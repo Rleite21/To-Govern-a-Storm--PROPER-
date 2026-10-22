@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://db8c86fckaesd"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_45ds8"]
+
+[resource]
+script = ExtResource("1_45ds8")
+city_name = "Silves"

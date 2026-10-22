@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://di3x26uxsstj0"]
+
+[ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/ProvinceData.gd" id="1_pmovi"]
+
+[resource]
+script = ExtResource("1_pmovi")
+province_name = "Baixo Alentejo"
+metadata/_custom_type_script = "uid://bdxcaeyat04r3"

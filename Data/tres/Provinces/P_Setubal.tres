@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://dfyx4kddrlkkl"]
+
+[ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/ProvinceData.gd" id="1_tbhtt"]
+
+[resource]
+script = ExtResource("1_tbhtt")
+province_name = "Península de Setúbal"
+metadata/_custom_type_script = "uid://bdxcaeyat04r3"

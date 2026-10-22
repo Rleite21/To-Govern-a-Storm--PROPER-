@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://6y78dfmlmmo4"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_vxpie"]
+
+[resource]
+script = ExtResource("1_vxpie")
+city_name = "Castelo de Vide"

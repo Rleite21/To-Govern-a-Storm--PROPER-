@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://kp05hibcntbv"]
+
+[ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/ProvinceData.gd" id="1_i7q3l"]
+
+[resource]
+script = ExtResource("1_i7q3l")
+province_name = "Beira Baixa"
+metadata/_custom_type_script = "uid://bdxcaeyat04r3"

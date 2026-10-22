@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://b37m4dpplnjug"]
+
+[ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/ProvinceData.gd" id="1_iec51"]
+
+[resource]
+script = ExtResource("1_iec51")
+province_name = "Douro Litoral"
+metadata/_custom_type_script = "uid://bdxcaeyat04r3"

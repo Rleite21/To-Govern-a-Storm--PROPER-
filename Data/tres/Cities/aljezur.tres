@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://duraa3yxutnod"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_hskbs"]
+
+[resource]
+script = ExtResource("1_hskbs")
+city_name = "Aljezur"

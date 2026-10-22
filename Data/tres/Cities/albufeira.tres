@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dvgnqapf6nvbt"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_75754"]
+
+[resource]
+script = ExtResource("1_75754")
+city_name = "Albufeira"
