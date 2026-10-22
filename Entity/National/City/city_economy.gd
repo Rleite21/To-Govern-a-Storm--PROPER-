@@ -1,10 +1,13 @@
 class_name CityEconomy
 extends RefCounted
 
-var sectors := {}  # Economy.Sector -> float (size)
+var sizes := PackedFloat32Array()  # indexado por Economy.Sector
+
+func _init() -> void:
+	sizes.resize(Economy.Sector.size())
 
 func generate(population: float, traits: Array, specializations: Array[SectorSpecialization]) -> void:
-	sectors.clear()
+	sizes.fill(0.0)
 
 	var prevalence_by_sector := {}
 	for spec in specializations:
@@ -17,4 +20,16 @@ func generate(population: float, traits: Array, specializations: Array[SectorSpe
 				push_warning("Specialization on %s ignored: suitability is 0 (missing trait?)" % Economy.Sector.keys()[s])
 			continue
 		var prevalence: float = prevalence_by_sector.get(s, randf_range(1.0, 1.3))
-		sectors[s] = Economy.roll_size(population, s, suit, prevalence)
+		sizes[s] = Economy.roll_size(population, s, suit, prevalence)
+
+func get_size(sector: Economy.Sector) -> float:
+	return sizes[sector]
+
+func has_sector(sector: Economy.Sector) -> bool:
+	return sizes[sector] > 0.0
+
+func total_size() -> float:
+	var t := 0.0
+	for v in sizes:
+		t += v
+	return t

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://b6bk2q660s1yh"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_774bd"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_7cwve"]
+
+[sub_resource type="Resource" id="Resource_h5v7k"]
+script = ExtResource("2_7cwve")
+
+[resource]
+script = ExtResource("1_774bd")
+city_name = "Miranda do Douro"
+description = "Perched above the deep gorge of the Douro on Portugal's northeastern frontier, Miranda do Douro occupies a rugged landscape whose isolation has preserved a distinctive regional identity. The Mirandese language, traditional customs and strong communal loyalties set the area apart from much of the country, while the river and border sustain centuries-old connections with neighbouring Spain. Agriculture and livestock dominate the local economy, and the Catholic Church remains an enduring presence in village life. The Republic's debates over centralisation, secularism and national identity reach Miranda from afar, often seeming remote beside the demands of rural existence. Here, loyalty to the community and its inherited traditions can matter more than the changing allegiances of Lisbon."
+population = 6065
+specializations = Array[ExtResource("2_7cwve")]([SubResource("Resource_h5v7k")])
+society = 30912
+traits = Array[int]([0, 10, 11])

@@ -1,7 +1,20 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cbk2v0hp2jf36"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ggb87"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_tigbl"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_byc8k"]
+
+[sub_resource type="Resource" id="Resource_lmt3m"]
+script = ExtResource("2_byc8k")
+
+[sub_resource type="Resource" id="Resource_esvn0"]
+script = ExtResource("2_byc8k")
+sector = 4
 
 [resource]
-script = ExtResource("1_ggb87")
+script = ExtResource("1_tigbl")
 city_name = "Pinhel"
+description = "Standing upon the granite uplands of the Beira Interior, Pinhel is a historic walled town surrounded by vineyards, olive groves and the rugged countryside of Portugal's eastern interior. Its strategic position near the Spanish frontier has given it a long history of military significance, while its economy remains tied to agriculture and small-scale regional trade. Here, the Republic's political upheavals often appear distant from the practical concerns of rural families. The clergy and established local proprietors continue to shape community life, even as republican administration seeks to extend secular education and modern governance into the countryside. In Pinhel, the old Portugal endures: austere, devout and suspicious of distant political promises, yet increasingly connected to a nation undergoing profound institutional change."
+population = 8092
+specializations = Array[ExtResource("2_byc8k")]([SubResource("Resource_lmt3m"), SubResource("Resource_esvn0")])
+society = 15360
+traits = Array[int]([0, 10, 1])

@@ -1,7 +1,25 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cvhw6yf5g4es0"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_40irr"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_t5rpe"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_n1nev"]
+
+[sub_resource type="Resource" id="Resource_e6deb"]
+script = ExtResource("2_n1nev")
+
+[sub_resource type="Resource" id="Resource_s2dey"]
+script = ExtResource("2_n1nev")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_60a4q"]
+script = ExtResource("2_n1nev")
+sector = 4
 
 [resource]
-script = ExtResource("1_40irr")
+script = ExtResource("1_t5rpe")
 city_name = "Guarda"
+description = "Perched high in the Serra da Estrela region, Guarda is one of Portugal's highest cities, a place of granite walls, narrow streets and biting winter winds. Its cathedral and medieval fortifications recall centuries of frontier vigilance, while merchants and farmers serve the scattered settlements of the surrounding mountains. Snow and harsh weather can isolate the countryside, making travel and trade difficult for much of the year. At this exposed height, daily life is defined by endurance, close-knit communities and the constant presence of the mountains."
+population = 40126
+specializations = Array[ExtResource("2_n1nev")]([SubResource("Resource_e6deb"), SubResource("Resource_s2dey"), SubResource("Resource_60a4q")])
+density = 2
+society = 5312
+traits = Array[int]([1, 12, 11, 10])

@@ -13,7 +13,7 @@ const BASELINE_WEIGHT := {
 	Sector.TRANSPORTATION: 0.25,
 	Sector.MINING: 0.2,
 	Sector.TRADE_SERVICES: 0.5,
-	Sector.ARMS: 0.0,
+	Sector.ARMS: 0.1,
 	Sector.MANUFACTURING: 0.4,
 	Sector.FISHING: 0.1,
 	Sector.PORTUARY: 0.1,

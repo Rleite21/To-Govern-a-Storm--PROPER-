@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://itko2s8n0ivy" path="res://Controllers/Map_Controller.gd" id="1_f3oab"]
 [ext_resource type="Script" uid="uid://dw6i15cglynu3" path="res://UI/Map_Camera.gd" id="1_k0ryu"]
 [ext_resource type="Script" uid="uid://bvds7i8gndgx7" path="res://Entity/National/Portugal.gd" id="2_wu0gp"]
-[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City.gd" id="3_1r5yo"]
+[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/City.gd" id="3_1r5yo"]
 [ext_resource type="Script" uid="uid://5u4y0so43u03" path="res://Entity/National/Province.gd" id="4_c6w4c"]
 [ext_resource type="Resource" uid="uid://33oj4a2yehjp" path="res://Data/tres/Provinces/Beira_Alta.tres" id="5_776dh"]
 [ext_resource type="Resource" uid="uid://damolcyvw1a0p" path="res://Data/tres/Provinces/Ribatejo.tres" id="5_t6cg6"]

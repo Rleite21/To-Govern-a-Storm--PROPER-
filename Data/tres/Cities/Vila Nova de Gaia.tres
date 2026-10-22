@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://n7b4hrcfj1pt"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_aapue"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_iubpx"]
+
+[sub_resource type="Resource" id="Resource_qwrqs"]
+script = ExtResource("2_iubpx")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_3517e"]
+script = ExtResource("2_iubpx")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_hy4jf"]
+script = ExtResource("2_iubpx")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_ri856"]
+script = ExtResource("2_iubpx")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_j0xmm"]
+script = ExtResource("2_iubpx")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_211ox"]
+script = ExtResource("2_iubpx")
+sector = 3
+
+[resource]
+script = ExtResource("1_aapue")
+city_name = "Vila Nova de Gaia"
+description = "Stretching along the southern bank of the Douro opposite Porto, Vila Nova de Gaia owes its international reputation to the great wine lodges where Port wine is stored and matured before shipment abroad. Its riverside warehouses, merchant houses and commercial connections reflect an economy deeply tied to export trade, while its growing working population supports transport, industry and the wine business. The fortunes of the town are closely linked to those of Porto's merchant bourgeoisie, whose commercial success contrasts with the modest circumstances of many labourers. Catholic traditions remain influential, but republican politics and organised labour find a receptive audience in the industrial districts of the region. Gaia occupies a distinctive position between commerce and production, where international markets, local employment and the social tensions of the Republic meet along the banks of the Douro."
+population = 323202
+specializations = Array[ExtResource("2_iubpx")]([SubResource("Resource_qwrqs"), SubResource("Resource_3517e"), SubResource("Resource_hy4jf"), SubResource("Resource_ri856"), SubResource("Resource_j0xmm"), SubResource("Resource_211ox")])
+density = 4
+society = 166
+traits = Array[int]([2, 4, 5, 6, 7, 9, 10, 11, 13, 14])

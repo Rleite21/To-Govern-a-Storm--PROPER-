@@ -1,7 +1,16 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://brmkultu7ujj3"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ipnjr"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7tjs2"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_3f0nf"]
+
+[sub_resource type="Resource" id="Resource_egpmt"]
+script = ExtResource("2_3f0nf")
 
 [resource]
-script = ExtResource("1_ipnjr")
+script = ExtResource("1_7tjs2")
 city_name = "Almeirim"
+description = "Set amid the fertile plains of the Tagus Valley, Almeirim draws its wealth from the land. Farms, livestock and rural commerce sustain the local economy, while regional traditions preserve the memory of an age when royal courts favoured these lands. The Republic has shaken the foundations of Portugal’s old political order, yet established landowners retain considerable influence. In Almeirim, the harvest remains more immediate than politics, and tradition proves difficult to uproot."
+population = 22012
+specializations = Array[ExtResource("2_3f0nf")]([SubResource("Resource_egpmt")])
+society = 7168
+traits = Array[int]([0, 10])

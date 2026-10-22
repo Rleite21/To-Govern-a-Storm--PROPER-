@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://be87k6ccwqow4"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_6tanv"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_lt1bh"]
+
+[sub_resource type="Resource" id="Resource_dxevm"]
+script = ExtResource("2_lt1bh")
+
+[sub_resource type="Resource" id="Resource_4mkqa"]
+script = ExtResource("2_lt1bh")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_5tpqg"]
+script = ExtResource("2_lt1bh")
+sector = 5
+
+[resource]
+script = ExtResource("1_6tanv")
+city_name = "Vilar Formoso"
+description = "Positioned on Portugal's eastern frontier, Vilar Formoso owes much of its importance to its railway connection with Spain and its role as a crossing point between the two countries. The surrounding landscape of the Beira Interior is marked by granite hills, agricultural villages and harsh winters. Its fortunes depend upon transport, border trade and the movement of travellers and goods, while contrabandists slip across the frontier, exploiting the long, porous border to smuggle goods and evade customs duties. Railway workers, merchants and smugglers alike bring the wider world to this otherwise quiet settlement. The traditional influence of the Church remains strong, while the Republic's political crises often seem distant from local concerns. Yet the frontier leaves Vilar Formoso exposed to events beyond Portugal's control, making it a place where rural traditions, illicit enterprise and the wider currents of European commerce converge."
+population = 1719
+specializations = Array[ExtResource("2_lt1bh")]([SubResource("Resource_dxevm"), SubResource("Resource_4mkqa"), SubResource("Resource_5tpqg")])
+density = 0
+society = 20480
+traits = Array[int]([0, 11])

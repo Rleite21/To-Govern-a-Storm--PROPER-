@@ -1,7 +1,29 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://y116ln2uy37w"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_13klt"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_i827g"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_b76p2"]
+
+[sub_resource type="Resource" id="Resource_rcuhf"]
+script = ExtResource("2_b76p2")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_geqa7"]
+script = ExtResource("2_b76p2")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_dpxs2"]
+script = ExtResource("2_b76p2")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_q5f3g"]
+script = ExtResource("2_b76p2")
 
 [resource]
-script = ExtResource("1_13klt")
+script = ExtResource("1_i827g")
 city_name = "Sintra"
+description = "Set amid mist-covered hills, wooded estates and extravagant palaces, Sintra has long served as a retreat for Portuguese royalty and aristocracy. Its romantic landscape, dotted with monasteries, manor houses and royal residences, embodies the splendour of the old regime even after the monarchy's fall in 1910. The surrounding villages retain a more rural character, sustained by agriculture, crafts and local commerce, while the town itself attracts visitors and members of Lisbon's wealthier society. Monarchist nostalgia remains particularly evocative in a place so closely associated with royal life, though republican institutions now define the political order. Catholic traditions endure alongside the secular outlook of sections of the educated bourgeoisie. Sintra exists between two worlds: the fading grandeur of aristocratic Portugal and the uncertain modernity of the Republic."
+population = 395528
+specializations = Array[ExtResource("2_b76p2")]([SubResource("Resource_rcuhf"), SubResource("Resource_geqa7"), SubResource("Resource_dpxs2"), SubResource("Resource_q5f3g")])
+density = 4
+society = 786
+traits = Array[int]([0, 4, 5, 6, 7, 8, 9, 10, 14])

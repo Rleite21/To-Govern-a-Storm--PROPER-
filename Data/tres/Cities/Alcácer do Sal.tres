@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://hnljxqi88n0n"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_gb81e"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_p8t6y"]
+
+[sub_resource type="Resource" id="Resource_87hdr"]
+script = ExtResource("2_p8t6y")
+
+[sub_resource type="Resource" id="Resource_54kug"]
+script = ExtResource("2_p8t6y")
+sector = 8
+
+[resource]
+script = ExtResource("1_gb81e")
+city_name = "Alcácer do Sal"
+description = "Along the Sado River, Alcácer do Sal thrives on the wealth of the surrounding countryside. Rice fields, salt production and agricultural labour sustain its economy, while its ancient castle bears witness to centuries of Roman, Islamic and Christian rule. Yet beneath this rich history lies a rigid social order, shaped by powerful landowners and generations of rural tradition. The Republic may promise a new Portugal, but here, the land still belongs to the few."
+population = 11112
+specializations = Array[ExtResource("2_p8t6y")]([SubResource("Resource_87hdr"), SubResource("Resource_54kug")])
+society = 3330
+traits = Array[int]([0, 10, 11, 12, 13])

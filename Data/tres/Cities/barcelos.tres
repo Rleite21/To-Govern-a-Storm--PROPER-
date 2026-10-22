@@ -1,7 +1,18 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dina5aqc0gimd"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_u30mp"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7ja3d"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_kjd1b"]
+
+[sub_resource type="Resource" id="Resource_j1tpc"]
+script = ExtResource("2_kjd1b")
+sector = 7
 
 [resource]
-script = ExtResource("1_u30mp")
+script = ExtResource("1_7ja3d")
 city_name = "Barcelos"
+description = "Amid the green valleys of northern Portugal, Barcelos thrives on agriculture, local markets and centuries-old craft traditions. Its streets echo with the sounds of merchants and artisans, while pottery and colourful folk art reflect the character of the Minho region. The legend of the Rooster of Barcelos lives on in local folklore, a symbol of faith, justice and Portuguese identity. Beneath the church bells and the bustle of market day, rural customs remain deeply rooted in everyday life."
+population = 122487
+specializations = Array[ExtResource("2_kjd1b")]([SubResource("Resource_j1tpc")])
+density = 2
+society = 1346
+traits = Array[int]([1, 4, 6, 7, 9])

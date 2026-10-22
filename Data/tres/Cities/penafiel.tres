@@ -1,7 +1,25 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://w5dn115trdls"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_i3ann"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_sr5of"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_mt4kp"]
+
+[sub_resource type="Resource" id="Resource_6svyq"]
+script = ExtResource("2_mt4kp")
+
+[sub_resource type="Resource" id="Resource_agovo"]
+script = ExtResource("2_mt4kp")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_83dke"]
+script = ExtResource("2_mt4kp")
+sector = 4
 
 [resource]
-script = ExtResource("1_i3ann")
+script = ExtResource("1_sr5of")
 city_name = "Penafiel"
+description = "Set amid the green hills and fertile valleys of the Minho and Douro borderlands, Penafiel is a prosperous provincial centre whose identity rests upon agriculture, local commerce and strong communal traditions. Its churches and religious festivities reflect the enduring influence of Catholicism, while its markets connect surrounding farming communities to the wider northern economy. The old landed families and local notables retain their social standing, though merchants, professionals and republican municipal figures increasingly participate in civic affairs. The Republic's secular reforms have challenged the Church's institutional privileges, but religious devotion remains deeply rooted among the population. Beyond the political turmoil of Lisbon, Penafiel represents a Portugal where inherited loyalties remain powerful and the prospect of change is approached with both curiosity and caution."
+population = 69629
+specializations = Array[ExtResource("2_mt4kp")]([SubResource("Resource_6svyq"), SubResource("Resource_agovo"), SubResource("Resource_83dke")])
+density = 2
+society = 2496
+traits = Array[int]([0, 1, 10, 11])

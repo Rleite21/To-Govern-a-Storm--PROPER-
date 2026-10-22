@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cmf3765cws0cd"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_w1qp4"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ljej0"]
+
+[sub_resource type="Resource" id="Resource_mr0sq"]
+script = ExtResource("2_ljej0")
+
+[resource]
+script = ExtResource("1_w1qp4")
+city_name = "Alter do Chão"
+description = "In the heart of the Alentejo, Alter do Chão is a land of vast estates, grazing livestock and deeply rooted rural customs. Roman ruins and a medieval castle recall the civilisations that once claimed this territory, while horse breeding continues a tradition of local prestige. Beneath the wide skies, life follows the demands of agriculture and the authority of landowners. As the Republic struggles with mounting instability, the old rural hierarchies remain stubbornly intact."
+population = 3044
+specializations = Array[ExtResource("2_ljej0")]([SubResource("Resource_mr0sq")])
+density = 0
+society = 14342
+traits = Array[int]([0, 10])

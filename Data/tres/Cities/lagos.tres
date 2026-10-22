@@ -1,7 +1,25 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://lwbcr1bomwhp"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ipy56"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_5bdba"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_8br0b"]
+
+[sub_resource type="Resource" id="Resource_72r25"]
+script = ExtResource("2_8br0b")
+
+[sub_resource type="Resource" id="Resource_v0tt7"]
+script = ExtResource("2_8br0b")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_2oeki"]
+script = ExtResource("2_8br0b")
+sector = 8
 
 [resource]
-script = ExtResource("1_ipy56")
+script = ExtResource("1_5bdba")
 city_name = "Lagos"
+description = "Once a principal gateway to Portugal's maritime expansion, Lagos rests along the sheltered shores of the western Algarve, where whitewashed streets overlook a sea that has long sustained fishermen and merchants. The memory of the Discoveries lingers in its churches and old walls, though the age of imperial glory has given way to the uncertain fortunes of a coastal town. Fishing, small commerce and agriculture sustain its people, whose traditional Catholic outlook coexists with the growing influence of republican institutions and the concerns of working families. Far from Lisbon's political theatres, Lagos remains attached to the rhythms of the sea, wary of distant promises of national renewal."
+population = 33583
+specializations = Array[ExtResource("2_8br0b")]([SubResource("Resource_72r25"), SubResource("Resource_v0tt7"), SubResource("Resource_2oeki")])
+density = 2
+society = 8450
+traits = Array[int]([0, 2, 11, 10])

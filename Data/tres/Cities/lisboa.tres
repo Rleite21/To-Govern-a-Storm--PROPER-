@@ -1,7 +1,42 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://bkfd631ymdkdq"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_4d0ax"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ttevi"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_o4heh"]
+
+[sub_resource type="Resource" id="Resource_2asuf"]
+script = ExtResource("2_o4heh")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_loswv"]
+script = ExtResource("2_o4heh")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_esgaf"]
+script = ExtResource("2_o4heh")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_0fn1u"]
+script = ExtResource("2_o4heh")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_truxw"]
+script = ExtResource("2_o4heh")
+sector = 6
+
+[sub_resource type="Resource" id="Resource_st78y"]
+script = ExtResource("2_o4heh")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_q353k"]
+script = ExtResource("2_o4heh")
+sector = 9
 
 [resource]
-script = ExtResource("1_4d0ax")
+script = ExtResource("1_ttevi")
 city_name = "Lisboa"
+description = "The capital of the Portuguese Republic is a city of contradictions, where grand avenues and cafés of the bourgeoisie stand beside crowded tenements, dockside taverns and working-class neighbourhoods. Its hills overlook the Tagus, still the great artery of an empire whose former splendour cannot conceal the country's economic weakness. Since the Revolution of 1910, Lisbon has been the principal battleground between republican factions, monarchist sympathisers, Catholic traditionalists and militant secularists. Freemasons, military officers, industrialists, socialists and anarchists all compete to shape the future, while strikes, inflation and successive political crises unsettle daily life. Here, the Republic's greatest ambitions and deepest failures are laid bare."
+population = 658236
+specializations = Array[ExtResource("2_o4heh")]([SubResource("Resource_2asuf"), SubResource("Resource_loswv"), SubResource("Resource_esgaf"), SubResource("Resource_0fn1u"), SubResource("Resource_truxw"), SubResource("Resource_st78y"), SubResource("Resource_q353k")])
+density = 4
+society = 63
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14])

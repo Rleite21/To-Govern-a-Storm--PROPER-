@@ -1,7 +1,24 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://b4bdfh2vre5ls"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_qmd48"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2icsx"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_61xaq"]
+
+[sub_resource type="Resource" id="Resource_vq37y"]
+script = ExtResource("2_61xaq")
+
+[sub_resource type="Resource" id="Resource_eb3co"]
+script = ExtResource("2_61xaq")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_ug1uw"]
+script = ExtResource("2_61xaq")
+sector = 7
 
 [resource]
-script = ExtResource("1_qmd48")
+script = ExtResource("1_2icsx")
 city_name = "Mealhada"
+description = "Set amid the fertile countryside between Coimbra and Aveiro, Mealhada owes much of its character to agriculture, roadside commerce and the movement of travellers along the region's important transport routes. Vineyards, farms and local businesses sustain a community increasingly connected to the wider economy. The town's reputation for food and hospitality reflects a provincial culture in which family, parish and local custom remain powerful institutions. Republican administration has brought new expectations of public education and civic life, yet Catholic influence continues to command respect among many residents. Merchants and landowners generally favour order and dependable trade, while agricultural labourers face the familiar uncertainties of wages, harvests and rising prices."
+population = 19948
+specializations = Array[ExtResource("2_61xaq")]([SubResource("Resource_vq37y"), SubResource("Resource_eb3co"), SubResource("Resource_ug1uw")])
+density = 2
+society = 448

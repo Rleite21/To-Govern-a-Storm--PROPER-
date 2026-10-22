@@ -1,81 +1,81 @@
-# sector_suitability.gd
 class_name SectorSuitability
 
 const S := Economy.Sector
+const T := CityTrait.Type
 
 const TRAIT_MULTIPLIERS := {
-	"fertile_land": {
+	T.FERTILE_LAND: {
 		S.AGRICULTURE: 2.0,
 	},
-	"coal_iron_deposits": {
+	T.COAL_AND_IRON_DEPOSITS: {
 		S.MINING: 3.0,
 		S.HEAVY_INDUSTRY: 2.0,
 	},
-	"coastal_location": {
+	T.COASTAL_LOCATION: {
 		S.FISHING: 1.0,
 		S.PORTUARY: 1.0,
 		S.TRADE_SERVICES: 1.1,
 	},
-	"established_financial_institutions": {
+	T.ESTABLISHED_FINANCIAL_INSTITUTIONS: {
 		S.FINANCE: 3.0,
 		S.TRADE_SERVICES: 1.2,
 	},
-	"prominent_government_institutions": {
+	T.PROMINENT_GOVERNMENT_INSTITUTIONS: {
 		S.FINANCE: 1.2,
 		S.TRADE_SERVICES: 1.2,
 		S.CIVIL_ENGINEERING: 1.3,
 	},
-	"prominent_military_bases": {
+	T.PROMINENT_MILITARY_BASES: {
 		S.ARMS: 1.0,
 		S.CIVIL_ENGINEERING: 1.2,
 		S.TRADE_SERVICES: 1.1,
 	},
-	"good_infrastructure": {
+	T.GOOD_INFRASTRUCTURE: {
 		S.TRANSPORTATION: 1.5,
 		S.TRADE_SERVICES: 1.2,
 		S.MANUFACTURING: 1.2,
 		S.HEAVY_INDUSTRY: 1.1,
 		S.CIVIL_ENGINEERING: 1.2,
 	},
-	"prominent_entrepreneurs": {
+	T.PROMINENT_ENTREPRENEURS: {
 		S.MANUFACTURING: 1.4,
 		S.TRADE_SERVICES: 1.3,
 		S.HEAVY_INDUSTRY: 1.2,
 		S.FINANCE: 1.2,
 	},
-	"bright_academia": {
+	T.BRIGHT_ACADEMIA: {
 		S.FINANCE: 1.2,
 		S.TRADE_SERVICES: 1.2,
 		S.MANUFACTURING: 1.1,
 		S.CIVIL_ENGINEERING: 1.1,
 	},
-	"skilled_workforce": {
+	T.SKILLED_WORKFORCE: {
 		S.MANUFACTURING: 1.4,
 		S.HEAVY_INDUSTRY: 1.3,
 		S.ARMS: 1.3,
 		S.CIVIL_ENGINEERING: 1.2,
 	},
-	"powerful_landowners": {
+	T.POWERFUL_LANDOWNERS: {
 		S.AGRICULTURE: 1.5,
 		S.MINING: 1.2,
 	},
-	"provincial_crossroads": {
+	T.PROVINCIAL_CROSSROADS: {
 		S.TRANSPORTATION: 1.5,
 		S.TRADE_SERVICES: 1.5,
 	},
-	"bureaucratic_center": {
+	T.BUREAUCRATIC_CENTER: {
 		S.FINANCE: 1.3,
 		S.TRADE_SERVICES: 1.3,
 		S.CIVIL_ENGINEERING: 1.1,
 	},
-	"riverine_hub": {
+	T.RIVERINE_HUB: {
 		S.AGRICULTURE: 1.2,
 		S.TRANSPORTATION: 1.3,
 		S.TRADE_SERVICES: 1.2,
 		S.FISHING: 1.0,
 		S.PORTUARY: 1.0,
 	},
-	"regeneracao_blessings": {
+	T.REGENERACAO_BLESSINGS: {
 		S.TRANSPORTATION: 1.4,
 		S.CIVIL_ENGINEERING: 1.4,
 		S.FINANCE: 1.2,
@@ -85,11 +85,11 @@ const TRAIT_MULTIPLIERS := {
 	},
 }
 
-# Setor -> lista de traços; basta a cidade ter UM deles para o setor existir
+# Setor -> traços; basta a cidade ter UM deles para o setor existir
 const REQUIRES := {
-	S.FISHING: ["coastal_location", "riverine_hub"],
-	S.PORTUARY: ["coastal_location", "riverine_hub"],
-	S.ARMS: ["prominent_military_bases"],
+	S.FISHING: [T.COASTAL_LOCATION, T.RIVERINE_HUB],
+	S.PORTUARY: [T.COASTAL_LOCATION, T.RIVERINE_HUB],
+	S.ARMS: [T.PROMINENT_MILITARY_BASES],
 }
 
 static func get_suitability(city_traits: Array, sector: Economy.Sector) -> float:

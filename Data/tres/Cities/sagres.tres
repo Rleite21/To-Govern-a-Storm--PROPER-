@@ -1,7 +1,18 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://b1sediycau1ay"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_yubwq"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wcobn"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_v1fbw"]
+
+[sub_resource type="Resource" id="Resource_nf5wn"]
+script = ExtResource("2_v1fbw")
+sector = 8
 
 [resource]
-script = ExtResource("1_yubwq")
+script = ExtResource("1_wcobn")
 city_name = "Sagres"
+description = "At the southwestern extremity of Portugal, Sagres stands amid wind-scoured cliffs and a restless Atlantic that once carried Portuguese navigators towards distant continents. Its name is inseparable from the mythology of the Discoveries and the figure of Prince Henry the Navigator, even as its modest settlement remains rooted in fishing and the demanding rhythms of coastal life. Far from the industrial centres and political salons, Sagres is a place where the sea commands greater attention than parliamentary intrigue. Catholic observance and local traditions remain strong, while the Republic's ideological divisions have little direct presence in the daily concerns of fishermen and their families. Yet the national memory of maritime greatness persists, offering a powerful contrast to the economic difficulties and political uncertainty of modern Portugal."
+population = 1894
+specializations = Array[ExtResource("2_v1fbw")]([SubResource("Resource_nf5wn")])
+density = 0
+society = 12288
+traits = Array[int]([0, 10, 2])

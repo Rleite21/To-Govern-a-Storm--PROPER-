@@ -1,7 +1,20 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://e74kns8srtld"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2rpfp"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3dgyy"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_w2uek"]
+
+[sub_resource type="Resource" id="Resource_3oh3t"]
+script = ExtResource("2_w2uek")
+
+[sub_resource type="Resource" id="Resource_af7lr"]
+script = ExtResource("2_w2uek")
+sector = 3
 
 [resource]
-script = ExtResource("1_2rpfp")
+script = ExtResource("1_3dgyy")
 city_name = "Chaves"
+description = "Near the Spanish border, Chaves stands as a historic gateway between Portugal and Galicia. Its Roman bridge spans the Tâmega River, a reminder of the armies, merchants and travellers who have crossed these lands for centuries. The town’s thermal springs draw visitors seeking relief in their warm waters, while agriculture, livestock and regional trade sustain the surrounding countryside. Stone fortifications recall generations of border conflicts, and the proximity of Spain gives local life a distinctive frontier character. In Chaves, Roman legacies and rural traditions endure beneath the watchful presence of an ancient stronghold."
+population = 37419
+specializations = Array[ExtResource("2_w2uek")]([SubResource("Resource_3oh3t"), SubResource("Resource_af7lr")])
+society = 14528
+traits = Array[int]([10, 11])

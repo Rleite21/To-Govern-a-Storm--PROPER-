@@ -1,7 +1,29 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dglv63vpp6xee"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_nk1i6"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7s5ge"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_bcf2y"]
+
+[sub_resource type="Resource" id="Resource_hwora"]
+script = ExtResource("2_bcf2y")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_s2lr5"]
+script = ExtResource("2_bcf2y")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_ofx5g"]
+script = ExtResource("2_bcf2y")
+
+[sub_resource type="Resource" id="Resource_fiuw6"]
+script = ExtResource("2_bcf2y")
+sector = 4
 
 [resource]
-script = ExtResource("1_nk1i6")
+script = ExtResource("1_7s5ge")
 city_name = "Mangualde"
+description = "Situated amid the granite hills, vineyards and small agricultural holdings of the Beira Alta, Mangualde serves as a modest commercial centre for its surrounding communities. Its fortunes are bound to the land, the movement of regional produce and the labour of families whose lives remain far removed from the political intrigues of the capital. The Catholic Church continues to shape social customs and communal identity, while republican officials and educated professionals advocate greater administrative reach and modern schooling. Property owners and merchants seek stability, but the rural poor remain vulnerable to economic hardship. In Mangualde, the struggle between tradition and reform unfolds gradually, through municipal affairs, parish life and the everyday demands of survival."
+population = 18766
+specializations = Array[ExtResource("2_bcf2y")]([SubResource("Resource_hwora"), SubResource("Resource_s2lr5"), SubResource("Resource_ofx5g"), SubResource("Resource_fiuw6")])
+density = 2
+society = 2434
+traits = Array[int]([1, 0, 7, 10])

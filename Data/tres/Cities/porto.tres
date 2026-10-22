@@ -1,7 +1,42 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://qrqqdvc84vin"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fsdd2"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2x66g"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_b2rju"]
+
+[sub_resource type="Resource" id="Resource_jubsg"]
+script = ExtResource("2_b2rju")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_a1xa0"]
+script = ExtResource("2_b2rju")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_g0xpm"]
+script = ExtResource("2_b2rju")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_72gs3"]
+script = ExtResource("2_b2rju")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_kbfsg"]
+script = ExtResource("2_b2rju")
+sector = 6
+
+[sub_resource type="Resource" id="Resource_70xk2"]
+script = ExtResource("2_b2rju")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_1pjkt"]
+script = ExtResource("2_b2rju")
+sector = 9
 
 [resource]
-script = ExtResource("1_fsdd2")
+script = ExtResource("1_2x66g")
 city_name = "Porto"
+description = "The 2nd largest metropolis of Portugal rises produly along the steep banks of the Douro, its crowded streets and riverside warehouses reflecting centuries of trade and mercantile ambition. Port wine has carried its name across the world, enriching merchant houses and connecting the city to British markets, while factories and workshops sustain a growing industrial working class. Porto's proud northerner identity is inseparable from its history of resistance: since the grueling Siege of Porto and the Liberal Wars, the city has carried the enduring nickname A Invicta — the Undefeated. Its rebellious spirit resurfaced during the republican uprising of 1891 against the monarchy. In the Republic, conservative Catholics, monarchists, republican factions, industrialists, socialists and anarchist labour organisers compete for influence. Strikes and economic hardship expose the gulf between prosperous commercial interests and working-class neighbourhoods. Porto remains a city of enterprise and defiance, where Portugal's future is contested in factories, cafés and the streets, under the ever so watchful eye of foreign interests."
+population = 273476
+specializations = Array[ExtResource("2_b2rju")]([SubResource("Resource_jubsg"), SubResource("Resource_a1xa0"), SubResource("Resource_g0xpm"), SubResource("Resource_72gs3"), SubResource("Resource_kbfsg"), SubResource("Resource_70xk2"), SubResource("Resource_1pjkt")])
+density = 4
+society = 255
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14])

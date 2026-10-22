@@ -1,7 +1,42 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://bu8kotx8rlqda"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_rdls5"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_tdooo"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_mnwgg"]
+
+[sub_resource type="Resource" id="Resource_lq71l"]
+script = ExtResource("2_mnwgg")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_xnq1q"]
+script = ExtResource("2_mnwgg")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_gpm38"]
+script = ExtResource("2_mnwgg")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_7r84r"]
+script = ExtResource("2_mnwgg")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_5opjr"]
+script = ExtResource("2_mnwgg")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_b27jr"]
+script = ExtResource("2_mnwgg")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_dsbgo"]
+script = ExtResource("2_mnwgg")
+sector = 7
 
 [resource]
-script = ExtResource("1_rdls5")
+script = ExtResource("1_tdooo")
 city_name = "Aveiro"
+description = "Between the lagoon and the Atlantic, Aveiro is a town in transition. Its canals carry the memory of generations of salt workers and fishermen, while ceramics, commerce and emerging industries signal a future shaped by modern transport and expanding markets. New ideas about education, administration and progress find fertile ground in this growing regional centre. Yet beneath the promise of prosperity, old customs and social divisions endure. In Aveiro, the future is arriving — carried on the same waters that have sustained the town for centuries."
+population = 80978
+specializations = Array[ExtResource("2_mnwgg")]([SubResource("Resource_lq71l"), SubResource("Resource_xnq1q"), SubResource("Resource_gpm38"), SubResource("Resource_7r84r"), SubResource("Resource_5opjr"), SubResource("Resource_b27jr"), SubResource("Resource_dsbgo")])
+density = 3
+society = 38
+traits = Array[int]([0, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14])

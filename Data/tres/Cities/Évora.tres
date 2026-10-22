@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://ptbb7tvfmk71"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_0an68"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_e2scf"]
+
+[sub_resource type="Resource" id="Resource_fi4os"]
+script = ExtResource("2_e2scf")
+
+[sub_resource type="Resource" id="Resource_kw887"]
+script = ExtResource("2_e2scf")
+sector = 5
+
+[resource]
+script = ExtResource("1_0an68")
+city_name = "Évora"
+description = "Encircled by medieval walls, Évora is a city where Roman columns, Gothic churches and whitewashed streets preserve the weight of centuries. Its ancient temple rises above the rooftops, while convents, noble residences and bustling markets reflect a long history of religious devotion and regional prestige. Beyond the city gates, the vast plains of the Alentejo are divided among agricultural estates, where seasonal labourers endure the summer heat and landowners maintain their influence. Life within Évora moves between solemn processions, market-day chatter and the quiet routines of rural commerce. Here, the past is not merely remembered — it stands in stone at every turn."
+population = 58567
+specializations = Array[ExtResource("2_e2scf")]([SubResource("Resource_fi4os"), SubResource("Resource_kw887")])
+density = 2
+society = 8514
+traits = Array[int]([0, 12, 11, 10, 8, 4])

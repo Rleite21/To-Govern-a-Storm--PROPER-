@@ -1,7 +1,26 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://s0xp7rii1rhr"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_x6vu3"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_q8gmc"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_avul0"]
+
+[sub_resource type="Resource" id="Resource_sqm61"]
+script = ExtResource("2_avul0")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_c440k"]
+script = ExtResource("2_avul0")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_nrwf1"]
+script = ExtResource("2_avul0")
+sector = 3
 
 [resource]
-script = ExtResource("1_x6vu3")
+script = ExtResource("1_q8gmc")
 city_name = "Pombal"
+description = "Overlooked by the medieval castle that once guarded the roads between Lisbon and Coimbra, Pombal occupies a fertile stretch of central Portugal where agriculture and regional commerce sustain its population. Its surrounding countryside, marked by pinewoods, fields and scattered villages, remains a world of smallholders, tenant farmers and established local proprietors. The Republic has brought new administrative institutions and promises of modernisation, yet the rhythms of rural life remain deeply traditional. The Catholic Church continues to command considerable social influence, while republican officials and the emerging professional classes seek to reshape education and public life. In Pombal, the national struggle between tradition and reform is felt less through grand ideological confrontations than through the everyday affairs of the municipality."
+population = 53995
+specializations = Array[ExtResource("2_avul0")]([SubResource("Resource_sqm61"), SubResource("Resource_c440k"), SubResource("Resource_nrwf1")])
+density = 2
+society = 256
+traits = Array[int]([0, 4, 10, 11, 12])

@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ho7hk7o6qqel"
+
+[deps]
+
+files=["res://Data/csv files/Cities.description.translation", "res://Data/csv files/Cities.population.translation", "res://Data/csv files/Cities.economy.translation", "res://Data/csv files/Cities.society.translation", "res://Data/csv files/Cities.density.translation", "res://Data/csv files/Cities.traits.translation"]
+
+source_file="res://Data/csv files/Cities.csv"
+dest_files=["res://Data/csv files/Cities.description.translation", "res://Data/csv files/Cities.population.translation", "res://Data/csv files/Cities.economy.translation", "res://Data/csv files/Cities.society.translation", "res://Data/csv files/Cities.density.translation", "res://Data/csv files/Cities.traits.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
