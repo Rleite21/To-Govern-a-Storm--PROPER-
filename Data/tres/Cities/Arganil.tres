@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ck6tr"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_qftng"]
 
-[sub_resource type="Resource" id="Resource_p86fh"]
+[sub_resource type="Resource" id="Resource_ck6tr"]
 script = ExtResource("2_qftng")
 
-[sub_resource type="Resource" id="Resource_ovuyy"]
+[sub_resource type="Resource" id="Resource_qftng"]
 script = ExtResource("2_qftng")
 sector = 7
 
@@ -15,6 +15,6 @@ script = ExtResource("1_ck6tr")
 city_name = "Arganil"
 description = "Nestled among the wooded hills and deep valleys of central Portugal, Arganil is a rural town shaped by the rugged landscapes of the Serra do Açor and the agricultural communities scattered throughout its hinterland. Chestnut groves, olive orchards and small farms sustain a population accustomed to hard work and the uncertainties of mountain life. Catholic traditions and the influence of local notables remain deeply rooted, while the Republic's promises of secular education and modernisation reach these remote communities only gradually. Landowners and merchants preserve their standing, but poverty and limited opportunities weigh heavily upon rural labourers. Far from the political intrigues of Lisbon, Arganil represents an enduring, traditional Portugal, where communal loyalties and the struggle for livelihood matter more than the shifting fortunes of the Republic."
 population = 11065
-specializations = Array[ExtResource("2_qftng")]([SubResource("Resource_p86fh"), SubResource("Resource_ovuyy")])
+specializations = Array[ExtResource("2_qftng")]([SubResource("Resource_ck6tr"), SubResource("Resource_qftng")])
 society = 12480
 traits = Array[int]([0, 10])

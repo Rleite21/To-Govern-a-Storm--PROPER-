@@ -3,27 +3,29 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_4myf1"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_82ehm"]
 
-[sub_resource type="Resource" id="Resource_5si50"]
+[sub_resource type="Resource" id="Resource_4myf1"]
 script = ExtResource("2_82ehm")
 sector = 5
 
-[sub_resource type="Resource" id="Resource_d75ju"]
+[sub_resource type="Resource" id="Resource_82ehm"]
 script = ExtResource("2_82ehm")
 sector = 7
 
-[sub_resource type="Resource" id="Resource_je083"]
+[sub_resource type="Resource" id="Resource_5si50"]
 script = ExtResource("2_82ehm")
 
-[sub_resource type="Resource" id="Resource_8yl3k"]
+[sub_resource type="Resource" id="Resource_d75ju"]
 script = ExtResource("2_82ehm")
 sector = 3
 
 [resource]
 script = ExtResource("1_4myf1")
 city_name = "Vila Real"
+map_position = Vector3(2.1946983, 0.6200257, -6.93768)
 description = "Standing upon a high plateau among the valleys and mountains of Trás-os-Montes, Vila Real is a regional centre whose fortunes are linked to agriculture, wine production and commerce with the surrounding interior. The nearby estates of the Douro, including those associated with the production of Port wine, connect the city to one of Portugal's most important export industries. Its historic churches, aristocratic residences and Catholic traditions preserve the influence of older social institutions, while professionals, merchants and republican officials seek to extend modern administration into the region. The city's political life reflects the broader tensions of the Republic: conservative loyalties remain strong, but economic hardship and social inequality can encourage demands for reform. Vila Real stands as a gateway to the mountainous northeast, balancing inherited privilege and rural custom against the uncertain prospects of a changing nation"
+province_name = "Trás-os-Montes"
 population = 49574
-specializations = Array[ExtResource("2_82ehm")]([SubResource("Resource_5si50"), SubResource("Resource_d75ju"), SubResource("Resource_je083"), SubResource("Resource_8yl3k")])
+specializations = Array[ExtResource("2_82ehm")]([SubResource("Resource_4myf1"), SubResource("Resource_82ehm"), SubResource("Resource_5si50"), SubResource("Resource_d75ju")])
 density = 2
 society = 2498
 traits = Array[int]([0, 12, 11, 10, 9])

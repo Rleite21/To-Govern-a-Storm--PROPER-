@@ -21,7 +21,9 @@ sector = 4
 [resource]
 script = ExtResource("1_7s5ge")
 city_name = "Mangualde"
+map_position = Vector3(2.0953064, 0.6200257, -4.1635675)
 description = "Situated amid the granite hills, vineyards and small agricultural holdings of the Beira Alta, Mangualde serves as a modest commercial centre for its surrounding communities. Its fortunes are bound to the land, the movement of regional produce and the labour of families whose lives remain far removed from the political intrigues of the capital. The Catholic Church continues to shape social customs and communal identity, while republican officials and educated professionals advocate greater administrative reach and modern schooling. Property owners and merchants seek stability, but the rural poor remain vulnerable to economic hardship. In Mangualde, the struggle between tradition and reform unfolds gradually, through municipal affairs, parish life and the everyday demands of survival."
+province_name = "Beira Alta"
 population = 18766
 specializations = Array[ExtResource("2_bcf2y")]([SubResource("Resource_hwora"), SubResource("Resource_s2lr5"), SubResource("Resource_ofx5g"), SubResource("Resource_fiuw6")])
 density = 2

@@ -14,7 +14,9 @@ var population: int:
 	get: return demographics.population
 var density: CityDensity.Level:
 	get: return data.density
-
+var tier: CityTier.Type:
+	get: return data.tier
+	
 # Returns false if the city can't be used
 func initialize() -> bool:
 	if data == null:

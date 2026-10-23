@@ -13,7 +13,9 @@ sector = 4
 [resource]
 script = ExtResource("1_tigbl")
 city_name = "Pinhel"
+map_position = Vector3(4.0474877, 0.6200257, -4.9923887)
 description = "Standing upon the granite uplands of the Beira Interior, Pinhel is a historic walled town surrounded by vineyards, olive groves and the rugged countryside of Portugal's eastern interior. Its strategic position near the Spanish frontier has given it a long history of military significance, while its economy remains tied to agriculture and small-scale regional trade. Here, the Republic's political upheavals often appear distant from the practical concerns of rural families. The clergy and established local proprietors continue to shape community life, even as republican administration seeks to extend secular education and modern governance into the countryside. In Pinhel, the old Portugal endures: austere, devout and suspicious of distant political promises, yet increasingly connected to a nation undergoing profound institutional change."
+province_name = "Beira Alta"
 population = 8092
 specializations = Array[ExtResource("2_byc8k")]([SubResource("Resource_lmt3m"), SubResource("Resource_esvn0")])
 society = 15360

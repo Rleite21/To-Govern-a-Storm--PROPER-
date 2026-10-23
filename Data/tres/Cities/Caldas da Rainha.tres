@@ -3,24 +3,26 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_jba3t"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_wnqil"]
 
-[sub_resource type="Resource" id="Resource_k5qoq"]
+[sub_resource type="Resource" id="Resource_jba3t"]
 script = ExtResource("2_wnqil")
 sector = 3
 
-[sub_resource type="Resource" id="Resource_lvvlc"]
+[sub_resource type="Resource" id="Resource_wnqil"]
 script = ExtResource("2_wnqil")
 sector = 5
 
-[sub_resource type="Resource" id="Resource_35s36"]
+[sub_resource type="Resource" id="Resource_k5qoq"]
 script = ExtResource("2_wnqil")
 sector = 7
 
 [resource]
 script = ExtResource("1_jba3t")
 city_name = "Caldas da Rainha"
+map_position = Vector3(-1.986433, 0.6200257, 0.34521043)
 description = "Renowned for its thermal springs, Caldas da Rainha has long drawn visitors seeking relief from illness and the burdens of everyday life. Its hospital, founded under the patronage of Queen Leonor, remains a symbol of the town’s charitable heritage. Around the bustling markets, pottery workshops and small businesses sustain a lively local economy, while distinctive ceramics reflect the artistic spirit of the region. Beneath the familiar rhythm of trade and healing, Caldas preserves an identity shaped by royal patronage, craftsmanship and the enduring belief in the restorative power of its waters."
+province_name = "Oeste"
 population = 58983
-specializations = Array[ExtResource("2_wnqil")]([SubResource("Resource_k5qoq"), SubResource("Resource_lvvlc"), SubResource("Resource_35s36")])
+specializations = Array[ExtResource("2_wnqil")]([SubResource("Resource_jba3t"), SubResource("Resource_wnqil"), SubResource("Resource_k5qoq")])
 density = 2
 society = 262
 traits = Array[int]([4, 6, 7, 9, 10, 11, 12])

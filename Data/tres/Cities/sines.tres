@@ -22,7 +22,9 @@ sector = 8
 [resource]
 script = ExtResource("1_7g8h6")
 city_name = "Sines"
+map_position = Vector3(-1.2655579, 0.6200257, 6.0301914)
 description = "A coastal town overlooking the Atlantic, Sines is shaped by its fishing harbour, rugged shoreline and the agricultural hinterland of the Alentejo. Traditionally sustained by fishing, small commerce and rural production, it remains far removed from the scale of the major industrial centres, though the sea offers enduring possibilities for trade and maritime activity. Its people maintain strong local ties and a practical relationship with the ocean, while Catholic observance continues to mark communal life. The political tensions of the Republic are less concentrated here than in Lisbon or Setúbal, but economic hardship and the difficulties faced by coastal workers remain familiar concerns. Sines stands at the meeting point of sea and plain, a modest settlement whose future depends upon whether Portugal can turn its maritime geography into renewed prosperity."
+province_name = "Península de Setúbal"
 population = 16943
 specializations = Array[ExtResource("2_2tr4w")]([SubResource("Resource_hccky"), SubResource("Resource_otkip"), SubResource("Resource_trf7l"), SubResource("Resource_s0msw")])
 density = 2

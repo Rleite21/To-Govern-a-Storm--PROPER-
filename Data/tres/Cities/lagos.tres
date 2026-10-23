@@ -17,7 +17,9 @@ sector = 8
 [resource]
 script = ExtResource("1_5bdba")
 city_name = "Lagos"
+map_position = Vector3(-0.79403794, 0.6200257, 9.20315)
 description = "Once a principal gateway to Portugal's maritime expansion, Lagos rests along the sheltered shores of the western Algarve, where whitewashed streets overlook a sea that has long sustained fishermen and merchants. The memory of the Discoveries lingers in its churches and old walls, though the age of imperial glory has given way to the uncertain fortunes of a coastal town. Fishing, small commerce and agriculture sustain its people, whose traditional Catholic outlook coexists with the growing influence of republican institutions and the concerns of working families. Far from Lisbon's political theatres, Lagos remains attached to the rhythms of the sea, wary of distant promises of national renewal."
+province_name = "Algarve"
 population = 33583
 specializations = Array[ExtResource("2_8br0b")]([SubResource("Resource_72r25"), SubResource("Resource_v0tt7"), SubResource("Resource_2oeki")])
 density = 2

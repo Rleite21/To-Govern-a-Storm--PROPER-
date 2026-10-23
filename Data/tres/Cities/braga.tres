@@ -26,7 +26,9 @@ sector = 7
 [resource]
 script = ExtResource("1_27yi2")
 city_name = "Braga"
+map_position = Vector3(-0.039708376, 0.6200257, -7.811184)
 description = "One of Portugal’s oldest religious centres, Braga is a city of towering churches, ancient streets and solemn processions. The bells of its cathedral ring over granite façades and crowded markets, while the clergy retain considerable influence over local society. Beyond the city, the green hills of Minho are dotted with farms, vineyards and traditional villages. Despite the Republic’s efforts to diminish the Church’s power, faith remains woven into the fabric of Braga, shaping its festivals, customs and the lives of its inhabitants"
+province_name = "Minho"
 population = 212635
 specializations = Array[ExtResource("2_na15e")]([SubResource("Resource_7hkr6"), SubResource("Resource_1jkdd"), SubResource("Resource_q1phb"), SubResource("Resource_ji0x6"), SubResource("Resource_uvyej")])
 density = 3

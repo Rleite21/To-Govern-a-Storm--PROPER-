@@ -3,19 +3,21 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_rvh1l"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_f8alb"]
 
-[sub_resource type="Resource" id="Resource_o031g"]
+[sub_resource type="Resource" id="Resource_rvh1l"]
 script = ExtResource("2_f8alb")
 
-[sub_resource type="Resource" id="Resource_5mol1"]
+[sub_resource type="Resource" id="Resource_f8alb"]
 script = ExtResource("2_f8alb")
 sector = 8
 
 [resource]
 script = ExtResource("1_rvh1l")
 city_name = "Olhão"
+map_position = Vector3(1.872944, 0.6200257, 9.521231)
 description = "A busy fishing town on the sheltered waters of the Ria Formosa, Olhão faces the sea through a maze of narrow streets, whitewashed houses and flat-roofed buildings shaped by centuries of maritime life. Fishing, fish processing and coastal trade sustain its economy, binding the fortunes of working families to the markets beyond the Algarve. Its seafaring population has long cultivated a reputation for independence and resilience, with collective action and labour organisation finding a natural foothold among those whose livelihoods depend upon the waterfront. The Catholic traditions of the region endure, but the social questions raised by industrial fishing, wages and working conditions give republican and socialist ideas a tangible local relevance. However, Olhão looks outward to the sea and not th power of Lisbon, its identity shaped by labour, commerce and a fierce attachment to the coast."
+province_name = "Algarve"
 population = 44623
-specializations = Array[ExtResource("2_f8alb")]([SubResource("Resource_o031g"), SubResource("Resource_5mol1")])
+specializations = Array[ExtResource("2_f8alb")]([SubResource("Resource_rvh1l"), SubResource("Resource_f8alb")])
 density = 2
 society = 10560
 traits = Array[int]([2, 10, 11])

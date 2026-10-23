@@ -3,28 +3,30 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3nnjv"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ubhs6"]
 
-[sub_resource type="Resource" id="Resource_emarx"]
+[sub_resource type="Resource" id="Resource_3nnjv"]
 script = ExtResource("2_ubhs6")
 sector = 9
 
-[sub_resource type="Resource" id="Resource_jo7cm"]
+[sub_resource type="Resource" id="Resource_ubhs6"]
 script = ExtResource("2_ubhs6")
 sector = 8
 
-[sub_resource type="Resource" id="Resource_w8ehf"]
+[sub_resource type="Resource" id="Resource_emarx"]
 script = ExtResource("2_ubhs6")
 sector = 7
 
-[sub_resource type="Resource" id="Resource_rcjjw"]
+[sub_resource type="Resource" id="Resource_jo7cm"]
 script = ExtResource("2_ubhs6")
 sector = 1
 
 [resource]
 script = ExtResource("1_3nnjv")
 city_name = "Setúbal"
+map_position = Vector3(-1.5347443, 0.6200257, 3.9400616)
 description = "Facing the broad estuary of the Sado, Setúbal has grown into one of Portugal's most important fishing and industrial centres. Its harbour, salt pans, fish-processing factories and commercial connections sustain a vigorous economy, while the surrounding Arrábida hills and fertile lands provide a striking contrast to the bustle of the waterfront. The growth of the canning industry has created a substantial working population, including many women employed in fish processing, whose wages and conditions are central to household survival. Industrialists and merchants seek stable markets, while labour organisers, socialists and anarchists challenge the inequalities of factory life. Republican secularism has weakened the Church's formal political position, but religious traditions endure among many families. Setúbal is a city where the promises of modern industry stand beside the realities of low wages, labour disputes and class conflict."
+province_name = "Península de Setúbal"
 population = 123519
-specializations = Array[ExtResource("2_ubhs6")]([SubResource("Resource_emarx"), SubResource("Resource_jo7cm"), SubResource("Resource_w8ehf"), SubResource("Resource_rcjjw")])
+specializations = Array[ExtResource("2_ubhs6")]([SubResource("Resource_3nnjv"), SubResource("Resource_ubhs6"), SubResource("Resource_emarx"), SubResource("Resource_jo7cm")])
 density = 3
 society = 2086
 traits = Array[int]([0, 2, 4, 5, 7, 10, 11, 12, 14, 13])

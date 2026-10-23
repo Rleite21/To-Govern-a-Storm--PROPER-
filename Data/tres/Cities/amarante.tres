@@ -17,7 +17,9 @@ sector = 5
 [resource]
 script = ExtResource("1_fs4il")
 city_name = "Amarante"
+map_position = Vector3(1.1419468, 0.6200257, -6.6659803)
 description = "Straddling the Tâmega River, Amarante is a town of granite houses, ancient bridges and solemn churches, steeped in the traditions of northern Portugal. Surrounded by green hills and vineyards, its people live by the land, the wine and the rhythms of the river. Yet when heavy rains descend, the Tâmega can swell into a destructive force, flooding streets and threatening riverside homes. Beneath the watchful presence of Saint Gonçalo, faith remains a powerful anchor in a community shaped by harsh nature, enduring traditions and generations of hardship."
+province_name = "Douro Litoral"
 population = 52116
 specializations = Array[ExtResource("2_drev2")]([SubResource("Resource_21m1i"), SubResource("Resource_5abon"), SubResource("Resource_4uvsa")])
 density = 2

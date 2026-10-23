@@ -3,36 +3,38 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_hacvp"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_61rte"]
 
-[sub_resource type="Resource" id="Resource_5squp"]
+[sub_resource type="Resource" id="Resource_hacvp"]
 script = ExtResource("2_61rte")
 sector = 1
 
-[sub_resource type="Resource" id="Resource_e1jxc"]
+[sub_resource type="Resource" id="Resource_61rte"]
 script = ExtResource("2_61rte")
 sector = 9
 
-[sub_resource type="Resource" id="Resource_ap3a3"]
+[sub_resource type="Resource" id="Resource_5squp"]
 script = ExtResource("2_61rte")
 sector = 8
 
-[sub_resource type="Resource" id="Resource_jssik"]
+[sub_resource type="Resource" id="Resource_e1jxc"]
 script = ExtResource("2_61rte")
 sector = 7
 
-[sub_resource type="Resource" id="Resource_hutqd"]
+[sub_resource type="Resource" id="Resource_ap3a3"]
 script = ExtResource("2_61rte")
 sector = 5
 
-[sub_resource type="Resource" id="Resource_uwtja"]
+[sub_resource type="Resource" id="Resource_jssik"]
 script = ExtResource("2_61rte")
 sector = 3
 
 [resource]
 script = ExtResource("1_hacvp")
 city_name = "Viana do Castelo"
+map_position = Vector3(-1.0695024, 0.6160481, -8.250099)
 description = "At the mouth of the Lima River, Viana do Castelo faces the Atlantic beneath the green hills of the Minho. Its harbour, fishing traditions and maritime industries have sustained centuries of commerce, while its historic centre reflects the wealth accumulated through trade and overseas connections. The surrounding countryside is fertile and densely settled, characterised by small farms, vineyards and strong communal traditions. Viana's maritime economy gives it a more outward-looking character than many inland towns, bringing merchants, shipowners and workers into contact with wider economic currents. Catholicism remains a powerful cultural force in the Minho, even as republican secularism challenges the Church's formal privileges. The town's political life is shaped by the familiar tension between conservative provincial society and the demands of a modernising commercial and working population."
+province_name = "Minho"
 population = 85778
-specializations = Array[ExtResource("2_61rte")]([SubResource("Resource_5squp"), SubResource("Resource_e1jxc"), SubResource("Resource_ap3a3"), SubResource("Resource_jssik"), SubResource("Resource_hutqd"), SubResource("Resource_uwtja")])
+specializations = Array[ExtResource("2_61rte")]([SubResource("Resource_hacvp"), SubResource("Resource_61rte"), SubResource("Resource_5squp"), SubResource("Resource_e1jxc"), SubResource("Resource_ap3a3"), SubResource("Resource_jssik")])
 density = 3
 society = 21702
 traits = Array[int]([1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13])

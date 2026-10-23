@@ -3,23 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_4j1xw"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_fbjlp"]
 
-[sub_resource type="Resource" id="Resource_chau0"]
+[sub_resource type="Resource" id="Resource_4j1xw"]
 script = ExtResource("2_fbjlp")
 
-[sub_resource type="Resource" id="Resource_jnjny"]
+[sub_resource type="Resource" id="Resource_fbjlp"]
 script = ExtResource("2_fbjlp")
 sector = 3
 
-[sub_resource type="Resource" id="Resource_woi0e"]
+[sub_resource type="Resource" id="Resource_chau0"]
 script = ExtResource("2_fbjlp")
 sector = 5
 
 [resource]
 script = ExtResource("1_4j1xw")
 city_name = "Bragança"
+map_position = Vector3(4.8502045, 0.6200257, -8.665115)
 description = "Far in Portugal’s northeastern reaches, Bragança stands amid rugged hills, cold winters and isolated villages. Its medieval citadel rises above a maze of stone houses, guarding a land shaped by border conflicts, rural hardship and enduring traditions. Livestock, farming and local trade sustain the population, while strong family ties bind communities scattered across the surrounding countryside. Distant from the political centres of Lisbon and Porto, Bragança preserves a stern, resilient character, where the harsh landscape and the memory of old struggles are never far away."
+province_name = "Trás-os-Montes"
 population = 38309
-specializations = Array[ExtResource("2_fbjlp")]([SubResource("Resource_chau0"), SubResource("Resource_jnjny"), SubResource("Resource_woi0e")])
+specializations = Array[ExtResource("2_fbjlp")]([SubResource("Resource_4j1xw"), SubResource("Resource_fbjlp"), SubResource("Resource_chau0")])
 density = 2
 society = 19904
 traits = Array[int]([0, 3, 4, 7, 9, 10, 11, 12])

@@ -17,7 +17,9 @@ sector = 4
 [resource]
 script = ExtResource("1_sr5of")
 city_name = "Penafiel"
+map_position = Vector3(0.70152783, 0.6200257, -6.42375)
 description = "Set amid the green hills and fertile valleys of the Minho and Douro borderlands, Penafiel is a prosperous provincial centre whose identity rests upon agriculture, local commerce and strong communal traditions. Its churches and religious festivities reflect the enduring influence of Catholicism, while its markets connect surrounding farming communities to the wider northern economy. The old landed families and local notables retain their social standing, though merchants, professionals and republican municipal figures increasingly participate in civic affairs. The Republic's secular reforms have challenged the Church's institutional privileges, but religious devotion remains deeply rooted among the population. Beyond the political turmoil of Lisbon, Penafiel represents a Portugal where inherited loyalties remain powerful and the prospect of change is approached with both curiosity and caution."
+province_name = "Douro Litoral"
 population = 69629
 specializations = Array[ExtResource("2_mt4kp")]([SubResource("Resource_6svyq"), SubResource("Resource_agovo"), SubResource("Resource_83dke")])
 density = 2

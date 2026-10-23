@@ -17,7 +17,9 @@ sector = 9
 [resource]
 script = ExtResource("1_6vejc")
 city_name = "Albufeira"
+map_position = Vector3(0.69237626, 0.6200257, 9.356073)
 description = "Albufeira is a modest fishing town shaped by the rhythms of the Atlantic. Fishing boats crowd its shores, while dried-fruit exports and small factories provide a living for its inhabitants. Women toil in the fish-processing trade, their labour essential to the local economy. Beyond the harbour, daily life follows familiar rhythms, grounded in family, faith and generations of coastal tradition. Here, the sea provides both livelihood and identity, while hardship remains an inseparable part of life along the Algarve coast."
+province_name = "Algarve"
 population = 44164
 specializations = Array[ExtResource("2_s40vh")]([SubResource("Resource_ms2jh"), SubResource("Resource_4iwmm"), SubResource("Resource_qwe7d")])
 density = 2

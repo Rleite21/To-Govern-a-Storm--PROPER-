@@ -17,7 +17,9 @@ sector = 7
 [resource]
 script = ExtResource("1_3gr1l")
 city_name = "Mafra"
+map_position = Vector3(-2.445207, 0.6200257, 2.1741896)
 description = "Dominated by its immense royal palace and convent, Mafra bears the imposing legacy of a monarchy that sought to express its authority through faith, architecture and magnificence. The surrounding countryside, with its farms and small settlements, remains attached to traditional Catholic observance and the rhythms of rural life. The Republic has abolished the political order that commissioned the palace, yet royalist sympathies and reverence for the old institutions have not disappeared from the region. Farmers, artisans and local proprietors navigate a changing political landscape in which secular education and republican administration challenge familiar loyalties. Mafra's monumental past stands as a reminder that Portugal's monarchy has fallen, but its memory remains alive."
+province_name = "Oeste"
 population = 86521
 specializations = Array[ExtResource("2_gii5h")]([SubResource("Resource_q6ks6"), SubResource("Resource_ogunu"), SubResource("Resource_5xfrr")])
 density = 2

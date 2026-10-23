@@ -2,8 +2,10 @@ extends Resource
 class_name CityData
 
 @export var city_name: String  # Nome da cidade
+@export var map_position: Vector3  # relativa à raiz do mapa (Portugal)
 @export_multiline var description: String  # Texto de apresentação
 @export var province_name: String  # Província a que pertence
+@export var tier: CityTier.Type = CityTier.Type.SMALL ## estatuto da cidade quanto a importancia regional
 @export var population: int  # População total
 @export var specializations: Array[SectorSpecialization] = []  # Setores especializados e prevalence
 @export var density: CityDensity.Level = CityDensity.Level.RURAL  # Nível de urbanização
