@@ -3,12 +3,10 @@ extends Node
 @onready var provinces := get_node_or_null("Provinces")
 @onready var cities := get_node_or_null("Cities")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Portugal initialized! Running routine checks...\n")
 	print("[MAIN]- Checking provinces...")
 	initialize_provinces()
-	
 
 func _process(delta: float) -> void:
 	pass

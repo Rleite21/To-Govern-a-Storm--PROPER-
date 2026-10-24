@@ -95,6 +95,8 @@
 [ext_resource type="Resource" uid="uid://bae2ob68mp0ub" path="res://Data/tres/Cities/Montalegre.tres" id="86_wmdql"]
 [ext_resource type="Resource" uid="uid://vig37yrowxjx" path="res://Data/tres/Cities/braganca.tres" id="87_xl2vh"]
 [ext_resource type="Resource" uid="uid://dyb16avgkj0mo" path="res://Data/tres/Cities/vila_real.tres" id="88_1txbo"]
+[ext_resource type="Script" uid="uid://c7yj6wogtp264" path="res://city_model_spawner.gd" id="96_4tpd2"]
+[ext_resource type="Resource" uid="uid://buwtujvkdo5y7" path="res://Data/tres/city_models.tres" id="97_3qrso"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1r18"]
 resource_name = "Edges"
@@ -1591,3 +1593,7 @@ data = ExtResource("88_1txbo")
 [node name="Vila Real" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Vila Real" unique_id=970867046]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5486746, 0.15500642, -1.73442)
 gizmo_extents = 0.15
+
+[node name="City_Spawner" type="Node" parent="Portugal" unique_id=1422882795]
+script = ExtResource("96_4tpd2")
+model_set = ExtResource("97_3qrso")
