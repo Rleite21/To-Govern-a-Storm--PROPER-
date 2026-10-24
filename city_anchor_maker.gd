@@ -1,90 +1,92 @@
 @tool
 extends EditorScript
 
-const CITIES_DIR := "res://Data/tres/Cities/"
-const DEBUG_LIMIT := 3  # imprime detalhes das primeiras N cidades
+# Replaces the MeshInstance3D(s) inside each city node with a Marker3D named after the city,
+# positioned at the geometry's center. The province's own mesh is never touched.
+# After running, save the scene (Ctrl+S).
 
 func _run() -> void:
 	var root := get_scene()
 	if root == null:
-		push_error("Abre a cena do mapa primeiro.")
+		push_error("Open the map scene first.")
 		return
 
-	# find_child procura em qualquer profundidade
 	var provinces := root.find_child("Provinces", true, false)
 	if provinces == null:
-		push_error("Não encontrei 'Provinces' na cena '%s'. Filhos diretos: %s" % [root.name, root.get_children()])
+		push_error("Couldn't find 'Provinces' in scene '%s'." % root.name)
 		return
 
-	# Se o pai de Provinces for Node3D, as coordenadas ficam relativas a ele;
-	# se for um Node simples (sem transform), usa-se o espaço global.
-	var inv := Transform3D.IDENTITY
-	var portugal := provinces.get_parent() as Node3D
-	if portugal != null:
-		inv = portugal.global_transform.affine_inverse()
-
-	var updated := 0
+	var replaced := 0
+	var skipped := 0
 	var problems := 0
-	var debugged := 0
+	var province_meshes_ignored := 0
 
 	for province in provinces.get_children():
-		for child in province.get_children():
-			if child is MeshInstance3D or not child is Node3D:
-				continue  # mesh da própria província
+		for city in province.get_children():
+			# The province's own mesh is a direct MeshInstance3D child: never touch it.
+			if city is MeshInstance3D:
+				province_meshes_ignored += 1
+				continue
+			# Cities are plain Node3D children; ignore anything else.
+			if not city is Node3D:
+				continue
 
-			if debugged < DEBUG_LIMIT:
-				_debug_city(child)
-				debugged += 1
+			# Already converted in a previous run?
+			if _has_marker(city):
+				skipped += 1
+				continue
 
-			var path := CITIES_DIR + String(child.name).validate_filename() + ".tres"
-			if not ResourceLoader.exists(path):
-				push_warning("Sem .tres para '%s'" % child.name)
+			# Only searches INSIDE this city node, so the province mesh (a sibling) is never included.
+			var meshes := city.find_children("*", "MeshInstance3D", true, false)
+			var center = _center_of_meshes(meshes)
+			if center == null:
+				push_warning("'%s': no mesh with valid geometry, skipped" % city.name)
 				problems += 1
 				continue
 
-			var centro = _center_of_city(child, inv)
-			if centro == null:
-				push_warning("'%s': sem MeshInstance3D com geometria válida" % child.name)
-				problems += 1
-				continue
+			# Delete the city's meshes (free immediately so the name is available)
+			for m in meshes:
+				var mi := m as Node
+				# Safety: never delete anything that isn't inside this city
+				if not city.is_ancestor_of(mi):
+					push_error("Refusing to delete '%s': not inside city '%s'" % [mi.get_path(), city.name])
+					continue
+				if mi.get_parent() != null:
+					mi.get_parent().remove_child(mi)
+				mi.free()
 
-			var data := ResourceLoader.load(path) as CityData
-			if data == null:
-				push_warning("'%s': não consegui carregar %s como CityData" % [child.name, path])
-				problems += 1
-				continue
+			# Create the marker named after the city
+			var marker := Marker3D.new()
+			marker.name = city.name
+			marker.gizmo_extents = 0.15
+			city.add_child(marker)
+			marker.owner = root  # needed so it's saved with the scene
+			marker.global_position = center
+			replaced += 1
 
-			data.map_position = centro
-			data.province_name = String(province.name)
-			print("%s -> centro calculado: %s" % [child.name, centro])
+	EditorInterface.mark_scene_as_unsaved()
+	print("Markers created: %d | already converted: %d | problems: %d | province meshes left untouched: %d"
+		% [replaced, skipped, problems, province_meshes_ignored])
+	print("Save the scene (Ctrl+S) to keep the changes.")
 
-			var err := ResourceSaver.save(data, path)
-			if err != OK:
-				push_error("Erro %d ao guardar %s" % [err, path])
-				problems += 1
-			else:
-				updated += 1
-				var check := ResourceLoader.load(path, "", ResourceLoader.CACHE_MODE_IGNORE) as CityData
-				print("   guardado no disco: %s" % check.map_position)
+func _has_marker(city: Node) -> bool:
+	for c in city.get_children():
+		if c is Marker3D:
+			return true
+	return false
 
-	EditorInterface.get_resource_filesystem().scan()
-	print("Posições atualizadas: %d, com problemas: %d" % [updated, problems])
-
-# Centro da geometria da cidade, já em espaço do Portugal (ou global, se não houver transform).
-# Junta os AABBs de todas as MeshInstance3D dentro do node da cidade.
-# Devolve null se não houver nenhuma mesh válida.
-func _center_of_city(city: Node3D, inv: Transform3D) -> Variant:
+# Center of the combined AABB (in global space) of all given meshes.
+func _center_of_meshes(meshes: Array) -> Variant:
 	var merged := AABB()
 	var first := true
-	for m in city.find_children("*", "MeshInstance3D", true, false):
+	for m in meshes:
 		var mi := m as MeshInstance3D
 		if mi.mesh == null:
 			continue
 		var local_aabb := mi.get_aabb()
 		if local_aabb.size == Vector3.ZERO:
 			continue
-		# AABB local da mesh -> espaço do Portugal
-		var aabb: AABB = (inv * mi.global_transform) * local_aabb
+		var aabb: AABB = mi.global_transform * local_aabb
 		if first:
 			merged = aabb
 			first = false
@@ -93,16 +95,3 @@ func _center_of_city(city: Node3D, inv: Transform3D) -> Variant:
 	if first:
 		return null
 	return merged.get_center()
-
-func _debug_city(city: Node3D) -> void:
-	print("--- %s (%s) ---" % [city.name, city.get_class()])
-	var meshes := city.find_children("*", "MeshInstance3D", true, false)
-	print("MeshInstance3D encontradas: %d" % meshes.size())
-	for m in meshes:
-		var mi := m as MeshInstance3D
-		print("  %s | mesh: %s | aabb: %s | global_pos: %s" % [
-			mi.get_path(),
-			mi.mesh.get_class() if mi.mesh else "null",
-			mi.get_aabb(),
-			mi.global_position,
-		])
