@@ -3,29 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_1t2no"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_no56u"]
 
-[sub_resource type="Resource" id="Resource_1t2no"]
-script = ExtResource("2_no56u")
-sector = 5
-
-[sub_resource type="Resource" id="Resource_no56u"]
-script = ExtResource("2_no56u")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_sjgl4"]
-script = ExtResource("2_no56u")
-sector = 7
-
-[sub_resource type="Resource" id="Resource_syh7a"]
-script = ExtResource("2_no56u")
-
 [resource]
 script = ExtResource("1_1t2no")
 city_name = "Castelo Branco"
 map_position = Vector3(0.73074645, 0.15500644, -0.29863948)
 description = "Set amid the rugged landscapes of the Beiras, Castelo Branco is a town of stone streets, fortified heights and sun-baked countryside. Its historic gardens, adorned with elaborate stone statues and intricate ornamental hedges, recall the influence of noble families who once shaped the region. Agriculture, livestock and local trade sustain the surrounding communities, where summers bring relentless heat and rural life demands resilience. Far from the bustle of the coast, Castelo Branco endures as a stronghold of provincial tradition, where old customs persist beneath the weight of an uncertain political age."
 province_name = "Beira Baixa"
+tier = 2
 population = 58197
-specializations = Array[ExtResource("2_no56u")]([SubResource("Resource_1t2no"), SubResource("Resource_no56u"), SubResource("Resource_sjgl4"), SubResource("Resource_syh7a")])
 density = 2
 society = 1472
 traits = Array[int]([12, 11, 0])

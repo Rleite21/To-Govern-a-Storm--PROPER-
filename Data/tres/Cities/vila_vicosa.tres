@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dktbx1a7jw87p"]
-
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_knrcd"]
-
-[resource]
-script = ExtResource("1_knrcd")
-city_name = "Vila Viçosa"

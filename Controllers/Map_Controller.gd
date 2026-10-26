@@ -66,4 +66,4 @@ func _select_city(city: City) -> void:
 		return
 	selected_province = null  # só um pode estar selecionado
 	selected_city = city
-	print("City selected: ", city.city_name)
+	print("City selected: ", city.city_name, " ", )

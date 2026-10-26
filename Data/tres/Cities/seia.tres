@@ -3,16 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_6h5v7"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_c4s36"]
 
-[sub_resource type="Resource" id="Resource_salhf"]
-script = ExtResource("2_c4s36")
-
 [resource]
 script = ExtResource("1_6h5v7")
 city_name = "Seia"
 map_position = Vector3(0.51589906, 0.15500642, -0.78985304)
 description = "Nestled on the northern slopes of the Serra da Estrela, Seia looks towards Portugal's highest mainland mountains, where harsh winters, steep valleys and scattered settlements shape a demanding rural existence. Sheep farming, dairy production, wool working and mountain agriculture sustain the local economy, while traditional crafts connect its inhabitants to wider regional markets. Catholic festivals and village customs remain central to communal life, and the influence of the clergy and established local families is considerable. The Republic's promises of secular education and modern administration are tempered by the realities of poverty, difficult transport and seasonal work. For many residents, political ideologies matter less than land, family and livelihood. Yet the growth of commerce and industry in the surrounding region slowly introduces new social aspirations into this mountain society."
 province_name = "Beira Baixa"
+tier = 2
 population = 21597
-specializations = Array[ExtResource("2_c4s36")]([SubResource("Resource_salhf")])
 society = 14464
 traits = Array[int]([10])

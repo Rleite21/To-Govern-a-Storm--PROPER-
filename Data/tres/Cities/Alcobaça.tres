@@ -3,21 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_jl772"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_vxtpa"]
 
-[sub_resource type="Resource" id="Resource_jl772"]
-script = ExtResource("2_vxtpa")
-sector = 7
-
-[sub_resource type="Resource" id="Resource_vxtpa"]
-script = ExtResource("2_vxtpa")
-
 [resource]
 script = ExtResource("1_jl772")
 city_name = "Alcobaça"
 map_position = Vector3(-0.44818214, 0.15500642, -0.0006095134)
 description = "Dominating the town, the great Monastery of Alcobaça stands as a monument to the power of faith, monarchy and the religious orders that once shaped Portugal. The Republic’s secular reforms have challenged that legacy, but the monastery remains woven into the identity of the town. Beyond its walls, farmers, merchants and artisans carry on their daily trades. Old beliefs and new ideals coexist uneasily, leaving Alcobaça caught between a sacred past and a changing present."
 province_name = "Oeste"
+tier = 2
 population = 54965
-specializations = Array[ExtResource("2_vxtpa")]([SubResource("Resource_jl772"), SubResource("Resource_vxtpa")])
 density = 2
 society = 3330
 traits = Array[int]([6, 0, 11, 9])

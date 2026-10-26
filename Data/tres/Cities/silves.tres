@@ -3,16 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_43gpb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_irnrt"]
 
-[sub_resource type="Resource" id="Resource_arspn"]
-script = ExtResource("2_irnrt")
-
 [resource]
 script = ExtResource("1_43gpb")
 city_name = "Silves"
 map_position = Vector3(0.0033492409, 0.15500642, 2.2243257)
 description = "Once a flourishing centre of Islamic al-Andalus, Silves preserves the memory of a very different Algarve beneath its imposing red sandstone castle. Situated along the Arade River, the town is surrounded by orchards, particularly citrus groves, and an agricultural landscape that has long sustained local commerce. Its medieval walls and historic churches recall successive layers of conquest, settlement and religious transformation. In the 1920s, Silves remains principally a provincial agricultural centre, where landowners, merchants and small farmers shape the local economy. Catholicism is deeply rooted in communal life, while the Republic's secular reforms remain a source of tension between traditional institutions and modernising officials. The town's ancient grandeur contrasts with the modest pace of contemporary life, preserving the memory of Portugal's layered past amid the uncertainties of the present."
 province_name = "Algarve"
+tier = 2
 population = 38239
-specializations = Array[ExtResource("2_irnrt")]([SubResource("Resource_arspn")])
 society = 2432
 traits = Array[int]([0, 10])

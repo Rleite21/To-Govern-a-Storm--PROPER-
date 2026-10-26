@@ -3,34 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_27yi2"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_na15e"]
 
-[sub_resource type="Resource" id="Resource_7hkr6"]
-script = ExtResource("2_na15e")
-sector = 1
-
-[sub_resource type="Resource" id="Resource_1jkdd"]
-script = ExtResource("2_na15e")
-sector = 2
-
-[sub_resource type="Resource" id="Resource_q1phb"]
-script = ExtResource("2_na15e")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_ji0x6"]
-script = ExtResource("2_na15e")
-sector = 5
-
-[sub_resource type="Resource" id="Resource_uvyej"]
-script = ExtResource("2_na15e")
-sector = 7
-
 [resource]
 script = ExtResource("1_27yi2")
 city_name = "Braga"
 map_position = Vector3(-0.009927094, 0.15500642, -1.952796)
 description = "One of Portugal’s oldest religious centres, Braga is a city of towering churches, ancient streets and solemn processions. The bells of its cathedral ring over granite façades and crowded markets, while the clergy retain considerable influence over local society. Beyond the city, the green hills of Minho are dotted with farms, vineyards and traditional villages. Despite the Republic’s efforts to diminish the Church’s power, faith remains woven into the fabric of Braga, shaping its festivals, customs and the lives of its inhabitants"
 province_name = "Minho"
+tier = 1
 population = 212635
-specializations = Array[ExtResource("2_na15e")]([SubResource("Resource_7hkr6"), SubResource("Resource_1jkdd"), SubResource("Resource_q1phb"), SubResource("Resource_ji0x6"), SubResource("Resource_uvyej")])
 density = 3
 society = 5334
 traits = Array[int]([0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])

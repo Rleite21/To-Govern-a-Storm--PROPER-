@@ -3,16 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_1a224"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_45yte"]
 
-[sub_resource type="Resource" id="Resource_2hgnm"]
-script = ExtResource("2_45yte")
-
 [resource]
 script = ExtResource("1_1a224")
 city_name = "Tondela"
 map_position = Vector3(0.31286588, 0.15500642, -0.98481196)
 description = "Situated in the rolling countryside of the Beira Alta, Tondela is surrounded by vineyards, pinewoods, small farms and villages connected by the roads of Portugal's interior. Its economy rests upon agriculture, livestock and regional commerce, while its markets serve communities whose lives remain closely tied to the land. The old social order is sustained by local proprietors, municipal notables and the Catholic Church, whose influence remains substantial despite the Republic's secular legislation. Republican officials and professionals advocate improvements in schooling, infrastructure and administration, but the effects of national reform are uneven across the countryside. For farmers and labourers, harvests, prices and access to markets often matter more than the political fortunes of Lisbon. Tondela represents the enduring provincial character of central Portugal, where modernisation advances gradually through a society still governed by tradition."
 province_name = "Beira Alta"
+tier = 2
 population = 25914
-specializations = Array[ExtResource("2_45yte")]([SubResource("Resource_2hgnm")])
 society = 6272
 traits = Array[int]([0, 10])

@@ -3,27 +3,12 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_6rb54"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_cd1t2"]
 
-[sub_resource type="Resource" id="Resource_6rb54"]
-script = ExtResource("2_cd1t2")
-
-[sub_resource type="Resource" id="Resource_cd1t2"]
-script = ExtResource("2_cd1t2")
-sector = 7
-
-[sub_resource type="Resource" id="Resource_7goty"]
-script = ExtResource("2_cd1t2")
-sector = 5
-
-[sub_resource type="Resource" id="Resource_1kp8t"]
-script = ExtResource("2_cd1t2")
-sector = 3
-
 [resource]
 script = ExtResource("1_6rb54")
 city_name = "Santarém"
 description = "Rising above the fertile plains of the Tagus, Santarém is an ancient town whose Gothic churches, medieval streets and commanding position recall centuries of royal and military importance. Its surrounding lezíria is among Portugal's richest agricultural landscapes, sustaining grain production, livestock and commercial estates that tie local prosperity to the fortunes of the countryside. The town's landowners and professional classes retain considerable influence, while agricultural labourers face the familiar inequalities of rural society. Republicanism has a visible place in municipal life, but the Catholic Church continues to shape social customs and conservative opinion. The proximity of Lisbon brings Santarém into closer contact with national politics, even as its economic and cultural identity remains anchored in the agricultural wealth of the Tagus valley."
+tier = 2
 population = 69392
-specializations = Array[ExtResource("2_cd1t2")]([SubResource("Resource_6rb54"), SubResource("Resource_cd1t2"), SubResource("Resource_7goty"), SubResource("Resource_1kp8t")])
 density = 2
 society = 34
 traits = Array[int]([14, 12, 11, 10, 6, 7])

@@ -3,26 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_sj80j"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_u5g7t"]
 
-[sub_resource type="Resource" id="Resource_dgax6"]
-script = ExtResource("2_u5g7t")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_llydl"]
-script = ExtResource("2_u5g7t")
-sector = 2
-
-[sub_resource type="Resource" id="Resource_8mnxn"]
-script = ExtResource("2_u5g7t")
-sector = 5
-
 [resource]
 script = ExtResource("1_sj80j")
 city_name = "Cascais"
 map_position = Vector3(-0.7443462, 0.15500642, 0.7928146)
 description = "Once a humble fishing settlement, Cascais has grown into a fashionable coastal retreat for wealthy families and members of Portugal’s former aristocracy. Fishing boats still crowd the harbour, and local fishermen continue their daily struggle against the Atlantic, while elegant villas and seaside promenades reveal the growing influence of Lisbon’s elite. Beneath the sunlit façades lies a town divided between those who profit from its prestige and those who earn their living from the sea. Here, the old maritime world and the privileges of wealth meet along a restless coastline."
 province_name = "Oeste"
+tier = 1
 population = 222339
-specializations = Array[ExtResource("2_u5g7t")]([SubResource("Resource_dgax6"), SubResource("Resource_llydl"), SubResource("Resource_8mnxn")])
 density = 3
 society = 570
 traits = Array[int]([2, 3, 6, 7, 8, 9, 10, 11, 14])

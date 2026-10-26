@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://o87ddb46gf3t"]
-
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_mwluw"]
-
-[resource]
-script = ExtResource("1_mwluw")
-city_name = "Vila Nova de Foz Côa"

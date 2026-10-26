@@ -1,24 +1,14 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://b4bdfh2vre5ls"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cppq1mve76qpu"]
 
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2icsx"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_61xaq"]
-
-[sub_resource type="Resource" id="Resource_2icsx"]
-script = ExtResource("2_61xaq")
-
-[sub_resource type="Resource" id="Resource_61xaq"]
-script = ExtResource("2_61xaq")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_vq37y"]
-script = ExtResource("2_61xaq")
-sector = 7
 
 [resource]
 script = ExtResource("1_2icsx")
 city_name = "Mealhada"
 description = "Set amid the fertile countryside between Coimbra and Aveiro, Mealhada owes much of its character to agriculture, roadside commerce and the movement of travellers along the region's important transport routes. Vineyards, farms and local businesses sustain a community increasingly connected to the wider economy. The town's reputation for food and hospitality reflects a provincial culture in which family, parish and local custom remain powerful institutions. Republican administration has brought new expectations of public education and civic life, yet Catholic influence continues to command respect among many residents. Merchants and landowners generally favour order and dependable trade, while agricultural labourers face the familiar uncertainties of wages, harvests and rising prices."
+tier = 2
 population = 19948
-specializations = Array[ExtResource("2_61xaq")]([SubResource("Resource_2icsx"), SubResource("Resource_61xaq"), SubResource("Resource_vq37y")])
 density = 2
 society = 448
+traits = Array[int]([0, 6, 11, 10])

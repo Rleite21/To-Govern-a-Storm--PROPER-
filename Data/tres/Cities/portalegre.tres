@@ -3,21 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ye5om"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ugemt"]
 
-[sub_resource type="Resource" id="Resource_82ky0"]
-script = ExtResource("2_ugemt")
-
-[sub_resource type="Resource" id="Resource_afalj"]
-script = ExtResource("2_ugemt")
-sector = 4
-
 [resource]
 script = ExtResource("1_ye5om")
 city_name = "Portalegre"
 map_position = Vector3(0.7226556, 0.15500642, 0.25266618)
 description = "ituated on the slopes of the Serra de São Mamede, Portalegre commands a landscape of wooded hills, agricultural estates and routes linking the Alentejo to the Spanish frontier. Its identity is shaped by textile production, regional commerce and the surrounding countryside, where large landholdings coexist with the precarious livelihoods of agricultural labourers. The town's workshops and manufacturing establishments give it a more varied social character than many rural settlements, bringing employers, artisans and wage workers into closer contact. Republican ideas find support among sections of the urban middle classes, while Catholic traditions and conservative proprietors remain influential. Beneath the apparent calm of provincial life lies the same unresolved question confronting the Republic: whether political modernisation can improve the condition of ordinary people without provoking a deeper struggle over property, labour and authority."
 province_name = "Alto Alentejo"
+tier = 2
 population = 22368
-specializations = Array[ExtResource("2_ugemt")]([SubResource("Resource_82ky0"), SubResource("Resource_afalj")])
 density = 2
 society = 2374
 traits = Array[int]([12, 11, 10, 0, 1])

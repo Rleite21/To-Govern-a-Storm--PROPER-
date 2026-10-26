@@ -3,20 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_21dfo"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_tlpqx"]
 
-[sub_resource type="Resource" id="Resource_21dfo"]
-script = ExtResource("2_tlpqx")
-
-[sub_resource type="Resource" id="Resource_tlpqx"]
-script = ExtResource("2_tlpqx")
-sector = 3
-
 [resource]
 script = ExtResource("1_21dfo")
 city_name = "Fátima"
 map_position = Vector3(-0.12612277, 0.15500642, -0.052298035)
 description = "A modest rural settlement surrounded by fields, olive groves, and dusty roads, Fátima has become a destination for pilgrims since the reported apparitions of 1917. For many Catholics, the events offer hope in a country unsettled by revolution, anticlerical laws, and the decline of the monarchy that once stood closely beside the Church. Others regard the growing devotion with suspicion, seeing superstition where the faithful see divine intervention. As pilgrims arrive, the quiet countryside becomes a stage for a wider struggle over faith, authority, and the soul of the Republic."
 province_name = "Beira Litoral"
+tier = 2
 population = 13224
-specializations = Array[ExtResource("2_tlpqx")]([SubResource("Resource_21dfo"), SubResource("Resource_tlpqx")])
 society = 1280
 traits = Array[int]([6, 11])

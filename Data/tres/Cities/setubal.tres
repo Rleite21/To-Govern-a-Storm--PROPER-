@@ -1,7 +1,0 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://blkt8bdbp4wgm"]
-
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2q72t"]
-
-[resource]
-script = ExtResource("1_2q72t")
-city_name = "Setúbal"

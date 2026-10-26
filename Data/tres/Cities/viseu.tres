@@ -3,25 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_nlguy"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_kgs3f"]
 
-[sub_resource type="Resource" id="Resource_c2uy2"]
-script = ExtResource("2_kgs3f")
-
-[sub_resource type="Resource" id="Resource_r7lku"]
-script = ExtResource("2_kgs3f")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_tcflu"]
-script = ExtResource("2_kgs3f")
-sector = 5
-
 [resource]
 script = ExtResource("1_nlguy")
 city_name = "Viseu"
 map_position = Vector3(0.3870449, 0.15500642, -1.1715645)
 description = "Set among the granite hills and vineyards of the Beira Alta, Viseu is an old episcopal city whose historic streets and religious monuments testify to centuries of ecclesiastical and regional importance. Its position at the crossroads of inland routes makes it a commercial centre for surrounding agricultural communities, whose livelihoods depend upon vineyards, livestock and small-scale farming. The Catholic Church retains considerable social prestige, and conservative values remain influential among landowners and established families. Yet the Republic has created new opportunities for municipal officials, teachers and professionals who favour secular education and administrative reform. Viseu's political climate is therefore one of cautious negotiation between inherited institutions and the ambitions of a new civic order. Removed from the tumult of the capital, it remains an important centre of regional identity, balancing religious tradition, commerce and the gradual advance of modern politics."
 province_name = "Beira Alta"
+tier = 2
 population = 109166
-specializations = Array[ExtResource("2_kgs3f")]([SubResource("Resource_c2uy2"), SubResource("Resource_r7lku"), SubResource("Resource_tcflu")])
 density = 3
 society = 1472
 traits = Array[int]([0, 4, 9, 10, 11, 12])

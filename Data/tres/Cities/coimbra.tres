@@ -3,26 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ukxg4"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_omba4"]
 
-[sub_resource type="Resource" id="Resource_felmp"]
-script = ExtResource("2_omba4")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_8l7sm"]
-script = ExtResource("2_omba4")
-sector = 5
-
-[sub_resource type="Resource" id="Resource_w6anp"]
-script = ExtResource("2_omba4")
-sector = 7
-
 [resource]
 script = ExtResource("1_ukxg4")
 city_name = "Coimbra"
 map_position = Vector3(-0.005264282, 0.15500642, -0.6575407)
 description = "Rising above the Mondego River, Coimbra is a city of ancient stone walls, steep lanes and centuries of intellectual tradition. Its historic university draws students and scholars from across Portugal, filling the streets with lively debates, academic rivalries and youthful restlessness. In lecture halls and crowded taverns, ideas are exchanged, reputations challenged and long-held customs questioned. The university gives the city an unmistakable energy, where the curiosity of the students' black capes and traditions often brings generations into disagreement. Beyond its scholarly quarters, churches, monasteries and working-class neighbourhoods reflect the varied lives of its inhabitants. In Coimbra, knowledge commands respect, but a sharp mind and a stubborn spirit rarely allow things to remain unquestioned."
 province_name = "Beira Litoral"
+tier = 1
 population = 146899
-specializations = Array[ExtResource("2_omba4")]([SubResource("Resource_felmp"), SubResource("Resource_8l7sm"), SubResource("Resource_w6anp")])
 density = 3
 society = 2902
-traits = Array[int]([3, 4, 5, 6, 8, 10, 11, 12, 13, 14])
+traits = Array[int]([3, 4, 5, 6, 8, 10, 11, 12, 15, 14])

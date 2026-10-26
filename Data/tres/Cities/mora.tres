@@ -3,13 +3,6 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3b1hp"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_71c1m"]
 
-[sub_resource type="Resource" id="Resource_q4snd"]
-script = ExtResource("2_71c1m")
-
-[sub_resource type="Resource" id="Resource_6phub"]
-script = ExtResource("2_71c1m")
-sector = 4
-
 [resource]
 script = ExtResource("1_3b1hp")
 city_name = "Mora"
@@ -17,7 +10,6 @@ map_position = Vector3(0.23028722, 0.15500642, 0.5629674)
 description = "Set within the rolling plains and cork-oak country of the Alentejo, Mora is a rural municipality whose fortunes depend on grain, livestock, cork and the labour of the surrounding countryside. The landscape is broad and exposed, its agricultural wealth contrasting with the modest means of many who work the land. Large estates and established local families exercise considerable economic influence, while seasonal workers remain vulnerable to low wages and insecurity. The Church retains a place in communal life, even as republican secularism has altered its formal standing. Labour agitation and socialist ideas find fertile ground wherever rural hardship sharpens class divisions, though local politics remains shaped as much by patronage and personal loyalties as by party doctrine."
 province_name = "Alto Alentejo"
 population = 4143
-specializations = Array[ExtResource("2_71c1m")]([SubResource("Resource_q4snd"), SubResource("Resource_6phub")])
 density = 0
 society = 8450
 traits = Array[int]([0, 10, 1])

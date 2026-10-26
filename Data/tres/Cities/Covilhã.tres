@@ -3,20 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fahgj"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_7xvwf"]
 
-[sub_resource type="Resource" id="Resource_fahgj"]
-script = ExtResource("2_7xvwf")
-
-[sub_resource type="Resource" id="Resource_7xvwf"]
-script = ExtResource("2_7xvwf")
-sector = 7
-
 [resource]
 script = ExtResource("1_fahgj")
 city_name = "Covilhã"
 map_position = Vector3(0.7503732, 0.15500642, -0.78321046)
 description = "Climbing the steep slopes of the Serra da Estrela, Covilhã is a town built on wool, water and hard labour. Its textile mills and workshops transform wool from the surrounding mountains into cloth, their machinery and smoke marking the town as one of Portugal’s important industrial centres. Workers endure long hours in crowded factories, while merchants and mill owners profit from the growing textile trade. Beyond the industrial streets, mountain villages cling to old traditions beneath the imposing peaks. In Covilhã, the demands of industry collide with the harsh realities of working-class life."
 province_name = "Beira Baixa"
+tier = 2
 population = 51045
-specializations = Array[ExtResource("2_7xvwf")]([SubResource("Resource_fahgj"), SubResource("Resource_7xvwf")])
 society = 8640
 traits = Array[int]([1, 11, 10])

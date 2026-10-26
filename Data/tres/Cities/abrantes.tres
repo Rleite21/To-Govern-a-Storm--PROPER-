@@ -3,17 +3,6 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_bw7j5"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_5rypf"]
 
-[sub_resource type="Resource" id="Resource_kxrjm"]
-script = ExtResource("2_5rypf")
-
-[sub_resource type="Resource" id="Resource_ocxiv"]
-script = ExtResource("2_5rypf")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_bitvd"]
-script = ExtResource("2_5rypf")
-sector = 1
-
 [resource]
 script = ExtResource("1_bw7j5")
 city_name = "Abrantes"
@@ -22,7 +11,6 @@ description = "Perched above the Tagus Valley, Abrantes stands between Portugalâ
 province_name = "Ribatejo"
 tier = 2
 population = 34329
-specializations = Array[ExtResource("2_5rypf")]([SubResource("Resource_kxrjm"), SubResource("Resource_ocxiv"), SubResource("Resource_bitvd")])
 density = 2
 society = 2368
 traits = Array[int]([0, 11, 12, 5, 6])

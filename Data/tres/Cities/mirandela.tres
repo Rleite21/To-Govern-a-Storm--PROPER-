@@ -3,21 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_d4ax0"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_s8jpt"]
 
-[sub_resource type="Resource" id="Resource_jcmj0"]
-script = ExtResource("2_s8jpt")
-
-[sub_resource type="Resource" id="Resource_2d54t"]
-script = ExtResource("2_s8jpt")
-sector = 3
-
 [resource]
 script = ExtResource("1_d4ax0")
 city_name = "Mirandela"
 map_position = Vector3(0.7960056, 0.15500642, -1.8389313)
 description = "In the fertile valleys of the Tua and the wider landscapes of northeastern Portugal, Mirandela serves as an agricultural market town surrounded by olive groves, orchards and fields. Its prosperity rests upon rural production and the trade that links isolated communities to regional centres. The social order remains shaped by landowners, merchants and the Church, although the growth of transport connections and commercial activity encourages a more outward-looking local bourgeoisie. Republican politics has weakened the old formal authority of the monarchy, but it has not erased conservative loyalties or the influence of religious life. In this distant corner of the Republic, national upheavals are filtered through the practical concerns of land, prices, harvests and local authority."
 province_name = "Trás-os-Montes"
+tier = 2
 population = 21284
-specializations = Array[ExtResource("2_s8jpt")]([SubResource("Resource_jcmj0"), SubResource("Resource_2d54t")])
 density = 2
 society = 6336
 traits = Array[int]([12, 11, 0, 10])

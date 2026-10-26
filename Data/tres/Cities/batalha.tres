@@ -3,16 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_emi1d"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_v5xuu"]
 
-[sub_resource type="Resource" id="Resource_sf10g"]
-script = ExtResource("2_v5xuu")
-
 [resource]
 script = ExtResource("1_emi1d")
 city_name = "Batalha"
 map_position = Vector3(-0.30540875, 0.15500642, -0.103741705)
 description = "Batalha stands beneath the shadow of its magnificent monastery, a monument to the victory that secured Portugal’s independence from Castile. Its soaring Gothic arches and intricate stonework speak of kings, warriors and generations of devoted craftsmen. Beyond the monastery, the surrounding countryside is a patchwork of farms, villages and limestone hills, where life moves to the rhythm of the seasons. Here, the glories of the medieval kingdom remain etched in stone, while ordinary people carry on beneath their weighty legacy."
 province_name = "Beira Litoral"
+tier = 2
 population = 15557
-specializations = Array[ExtResource("2_v5xuu")]([SubResource("Resource_sf10g")])
 society = 3328
 traits = Array[int]([0, 4, 11])

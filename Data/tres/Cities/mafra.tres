@@ -3,24 +3,14 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3gr1l"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_gii5h"]
 
-[sub_resource type="Resource" id="Resource_q6ks6"]
-script = ExtResource("2_gii5h")
-sector = 5
-
-[sub_resource type="Resource" id="Resource_ogunu"]
-script = ExtResource("2_gii5h")
-
-[sub_resource type="Resource" id="Resource_5xfrr"]
-script = ExtResource("2_gii5h")
-sector = 7
-
 [resource]
 script = ExtResource("1_3gr1l")
 city_name = "Mafra"
 map_position = Vector3(-0.6113018, 0.15500642, 0.5435474)
 description = "Dominated by its immense royal palace and convent, Mafra bears the imposing legacy of a monarchy that sought to express its authority through faith, architecture and magnificence. The surrounding countryside, with its farms and small settlements, remains attached to traditional Catholic observance and the rhythms of rural life. The Republic has abolished the political order that commissioned the palace, yet royalist sympathies and reverence for the old institutions have not disappeared from the region. Farmers, artisans and local proprietors navigate a changing political landscape in which secular education and republican administration challenge familiar loyalties. Mafra's monumental past stands as a reminder that Portugal's monarchy has fallen, but its memory remains alive."
 province_name = "Oeste"
+tier = 2
 population = 86521
-specializations = Array[ExtResource("2_gii5h")]([SubResource("Resource_q6ks6"), SubResource("Resource_ogunu"), SubResource("Resource_5xfrr")])
 density = 2
 society = 1280
+traits = Array[int]([0, 5, 10])

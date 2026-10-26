@@ -3,20 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_siwk2"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_p3j3x"]
 
-[sub_resource type="Resource" id="Resource_jo1y3"]
-script = ExtResource("2_p3j3x")
-sector = 3
-
-[sub_resource type="Resource" id="Resource_ot6sj"]
-script = ExtResource("2_p3j3x")
-
 [resource]
 script = ExtResource("1_siwk2")
 city_name = "Elvas"
 map_position = Vector3(0.9753296, 0.15500642, 0.6106795)
 description = "Rising from the plains of the Alentejo, Elvas stands as one of Portugal’s great frontier strongholds. Its immense star-shaped fortifications, bastions and guarded gates bear witness to centuries of conflict with neighbouring Spain. Within the fortified walls, merchants, soldiers and craftsmen move through narrow streets lined with whitewashed houses, while the surrounding fields sustain a largely agricultural population. The memory of past sieges lingers in the stonework, and the nearby border ensures that military vigilance remains part of everyday life. In Elvas, peace is precious, but never taken for granted."
 province_name = "Alto Alentejo"
+tier = 2
 population = 21929
-specializations = Array[ExtResource("2_p3j3x")]([SubResource("Resource_jo1y3"), SubResource("Resource_ot6sj")])
 society = 2306
 traits = Array[int]([0, 4, 5, 11, 10])

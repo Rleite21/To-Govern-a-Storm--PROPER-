@@ -3,16 +3,13 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_cjh32"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_lkn77"]
 
-[sub_resource type="Resource" id="Resource_cjh32"]
-script = ExtResource("2_lkn77")
-
 [resource]
 script = ExtResource("1_cjh32")
 city_name = "Fundão"
 map_position = Vector3(0.7075547, 0.15500642, -0.60429025)
 description = "Nestled between the slopes of the Serra da Gardunha and the vast heights of the Serra da Estrela, Fundão is a fertile town known for its orchards, vineyards and agricultural markets. Cherry trees flourish across the surrounding countryside, while farmers cultivate the land beneath the shadow of the mountains. Local commerce connects scattered rural communities, though life remains governed by the seasons and the demands of agricultural labour. Fundão is a place where the richness of the soil stands in contrast to the hardships of mountain life."
 province_name = "Beira Baixa"
+tier = 2
 population = 27754
-specializations = Array[ExtResource("2_lkn77")]([SubResource("Resource_cjh32")])
 society = 14528
 traits = Array[int]([0, 10])
