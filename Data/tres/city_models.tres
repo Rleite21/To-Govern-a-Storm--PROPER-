@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cf6snldqgi5sv" path="res://glb/City_Capital.glb" id="1_agym1"]
 [ext_resource type="Script" uid="uid://cuoso1d123bi7" path="res://Data/Data Scripts/city_model_set.gd" id="1_l2dnh"]
-[ext_resource type="PackedScene" uid="uid://i4o1m1g3xejf" path="res://glb/Medium_City.glb" id="2_onw6f"]
-[ext_resource type="PackedScene" uid="uid://h8302vqtdfhi" path="res://glb/Large_City.glb" id="3_tcenl"]
-[ext_resource type="PackedScene" uid="uid://dja7p85xy4fg4" path="res://glb/Small_City.glb" id="5_8t763"]
+[ext_resource type="PackedScene" uid="uid://srwpdq0xg8h8" path="res://glb/Medium_City.glb" id="2_onw6f"]
+[ext_resource type="PackedScene" uid="uid://dhc3sthfjjd11" path="res://glb/Large_City.glb" id="3_tcenl"]
+[ext_resource type="PackedScene" uid="uid://ky2ffngcy82k" path="res://glb/Small_City.glb" id="5_8t763"]
 
 [resource]
 script = ExtResource("1_l2dnh")
 capital = ExtResource("1_agym1")
-provincial_capital = ExtResource("3_tcenl")
+large = ExtResource("3_tcenl")
 medium = ExtResource("2_onw6f")
 small = ExtResource("5_8t763")
 metadata/_custom_type_script = "uid://cuoso1d123bi7"

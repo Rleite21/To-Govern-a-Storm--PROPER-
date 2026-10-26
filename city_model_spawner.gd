@@ -9,6 +9,7 @@ const MIN_CLICK_SIZE := Vector3(0.15, 0.15, 0.15)
 @export var generate_click_body := true
 
 @onready var provinces := get_parent().get_node_or_null("Provinces")
+@onready var map_root := get_parent() as Node3D
 
 func _ready() -> void:
 	spawn()
@@ -35,7 +36,13 @@ func spawn() -> void:
 				push_warning("'%s': sem modelo para o tier" % city.name)
 				continue
 
-			marker.global_position = data.map_position  # o .tres é a fonte da coordenada
+			_clear_previous(marker)
+
+			# map_position é relativa à raiz do mapa, por isso converte para global
+			if map_root != null:
+				marker.global_position = map_root.to_global(data.map_position)
+			else:
+				marker.global_position = data.map_position
 
 			var model := scene.instantiate() as Node3D
 			model.name = "Model"
@@ -47,6 +54,13 @@ func spawn() -> void:
 			spawned += 1
 
 	print("[CityModelSpawner] Models spawned: %d" % spawned)
+
+func _clear_previous(marker: Marker3D) -> void:
+	for child_name in ["Model", "ClickBody"]:
+		var old := marker.get_node_or_null(child_name)
+		if old != null:
+			marker.remove_child(old)
+			old.queue_free()
 
 func _find_marker(city: Node) -> Marker3D:
 	for c in city.get_children():

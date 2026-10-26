@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://cisd305cg8krh"]
+
+[ext_resource type="Script" uid="uid://covr643g4mpxm" path="res://UI/city_tab.gd" id="1_ikkh7"]
+
+[node name="CityTab" type="Control" unique_id=1226605598]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ikkh7")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2044181432]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.3
+anchor_bottom = 0.8
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer" unique_id=11513643]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="PanelContainer/VBox" unique_id=1021751646]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="PanelContainer/VBox/Header" unique_id=1008583762]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PanelContainer/VBox/Header" unique_id=1874354015]
+layout_mode = 2
+
+[node name="TierLabel" type="Label" parent="PanelContainer/VBox/Header" unique_id=1514077551]
+layout_mode = 2
+
+[node name="ProvinceLabel" type="Label" parent="PanelContainer/VBox" unique_id=698407173]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBox" unique_id=311788441]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="PanelContainer/VBox" unique_id=1606731677]
+layout_mode = 2
+size_flags_vertical = 3
+fit_content = true
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/VBox" unique_id=158896861]
+layout_mode = 2
+
+[node name="Stats" type="GridContainer" parent="PanelContainer/VBox" unique_id=498628557]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBox/Stats" unique_id=1637490244]
+layout_mode = 2
+text = "Population"
+
+[node name="Label2" type="Label" parent="PanelContainer/VBox/Stats" unique_id=1765972966]
+layout_mode = 2
+text = "Density"
+
+[node name="PopulationLabel" type="Label" parent="PanelContainer/VBox/Stats" unique_id=584126907]
+layout_mode = 2
+
+[node name="DensityLabel" type="Label" parent="PanelContainer/VBox/Stats" unique_id=1230229610]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBox" unique_id=178555464]
+layout_mode = 2
+text = "Society"
+
+[node name="SocietyBox" type="HFlowContainer" parent="PanelContainer/VBox" unique_id=50401190]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PanelContainer/VBox" unique_id=1436504290]
+layout_mode = 2
+text = "Specializations"
+
+[node name="SpecializationsBox" type="VBoxContainer" parent="PanelContainer/VBox" unique_id=754557123]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="PanelContainer/VBox" unique_id=955750253]
+layout_mode = 2
+text = "Traits"
+
+[node name="TraitsBox" type="HFlowContainer" parent="PanelContainer/VBox" unique_id=814988529]
+layout_mode = 2

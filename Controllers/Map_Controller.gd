@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var camera: Camera3D = $Camera3D
+@export var city_tab: CityTab
 
 var selected_province: Province
 var selected_city: City
@@ -62,8 +63,13 @@ func _select_province(province: Province) -> void:
 	province.print_cities()
 
 func _select_city(city: City) -> void:
-	if selected_city == city and selected_province == null:
+	if selected_city == city and selected_province == null and city_tab.visible:
 		return
 	selected_province = null  # só um pode estar selecionado
 	selected_city = city
-	print("City selected: ", city.city_name, " ", )
+	print("City selected: ", city.city_name)
+
+	if city.data != null:
+		city_tab.show_city(city.data)
+	else:
+		push_warning("'%s': sem CityData" % city.name)
