@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_slecl")
 city_name = "Monsaraz"
-map_position = Vector3(2.925056, 0.6200257, 3.8447187)
+map_position = Vector3(0.731264, 0.15500642, 0.9611797)
 province_name = "Alto Alentejo"

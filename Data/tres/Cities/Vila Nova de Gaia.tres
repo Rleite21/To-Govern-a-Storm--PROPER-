@@ -30,7 +30,7 @@ sector = 3
 [resource]
 script = ExtResource("1_aapue")
 city_name = "Vila Nova de Gaia"
-map_position = Vector3(-0.42412585, 0.6200257, -5.780123)
+map_position = Vector3(-0.10603146, 0.15500642, -1.4450308)
 description = "Stretching along the southern bank of the Douro opposite Porto, Vila Nova de Gaia owes its international reputation to the great wine lodges where Port wine is stored and matured before shipment abroad. Its riverside warehouses, merchant houses and commercial connections reflect an economy deeply tied to export trade, while its growing working population supports transport, industry and the wine business. The fortunes of the town are closely linked to those of Porto's merchant bourgeoisie, whose commercial success contrasts with the modest circumstances of many labourers. Catholic traditions remain influential, but republican politics and organised labour find a receptive audience in the industrial districts of the region. Gaia occupies a distinctive position between commerce and production, where international markets, local employment and the social tensions of the Republic meet along the banks of the Douro."
 province_name = "Douro Litoral"
 population = 323202

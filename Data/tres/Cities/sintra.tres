@@ -21,7 +21,7 @@ script = ExtResource("2_b76p2")
 [resource]
 script = ExtResource("1_i827g")
 city_name = "Sintra"
-map_position = Vector3(-2.799992, 0.6200257, 2.7675374)
+map_position = Vector3(-0.699998, 0.15500642, 0.69188434)
 description = "Set amid mist-covered hills, wooded estates and extravagant palaces, Sintra has long served as a retreat for Portuguese royalty and aristocracy. Its romantic landscape, dotted with monasteries, manor houses and royal residences, embodies the splendour of the old regime even after the monarchy's fall in 1910. The surrounding villages retain a more rural character, sustained by agriculture, crafts and local commerce, while the town itself attracts visitors and members of Lisbon's wealthier society. Monarchist nostalgia remains particularly evocative in a place so closely associated with royal life, though republican institutions now define the political order. Catholic traditions endure alongside the secular outlook of sections of the educated bourgeoisie. Sintra exists between two worlds: the fading grandeur of aristocratic Portugal and the uncertain modernity of the Republic."
 province_name = "Oeste"
 population = 395528

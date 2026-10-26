@@ -13,7 +13,7 @@ sector = 4
 [resource]
 script = ExtResource("1_3b1hp")
 city_name = "Mora"
-map_position = Vector3(0.9211489, 0.6200257, 2.2518697)
+map_position = Vector3(0.23028722, 0.15500642, 0.5629674)
 description = "Set within the rolling plains and cork-oak country of the Alentejo, Mora is a rural municipality whose fortunes depend on grain, livestock, cork and the labour of the surrounding countryside. The landscape is broad and exposed, its agricultural wealth contrasting with the modest means of many who work the land. Large estates and established local families exercise considerable economic influence, while seasonal workers remain vulnerable to low wages and insecurity. The Church retains a place in communal life, even as republican secularism has altered its formal standing. Labour agitation and socialist ideas find fertile ground wherever rural hardship sharpens class divisions, though local politics remains shaped as much by patronage and personal loyalties as by party doctrine."
 province_name = "Alto Alentejo"
 population = 4143

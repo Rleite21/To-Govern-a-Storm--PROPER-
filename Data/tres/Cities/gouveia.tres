@@ -13,7 +13,7 @@ sector = 4
 [resource]
 script = ExtResource("1_u5ik2")
 city_name = "Gouveia"
-map_position = Vector3(2.528679, 0.6200257, -3.3813834)
+map_position = Vector3(0.6321697, 0.15500642, -0.84534585)
 description = "Climbing the foothills of the Serra da Estrela, Gouveia is a mountain town shaped by wool, livestock and the rugged beauty of its surroundings. Shepherds guide their flocks across high pastures, while textile workshops turn local wool into cloth for markets farther afield. Stone houses cling to the slopes, enduring bitter winters and the isolation of the interior. Life here demands resilience, and generations of inhabitants have learned to draw their livelihood from a landscape as beautiful as it is unforgiving."
 province_name = "Beira Alta"
 population = 12222

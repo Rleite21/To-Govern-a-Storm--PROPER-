@@ -21,7 +21,7 @@ sector = 7
 [resource]
 script = ExtResource("1_bmy6d")
 city_name = "Leiria"
-map_position = Vector3(-1.1333709, 0.6200257, -0.8770361)
+map_position = Vector3(-0.28334272, 0.15500642, -0.21925902)
 description = "Standing beneath the ruins of its medieval castle, Leiria commands a fertile landscape of orchards, pinewoods and agricultural villages between the coast and the central highlands. Its history is one of royal authority, religious devotion and provincial commerce, but the twentieth century brings new pressures upon this old order. Merchants, professionals and municipal republicans look towards modern administration and improved infrastructure, while the Catholic Church remains an important guardian of local identity. Beyond the town, smallholders and labourers face the uncertainties of rural poverty, their fortunes tied to harvests and markets rather than the promises of parliamentary politics."
 province_name = "Beira Litoral"
 population = 128640

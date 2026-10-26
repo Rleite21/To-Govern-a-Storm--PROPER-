@@ -9,7 +9,7 @@ script = ExtResource("2_mm1pm")
 [resource]
 script = ExtResource("1_ualxn")
 city_name = "Crato"
-map_position = Vector3(2.5526574, 0.6200257, 0.92792106)
+map_position = Vector3(0.6381643, 0.15500644, 0.23198032)
 description = "In the heart of the Alto Alentejo, Crato bears the remnants of a once-powerful religious and military order. Its castle, churches and former monastic buildings recall the Knights of St John, whose influence once extended across the region. Beyond these weathered monuments, vast estates and open plains sustain a rural society shaped by livestock, agriculture and the authority of landowners. Life unfolds beneath an unforgiving sun, where labour is hard and opportunities are few. Crato is a place of faded grandeur, where the stones remember a power that the passing centuries have diminished."
 province_name = "Alto Alentejo"
 population = 3255

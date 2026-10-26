@@ -9,7 +9,7 @@ script = ExtResource("2_441qi")
 [resource]
 script = ExtResource("1_1tked")
 city_name = "Montalegre"
-map_position = Vector3(1.7526611, 0.6200257, -8.756502)
+map_position = Vector3(0.43816528, 0.15500642, -2.1891255)
 description = "In the highlands of Barroso, Montalegre is a land of harsh winters, open pastures, stone villages and rugged mountains, where livestock and subsistence farming shape the lives of its inhabitants. Its distance from the coastal cities has preserved strong communal ties and a culture marked by rural resilience, religious observance and attachment to inherited customs. The Republic's promises of progress often appear remote here, where poor communications and limited economic opportunities reinforce distrust of distant authorities. Local landowners, clergy and municipal notables retain influence, while the needs of small farmers and labourers rarely command national attention. Montalegre embodies the endurance of Portugal's north: proud, conservative in many of its customs, and determined to survive beyond the reach of political fashion."
 province_name = "Trás-os-Montes"
 population = 9261

@@ -18,7 +18,7 @@ sector = 5
 [resource]
 script = ExtResource("1_sj80j")
 city_name = "Cascais"
-map_position = Vector3(-2.9773848, 0.6200257, 3.1712584)
+map_position = Vector3(-0.7443462, 0.15500642, 0.7928146)
 description = "Once a humble fishing settlement, Cascais has grown into a fashionable coastal retreat for wealthy families and members of Portugal’s former aristocracy. Fishing boats still crowd the harbour, and local fishermen continue their daily struggle against the Atlantic, while elegant villas and seaside promenades reveal the growing influence of Lisbon’s elite. Beneath the sunlit façades lies a town divided between those who profit from its prestige and those who earn their living from the sea. Here, the old maritime world and the privileges of wealth meet along a restless coastline."
 province_name = "Oeste"
 population = 222339

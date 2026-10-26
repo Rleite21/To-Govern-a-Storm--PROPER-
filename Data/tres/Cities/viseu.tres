@@ -17,7 +17,7 @@ sector = 5
 [resource]
 script = ExtResource("1_nlguy")
 city_name = "Viseu"
-map_position = Vector3(1.5481796, 0.6200257, -4.686258)
+map_position = Vector3(0.3870449, 0.15500642, -1.1715645)
 description = "Set among the granite hills and vineyards of the Beira Alta, Viseu is an old episcopal city whose historic streets and religious monuments testify to centuries of ecclesiastical and regional importance. Its position at the crossroads of inland routes makes it a commercial centre for surrounding agricultural communities, whose livelihoods depend upon vineyards, livestock and small-scale farming. The Catholic Church retains considerable social prestige, and conservative values remain influential among landowners and established families. Yet the Republic has created new opportunities for municipal officials, teachers and professionals who favour secular education and administrative reform. Viseu's political climate is therefore one of cautious negotiation between inherited institutions and the ambitions of a new civic order. Removed from the tumult of the capital, it remains an important centre of regional identity, balancing religious tradition, commerce and the gradual advance of modern politics."
 province_name = "Beira Alta"
 population = 109166

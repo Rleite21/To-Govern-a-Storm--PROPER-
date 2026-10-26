@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bq8vqmockr0qs"
+uid="uid://be0nb88tankh2"
 path="res://.godot/imported/Portugal Map.glb-7cd9ada50715dd0fb06c1f8f18d6ccae.scn"
 
 [deps]
@@ -39,7 +39,135 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Edges": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/tres/Material/Edges.tres",
+"use_external/path": "uid://bujd30blgucsd"
+},
+"Faces": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/tres/Material/Faces.tres",
+"use_external/path": "uid://v4wapwxicq8j"
+},
+"Material": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Data/tres/Material/Material.tres",
+"use_external/path": "uid://c86rgc3pomnwv"
+}
+},
+"meshes": {
+"Portugal Map_Algarve": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Algarve.res",
+"save_to_file/path": "uid://kb3rbyssuhp6"
+},
+"Portugal Map_Alto Alentejo": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Alto Alentejo.res",
+"save_to_file/path": "uid://bkua8ueuusx7b"
+},
+"Portugal Map_Baixo Alentejo": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Baixo Alentejo.res",
+"save_to_file/path": "uid://et1ts4gh0inp"
+},
+"Portugal Map_Beira Alta": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Alta.res",
+"save_to_file/path": "uid://fg322vumlhvb"
+},
+"Portugal Map_Beira Baixa": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Baixa.res",
+"save_to_file/path": "uid://bj5hv34qoncdu"
+},
+"Portugal Map_Douro Litoral": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Douro Litoral.res",
+"save_to_file/path": "uid://bb7ksc6dfsv5w"
+},
+"Portugal Map_Minho": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Minho.res",
+"save_to_file/path": "uid://cglalqoa4jroo"
+},
+"Portugal Map_Oeste e Lisboa": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Oeste e Lisboa.res",
+"save_to_file/path": "uid://blhp8f7vbc5tx"
+},
+"Portugal Map_Península de Setúbal": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Península de Setúbal.res",
+"save_to_file/path": "uid://dvymj6i8hgwjs"
+},
+"Portugal Map_Plane_007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Litoral.res",
+"save_to_file/path": "uid://bm1qnsdmbxkt4"
+},
+"Portugal Map_Ribatejo": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Ribatejo.res",
+"save_to_file/path": "uid://b8y16extl1nyy"
+},
+"Portugal Map_Trás-os-Montes": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://meshes/Portugal Map_Trás-os-Montes.res",
+"save_to_file/path": "uid://cdbju84l3mcfq"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

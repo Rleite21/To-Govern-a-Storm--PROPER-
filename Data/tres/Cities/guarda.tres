@@ -17,7 +17,7 @@ sector = 4
 [resource]
 script = ExtResource("1_t5rpe")
 city_name = "Guarda"
-map_position = Vector3(3.5609398, 0.6200257, -3.9434319)
+map_position = Vector3(0.89023495, 0.15500642, -0.98585796)
 description = "Perched high in the Serra da Estrela region, Guarda is one of Portugal's highest cities, a place of granite walls, narrow streets and biting winter winds. Its cathedral and medieval fortifications recall centuries of frontier vigilance, while merchants and farmers serve the scattered settlements of the surrounding mountains. Snow and harsh weather can isolate the countryside, making travel and trade difficult for much of the year. At this exposed height, daily life is defined by endurance, close-knit communities and the constant presence of the mountains."
 province_name = "Beira Alta"
 population = 40126

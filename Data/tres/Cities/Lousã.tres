@@ -17,7 +17,7 @@ sector = 7
 [resource]
 script = ExtResource("1_nmins")
 city_name = "Lousã"
-map_position = Vector3(0.71376145, 0.6200257, -2.3437579)
+map_position = Vector3(0.17844036, 0.15500642, -0.58593947)
 description = "Nestled among the wooded slopes of the Serra da Lousã, this inland settlement is shaped by mountain paths, scattered villages and the resources of its surrounding countryside. Agriculture, forestry and traditional crafts sustain much of the local economy, while connections to Coimbra offer access to wider markets and new ideas. The Republic's secular reforms and political disputes are felt here less through mass demonstrations than through the tensions between local notables, rural communities and the Church. Catholic observance remains deeply rooted, though the aspirations of teachers, professionals and younger republicans reflect a country increasingly divided over education, authority and the meaning of progress."
 province_name = "Beira Litoral"
 population = 17006

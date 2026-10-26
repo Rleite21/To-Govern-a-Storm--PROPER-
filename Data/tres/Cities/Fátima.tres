@@ -13,7 +13,7 @@ sector = 3
 [resource]
 script = ExtResource("1_21dfo")
 city_name = "Fátima"
-map_position = Vector3(-0.5044911, 0.6200257, -0.20919214)
+map_position = Vector3(-0.12612277, 0.15500642, -0.052298035)
 description = "A modest rural settlement surrounded by fields, olive groves, and dusty roads, Fátima has become a destination for pilgrims since the reported apparitions of 1917. For many Catholics, the events offer hope in a country unsettled by revolution, anticlerical laws, and the decline of the monarchy that once stood closely beside the Church. Others regard the growing devotion with suspicion, seeing superstition where the faithful see divine intervention. As pilgrims arrive, the quiet countryside becomes a stage for a wider struggle over faith, authority, and the soul of the Republic."
 province_name = "Beira Litoral"
 population = 13224

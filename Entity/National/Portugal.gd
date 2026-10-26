@@ -8,9 +8,6 @@ func _ready() -> void:
 	print("[MAIN]- Checking provinces...")
 	initialize_provinces()
 
-func _process(delta: float) -> void:
-	pass
-
 func initialize_provinces() -> void:
 	if provinces == null:
 		push_error("Provinces node not found!")

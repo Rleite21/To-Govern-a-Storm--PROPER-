@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_kf16a")
 city_name = "Beja"
-map_position = Vector3(1.7166324, 0.6200257, 5.710308)
+map_position = Vector3(0.4291581, 0.15500642, 1.427577)
 province_name = "Baixo Alentejo"
 metadata/_custom_type_script = "uid://b7ybj3s8rlcba"

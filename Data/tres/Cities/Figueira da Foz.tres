@@ -22,7 +22,7 @@ sector = 3
 [resource]
 script = ExtResource("1_mqtke")
 city_name = "Figueira da Foz"
-map_position = Vector3(-1.231422, 0.6200257, -2.4110441)
+map_position = Vector3(-0.3078555, 0.15500642, -0.60276103)
 description = "At the mouth of the Mondego River, Figueira da Foz is a coastal town of fishing boats, salt air and broad Atlantic beaches. Its harbour draws merchants and fishermen, while its seaside promenades and casino attract visitors seeking leisure away from the pressures of everyday life. Beyond the waterfront, fishing, trade and agriculture sustain the local population. Yet the ocean remains an unpredictable neighbour, bringing both prosperity and danger to a town whose fortunes have always depended on the tides."
 province_name = "Beira Litoral"
 population = 65852

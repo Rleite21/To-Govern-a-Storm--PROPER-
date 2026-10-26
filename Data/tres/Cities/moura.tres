@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_r8fp0")
 city_name = "Moura"
-map_position = Vector3(3.0412776, 0.6200257, 5.2699633)
+map_position = Vector3(0.7603194, 0.15500642, 1.3174908)
 province_name = "Baixo Alentejo"
 metadata/_custom_type_script = "uid://b7ybj3s8rlcba"

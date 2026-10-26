@@ -17,7 +17,7 @@ sector = 7
 [resource]
 script = ExtResource("1_u7ps3")
 city_name = "Torres Vedras"
-map_position = Vector3(-2.6715355, 0.6200257, 1.9050422)
+map_position = Vector3(-0.6678839, 0.15500642, 0.47626054)
 description = "Surrounded by fertile farmland and rolling hills northwest of Lisbon, Torres Vedras occupies a landscape whose strategic importance was demonstrated during the Peninsular War. The Lines of Torres Vedras, constructed in the early nineteenth century to halt Napoleon's advance, remain a powerful reminder of Portugal's vulnerability and resilience in the face of foreign invasion. By the 1920s, the municipality is principally agricultural, with vineyards, orchards and local markets sustaining its economy. Landowners and merchants retain influence, while agricultural workers remain exposed to the inequalities of rural life. Catholic traditions persist alongside the secular institutions of the Republic, and political allegiances vary between local conservatives and republican supporters. Its proximity to the capital brings the national crisis within reach, but the rhythms of harvest and village life continue to shape the town's character."
 province_name = "Oeste"
 population = 83130

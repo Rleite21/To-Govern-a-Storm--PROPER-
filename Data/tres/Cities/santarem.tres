@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_7c80t")
 city_name = "Santarém"
-map_position = Vector3(-0.8617779, 0.6200257, 1.091408)
+map_position = Vector3(-0.21544448, 0.15500642, 0.272852)
 province_name = "Ribatejo"

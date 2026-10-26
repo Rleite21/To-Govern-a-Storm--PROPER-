@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://phjd6bc8oc4b"
-path.s3tc="res://.godot/imported/Portugal Map_Poliigon_PlasterPainted_7664_Metallic_2K_jpg-Poliigon_PlasterPainted_7664_Roughness_2K_jpg.png-d2b7912ee9bec11d89d91ad4e9215aa6.s3tc.ctex"
+uid="uid://d3qctn271ey0q"
+path.s3tc="res://.godot/imported/Portugal Map_Portugal verde.png-2f56715475cb100eab6518748e18e63e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "b06d4e830326d4a9a2e7dd28bc883b11"
+"md5": "4f6dd8591e063a03eb9a57147ac9b393"
 }
 
 [deps]
 
-source_file="res://glb/Portugal Map_Poliigon_PlasterPainted_7664_Metallic_2K_jpg-Poliigon_PlasterPainted_7664_Roughness_2K_jpg.png"
-dest_files=["res://.godot/imported/Portugal Map_Poliigon_PlasterPainted_7664_Metallic_2K_jpg-Poliigon_PlasterPainted_7664_Roughness_2K_jpg.png-d2b7912ee9bec11d89d91ad4e9215aa6.s3tc.ctex"]
+source_file="res://glb/Portugal Map_Portugal verde.png"
+dest_files=["res://.godot/imported/Portugal Map_Portugal verde.png-2f56715475cb100eab6518748e18e63e.s3tc.ctex"]
 
 [params]
 

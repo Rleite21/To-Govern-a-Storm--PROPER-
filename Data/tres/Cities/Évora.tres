@@ -13,7 +13,7 @@ sector = 5
 [resource]
 script = ExtResource("1_0an68")
 city_name = "Évora"
-map_position = Vector3(1.879765, 0.6200257, 3.4961154)
+map_position = Vector3(0.46994126, 0.15500642, 0.87402886)
 description = "Encircled by medieval walls, Évora is a city where Roman columns, Gothic churches and whitewashed streets preserve the weight of centuries. Its ancient temple rises above the rooftops, while convents, noble residences and bustling markets reflect a long history of religious devotion and regional prestige. Beyond the city gates, the vast plains of the Alentejo are divided among agricultural estates, where seasonal labourers endure the summer heat and landowners maintain their influence. Life within Évora moves between solemn processions, market-day chatter and the quiet routines of rural commerce. Here, the past is not merely remembered — it stands in stone at every turn."
 province_name = "Alto Alentejo"
 population = 58567

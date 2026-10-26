@@ -10,7 +10,7 @@ sector = 8
 [resource]
 script = ExtResource("1_wcobn")
 city_name = "Sagres"
-map_position = Vector3(-1.583122, 0.6200257, 9.619101)
+map_position = Vector3(-0.3957805, 0.15500642, 2.4047751)
 description = "At the southwestern extremity of Portugal, Sagres stands amid wind-scoured cliffs and a restless Atlantic that once carried Portuguese navigators towards distant continents. Its name is inseparable from the mythology of the Discoveries and the figure of Prince Henry the Navigator, even as its modest settlement remains rooted in fishing and the demanding rhythms of coastal life. Far from the industrial centres and political salons, Sagres is a place where the sea commands greater attention than parliamentary intrigue. Catholic observance and local traditions remain strong, while the Republic's ideological divisions have little direct presence in the daily concerns of fishermen and their families. Yet the national memory of maritime greatness persists, offering a powerful contrast to the economic difficulties and political uncertainty of modern Portugal."
 province_name = "Algarve"
 population = 1894

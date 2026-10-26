@@ -30,7 +30,7 @@ sector = 3
 [resource]
 script = ExtResource("1_hacvp")
 city_name = "Viana do Castelo"
-map_position = Vector3(-1.0695024, 0.6160481, -8.250099)
+map_position = Vector3(-0.2673756, 0.15401202, -2.0625248)
 description = "At the mouth of the Lima River, Viana do Castelo faces the Atlantic beneath the green hills of the Minho. Its harbour, fishing traditions and maritime industries have sustained centuries of commerce, while its historic centre reflects the wealth accumulated through trade and overseas connections. The surrounding countryside is fertile and densely settled, characterised by small farms, vineyards and strong communal traditions. Viana's maritime economy gives it a more outward-looking character than many inland towns, bringing merchants, shipowners and workers into contact with wider economic currents. Catholicism remains a powerful cultural force in the Minho, even as republican secularism challenges the Church's formal privileges. The town's political life is shaped by the familiar tension between conservative provincial society and the demands of a modernising commercial and working population."
 province_name = "Minho"
 population = 85778

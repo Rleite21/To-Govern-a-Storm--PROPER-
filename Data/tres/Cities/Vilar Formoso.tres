@@ -17,7 +17,7 @@ sector = 5
 [resource]
 script = ExtResource("1_6tanv")
 city_name = "Vilar Formoso"
-map_position = Vector3(4.56131, 0.6200257, -4.1054335)
+map_position = Vector3(1.1403275, 0.15500642, -1.0263584)
 description = "Positioned on Portugal's eastern frontier, Vilar Formoso owes much of its importance to its railway connection with Spain and its role as a crossing point between the two countries. The surrounding landscape of the Beira Interior is marked by granite hills, agricultural villages and harsh winters. Its fortunes depend upon transport, border trade and the movement of travellers and goods, while contrabandists slip across the frontier, exploiting the long, porous border to smuggle goods and evade customs duties. Railway workers, merchants and smugglers alike bring the wider world to this otherwise quiet settlement. The traditional influence of the Church remains strong, while the Republic's political crises often seem distant from local concerns. Yet the frontier leaves Vilar Formoso exposed to events beyond Portugal's control, making it a place where rural traditions, illicit enterprise and the wider currents of European commerce converge."
 province_name = "Beira Alta"
 population = 1719

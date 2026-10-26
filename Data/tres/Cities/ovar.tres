@@ -18,7 +18,7 @@ sector = 7
 [resource]
 script = ExtResource("1_wkkgb")
 city_name = "Ovar"
-map_position = Vector3(-0.56100655, 0.6200257, -5.1098337)
+map_position = Vector3(-0.14025164, 0.15500642, -1.2774584)
 description = "Situated between the Atlantic shore and the lagoons and waterways of the Aveiro region, Ovar combines fishing, agriculture, commerce and emerging industrial activity. Its traditional façades, religious festivals and distinctive local customs testify to a strong communal identity, while its connections to the wider northern economy bring new opportunities and social pressures. Small manufacturers, merchants and property owners seek prosperity and stability, but workers in fisheries and industry face the uncertainties of wages, employment and economic change. The Catholic Church remains a visible influence, though republican secularism and the growth of labour politics have introduced competing visions of public life. Ovar stands between the inherited rhythms of a coastal town and the industrial transformations gathering pace across northern Portugal."
 province_name = "Beira Litoral"
 population = 58091

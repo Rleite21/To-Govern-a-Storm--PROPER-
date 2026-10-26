@@ -21,7 +21,7 @@ script = ExtResource("2_no56u")
 [resource]
 script = ExtResource("1_1t2no")
 city_name = "Castelo Branco"
-map_position = Vector3(2.9229858, 0.6200257, -1.1945579)
+map_position = Vector3(0.73074645, 0.15500644, -0.29863948)
 description = "Set amid the rugged landscapes of the Beiras, Castelo Branco is a town of stone streets, fortified heights and sun-baked countryside. Its historic gardens, adorned with elaborate stone statues and intricate ornamental hedges, recall the influence of noble families who once shaped the region. Agriculture, livestock and local trade sustain the surrounding communities, where summers bring relentless heat and rural life demands resilience. Far from the bustle of the coast, Castelo Branco endures as a stronghold of provincial tradition, where old customs persist beneath the weight of an uncertain political age."
 province_name = "Beira Baixa"
 population = 58197

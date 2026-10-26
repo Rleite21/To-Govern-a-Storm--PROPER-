@@ -18,7 +18,7 @@ sector = 3
 [resource]
 script = ExtResource("1_u4b6i")
 city_name = "Guimarães"
-map_position = Vector3(0.48736602, 0.6200257, -7.2947383)
+map_position = Vector3(0.121841505, 0.15500642, -1.8236846)
 description = "Ancient walls and narrow medieval streets surround the castle where Portugal’s earliest legends took shape. Guimarães wears its royal past with pride, and the memory of kings remains woven into its identity—even after the monarchy’s fall. Yet the town is not frozen in history: workshops and growing industries draw workers into new forms of collective life, where discussions of wages, unions, socialism, and the rights of labour challenge the old social hierarchy. Here, the birthplace of a kingdom must reckon with a country trying to imagine what should replace it."
 province_name = "Minho"
 population = 165554

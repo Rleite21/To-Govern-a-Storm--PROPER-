@@ -34,7 +34,7 @@ sector = 9
 [resource]
 script = ExtResource("1_2x66g")
 city_name = "Porto"
-map_position = Vector3(-0.5341023, 0.6200257, -6.235323)
+map_position = Vector3(-0.13352558, 0.15500642, -1.5588307)
 description = "The 2nd largest metropolis of Portugal rises produly along the steep banks of the Douro, its crowded streets and riverside warehouses reflecting centuries of trade and mercantile ambition. Port wine has carried its name across the world, enriching merchant houses and connecting the city to British markets, while factories and workshops sustain a growing industrial working class. Porto's proud northerner identity is inseparable from its history of resistance: since the grueling Siege of Porto and the Liberal Wars, the city has carried the enduring nickname A Invicta — the Undefeated. Its rebellious spirit resurfaced during the republican uprising of 1891 against the monarchy. In the Republic, conservative Catholics, monarchists, republican factions, industrialists, socialists and anarchist labour organisers compete for influence. Strikes and economic hardship expose the gulf between prosperous commercial interests and working-class neighbourhoods. Porto remains a city of enterprise and defiance, where Portugal's future is contested in factories, cafés and the streets, under the ever so watchful eye of foreign interests."
 province_name = "Douro Litoral"
 population = 273476

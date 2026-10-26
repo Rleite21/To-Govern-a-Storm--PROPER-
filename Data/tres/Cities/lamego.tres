@@ -13,7 +13,7 @@ sector = 4
 [resource]
 script = ExtResource("1_a5sf7")
 city_name = "Lamego"
-map_position = Vector3(1.7878946, 0.6200257, -6.0787554)
+map_position = Vector3(0.44697365, 0.15500642, -1.5196888)
 description = "Set among the terraced slopes and valleys of the upper Douro, Lamego is a city of old churches, episcopal grandeur and agricultural wealth. Its vineyards and surrounding estates tie it to the commercial fortunes of the Douro, while its cathedral and pilgrimage traditions preserve the authority of an older, deeply Catholic Portugal. The local landowning families and clergy retain considerable social prestige, even as the Republic's secular reforms challenge institutions that once stood above political dispute."
 province_name = "Beira Alta"
 population = 24315

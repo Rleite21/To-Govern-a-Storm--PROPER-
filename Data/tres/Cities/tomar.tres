@@ -21,7 +21,7 @@ sector = 7
 [resource]
 script = ExtResource("1_2jdfm")
 city_name = "Tomar"
-map_position = Vector3(0.02768676, 0.6200257, -0.38658476)
+map_position = Vector3(0.00692169, 0.15500642, -0.09664619)
 description = "Dominated by the monumental Convent of Christ, Tomar is a city whose identity is inseparable from the Knights Templar, the Order of Christ and Portugal's age of maritime expansion. Its historic centre and the Nabão River reflect centuries of religious, military and commercial importance, while the surrounding region sustains agriculture and a growing variety of crafts and industrial activities. The city's legacy of Catholic and monastic power sits uneasily beside the secular ideals of the Republic, which abolished religious orders and confiscated church property following the revolution of 1910. Nevertheless, religious heritage remains a source of civic pride, even among those who support the new political order. Merchants, professionals and local republicans seek progress and stability, while conservative Catholics preserve the memory of an older Portugal. Tomar is a city where the monuments of a sacred past endure beneath a republic determined to redefine the nation."
 province_name = "Ribatejo"
 population = 37420

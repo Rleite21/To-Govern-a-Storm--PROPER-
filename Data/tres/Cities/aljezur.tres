@@ -13,7 +13,7 @@ sector = 8
 [resource]
 script = ExtResource("1_38040")
 city_name = "Aljezur"
-map_position = Vector3(-1.1488199, 0.6200257, 8.340662)
+map_position = Vector3(-0.28720498, 0.15500642, 2.0851655)
 description = "Remote and rugged, Aljezur clings to the western Algarve, where the Atlantic meets a landscape of windswept hills, farmland and scattered villages. Fishing and agriculture dictate the pace of life, while the ruins of the old Moorish settlement preserve the memory of earlier rulers. Modernity has yet to transform this isolated corner of Portugal. The debates of Lisbon — politics, religion and revolution — feel distant here, where survival still depends on the land, the weather and the sea."
 province_name = "Algarve"
 population = 6045

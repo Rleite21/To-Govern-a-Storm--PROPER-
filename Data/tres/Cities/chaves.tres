@@ -13,7 +13,7 @@ sector = 3
 [resource]
 script = ExtResource("1_3dgyy")
 city_name = "Chaves"
-map_position = Vector3(2.8414745, 0.6200257, -8.487358)
+map_position = Vector3(0.71036863, 0.15500642, -2.1218395)
 description = "Near the Spanish border, Chaves stands as a historic gateway between Portugal and Galicia. Its Roman bridge spans the Tâmega River, a reminder of the armies, merchants and travellers who have crossed these lands for centuries. The town’s thermal springs draw visitors seeking relief in their warm waters, while agriculture, livestock and regional trade sustain the surrounding countryside. Stone fortifications recall generations of border conflicts, and the proximity of Spain gives local life a distinctive frontier character. In Chaves, Roman legacies and rural traditions endure beneath the watchful presence of an ancient stronghold."
 province_name = "Trás-os-Montes"
 population = 37419

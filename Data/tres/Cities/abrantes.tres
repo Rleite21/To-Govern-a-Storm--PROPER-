@@ -17,9 +17,10 @@ sector = 1
 [resource]
 script = ExtResource("1_bw7j5")
 city_name = "Abrantes"
-map_position = Vector3(0.61899, 0.6200257, 0.26588768)
+map_position = Vector3(0.1547475, 0.15500642, 0.06647192)
 description = "Perched above the Tagus Valley, Abrantes stands between Portugal’s fading agricultural past and an uncertain modern age. Its ancient castle watches over fields, river traffic and the villages scattered across the surrounding countryside. Trade and farming sustain the town, while the old order endures beneath the promises of the Republic. Here, history is never far from the surface — and progress arrives slowly."
 province_name = "Ribatejo"
+tier = 2
 population = 34329
 specializations = Array[ExtResource("2_5rypf")]([SubResource("Resource_kxrjm"), SubResource("Resource_ocxiv"), SubResource("Resource_bitvd")])
 density = 2

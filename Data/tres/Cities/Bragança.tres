@@ -17,7 +17,7 @@ sector = 5
 [resource]
 script = ExtResource("1_4j1xw")
 city_name = "Bragança"
-map_position = Vector3(4.8502045, 0.6200257, -8.665115)
+map_position = Vector3(1.2125511, 0.15500642, -2.1662788)
 description = "Far in Portugal’s northeastern reaches, Bragança stands amid rugged hills, cold winters and isolated villages. Its medieval citadel rises above a maze of stone houses, guarding a land shaped by border conflicts, rural hardship and enduring traditions. Livestock, farming and local trade sustain the population, while strong family ties bind communities scattered across the surrounding countryside. Distant from the political centres of Lisbon and Porto, Bragança preserves a stern, resilient character, where the harsh landscape and the memory of old struggles are never far away."
 province_name = "Trás-os-Montes"
 population = 38309
