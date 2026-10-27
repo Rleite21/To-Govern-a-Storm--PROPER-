@@ -11,12 +11,13 @@ const SOCIETY_FLAGS: Array[String] = [
 	"Frontier Minded", "Progressive", "Patriotic"
 ]
 
-const VBOX := "PanelContainer/VBox/"
+const VBOX := "ScrollContainer/VBox/"
+
 
 @onready var name_label: Label = get_node(VBOX + "Header/NameLabel")
 @onready var tier_label: Label = get_node(VBOX + "Header/TierLabel")
 @onready var close_button: Button = get_node(VBOX + "Header/CloseButton")
-@onready var province_label: Label = get_node(VBOX + "ProvinceLabel")
+@onready var province_label: Label = get_node(VBOX + "Header/ProvinceLabel")
 @onready var description_label: RichTextLabel = get_node(VBOX + "DescriptionLabel")
 @onready var population_label: Label = get_node(VBOX + "Stats/PopulationLabel")
 @onready var density_label: Label = get_node(VBOX + "Stats/DensityLabel")
@@ -27,6 +28,10 @@ const VBOX := "PanelContainer/VBox/"
 func _ready() -> void:
 	close_button.pressed.connect(close)
 	visible = false
+
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		accept_event()
 
 func show_city(data: CityData) -> void:
 	if data == null:

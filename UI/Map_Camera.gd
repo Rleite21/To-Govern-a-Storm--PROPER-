@@ -1,19 +1,15 @@
-
 extends Camera3D
 
 @export var move_speed: float = 10.0
 @export var turn_speed: float = 1.5
 @export var mouse_sensitivity: float = 0.003
 
-# Zoom limits
 @export var zoom_speed: float = 2.0
 @export var min_fov: float = 25.0
 @export var max_fov: float = 90.0
 
-# Look up/down limit
 @export var max_pitch: float = 1.4
 
-# Vertical movement limits in world space
 @export var min_height: float = 1.0
 @export var max_height: float = 20.0
 
@@ -27,7 +23,9 @@ func _ready() -> void:
 	pitch = rotation.x
 
 
-func _input(event: InputEvent) -> void:
+# _unhandled_input only receives events that the UI (Controls) did not consume,
+# so scrolling over the CityTab no longer zooms the camera.
+func _unhandled_input(event: InputEvent) -> void:
 	# Hold middle mouse to rotate the camera.
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_MIDDLE:
