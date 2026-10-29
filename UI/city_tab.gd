@@ -11,7 +11,7 @@ const SOCIETY_FLAGS: Array[String] = [
 	"Frontier Minded", "Progressive", "Patriotic"
 ]
 
-const VBOX := "ScrollContainer/VBox/"
+const VBOX := "MarginContainer/ScrollContainer/VBox/"
 
 
 @onready var name_label: Label = get_node(VBOX + "Header/NameLabel")

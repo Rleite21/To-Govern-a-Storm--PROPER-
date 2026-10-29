@@ -5,111 +5,116 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
 font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ad8n"]
 font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_it55r"]
 font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_p8160"]
 font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6tkuj"]
 font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
-[node name="CityTab" type="Control" unique_id=1226605598]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_ikkh7")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1003018428]
-layout_mode = 1
+[node name="CityTab" type="PanelContainer" unique_id=808472461]
 anchors_preset = -1
 anchor_right = 0.3
-anchor_bottom = 0.8
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_bottom = 0.85
+script = ExtResource("1_ikkh7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=354473496]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1003018428]
+layout_mode = 2
 mouse_filter = 0
 theme = ExtResource("2_3ad8n")
 
-[node name="VBox" type="VBoxContainer" parent="ScrollContainer" unique_id=11513643]
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=11513643]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Header" type="HBoxContainer" parent="ScrollContainer/VBox" unique_id=1021751646]
+[node name="Header" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=1021751646]
 layout_mode = 2
 
-[node name="NameLabel" type="Label" parent="ScrollContainer/VBox/Header" unique_id=1008583762]
+[node name="NameLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=1008583762]
 layout_mode = 2
 
-[node name="TierLabel" type="Label" parent="ScrollContainer/VBox/Header" unique_id=1514077551]
+[node name="TierLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=1514077551]
 layout_mode = 2
 
-[node name="ProvinceLabel" type="Label" parent="ScrollContainer/VBox/Header" unique_id=698407173]
+[node name="ProvinceLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=698407173]
 layout_mode = 2
 
-[node name="CloseButton" type="Button" parent="ScrollContainer/VBox/Header" unique_id=1874354015]
+[node name="CloseButton" type="Button" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=1874354015]
 layout_mode = 2
+offset_transform_enabled = true
 text = "X"
 
-[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBox" unique_id=311788441]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=311788441]
 layout_mode = 2
 
-[node name="DescriptionLabel" type="RichTextLabel" parent="ScrollContainer/VBox" unique_id=1606731677]
+[node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/VBox" unique_id=1606731677]
 layout_mode = 2
 size_flags_vertical = 3
 fit_content = true
 scroll_following = true
 
-[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBox" unique_id=158896861]
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=158896861]
 layout_mode = 2
 
-[node name="Stats" type="GridContainer" parent="ScrollContainer/VBox" unique_id=498628557]
+[node name="Stats" type="GridContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=498628557]
 layout_mode = 2
 columns = 2
 
-[node name="Label" type="Label" parent="ScrollContainer/VBox/Stats" unique_id=1637490244]
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1637490244]
 layout_mode = 2
 text = "Population"
 label_settings = SubResource("LabelSettings_ikkh7")
 
-[node name="Label2" type="Label" parent="ScrollContainer/VBox/Stats" unique_id=1765972966]
+[node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1765972966]
 layout_mode = 2
 text = "Density"
 label_settings = SubResource("LabelSettings_3ad8n")
 
-[node name="PopulationLabel" type="Label" parent="ScrollContainer/VBox/Stats" unique_id=584126907]
+[node name="PopulationLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=584126907]
 layout_mode = 2
 
-[node name="DensityLabel" type="Label" parent="ScrollContainer/VBox/Stats" unique_id=1230229610]
+[node name="DensityLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1230229610]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ScrollContainer/VBox" unique_id=178555464]
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=178555464]
 layout_mode = 2
 text = "Society"
 label_settings = SubResource("LabelSettings_it55r")
 
-[node name="SocietyBox" type="HFlowContainer" parent="ScrollContainer/VBox" unique_id=50401190]
+[node name="SocietyBox" type="HFlowContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=50401190]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="ScrollContainer/VBox" unique_id=1436504290]
+[node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=1436504290]
 layout_mode = 2
 text = "Specializations"
 label_settings = SubResource("LabelSettings_p8160")
 
-[node name="SpecializationsBox" type="VBoxContainer" parent="ScrollContainer/VBox" unique_id=754557123]
+[node name="SpecializationsBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=754557123]
 layout_mode = 2
 
-[node name="Label3" type="Label" parent="ScrollContainer/VBox" unique_id=955750253]
+[node name="Label3" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=955750253]
 layout_mode = 2
 text = "Traits"
 label_settings = SubResource("LabelSettings_6tkuj")
 
-[node name="TraitsBox" type="HFlowContainer" parent="ScrollContainer/VBox" unique_id=814988529]
+[node name="TraitsBox" type="HFlowContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=814988529]
 layout_mode = 2

@@ -1,15 +1,25 @@
 [gd_resource type="Theme" format=3 uid="uid://b6cm0nocpc35k"]
 
+[ext_resource type="Texture2D" uid="uid://cqut4r53wir5r" path="res://UI/Art/Page Break W Coat of Arms.png" id="1_6tkuj"]
 [ext_resource type="FontFile" uid="uid://b05nxse0fque1" path="res://UI/Cutive-Regular.ttf" id="1_it55r"]
+[ext_resource type="Texture2D" uid="uid://b2ww4bfurpbc5" path="res://UI/Art/ui_panel.png" id="1_p8160"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8160"]
-bg_color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qgd44"]
+texture = ExtResource("1_6tkuj")
+region_rect = Rect2(342.4037, 0, 114.72034, 87)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6ond"]
+texture = ExtResource("1_p8160")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6tkuj"]
 
 [resource]
 default_font = ExtResource("1_it55r")
 default_font_size = 10
 Button/colors/font_color = Color(0.7882353, 0.6627451, 0.41960785, 1)
 Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+HSeparator/styles/separator = SubResource("StyleBoxTexture_qgd44")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_r6ond")
 ScrollContainer/colors/scroll_hint_horizontal_color = Color(0, 0, 0, 1)
 ScrollContainer/colors/scroll_hint_vertical_color = Color(0, 0, 0, 1)
-ScrollContainer/styles/panel = SubResource("StyleBoxFlat_p8160")
+ScrollContainer/styles/panel = SubResource("StyleBoxTexture_6tkuj")
