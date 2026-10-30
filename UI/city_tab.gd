@@ -36,62 +36,37 @@ func _gui_input(event: InputEvent) -> void:
 		accept_event()
 
 func show_city(source: Variant) -> void:
-	print("[DEBUG] show_city iniciado")
-	print("[DEBUG] source type: ", typeof(source))
-	print("[DEBUG] source class: ", source.get_class() if source is Object else "Not Object")
-
 	var city: City = null
 	var data: CityData = null
 
 	if source is City:
-		print("[DEBUG] Source é City")
 		city = source
 		data = city.data
 
-	elif source is CityData:
-		print("[DEBUG] Source é CityData")
+	if source is CityData:
 		data = source
 		city = _find_city(data)
-		print("[DEBUG] Resultado _find_city: ", city)
-
-	else:
-		print("[DEBUG] Source não é City nem CityData")
 
 	if data == null:
-		print("[DEBUG] DATA É NULL - RETURN")
 		return
 
-	print("[DEBUG] Data encontrada: ", data.city_name)
-
 	_show_data(data)
-	print("[DEBUG] _show_data concluído")
 
 	if city != null:
-		print("[DEBUG] City encontrada: ", city.data.city_name)
-
 		if city.demographics.social_classes.is_empty():
-			print("[DEBUG] Social classes vazias - initialize()")
 			city.initialize()
-
-		print("[DEBUG] ANTES de _fill_demographics()")
 		_fill_demographics(city)
-		print("[DEBUG] DEPOIS de _fill_demographics()")
 
 	else:
-		print("[DEBUG] CITY É NULL")
 		push_warning("CityTab: não encontrei a City para '%s'." % data.city_name)
 		_clear_demographics()
 
 	visible = true
 
-
-
 func close() -> void:
 	visible = false
 	closed.emit()
 
-
-# ---------------------------------------------------------------- preenchimento
 
 func _show_data(data: CityData) -> void:
 	name_label.text = data.city_name
@@ -128,11 +103,9 @@ func _fill_demographics(city: City) -> void:
 	print("Valores enviados ao gráfico: ", values)
 	demographics_chart.set_values(values, true)
 
-
 func _clear_demographics() -> void:
 	if demographics_chart != null:
 		demographics_chart.set_values({})
-
 
 func _fill_chips(box: Node, names: Array[String]) -> void:
 	_clear(box)
@@ -140,7 +113,6 @@ func _fill_chips(box: Node, names: Array[String]) -> void:
 		var chip := Label.new()
 		chip.text = n
 		box.add_child(chip)
-
 
 func _fill_specializations(data: CityData) -> void:
 	_clear(specializations_box)
@@ -155,7 +127,7 @@ func _fill_specializations(data: CityData) -> void:
 		specializations_box.add_child(line)
 
 
-# ---------------------------------------------------------------- helpers
+########### HELPERS ##########	
 
 func _find_city(data: CityData) -> City:
 	var provinces := get_node_or_null("../Portugal/Provinces")
@@ -174,12 +146,10 @@ func _find_city(data: CityData) -> City:
 
 	return null
 
-
 func _clear(box: Node) -> void:
 	for c in box.get_children():
 		box.remove_child(c)
 		c.queue_free()
-
 
 func _society_names(flags: int) -> Array[String]:
 	var out: Array[String] = []
@@ -189,13 +159,11 @@ func _society_names(flags: int) -> Array[String]:
 	return out
 
 
-# VERY_URBANISED -> "Very Urbanised"
 func _enum_text(enum_dict: Dictionary, value: int) -> String:
 	var key = enum_dict.find_key(value)
 	if key == null:
 		return "?"
 	return String(key).replace("_", " ").capitalize()
-
 
 func _format_number(n: int) -> String:
 	var s := str(n)
