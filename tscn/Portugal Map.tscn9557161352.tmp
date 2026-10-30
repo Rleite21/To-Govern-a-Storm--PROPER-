@@ -1,0 +1,2003 @@
+[gd_scene format=3 uid="uid://5rwq4tbwqml5"]
+
+[ext_resource type="Script" uid="uid://itko2s8n0ivy" path="res://Controllers/Map_Controller.gd" id="1_wr50m"]
+[ext_resource type="Script" uid="uid://dw6i15cglynu3" path="res://UI/Map_Camera.gd" id="2_6q2uf"]
+[ext_resource type="Script" uid="uid://bvds7i8gndgx7" path="res://Entity/National/Portugal.gd" id="3_co8rk"]
+[ext_resource type="Script" uid="uid://5u4y0so43u03" path="res://Entity/National/Province.gd" id="4_5bs6h"]
+[ext_resource type="Resource" uid="uid://damolcyvw1a0p" path="res://Data/tres/Provinces/Ribatejo_Data.tres" id="5_cgvin"]
+[ext_resource type="ArrayMesh" uid="uid://b8y16extl1nyy" path="res://meshes/provinces/Portugal Map_Ribatejo.res" id="6_5a8bk"]
+[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/City.gd" id="7_boprf"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="8_gau84"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="9_iwx5t"]
+[ext_resource type="Resource" uid="uid://b37m4dpplnjug" path="res://Data/tres/Provinces/Douro_Litoral_Data.tres" id="10_vnma1"]
+[ext_resource type="ArrayMesh" uid="uid://bb7ksc6dfsv5w" path="res://meshes/provinces/Portugal Map_Douro Litoral.res" id="11_hqn7d"]
+[ext_resource type="Resource" uid="uid://dfyx4kddrlkkl" path="res://Data/tres/Provinces/P_Setubal_Data.tres" id="12_oorhn"]
+[ext_resource type="ArrayMesh" uid="uid://dvymj6i8hgwjs" path="res://meshes/provinces/Portugal Map_Península de Setúbal.res" id="13_tj5qt"]
+[ext_resource type="Resource" uid="uid://bgwb0ii1dtr2n" path="res://Data/tres/Provinces/Oeste_Data.tres" id="14_h23dt"]
+[ext_resource type="ArrayMesh" uid="uid://blhp8f7vbc5tx" path="res://meshes/provinces/Portugal Map_Oeste e Lisboa.res" id="15_06ner"]
+[ext_resource type="Resource" uid="uid://bbx0nxpk4b6qp" path="res://Data/tres/Provinces/Minho_Data.tres" id="16_l8puq"]
+[ext_resource type="ArrayMesh" uid="uid://cglalqoa4jroo" path="res://meshes/provinces/Portugal Map_Minho.res" id="17_hvo7p"]
+[ext_resource type="Resource" uid="uid://jdttgslcpdwx" path="res://Data/tres/Provinces/Beira_Litoral_Data.tres" id="18_haj3r"]
+[ext_resource type="ArrayMesh" uid="uid://bm1qnsdmbxkt4" path="res://meshes/provinces/Portugal Map_Beira Litoral.res" id="19_0wyru"]
+[ext_resource type="Resource" uid="uid://kp05hibcntbv" path="res://Data/tres/Provinces/Beira_Baixa_Data.tres" id="20_qh1st"]
+[ext_resource type="ArrayMesh" uid="uid://bj5hv34qoncdu" path="res://meshes/provinces/Portugal Map_Beira Baixa.res" id="21_3klkf"]
+[ext_resource type="Resource" uid="uid://33oj4a2yehjp" path="res://Data/tres/Provinces/Beira_Alta_Data.tres" id="22_dbwa8"]
+[ext_resource type="ArrayMesh" uid="uid://fg322vumlhvb" path="res://meshes/provinces/Portugal Map_Beira Alta.res" id="23_hd6y6"]
+[ext_resource type="Resource" uid="uid://di3x26uxsstj0" path="res://Data/tres/Provinces/Baixo_Alentejo_Data.tres" id="24_gg2oi"]
+[ext_resource type="ArrayMesh" uid="uid://et1ts4gh0inp" path="res://meshes/provinces/Portugal Map_Baixo Alentejo.res" id="25_ouei8"]
+[ext_resource type="Resource" uid="uid://cxe4ewex2dt8b" path="res://Data/tres/Provinces/Alto_Alentejo_Data.tres" id="26_gqb84"]
+[ext_resource type="ArrayMesh" uid="uid://bkua8ueuusx7b" path="res://meshes/provinces/Portugal Map_Alto Alentejo.res" id="27_pxpsi"]
+[ext_resource type="Resource" uid="uid://hiaqcl0qptw2" path="res://Data/tres/Provinces/Algarve_Data.tres" id="28_5pdjc"]
+[ext_resource type="ArrayMesh" uid="uid://kb3rbyssuhp6" path="res://meshes/provinces/Portugal Map_Algarve.res" id="29_h73kv"]
+[ext_resource type="Resource" uid="uid://jir1dmji1kkj" path="res://Data/tres/Provinces/Tras-os-Montes_Data.tres" id="30_k1mt5"]
+[ext_resource type="ArrayMesh" uid="uid://cdbju84l3mcfq" path="res://meshes/provinces/Portugal Map_Trás-os-Montes.res" id="31_nhqut"]
+[ext_resource type="Script" uid="uid://c7yj6wogtp264" path="res://city_model_spawner.gd" id="32_obkjf"]
+[ext_resource type="Resource" uid="uid://buwtujvkdo5y7" path="res://Data/tres/city_models.tres" id="33_l65r0"]
+[ext_resource type="PackedScene" uid="uid://cisd305cg8krh" path="res://tscn/UI/City_Tab.tscn" id="34_843hb"]
+
+[sub_resource type="Resource" id="Resource_y4s44"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_f43vf"]
+script = ExtResource("8_gau84")
+city_name = "Coruche"
+map_position = Vector3(-0.06149045, 0.15500642, 0.5739779)
+description = "Across the vast plains of the Ribatejo, Coruche lies among rolling fields, cork oak forests and the winding waters of the Sorraia River. Cork harvesting, livestock and agriculture sustain its scattered rural communities, where generations have lived by the rhythm of the land. Herdsmen guide cattle across dusty tracks, while wealthy landowners oversee estates stretching towards the horizon. Here, the countryside is both a source of prosperity and a world of hard labour, where tradition and social hierarchy remain firmly rooted."
+province_name = "Ribatejo"
+tier = 2
+population = 17356
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_y4s44")])
+society = 2368
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_kxrjm"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_ocxiv"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_bitvd"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_6mwu2"]
+script = ExtResource("8_gau84")
+city_name = "Abrantes"
+map_position = Vector3(0.1547475, 0.15500642, 0.06647192)
+description = "Perched above the Tagus Valley, Abrantes stands between Portugal’s fading agricultural past and an uncertain modern age. Its ancient castle watches over fields, river traffic and the villages scattered across the surrounding countryside. Trade and farming sustain the town, while the old order endures beneath the promises of the Republic. Here, history is never far from the surface — and progress arrives slowly."
+province_name = "Ribatejo"
+tier = 2
+population = 34329
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_kxrjm"), SubResource("Resource_ocxiv"), SubResource("Resource_bitvd")])
+density = 2
+society = 2368
+traits = Array[int]([0, 11, 12, 5, 6])
+
+[sub_resource type="Resource" id="Resource_egpmt"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_bunlw"]
+script = ExtResource("8_gau84")
+city_name = "Almeirim"
+map_position = Vector3(-0.095867455, 0.15500644, 0.2763281)
+description = "Set amid the fertile plains of the Tagus Valley, Almeirim draws its wealth from the land. Farms, livestock and rural commerce sustain the local economy, while regional traditions preserve the memory of an age when royal courts favoured these lands. The Republic has shaken the foundations of Portugal’s old political order, yet established landowners retain considerable influence. In Almeirim, the harvest remains more immediate than politics, and tradition proves difficult to uproot."
+province_name = "Ribatejo"
+tier = 2
+population = 22012
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_egpmt")])
+society = 7168
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_017wa"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_3x0m2"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_hptlo"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_cdneq"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_1t6g0"]
+script = ExtResource("8_gau84")
+city_name = "Tomar"
+map_position = Vector3(0.00692169, 0.15500642, -0.09664619)
+description = "Dominated by the monumental Convent of Christ, Tomar is a city whose identity is inseparable from the Knights Templar, the Order of Christ and Portugal's age of maritime expansion. Its historic centre and the Nabão River reflect centuries of religious, military and commercial importance, while the surrounding region sustains agriculture and a growing variety of crafts and industrial activities. The city's legacy of Catholic and monastic power sits uneasily beside the secular ideals of the Republic, which abolished religious orders and confiscated church property following the revolution of 1910. Nevertheless, religious heritage remains a source of civic pride, even among those who support the new political order. Merchants, professionals and local republicans seek progress and stability, while conservative Catholics preserve the memory of an older Portugal. Tomar is a city where the monuments of a sacred past endure beneath a republic determined to redefine the nation."
+province_name = "Ribatejo"
+tier = 2
+population = 37420
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_017wa"), SubResource("Resource_3x0m2"), SubResource("Resource_hptlo"), SubResource("Resource_cdneq")])
+density = 2
+society = 1344
+traits = Array[int]([0, 4, 6, 9, 11, 12])
+
+[sub_resource type="Resource" id="Resource_rubsh"]
+script = ExtResource("8_gau84")
+city_name = "Santarém"
+map_position = Vector3(-0.21544448, 0.15500642, 0.272852)
+province_name = "Ribatejo"
+
+[sub_resource type="Resource" id="Resource_j2ggb"]
+script = ExtResource("8_gau84")
+city_name = "Vila Franca de Xira"
+
+[sub_resource type="Resource" id="Resource_6svyq"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_agovo"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_83dke"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_etvj1"]
+script = ExtResource("8_gau84")
+city_name = "Penafiel"
+map_position = Vector3(0.17538196, 0.15500642, -1.6059375)
+description = "Set amid the green hills and fertile valleys of the Minho and Douro borderlands, Penafiel is a prosperous provincial centre whose identity rests upon agriculture, local commerce and strong communal traditions. Its churches and religious festivities reflect the enduring influence of Catholicism, while its markets connect surrounding farming communities to the wider northern economy. The old landed families and local notables retain their social standing, though merchants, professionals and republican municipal figures increasingly participate in civic affairs. The Republic's secular reforms have challenged the Church's institutional privileges, but religious devotion remains deeply rooted among the population. Beyond the political turmoil of Lisbon, Penafiel represents a Portugal where inherited loyalties remain powerful and the prospect of change is approached with both curiosity and caution."
+province_name = "Douro Litoral"
+tier = 2
+population = 69629
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_6svyq"), SubResource("Resource_agovo"), SubResource("Resource_83dke")])
+density = 2
+society = 2496
+traits = Array[int]([0, 1, 10, 11])
+
+[sub_resource type="Resource" id="Resource_nm0hx"]
+script = ExtResource("8_gau84")
+city_name = "Vila Nova de Gaia"
+
+[sub_resource type="Resource" id="Resource_jubsg"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_a1xa0"]
+script = ExtResource("9_iwx5t")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_g0xpm"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_72gs3"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_kbfsg"]
+script = ExtResource("9_iwx5t")
+sector = 6
+
+[sub_resource type="Resource" id="Resource_70xk2"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_1pjkt"]
+script = ExtResource("9_iwx5t")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_kkro8"]
+script = ExtResource("8_gau84")
+city_name = "Porto"
+map_position = Vector3(-0.13352558, 0.15500642, -1.5588307)
+description = "The 2nd largest metropolis of Portugal rises produly along the steep banks of the Douro, its crowded streets and riverside warehouses reflecting centuries of trade and mercantile ambition. Port wine has carried its name across the world, enriching merchant houses and connecting the city to British markets, while factories and workshops sustain a growing industrial working class. Porto's proud northerner identity is inseparable from its history of resistance: since the grueling Siege of Porto and the Liberal Wars, the city has carried the enduring nickname A Invicta — the Undefeated. Its rebellious spirit resurfaced during the republican uprising of 1891 against the monarchy. In the Republic, conservative Catholics, monarchists, republican factions, industrialists, socialists and anarchist labour organisers compete for influence. Strikes and economic hardship expose the gulf between prosperous commercial interests and working-class neighbourhoods. Porto remains a city of enterprise and defiance, where Portugal's future is contested in factories, cafés and the streets, under the ever so watchful eye of foreign interests."
+province_name = "Douro Litoral"
+tier = 1
+population = 273476
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_jubsg"), SubResource("Resource_a1xa0"), SubResource("Resource_g0xpm"), SubResource("Resource_72gs3"), SubResource("Resource_kbfsg"), SubResource("Resource_70xk2"), SubResource("Resource_1pjkt")])
+density = 4
+society = 255
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 12])
+
+[sub_resource type="Resource" id="Resource_21m1i"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_5abon"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_4uvsa"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_6u58o"]
+script = ExtResource("8_gau84")
+city_name = "Amarante"
+map_position = Vector3(0.2854867, 0.15500642, -1.6664951)
+description = "Straddling the Tâmega River, Amarante is a town of granite houses, ancient bridges and solemn churches, steeped in the traditions of northern Portugal. Surrounded by green hills and vineyards, its people live by the land, the wine and the rhythms of the river. Yet when heavy rains descend, the Tâmega can swell into a destructive force, flooding streets and threatening riverside homes. Beneath the watchful presence of Saint Gonçalo, faith remains a powerful anchor in a community shaped by harsh nature, enduring traditions and generations of hardship."
+province_name = "Douro Litoral"
+tier = 2
+population = 52116
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_21m1i"), SubResource("Resource_5abon"), SubResource("Resource_4uvsa")])
+density = 2
+society = 2500
+traits = Array[int]([0, 6, 11, 12, 15, 9])
+
+[sub_resource type="Resource" id="Resource_hbns3"]
+script = ExtResource("8_gau84")
+city_name = "Alcácer do Sal"
+
+[sub_resource type="Resource" id="Resource_hccky"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_otkip"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_trf7l"]
+script = ExtResource("9_iwx5t")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_s0msw"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_sqv0p"]
+script = ExtResource("8_gau84")
+city_name = "Sines"
+map_position = Vector3(-0.31638947, 0.15500642, 1.5075479)
+description = "A coastal town overlooking the Atlantic, Sines is shaped by its fishing harbour, rugged shoreline and the agricultural hinterland of the Alentejo. Traditionally sustained by fishing, small commerce and rural production, it remains far removed from the scale of the major industrial centres, though the sea offers enduring possibilities for trade and maritime activity. Its people maintain strong local ties and a practical relationship with the ocean, while Catholic observance continues to mark communal life. The political tensions of the Republic are less concentrated here than in Lisbon or Setúbal, but economic hardship and the difficulties faced by coastal workers remain familiar concerns. Sines stands at the meeting point of sea and plain, a modest settlement whose future depends upon whether Portugal can turn its maritime geography into renewed prosperity."
+province_name = "Península de Setúbal"
+tier = 2
+population = 16943
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_hccky"), SubResource("Resource_otkip"), SubResource("Resource_trf7l"), SubResource("Resource_s0msw")])
+density = 2
+society = 386
+traits = Array[int]([2, 6])
+
+[sub_resource type="Resource" id="Resource_3mkjk"]
+script = ExtResource("8_gau84")
+city_name = "Setúbal"
+
+[sub_resource type="Resource" id="Resource_5cwne"]
+script = ExtResource("8_gau84")
+city_name = "Alcobaça"
+
+[sub_resource type="Resource" id="Resource_q6ks6"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_ogunu"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_5xfrr"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_n271j"]
+script = ExtResource("8_gau84")
+city_name = "Mafra"
+map_position = Vector3(-0.6113018, 0.15500642, 0.5435474)
+description = "Dominated by its immense royal palace and convent, Mafra bears the imposing legacy of a monarchy that sought to express its authority through faith, architecture and magnificence. The surrounding countryside, with its farms and small settlements, remains attached to traditional Catholic observance and the rhythms of rural life. The Republic has abolished the political order that commissioned the palace, yet royalist sympathies and reverence for the old institutions have not disappeared from the region. Farmers, artisans and local proprietors navigate a changing political landscape in which secular education and republican administration challenge familiar loyalties. Mafra's monumental past stands as a reminder that Portugal's monarchy has fallen, but its memory remains alive."
+province_name = "Oeste"
+tier = 2
+population = 86521
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_q6ks6"), SubResource("Resource_ogunu"), SubResource("Resource_5xfrr")])
+density = 2
+society = 1280
+
+[sub_resource type="Resource" id="Resource_pkq5a"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_iy7vd"]
+script = ExtResource("8_gau84")
+city_name = "Ericeira"
+map_position = Vector3(-0.7137613, 0.15500642, 0.5466059)
+description = "Perched above the Atlantic, Ericeira is a coastal fishing village where life is measured by the tides and the temper of the ocean. Whitewashed houses with blue trim cluster along narrow streets, overlooking a harbour where fishermen haul in their catch and mend their nets. The sea provides both livelihood and danger, its sudden storms capable of turning a routine voyage into tragedy. Salt hangs in the air, taverns fill with sailors’ stories, and generations of families remain bound to the water. Beyond the village, the rugged coastline stretches into the mist, beautiful, unforgiving and impossible to tame, the same mist that called thousands and thousands of portuguese seamen to take to the Atlantic in search of new horizons"
+province_name = "Oeste"
+population = 12359
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_pkq5a")])
+society = 9088
+traits = Array[int]([2])
+
+[sub_resource type="Resource" id="Resource_nmbuw"]
+script = ExtResource("8_gau84")
+city_name = "Caldas da Rainha"
+
+[sub_resource type="Resource" id="Resource_k6yg2"]
+script = ExtResource("8_gau84")
+city_name = "Torres Vedras"
+
+[sub_resource type="Resource" id="Resource_dgax6"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_llydl"]
+script = ExtResource("9_iwx5t")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_8mnxn"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_bxe0h"]
+script = ExtResource("8_gau84")
+city_name = "Cascais"
+map_position = Vector3(-0.7443462, 0.15500642, 0.7928146)
+description = "Once a humble fishing settlement, Cascais has grown into a fashionable coastal retreat for wealthy families and members of Portugal’s former aristocracy. Fishing boats still crowd the harbour, and local fishermen continue their daily struggle against the Atlantic, while elegant villas and seaside promenades reveal the growing influence of Lisbon’s elite. Beneath the sunlit façades lies a town divided between those who profit from its prestige and those who earn their living from the sea. Here, the old maritime world and the privileges of wealth meet along a restless coastline."
+province_name = "Oeste"
+tier = 1
+population = 222339
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_dgax6"), SubResource("Resource_llydl"), SubResource("Resource_8mnxn")])
+density = 3
+society = 570
+traits = Array[int]([2, 3, 6, 7, 8, 9, 10, 11, 14])
+
+[sub_resource type="Resource" id="Resource_rcuhf"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_geqa7"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_dpxs2"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_q5f3g"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_i63d5"]
+script = ExtResource("8_gau84")
+city_name = "Sintra"
+map_position = Vector3(-0.699998, 0.15500642, 0.69188434)
+description = "Set amid mist-covered hills, wooded estates and extravagant palaces, Sintra has long served as a retreat for Portuguese royalty and aristocracy. Its romantic landscape, dotted with monasteries, manor houses and royal residences, embodies the splendour of the old regime even after the monarchy's fall in 1910. The surrounding villages retain a more rural character, sustained by agriculture, crafts and local commerce, while the town itself attracts visitors and members of Lisbon's wealthier society. Monarchist nostalgia remains particularly evocative in a place so closely associated with royal life, though republican institutions now define the political order. Catholic traditions endure alongside the secular outlook of sections of the educated bourgeoisie. Sintra exists between two worlds: the fading grandeur of aristocratic Portugal and the uncertain modernity of the Republic."
+province_name = "Oeste"
+tier = 1
+population = 395528
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_rcuhf"), SubResource("Resource_geqa7"), SubResource("Resource_dpxs2"), SubResource("Resource_q5f3g")])
+density = 4
+society = 786
+traits = Array[int]([0, 4, 5, 6, 7, 8, 9, 10, 14])
+
+[sub_resource type="Resource" id="Resource_2asuf"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_loswv"]
+script = ExtResource("9_iwx5t")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_esgaf"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_0fn1u"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_truxw"]
+script = ExtResource("9_iwx5t")
+sector = 6
+
+[sub_resource type="Resource" id="Resource_st78y"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_q353k"]
+script = ExtResource("9_iwx5t")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_ivhbh"]
+script = ExtResource("8_gau84")
+city_name = "Lisboa"
+map_position = Vector3(-0.5638501, 0.15500642, 0.71844184)
+description = "The capital of the Portuguese Republic is a city of contradictions, where grand avenues and cafés of the bourgeoisie stand beside crowded tenements, dockside taverns and working-class neighbourhoods. Its hills overlook the Tagus, still the great artery of an empire whose former splendour cannot conceal the country's economic weakness. Since the Revolution of 1910, Lisbon has been the principal battleground between republican factions, monarchist sympathisers, Catholic traditionalists and militant secularists. Freemasons, military officers, industrialists, socialists and anarchists all compete to shape the future, while strikes, inflation and successive political crises unsettle daily life. Here, the Republic's greatest ambitions and deepest failures are laid bare."
+province_name = "Oeste"
+tier = 0
+population = 658236
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_2asuf"), SubResource("Resource_loswv"), SubResource("Resource_esgaf"), SubResource("Resource_0fn1u"), SubResource("Resource_truxw"), SubResource("Resource_st78y"), SubResource("Resource_q353k")])
+density = 4
+society = 63
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 14])
+
+[sub_resource type="Resource" id="Resource_nuix3"]
+script = ExtResource("8_gau84")
+city_name = "Guimarães"
+
+[sub_resource type="Resource" id="Resource_j1tpc"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_n1tgq"]
+script = ExtResource("8_gau84")
+city_name = "Barcelos"
+map_position = Vector3(-0.13683632, 0.15500642, -1.965307)
+description = "Amid the green valleys of northern Portugal, Barcelos thrives on agriculture, local markets and centuries-old craft traditions. Its streets echo with the sounds of merchants and artisans, while pottery and colourful folk art reflect the character of the Minho region. The legend of the Rooster of Barcelos lives on in local folklore, a symbol of faith, justice and Portuguese identity. Beneath the church bells and the bustle of market day, rural customs remain deeply rooted in everyday life."
+province_name = "Minho"
+tier = 2
+population = 122487
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_j1tpc")])
+density = 2
+society = 1346
+traits = Array[int]([1, 4, 6, 7, 9])
+
+[sub_resource type="Resource" id="Resource_ssv3o"]
+script = ExtResource("8_gau84")
+city_name = "Viana do Castelo"
+
+[sub_resource type="Resource" id="Resource_7hkr6"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_1jkdd"]
+script = ExtResource("9_iwx5t")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_q1phb"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_ji0x6"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_uvyej"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_qhwo3"]
+script = ExtResource("8_gau84")
+city_name = "Braga"
+map_position = Vector3(-0.009927094, 0.15500642, -1.952796)
+description = "One of Portugal’s oldest religious centres, Braga is a city of towering churches, ancient streets and solemn processions. The bells of its cathedral ring over granite façades and crowded markets, while the clergy retain considerable influence over local society. Beyond the city, the green hills of Minho are dotted with farms, vineyards and traditional villages. Despite the Republic’s efforts to diminish the Church’s power, faith remains woven into the fabric of Braga, shaping its festivals, customs and the lives of its inhabitants"
+province_name = "Minho"
+tier = 1
+population = 212635
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_7hkr6"), SubResource("Resource_1jkdd"), SubResource("Resource_q1phb"), SubResource("Resource_ji0x6"), SubResource("Resource_uvyej")])
+density = 3
+society = 5334
+traits = Array[int]([0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14])
+
+[sub_resource type="Resource" id="Resource_sf10g"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_b0tqk"]
+script = ExtResource("8_gau84")
+city_name = "Batalha"
+map_position = Vector3(-0.30540875, 0.15500642, -0.103741705)
+description = "Batalha stands beneath the shadow of its magnificent monastery, a monument to the victory that secured Portugal’s independence from Castile. Its soaring Gothic arches and intricate stonework speak of kings, warriors and generations of devoted craftsmen. Beyond the monastery, the surrounding countryside is a patchwork of farms, villages and limestone hills, where life moves to the rhythm of the seasons. Here, the glories of the medieval kingdom remain etched in stone, while ordinary people carry on beneath their weighty legacy."
+province_name = "Beira Litoral"
+tier = 2
+population = 15557
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_sf10g")])
+society = 3328
+traits = Array[int]([0, 4, 11])
+
+[sub_resource type="Resource" id="Resource_11wum"]
+script = ExtResource("8_gau84")
+city_name = "Lousã"
+
+[sub_resource type="Resource" id="Resource_sqlbv"]
+script = ExtResource("8_gau84")
+city_name = "Figueira da Foz"
+
+[sub_resource type="Resource" id="Resource_ppm8h"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_vpbf7"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_kh11w"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_ynrtx"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_ld44n"]
+script = ExtResource("8_gau84")
+city_name = "Leiria"
+map_position = Vector3(-0.28334272, 0.15500642, -0.21925902)
+description = "Standing beneath the ruins of its medieval castle, Leiria commands a fertile landscape of orchards, pinewoods and agricultural villages between the coast and the central highlands. Its history is one of royal authority, religious devotion and provincial commerce, but the twentieth century brings new pressures upon this old order. Merchants, professionals and municipal republicans look towards modern administration and improved infrastructure, while the Catholic Church remains an important guardian of local identity. Beyond the town, smallholders and labourers face the uncertainties of rural poverty, their fortunes tied to harvests and markets rather than the promises of parliamentary politics."
+province_name = "Beira Litoral"
+tier = 2
+population = 128640
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_ppm8h"), SubResource("Resource_vpbf7"), SubResource("Resource_kh11w"), SubResource("Resource_ynrtx")])
+density = 2
+society = 2306
+traits = Array[int]([0, 3, 4, 5, 6, 7, 9, 11, 12])
+
+[sub_resource type="Resource" id="Resource_felmp"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_8l7sm"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_w6anp"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_vuhbw"]
+script = ExtResource("8_gau84")
+city_name = "Coimbra"
+map_position = Vector3(-0.005264282, 0.15500642, -0.6575407)
+description = "Rising above the Mondego River, Coimbra is a city of ancient stone walls, steep lanes and centuries of intellectual tradition. Its historic university draws students and scholars from across Portugal, filling the streets with lively debates, academic rivalries and youthful restlessness. In lecture halls and crowded taverns, ideas are exchanged, reputations challenged and long-held customs questioned. The university gives the city an unmistakable energy, where the curiosity of the students' black capes and traditions often brings generations into disagreement. Beyond its scholarly quarters, churches, monasteries and working-class neighbourhoods reflect the varied lives of its inhabitants. In Coimbra, knowledge commands respect, but a sharp mind and a stubborn spirit rarely allow things to remain unquestioned."
+province_name = "Beira Litoral"
+tier = 1
+population = 146899
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_felmp"), SubResource("Resource_8l7sm"), SubResource("Resource_w6anp")])
+density = 3
+society = 2902
+traits = Array[int]([3, 4, 5, 6, 8, 10, 11, 12, 15, 14])
+
+[sub_resource type="Resource" id="Resource_lq71l"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_xnq1q"]
+script = ExtResource("9_iwx5t")
+sector = 2
+
+[sub_resource type="Resource" id="Resource_gpm38"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_7r84r"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_5opjr"]
+script = ExtResource("9_iwx5t")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_b27jr"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_dsbgo"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_sptww"]
+script = ExtResource("8_gau84")
+city_name = "Aveiro"
+map_position = Vector3(-0.14314175, 0.15500642, -1.0715381)
+description = "Between the lagoon and the Atlantic, Aveiro is a town in transition. Its canals carry the memory of generations of salt workers and fishermen, while ceramics, commerce and emerging industries signal a future shaped by modern transport and expanding markets. New ideas about education, administration and progress find fertile ground in this growing regional centre. Yet beneath the promise of prosperity, old customs and social divisions endure. In Aveiro, the future is arriving — carried on the same waters that have sustained the town for centuries."
+province_name = "Beira Litoral"
+tier = 2
+population = 80978
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_lq71l"), SubResource("Resource_xnq1q"), SubResource("Resource_gpm38"), SubResource("Resource_7r84r"), SubResource("Resource_5opjr"), SubResource("Resource_b27jr"), SubResource("Resource_dsbgo")])
+density = 3
+society = 38
+traits = Array[int]([0, 2, 3, 4, 5, 7, 9, 10, 11, 12, 15, 14])
+
+[sub_resource type="Resource" id="Resource_fcydv"]
+script = ExtResource("8_gau84")
+city_name = "Fátima"
+
+[sub_resource type="Resource" id="Resource_sqm61"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_c440k"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_nrwf1"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_a0gkw"]
+script = ExtResource("8_gau84")
+city_name = "Pombal"
+map_position = Vector3(-0.075412184, 0.15500642, -0.4467793)
+description = "Overlooked by the medieval castle that once guarded the roads between Lisbon and Coimbra, Pombal occupies a fertile stretch of central Portugal where agriculture and regional commerce sustain its population. Its surrounding countryside, marked by pinewoods, fields and scattered villages, remains a world of smallholders, tenant farmers and established local proprietors. The Republic has brought new administrative institutions and promises of modernisation, yet the rhythms of rural life remain deeply traditional. The Catholic Church continues to command considerable social influence, while republican officials and the emerging professional classes seek to reshape education and public life. In Pombal, the national struggle between tradition and reform is felt less through grand ideological confrontations than through the everyday affairs of the municipality."
+province_name = "Beira Litoral"
+tier = 2
+population = 53995
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_sqm61"), SubResource("Resource_c440k"), SubResource("Resource_nrwf1")])
+density = 2
+society = 256
+traits = Array[int]([0, 4, 10, 11, 12])
+
+[sub_resource type="Resource" id="Resource_nqe0a"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_anaot"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_332ah"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_rb2cf"]
+script = ExtResource("8_gau84")
+city_name = "Ovar"
+map_position = Vector3(-0.14025164, 0.15500642, -1.2774584)
+description = "Situated between the Atlantic shore and the lagoons and waterways of the Aveiro region, Ovar combines fishing, agriculture, commerce and emerging industrial activity. Its traditional façades, religious festivals and distinctive local customs testify to a strong communal identity, while its connections to the wider northern economy bring new opportunities and social pressures. Small manufacturers, merchants and property owners seek prosperity and stability, but workers in fisheries and industry face the uncertainties of wages, employment and economic change. The Catholic Church remains a visible influence, though republican secularism and the growth of labour politics have introduced competing visions of public life. Ovar stands between the inherited rhythms of a coastal town and the industrial transformations gathering pace across northern Portugal."
+province_name = "Beira Litoral"
+tier = 2
+population = 58091
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_nqe0a"), SubResource("Resource_anaot"), SubResource("Resource_332ah")])
+density = 2
+society = 390
+traits = Array[int]([9, 10, 11, 12, 14, 6, 2, 7])
+
+[sub_resource type="Resource" id="Resource_salhf"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_eifag"]
+script = ExtResource("8_gau84")
+city_name = "Seia"
+map_position = Vector3(0.51589906, 0.15500642, -0.78985304)
+description = "Nestled on the northern slopes of the Serra da Estrela, Seia looks towards Portugal's highest mainland mountains, where harsh winters, steep valleys and scattered settlements shape a demanding rural existence. Sheep farming, dairy production, wool working and mountain agriculture sustain the local economy, while traditional crafts connect its inhabitants to wider regional markets. Catholic festivals and village customs remain central to communal life, and the influence of the clergy and established local families is considerable. The Republic's promises of secular education and modern administration are tempered by the realities of poverty, difficult transport and seasonal work. For many residents, political ideologies matter less than land, family and livelihood. Yet the growth of commerce and industry in the surrounding region slowly introduces new social aspirations into this mountain society."
+province_name = "Beira Baixa"
+tier = 2
+population = 21597
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_salhf")])
+society = 14464
+traits = Array[int]([10])
+
+[sub_resource type="Resource" id="Resource_fxduh"]
+script = ExtResource("8_gau84")
+city_name = "Castelo Branco"
+
+[sub_resource type="Resource" id="Resource_08fu0"]
+script = ExtResource("8_gau84")
+city_name = "Covilhã"
+
+[sub_resource type="Resource" id="Resource_eocxm"]
+script = ExtResource("8_gau84")
+city_name = "Fundão"
+
+[sub_resource type="Resource" id="Resource_lmt3m"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_esvn0"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_t5gew"]
+script = ExtResource("8_gau84")
+city_name = "Pinhel"
+map_position = Vector3(1.0118719, 0.15500642, -1.2480972)
+description = "Standing upon the granite uplands of the Beira Interior, Pinhel is a historic walled town surrounded by vineyards, olive groves and the rugged countryside of Portugal's eastern interior. Its strategic position near the Spanish frontier has given it a long history of military significance, while its economy remains tied to agriculture and small-scale regional trade. Here, the Republic's political upheavals often appear distant from the practical concerns of rural families. The clergy and established local proprietors continue to shape community life, even as republican administration seeks to extend secular education and modern governance into the countryside. In Pinhel, the old Portugal endures: austere, devout and suspicious of distant political promises, yet increasingly connected to a nation undergoing profound institutional change."
+province_name = "Beira Alta"
+population = 8092
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_lmt3m"), SubResource("Resource_esvn0")])
+society = 15360
+traits = Array[int]([0, 10, 1])
+
+[sub_resource type="Resource" id="Resource_hwora"]
+script = ExtResource("9_iwx5t")
+sector = 1
+
+[sub_resource type="Resource" id="Resource_s2lr5"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_ofx5g"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_fiuw6"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_i4e54"]
+script = ExtResource("8_gau84")
+city_name = "Mangualde"
+map_position = Vector3(0.5238266, 0.15500642, -1.0408919)
+description = "Situated amid the granite hills, vineyards and small agricultural holdings of the Beira Alta, Mangualde serves as a modest commercial centre for its surrounding communities. Its fortunes are bound to the land, the movement of regional produce and the labour of families whose lives remain far removed from the political intrigues of the capital. The Catholic Church continues to shape social customs and communal identity, while republican officials and educated professionals advocate greater administrative reach and modern schooling. Property owners and merchants seek stability, but the rural poor remain vulnerable to economic hardship. In Mangualde, the struggle between tradition and reform unfolds gradually, through municipal affairs, parish life and the everyday demands of survival."
+province_name = "Beira Alta"
+tier = 2
+population = 18766
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_hwora"), SubResource("Resource_s2lr5"), SubResource("Resource_ofx5g"), SubResource("Resource_fiuw6")])
+density = 2
+society = 2434
+traits = Array[int]([1, 0, 7, 10])
+
+[sub_resource type="Resource" id="Resource_2hgnm"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_lde4b"]
+script = ExtResource("8_gau84")
+city_name = "Tondela"
+map_position = Vector3(0.31286588, 0.15500642, -0.98481196)
+description = "Situated in the rolling countryside of the Beira Alta, Tondela is surrounded by vineyards, pinewoods, small farms and villages connected by the roads of Portugal's interior. Its economy rests upon agriculture, livestock and regional commerce, while its markets serve communities whose lives remain closely tied to the land. The old social order is sustained by local proprietors, municipal notables and the Catholic Church, whose influence remains substantial despite the Republic's secular legislation. Republican officials and professionals advocate improvements in schooling, infrastructure and administration, but the effects of national reform are uneven across the countryside. For farmers and labourers, harvests, prices and access to markets often matter more than the political fortunes of Lisbon. Tondela represents the enduring provincial character of central Portugal, where modernisation advances gradually through a society still governed by tradition."
+province_name = "Beira Alta"
+tier = 2
+population = 25914
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_2hgnm")])
+society = 6272
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_c2uy2"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_r7lku"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_tcflu"]
+script = ExtResource("9_iwx5t")
+sector = 5
+
+[sub_resource type="Resource" id="Resource_np3ro"]
+script = ExtResource("8_gau84")
+city_name = "Viseu"
+map_position = Vector3(0.3870449, 0.15500642, -1.1715645)
+description = "Set among the granite hills and vineyards of the Beira Alta, Viseu is an old episcopal city whose historic streets and religious monuments testify to centuries of ecclesiastical and regional importance. Its position at the crossroads of inland routes makes it a commercial centre for surrounding agricultural communities, whose livelihoods depend upon vineyards, livestock and small-scale farming. The Catholic Church retains considerable social prestige, and conservative values remain influential among landowners and established families. Yet the Republic has created new opportunities for municipal officials, teachers and professionals who favour secular education and administrative reform. Viseu's political climate is therefore one of cautious negotiation between inherited institutions and the ambitions of a new civic order. Removed from the tumult of the capital, it remains an important centre of regional identity, balancing religious tradition, commerce and the gradual advance of modern politics."
+province_name = "Beira Alta"
+tier = 2
+population = 109166
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_c2uy2"), SubResource("Resource_r7lku"), SubResource("Resource_tcflu")])
+density = 3
+society = 1472
+traits = Array[int]([0, 4, 9, 10, 11, 12])
+
+[sub_resource type="Resource" id="Resource_sbgeg"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_guri5"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_60fy0"]
+script = ExtResource("8_gau84")
+city_name = "Lamego"
+map_position = Vector3(0.44697365, 0.15500642, -1.5196888)
+description = "Set among the terraced slopes and valleys of the upper Douro, Lamego is a city of old churches, episcopal grandeur and agricultural wealth. Its vineyards and surrounding estates tie it to the commercial fortunes of the Douro, while its cathedral and pilgrimage traditions preserve the authority of an older, deeply Catholic Portugal. The local landowning families and clergy retain considerable social prestige, even as the Republic's secular reforms challenge institutions that once stood above political dispute."
+province_name = "Beira Alta"
+tier = 2
+population = 24315
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_sbgeg"), SubResource("Resource_guri5")])
+society = 15552
+traits = Array[int]([0, 7, 11])
+
+[sub_resource type="Resource" id="Resource_gc3iy"]
+script = ExtResource("8_gau84")
+city_name = "Piódão"
+
+[sub_resource type="Resource" id="Resource_qfrwc"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_0787l"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_khjjl"]
+script = ExtResource("8_gau84")
+city_name = "Gouveia"
+map_position = Vector3(0.6321697, 0.15500642, -0.84534585)
+description = "Climbing the foothills of the Serra da Estrela, Gouveia is a mountain town shaped by wool, livestock and the rugged beauty of its surroundings. Shepherds guide their flocks across high pastures, while textile workshops turn local wool into cloth for markets farther afield. Stone houses cling to the slopes, enduring bitter winters and the isolation of the interior. Life here demands resilience, and generations of inhabitants have learned to draw their livelihood from a landscape as beautiful as it is unforgiving."
+province_name = "Beira Alta"
+population = 12222
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_qfrwc"), SubResource("Resource_0787l")])
+society = 12480
+traits = Array[int]([10])
+
+[sub_resource type="Resource" id="Resource_3a45c"]
+script = ExtResource("8_gau84")
+city_name = "Vilar Formoso"
+
+[sub_resource type="Resource" id="Resource_2icsx"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_61xaq"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_vq37y"]
+script = ExtResource("9_iwx5t")
+sector = 7
+
+[sub_resource type="Resource" id="Resource_nylm5"]
+script = ExtResource("8_gau84")
+city_name = "Mealhada"
+description = "Set amid the fertile countryside between Coimbra and Aveiro, Mealhada owes much of its character to agriculture, roadside commerce and the movement of travellers along the region's important transport routes. Vineyards, farms and local businesses sustain a community increasingly connected to the wider economy. The town's reputation for food and hospitality reflects a provincial culture in which family, parish and local custom remain powerful institutions. Republican administration has brought new expectations of public education and civic life, yet Catholic influence continues to command respect among many residents. Merchants and landowners generally favour order and dependable trade, while agricultural labourers face the familiar uncertainties of wages, harvests and rising prices."
+tier = 2
+population = 19948
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_2icsx"), SubResource("Resource_61xaq"), SubResource("Resource_vq37y")])
+density = 2
+society = 448
+
+[sub_resource type="Resource" id="Resource_e6deb"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_s2dey"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_60a4q"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_klb7t"]
+script = ExtResource("8_gau84")
+city_name = "Guarda"
+map_position = Vector3(0.89023495, 0.15500642, -0.98585796)
+description = "Perched high in the Serra da Estrela region, Guarda is one of Portugal's highest cities, a place of granite walls, narrow streets and biting winter winds. Its cathedral and medieval fortifications recall centuries of frontier vigilance, while merchants and farmers serve the scattered settlements of the surrounding mountains. Snow and harsh weather can isolate the countryside, making travel and trade difficult for much of the year. At this exposed height, daily life is defined by endurance, close-knit communities and the constant presence of the mountains."
+province_name = "Beira Alta"
+tier = 2
+population = 40126
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_e6deb"), SubResource("Resource_s2dey"), SubResource("Resource_60a4q")])
+density = 2
+society = 5312
+traits = Array[int]([1, 12, 11, 10])
+
+[sub_resource type="Resource" id="Resource_dbnuf"]
+script = ExtResource("8_gau84")
+city_name = "Mértola"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_qsgfp"]
+script = ExtResource("8_gau84")
+city_name = "Serpa"
+map_position = Vector3(0.6058669, 0.15500642, 1.5178204)
+province_name = "Baixo Alentejo"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_npvah"]
+script = ExtResource("8_gau84")
+city_name = "Alter do Chão"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_qny8f"]
+script = ExtResource("8_gau84")
+city_name = "Moura"
+map_position = Vector3(0.7603194, 0.15500642, 1.3174908)
+province_name = "Baixo Alentejo"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_376dd"]
+script = ExtResource("8_gau84")
+city_name = "Ourique"
+map_position = Vector3(0.17615256, 0.15500642, 1.7609684)
+province_name = "Baixo Alentejo"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_4qvq3"]
+script = ExtResource("8_gau84")
+city_name = "Beja"
+map_position = Vector3(0.4291581, 0.15500642, 1.427577)
+province_name = "Baixo Alentejo"
+metadata/_custom_type_script = "uid://b7ybj3s8rlcba"
+
+[sub_resource type="Resource" id="Resource_jo1y3"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_ot6sj"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_24ben"]
+script = ExtResource("8_gau84")
+city_name = "Elvas"
+map_position = Vector3(0.9753296, 0.15500642, 0.6106795)
+description = "Rising from the plains of the Alentejo, Elvas stands as one of Portugal’s great frontier strongholds. Its immense star-shaped fortifications, bastions and guarded gates bear witness to centuries of conflict with neighbouring Spain. Within the fortified walls, merchants, soldiers and craftsmen move through narrow streets lined with whitewashed houses, while the surrounding fields sustain a largely agricultural population. The memory of past sieges lingers in the stonework, and the nearby border ensures that military vigilance remains part of everyday life. In Elvas, peace is precious, but never taken for granted."
+province_name = "Alto Alentejo"
+tier = 2
+population = 21929
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_jo1y3"), SubResource("Resource_ot6sj")])
+society = 2306
+traits = Array[int]([0, 4, 5, 11, 10])
+
+[sub_resource type="Resource" id="Resource_rqbfb"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_dqt6c"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_oaaxq"]
+script = ExtResource("8_gau84")
+city_name = "Estremoz"
+map_position = Vector3(0.64318013, 0.15500642, 0.66940206)
+description = "Among the rolling plains of the Alentejo, Estremoz rises in a striking display of whitewashed walls, red rooftops and pale marble. Its medieval castle and imposing tower overlook a town shaped by royal patronage, stoneworking and the wealth of the surrounding agricultural estates. Marble quarries provide work for skilled labourers, while farmers and livestock traders gather at bustling markets beneath the shadow of the old walls. Beyond the town, vast estates stretch across the sun-scorched countryside, where the distance between landowner and labourer remains deeply felt. Estremoz is a place of elegance and hard toil, its beauty carved from the very stone that sustains it."
+province_name = "Alto Alentejo"
+population = 12683
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_rqbfb"), SubResource("Resource_dqt6c")])
+society = 2310
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_q4snd"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_6phub"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_8ety7"]
+script = ExtResource("8_gau84")
+city_name = "Mora"
+map_position = Vector3(0.23028722, 0.15500642, 0.5629674)
+description = "Set within the rolling plains and cork-oak country of the Alentejo, Mora is a rural municipality whose fortunes depend on grain, livestock, cork and the labour of the surrounding countryside. The landscape is broad and exposed, its agricultural wealth contrasting with the modest means of many who work the land. Large estates and established local families exercise considerable economic influence, while seasonal workers remain vulnerable to low wages and insecurity. The Church retains a place in communal life, even as republican secularism has altered its formal standing. Labour agitation and socialist ideas find fertile ground wherever rural hardship sharpens class divisions, though local politics remains shaped as much by patronage and personal loyalties as by party doctrine."
+province_name = "Alto Alentejo"
+population = 4143
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_q4snd"), SubResource("Resource_6phub")])
+density = 0
+society = 8450
+traits = Array[int]([0, 10, 1])
+
+[sub_resource type="Resource" id="Resource_b3f14"]
+script = ExtResource("8_gau84")
+city_name = "Monsaraz"
+map_position = Vector3(0.731264, 0.15500642, 0.9611797)
+province_name = "Alto Alentejo"
+
+[sub_resource type="Resource" id="Resource_q06er"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_mtadd"]
+script = ExtResource("8_gau84")
+city_name = "Crato"
+map_position = Vector3(0.6381643, 0.15500644, 0.23198032)
+description = "In the heart of the Alto Alentejo, Crato bears the remnants of a once-powerful religious and military order. Its castle, churches and former monastic buildings recall the Knights of St John, whose influence once extended across the region. Beyond these weathered monuments, vast estates and open plains sustain a rural society shaped by livestock, agriculture and the authority of landowners. Life unfolds beneath an unforgiving sun, where labour is hard and opportunities are few. Crato is a place of faded grandeur, where the stones remember a power that the passing centuries have diminished."
+province_name = "Alto Alentejo"
+population = 3255
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_q06er")])
+density = 0
+society = 8514
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_iahh5"]
+script = ExtResource("8_gau84")
+city_name = "Castelo de Vide"
+
+[sub_resource type="Resource" id="Resource_f3oab"]
+script = ExtResource("8_gau84")
+city_name = "Évora"
+
+[sub_resource type="Resource" id="Resource_82ky0"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_afalj"]
+script = ExtResource("9_iwx5t")
+sector = 4
+
+[sub_resource type="Resource" id="Resource_4tpd2"]
+script = ExtResource("8_gau84")
+city_name = "Portalegre"
+map_position = Vector3(0.7226556, 0.15500642, 0.25266618)
+description = "ituated on the slopes of the Serra de São Mamede, Portalegre commands a landscape of wooded hills, agricultural estates and routes linking the Alentejo to the Spanish frontier. Its identity is shaped by textile production, regional commerce and the surrounding countryside, where large landholdings coexist with the precarious livelihoods of agricultural labourers. The town's workshops and manufacturing establishments give it a more varied social character than many rural settlements, bringing employers, artisans and wage workers into closer contact. Republican ideas find support among sections of the urban middle classes, while Catholic traditions and conservative proprietors remain influential. Beneath the apparent calm of provincial life lies the same unresolved question confronting the Republic: whether political modernisation can improve the condition of ordinary people without provoking a deeper struggle over property, labour and authority."
+province_name = "Alto Alentejo"
+tier = 2
+population = 22368
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_82ky0"), SubResource("Resource_afalj")])
+density = 2
+society = 2374
+traits = Array[int]([12, 11, 10, 0, 1])
+
+[sub_resource type="Resource" id="Resource_3qrso"]
+script = ExtResource("8_gau84")
+city_name = "Vila Viçosa"
+
+[sub_resource type="Resource" id="Resource_lhrmh"]
+script = ExtResource("8_gau84")
+city_name = "Olhão"
+
+[sub_resource type="Resource" id="Resource_3sqjm"]
+script = ExtResource("8_gau84")
+city_name = "Loulé"
+
+[sub_resource type="Resource" id="Resource_jup4v"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_3pnia"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_wmdql"]
+script = ExtResource("8_gau84")
+city_name = "Aljezur"
+map_position = Vector3(-0.28720498, 0.15500642, 2.0851655)
+description = "Remote and rugged, Aljezur clings to the western Algarve, where the Atlantic meets a landscape of windswept hills, farmland and scattered villages. Fishing and agriculture dictate the pace of life, while the ruins of the old Moorish settlement preserve the memory of earlier rulers. Modernity has yet to transform this isolated corner of Portugal. The debates of Lisbon — politics, religion and revolution — feel distant here, where survival still depends on the land, the weather and the sea."
+province_name = "Algarve"
+population = 6045
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_jup4v"), SubResource("Resource_3pnia")])
+density = 0
+society = 10498
+traits = Array[int]([0, 10, 2])
+
+[sub_resource type="Resource" id="Resource_arspn"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_xl2vh"]
+script = ExtResource("8_gau84")
+city_name = "Silves"
+map_position = Vector3(0.0033492409, 0.15500642, 2.2243257)
+description = "Once a flourishing centre of Islamic al-Andalus, Silves preserves the memory of a very different Algarve beneath its imposing red sandstone castle. Situated along the Arade River, the town is surrounded by orchards, particularly citrus groves, and an agricultural landscape that has long sustained local commerce. Its medieval walls and historic churches recall successive layers of conquest, settlement and religious transformation. In the 1920s, Silves remains principally a provincial agricultural centre, where landowners, merchants and small farmers shape the local economy. Catholicism is deeply rooted in communal life, while the Republic's secular reforms remain a source of tension between traditional institutions and modernising officials. The town's ancient grandeur contrasts with the modest pace of contemporary life, preserving the memory of Portugal's layered past amid the uncertainties of the present."
+province_name = "Algarve"
+tier = 2
+population = 38239
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_arspn")])
+society = 2432
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_nf5wn"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_1txbo"]
+script = ExtResource("8_gau84")
+city_name = "Sagres"
+map_position = Vector3(-0.3957805, 0.15500642, 2.4047751)
+description = "At the southwestern extremity of Portugal, Sagres stands amid wind-scoured cliffs and a restless Atlantic that once carried Portuguese navigators towards distant continents. Its name is inseparable from the mythology of the Discoveries and the figure of Prince Henry the Navigator, even as its modest settlement remains rooted in fishing and the demanding rhythms of coastal life. Far from the industrial centres and political salons, Sagres is a place where the sea commands greater attention than parliamentary intrigue. Catholic observance and local traditions remain strong, while the Republic's ideological divisions have little direct presence in the daily concerns of fishermen and their families. Yet the national memory of maritime greatness persists, offering a powerful contrast to the economic difficulties and political uncertainty of modern Portugal."
+province_name = "Algarve"
+population = 1894
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_nf5wn")])
+density = 0
+society = 12288
+traits = Array[int]([0, 10, 2])
+
+[sub_resource type="Resource" id="Resource_72r25"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_v0tt7"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_2oeki"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_tpatd"]
+script = ExtResource("8_gau84")
+city_name = "Lagos"
+map_position = Vector3(-0.19850948, 0.15500642, 2.3007874)
+description = "Once a principal gateway to Portugal's maritime expansion, Lagos rests along the sheltered shores of the western Algarve, where whitewashed streets overlook a sea that has long sustained fishermen and merchants. The memory of the Discoveries lingers in its churches and old walls, though the age of imperial glory has given way to the uncertain fortunes of a coastal town. Fishing, small commerce and agriculture sustain its people, whose traditional Catholic outlook coexists with the growing influence of republican institutions and the concerns of working families. Far from Lisbon's political theatres, Lagos remains attached to the rhythms of the sea, wary of distant promises of national renewal."
+province_name = "Algarve"
+tier = 2
+population = 33583
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_72r25"), SubResource("Resource_v0tt7"), SubResource("Resource_2oeki")])
+density = 2
+society = 8450
+traits = Array[int]([0, 2, 11, 10])
+
+[sub_resource type="Resource" id="Resource_ms2jh"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_4iwmm"]
+script = ExtResource("9_iwx5t")
+sector = 8
+
+[sub_resource type="Resource" id="Resource_qwe7d"]
+script = ExtResource("9_iwx5t")
+sector = 9
+
+[sub_resource type="Resource" id="Resource_erx13"]
+script = ExtResource("8_gau84")
+city_name = "Albufeira"
+map_position = Vector3(0.17309406, 0.15500642, 2.3390183)
+description = "Albufeira is a modest fishing town shaped by the rhythms of the Atlantic. Fishing boats crowd its shores, while dried-fruit exports and small factories provide a living for its inhabitants. Women toil in the fish-processing trade, their labour essential to the local economy. Beyond the harbour, daily life follows familiar rhythms, grounded in family, faith and generations of coastal tradition. Here, the sea provides both livelihood and identity, while hardship remains an inseparable part of life along the Algarve coast."
+province_name = "Algarve"
+tier = 2
+population = 44164
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_ms2jh"), SubResource("Resource_4iwmm"), SubResource("Resource_qwe7d")])
+density = 2
+society = 10496
+traits = Array[int]([2, 10, 0])
+
+[sub_resource type="Resource" id="Resource_307ti"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_n13l1"]
+script = ExtResource("8_gau84")
+city_name = "Vimioso"
+map_position = Vector3(1.4092278, 0.15500642, -1.9826791)
+description = "In the northeastern reaches of Trás-os-Montes, Vimioso lies amid a rugged landscape of granite hills, open pastures and small settlements scattered across the frontier countryside. Livestock raising, subsistence agriculture and local trade sustain a population accustomed to difficult conditions and limited access to the wealthier coastal regions. Communal traditions and Catholic observance remain central to village life, while established landowners and local notables retain influence over municipal affairs. The Republic's secular reforms and partisan conflicts have altered the institutions of the nation, but their impact is less immediate here than the demands of harvests, weather and household survival. Vimioso embodies the endurance of Portugal's rural northeast, where attachment to land and community provides continuity amid the instability of national politics."
+province_name = "Trás-os-Montes"
+population = 4149
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_307ti")])
+society = 30912
+traits = Array[int]([0, 10])
+
+[sub_resource type="Resource" id="Resource_30h2s"]
+script = ExtResource("8_gau84")
+city_name = "Vila Nova de Foz Côa"
+
+[sub_resource type="Resource" id="Resource_jcmj0"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_2d54t"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_py0vj"]
+script = ExtResource("8_gau84")
+city_name = "Mirandela"
+map_position = Vector3(0.7960056, 0.15500642, -1.8389313)
+description = "In the fertile valleys of the Tua and the wider landscapes of northeastern Portugal, Mirandela serves as an agricultural market town surrounded by olive groves, orchards and fields. Its prosperity rests upon rural production and the trade that links isolated communities to regional centres. The social order remains shaped by landowners, merchants and the Church, although the growth of transport connections and commercial activity encourages a more outward-looking local bourgeoisie. Republican politics has weakened the old formal authority of the monarchy, but it has not erased conservative loyalties or the influence of religious life. In this distant corner of the Republic, national upheavals are filtered through the practical concerns of land, prices, harvests and local authority."
+province_name = "Trás-os-Montes"
+tier = 2
+population = 21284
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_jcmj0"), SubResource("Resource_2d54t")])
+density = 2
+society = 6336
+traits = Array[int]([12, 11, 0, 10])
+
+[sub_resource type="Resource" id="Resource_35ecq"]
+script = ExtResource("8_gau84")
+city_name = "Miranda do Douro"
+
+[sub_resource type="Resource" id="Resource_3oh3t"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_af7lr"]
+script = ExtResource("9_iwx5t")
+sector = 3
+
+[sub_resource type="Resource" id="Resource_5p402"]
+script = ExtResource("8_gau84")
+city_name = "Chaves"
+map_position = Vector3(0.71036863, 0.15500642, -2.1218395)
+description = "Near the Spanish border, Chaves stands as a historic gateway between Portugal and Galicia. Its Roman bridge spans the Tâmega River, a reminder of the armies, merchants and travellers who have crossed these lands for centuries. The town’s thermal springs draw visitors seeking relief in their warm waters, while agriculture, livestock and regional trade sustain the surrounding countryside. Stone fortifications recall generations of border conflicts, and the proximity of Spain gives local life a distinctive frontier character. In Chaves, Roman legacies and rural traditions endure beneath the watchful presence of an ancient stronghold."
+province_name = "Trás-os-Montes"
+tier = 2
+population = 37419
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_3oh3t"), SubResource("Resource_af7lr")])
+society = 14528
+traits = Array[int]([10, 11])
+
+[sub_resource type="Resource" id="Resource_w8lua"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_r2jwt"]
+script = ExtResource("8_gau84")
+city_name = "Montalegre"
+map_position = Vector3(0.43816528, 0.15500642, -2.1891255)
+description = "In the highlands of Barroso, Montalegre is a land of harsh winters, open pastures, stone villages and rugged mountains, where livestock and subsistence farming shape the lives of its inhabitants. Its distance from the coastal cities has preserved strong communal ties and a culture marked by rural resilience, religious observance and attachment to inherited customs. The Republic's promises of progress often appear remote here, where poor communications and limited economic opportunities reinforce distrust of distant authorities. Local landowners, clergy and municipal notables retain influence, while the needs of small farmers and labourers rarely command national attention. Montalegre embodies the endurance of Portugal's north: proud, conservative in many of its customs, and determined to survive beyond the reach of political fashion."
+province_name = "Trás-os-Montes"
+population = 9261
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_w8lua")])
+society = 28864
+traits = Array[int]([11, 10])
+
+[sub_resource type="Resource" id="Resource_xh2nj"]
+script = ExtResource("8_gau84")
+city_name = "Bragança"
+
+[sub_resource type="Resource" id="Resource_dtqei"]
+script = ExtResource("8_gau84")
+city_name = "Vila Real"
+
+[node name="PortugalMap" type="Node3D" unique_id=234336860 node_paths=PackedStringArray("city_tab")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+script = ExtResource("1_wr50m")
+city_tab = NodePath("CityTab")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=241464538]
+transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0, 0.97302246, 0)
+script = ExtResource("2_6q2uf")
+move_speed = 8.0
+mouse_sensitivity = 0.001
+zoom_speed = 3.0
+min_height = 3.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=889519064]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+
+[node name="Portugal" type="Node" parent="." unique_id=765804173]
+script = ExtResource("3_co8rk")
+
+[node name="Provinces" type="Node3D" parent="Portugal" unique_id=2061094848]
+
+[node name="Ribatejo" type="Node3D" parent="Portugal/Provinces" unique_id=2007997513]
+transform = Transform3D(4194304, 0, 0, 0, 4194304, 0, 0, 0, 4194304, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("5_cgvin")
+
+[node name="PortugalMapRibatejo" type="MeshInstance3D" parent="Portugal/Provinces/Ribatejo" unique_id=2131610748]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+mesh = ExtResource("6_5a8bk")
+
+[node name="Coruche" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=612844219]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_f43vf")
+
+[node name="Coruche" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Coruche" unique_id=806430984]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06149045, 0.15500642, 0.5739779)
+gizmo_extents = 0.15
+
+[node name="Abrantes" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=400567425]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_6mwu2")
+
+[node name="Abrantes" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Abrantes" unique_id=1176804563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1547475, 0.15500642, 0.06647192)
+gizmo_extents = 0.15
+
+[node name="Almeirim" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=1137737799]
+transform = Transform3D(4.7683717e-08, 0, 0, 0, 4.7683717e-08, 0, 0, 0, 4.7683717e-08, 2.0905661e-07, -5.4303925e-08, -2.3214508e-07)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_bunlw")
+
+[node name="Almeirim" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Almeirim" unique_id=503524978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.863572, 1.913868, 6.2500753)
+gizmo_extents = 0.15
+
+[node name="Tomar" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=1017833480]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_1t6g0")
+
+[node name="Tomar" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Tomar" unique_id=1138592510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00692169, 0.15500642, -0.09664619)
+gizmo_extents = 0.15
+
+[node name="Santarem" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=994839892]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_rubsh")
+
+[node name="Santarem" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Santarem" unique_id=211232096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21544448, 0.15500642, 0.272852)
+gizmo_extents = 0.15
+
+[node name="Vila Franca de Xira" type="Node3D" parent="Portugal/Provinces/Ribatejo" unique_id=1171788340]
+transform = Transform3D(2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0, 2.3841858e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_j2ggb")
+
+[node name="Vila Franca de Xira" type="Marker3D" parent="Portugal/Provinces/Ribatejo/Vila Franca de Xira" unique_id=399865835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34174657, 0.15500642, 0.4599996)
+gizmo_extents = 0.15
+
+[node name="Douro Litoral" type="Node3D" parent="Portugal/Provinces" unique_id=1516724912]
+transform = Transform3D(1048576, 0, 0, 0, 1048576, 0, 0, 0, 1048576, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("10_vnma1")
+
+[node name="PortugalMapDouroLitoral" type="MeshInstance3D" parent="Portugal/Provinces/Douro Litoral" unique_id=1640322089]
+transform = Transform3D(9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0)
+mesh = ExtResource("11_hqn7d")
+
+[node name="Penafiel" type="Node3D" parent="Portugal/Provinces/Douro Litoral" unique_id=1897461723]
+transform = Transform3D(9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_etvj1")
+
+[node name="Penafiel" type="Marker3D" parent="Portugal/Provinces/Douro Litoral/Penafiel" unique_id=1977759944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17538196, 0.15500642, -1.6059375)
+gizmo_extents = 0.15
+
+[node name="Vila Nova de Gaia" type="Node3D" parent="Portugal/Provinces/Douro Litoral" unique_id=965416384]
+transform = Transform3D(9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_nm0hx")
+
+[node name="Vila Nova de Gaia" type="Marker3D" parent="Portugal/Provinces/Douro Litoral/Vila Nova de Gaia" unique_id=1151827069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10603146, 0.15500642, -1.4450308)
+gizmo_extents = 0.15
+
+[node name="Porto" type="Node3D" parent="Portugal/Provinces/Douro Litoral" unique_id=1465319889]
+transform = Transform3D(9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_kkro8")
+
+[node name="Porto" type="Marker3D" parent="Portugal/Provinces/Douro Litoral/Porto" unique_id=1233464388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13352558, 0.15500642, -1.5588307)
+gizmo_extents = 0.15
+
+[node name="Amarante" type="Node3D" parent="Portugal/Provinces/Douro Litoral" unique_id=1806468116]
+transform = Transform3D(9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0, 9.536743e-07, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_6u58o")
+
+[node name="Amarante" type="Marker3D" parent="Portugal/Provinces/Douro Litoral/Amarante" unique_id=30519865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2854867, 0.15500642, -1.6664951)
+gizmo_extents = 0.15
+
+[node name="Península de Setúbal" type="Node3D" parent="Portugal/Provinces" unique_id=630592732]
+transform = Transform3D(262144, 0, 0, 0, 262144, 0, 0, 0, 262144, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("12_oorhn")
+
+[node name="PortugalMapPenínsulaDeSetúbal" type="MeshInstance3D" parent="Portugal/Provinces/Península de Setúbal" unique_id=194493866]
+transform = Transform3D(3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0)
+mesh = ExtResource("13_tj5qt")
+
+[node name="Alcácer do Sal" type="Node3D" parent="Portugal/Provinces/Península de Setúbal" unique_id=449502125]
+transform = Transform3D(3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_hbns3")
+
+[node name="Alcácer do Sal" type="Marker3D" parent="Portugal/Provinces/Península de Setúbal/Alcácer do Sal" unique_id=267016525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.063146204, 0.15500642, 1.1331882)
+gizmo_extents = 0.15
+
+[node name="Sines" type="Node3D" parent="Portugal/Provinces/Península de Setúbal" unique_id=1358572748]
+transform = Transform3D(3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_sqv0p")
+
+[node name="Sines" type="Marker3D" parent="Portugal/Provinces/Península de Setúbal/Sines" unique_id=1103266087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31638947, 0.15500642, 1.5075479)
+gizmo_extents = 0.15
+
+[node name="Setúbal" type="Node3D" parent="Portugal/Provinces/Península de Setúbal" unique_id=1069863133]
+transform = Transform3D(3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0, 3.8146973e-06, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_3mkjk")
+
+[node name="Setúbal" type="Marker3D" parent="Portugal/Provinces/Península de Setúbal/Setúbal" unique_id=1654274734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38368607, 0.15500642, 0.9850154)
+gizmo_extents = 0.15
+
+[node name="Oeste" type="Node3D" parent="Portugal/Provinces" unique_id=492604991]
+transform = Transform3D(65536, 0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("14_h23dt")
+
+[node name="PortugalMapOesteELisboa" type="MeshInstance3D" parent="Portugal/Provinces/Oeste" unique_id=493348896]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+mesh = ExtResource("15_06ner")
+
+[node name="Alcobaça" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=1739739636]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_5cwne")
+
+[node name="Alcobaça" type="Marker3D" parent="Portugal/Provinces/Oeste/Alcobaça" unique_id=326070525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44818214, 0.15500642, -0.0006095134)
+gizmo_extents = 0.15
+
+[node name="Mafra" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=372307107]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_n271j")
+
+[node name="Mafra" type="Marker3D" parent="Portugal/Provinces/Oeste/Mafra" unique_id=674545771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6113018, 0.15500642, 0.5435474)
+gizmo_extents = 0.15
+
+[node name="Ericeira" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=1271235522]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_iy7vd")
+
+[node name="Ericeira" type="Marker3D" parent="Portugal/Provinces/Oeste/Ericeira" unique_id=951949507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7137613, 0.15500642, 0.5466059)
+gizmo_extents = 0.15
+
+[node name="Caldas da Rainha" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=967419328]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_nmbuw")
+
+[node name="Caldas da Rainha" type="Marker3D" parent="Portugal/Provinces/Oeste/Caldas da Rainha" unique_id=1184600762]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49660826, 0.15500642, 0.08630261)
+gizmo_extents = 0.15
+
+[node name="Torres Vedras" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=1766666191]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_k6yg2")
+
+[node name="Torres Vedras" type="Marker3D" parent="Portugal/Provinces/Oeste/Torres Vedras" unique_id=1900503117]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6678839, 0.15500642, 0.47626054)
+gizmo_extents = 0.15
+
+[node name="Cascais" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=1980534083]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_bxe0h")
+
+[node name="Cascais" type="Marker3D" parent="Portugal/Provinces/Oeste/Cascais" unique_id=999737652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7443462, 0.15500642, 0.7928146)
+gizmo_extents = 0.15
+
+[node name="Sintra" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=1080588448]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_i63d5")
+
+[node name="Sintra" type="Marker3D" parent="Portugal/Provinces/Oeste/Sintra" unique_id=1605270422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.699998, 0.15500642, 0.69188434)
+gizmo_extents = 0.15
+
+[node name="Lisboa" type="Node3D" parent="Portugal/Provinces/Oeste" unique_id=895184951]
+transform = Transform3D(1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0, 1.5258789e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_ivhbh")
+
+[node name="Lisboa" type="Marker3D" parent="Portugal/Provinces/Oeste/Lisboa" unique_id=1232561095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5638501, 0.15500642, 0.71844184)
+gizmo_extents = 0.15
+
+[node name="Minho" type="Node3D" parent="Portugal/Provinces" unique_id=375357841]
+transform = Transform3D(16384, 0, 0, 0, 16384, 0, 0, 0, 16384, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("16_l8puq")
+
+[node name="Guimarães" type="Node3D" parent="Portugal/Provinces/Minho" unique_id=1178712779]
+transform = Transform3D(6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_nuix3")
+
+[node name="Guimarães" type="Marker3D" parent="Portugal/Provinces/Minho/Guimarães" unique_id=2025377612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.121841505, 0.15500642, -1.8236846)
+gizmo_extents = 0.15
+
+[node name="Barcelos" type="Node3D" parent="Portugal/Provinces/Minho" unique_id=2087943063]
+transform = Transform3D(6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_n1tgq")
+
+[node name="Barcelos" type="Marker3D" parent="Portugal/Provinces/Minho/Barcelos" unique_id=1158074332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13683632, 0.15500642, -1.965307)
+gizmo_extents = 0.15
+
+[node name="Viana do Castelo" type="Node3D" parent="Portugal/Provinces/Minho" unique_id=1683389111]
+transform = Transform3D(6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_ssv3o")
+
+[node name="Viana do Castelo" type="Marker3D" parent="Portugal/Provinces/Minho/Viana do Castelo" unique_id=1557054414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2673756, 0.15401202, -2.0625248)
+gizmo_extents = 0.15
+
+[node name="Braga" type="Node3D" parent="Portugal/Provinces/Minho" unique_id=77458647]
+transform = Transform3D(6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_qhwo3")
+
+[node name="Braga" type="Marker3D" parent="Portugal/Provinces/Minho/Braga" unique_id=547548249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009927094, 0.15500642, -1.952796)
+gizmo_extents = 0.15
+
+[node name="PortugalMapMinho" type="MeshInstance3D" parent="Portugal/Provinces/Minho" unique_id=669614478]
+transform = Transform3D(6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0, 6.1035156e-05, 0, 0, 0)
+mesh = ExtResource("17_hvo7p")
+
+[node name="Beira Litoral" type="Node3D" parent="Portugal/Provinces" unique_id=861707760]
+transform = Transform3D(4096, 0, 0, 0, 4096, 0, 0, 0, 4096, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("18_haj3r")
+
+[node name="Batalha" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1742970712]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_b0tqk")
+
+[node name="Batalha" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Batalha" unique_id=1617046231]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30540875, 0.15500642, -0.103741705)
+gizmo_extents = 0.15
+
+[node name="Lousã" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=2137642589]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_11wum")
+
+[node name="Lousã" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Lousã" unique_id=1865018740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17844036, 0.15500642, -0.58593947)
+gizmo_extents = 0.15
+
+[node name="Figueira da Foz" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=230244105]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_sqlbv")
+
+[node name="Figueira da Foz" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Figueira da Foz" unique_id=1379287453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3078555, 0.15500642, -0.60276103)
+gizmo_extents = 0.15
+
+[node name="Leiria" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1728686283]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_ld44n")
+
+[node name="Leiria" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Leiria" unique_id=1043324660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28334272, 0.15500642, -0.21925902)
+gizmo_extents = 0.15
+
+[node name="Coimbra" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1389525234]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_vuhbw")
+
+[node name="Coimbra" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Coimbra" unique_id=1151545780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005264282, 0.15500642, -0.6575407)
+gizmo_extents = 0.15
+
+[node name="Aveiro" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=188753724]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_sptww")
+
+[node name="Aveiro" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Aveiro" unique_id=693818760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14314175, 0.15500642, -1.0715381)
+gizmo_extents = 0.15
+
+[node name="Fátima" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1092958382]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_fcydv")
+
+[node name="Fátima" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Fátima" unique_id=889386358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12612277, 0.15500642, -0.052298035)
+gizmo_extents = 0.15
+
+[node name="Pombal" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1504185912]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_a0gkw")
+
+[node name="Pombal" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Pombal" unique_id=506098119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075412184, 0.15500642, -0.4467793)
+gizmo_extents = 0.15
+
+[node name="Ovar" type="Node3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1474468672]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_rb2cf")
+
+[node name="Ovar" type="Marker3D" parent="Portugal/Provinces/Beira Litoral/Ovar" unique_id=272041316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14025164, 0.15500642, -1.2774584)
+gizmo_extents = 0.15
+
+[node name="Portugal Map_Beira Litoral" type="MeshInstance3D" parent="Portugal/Provinces/Beira Litoral" unique_id=1808980795]
+transform = Transform3D(0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0, 0.00024414063, 0, 0, 0)
+mesh = ExtResource("19_0wyru")
+
+[node name="Beira Baixa" type="Node3D" parent="Portugal/Provinces" unique_id=2121795387]
+transform = Transform3D(1024, 0, 0, 0, 1024, 0, 0, 0, 1024, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("20_qh1st")
+
+[node name="PortugalMapBeiraBaixa" type="MeshInstance3D" parent="Portugal/Provinces/Beira Baixa" unique_id=270905550]
+transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
+mesh = ExtResource("21_3klkf")
+
+[node name="Seia" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=1123387739]
+transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_eifag")
+
+[node name="Seia" type="Marker3D" parent="Portugal/Provinces/Beira Baixa/Seia" unique_id=2057036629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51589906, 0.15500642, -0.78985304)
+gizmo_extents = 0.15
+
+[node name="Castelo Branco" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=294706588]
+transform = Transform3D(0.0001953125, 0, 0, 0, 0.0001953125, 0, 0, 0, 0.0001953125, 0.0007005454, -0.00022242888, -0.0002797545)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_fxduh")
+
+[node name="Castelo Branco" type="Marker3D" parent="Portugal/Provinces/Beira Baixa/Castelo Branco" unique_id=41443782]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06693983, 1.913868, -0.060854435)
+gizmo_extents = 0.15
+
+[node name="Covilhã" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=468161704]
+transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_08fu0")
+
+[node name="Covilhã" type="Marker3D" parent="Portugal/Provinces/Beira Baixa/Covilhã" unique_id=411462419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7503732, 0.15500642, -0.78321046)
+gizmo_extents = 0.15
+
+[node name="Fundão" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=2066922005]
+transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_eocxm")
+
+[node name="Fundão" type="Marker3D" parent="Portugal/Provinces/Beira Baixa/Fundão" unique_id=643166350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7075547, 0.15500642, -0.60429025)
+gizmo_extents = 0.15
+
+[node name="Beira Alta" type="Node3D" parent="Portugal/Provinces" unique_id=2139616738]
+transform = Transform3D(256, 0, 0, 0, 256, 0, 0, 0, 256, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("22_dbwa8")
+
+[node name="PortugalMapBeiraAlta" type="MeshInstance3D" parent="Portugal/Provinces/Beira Alta" unique_id=899324485]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+mesh = ExtResource("23_hd6y6")
+
+[node name="Pinhel" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=920195003]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_t5gew")
+
+[node name="Pinhel" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Pinhel" unique_id=772429464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0118719, 0.15500642, -1.2480972)
+gizmo_extents = 0.15
+
+[node name="Mangualde" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=1514742623]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_i4e54")
+
+[node name="Mangualde" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Mangualde" unique_id=1065743211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5238266, 0.15500642, -1.0408919)
+gizmo_extents = 0.15
+
+[node name="Tondela" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=353028836]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_lde4b")
+
+[node name="Tondela" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Tondela" unique_id=1170673054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31286588, 0.15500642, -0.98481196)
+gizmo_extents = 0.15
+
+[node name="Viseu" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=2131592403]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_np3ro")
+
+[node name="Viseu" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Viseu" unique_id=441917617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3870449, 0.15500642, -1.1715645)
+gizmo_extents = 0.15
+
+[node name="Lamego" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=1189366422]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_60fy0")
+
+[node name="Lamego" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Lamego" unique_id=887724130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44697365, 0.15500642, -1.5196888)
+gizmo_extents = 0.15
+
+[node name="Piódão" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=2142860629]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_gc3iy")
+
+[node name="Piódão" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Piódão" unique_id=1319338677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4376513, 0.15500642, -0.70954996)
+gizmo_extents = 0.15
+
+[node name="Gouveia" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=1703268642]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_khjjl")
+
+[node name="Gouveia" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Gouveia" unique_id=1460906652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6321697, 0.15500642, -0.84534585)
+gizmo_extents = 0.15
+
+[node name="Vilar Formoso" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=247889602]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_3a45c")
+
+[node name="Vilar Formoso" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Vilar Formoso" unique_id=366775375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1403275, 0.15500642, -1.0263584)
+gizmo_extents = 0.15
+
+[node name="Buçaco" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=449459498]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_nylm5")
+
+[node name="Buçaco" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Buçaco" unique_id=1547855334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035652135, 0.15500642, -0.80767816)
+gizmo_extents = 0.15
+
+[node name="Guarda" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=998974368]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_klb7t")
+
+[node name="Guarda" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Guarda" unique_id=468773729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89023495, 0.15500642, -0.98585796)
+gizmo_extents = 0.15
+
+[node name="Baixo Alentejo" type="Node3D" parent="Portugal/Provinces" unique_id=638531593]
+transform = Transform3D(64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("24_gg2oi")
+
+[node name="Mértola" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=1583848151]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_dbnuf")
+
+[node name="Mértola" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Mértola" unique_id=1811907144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58445764, 0.15500642, 1.81755)
+gizmo_extents = 0.15
+
+[node name="Serpa" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=1574336903]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_qsgfp")
+
+[node name="Serpa" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Serpa" unique_id=57448545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6058669, 0.15500642, 1.5178204)
+gizmo_extents = 0.15
+
+[node name="Alter do Chão" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=342057571]
+transform = Transform3D(0.0015625, 0, 0, 0, 0.003125, 0, 0, 0, 0.0015625, 0.012566776, -0.003558862, 0.010840267)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_npvah")
+
+[node name="Alter do Chão" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Alter do Chão" unique_id=1219301059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.355248, 1.913868, -3.027566)
+gizmo_extents = 0.15
+
+[node name="Moura" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=366461904]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_qny8f")
+
+[node name="Moura" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Moura" unique_id=254363178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7603194, 0.15500642, 1.3174908)
+gizmo_extents = 0.15
+
+[node name="Ourique" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=250482899]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_376dd")
+
+[node name="Ourique" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Ourique" unique_id=1566004813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17615256, 0.15500642, 1.7609684)
+gizmo_extents = 0.15
+
+[node name="Beja" type="Node3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=935296701]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_4qvq3")
+
+[node name="Beja" type="Marker3D" parent="Portugal/Provinces/Baixo Alentejo/Beja" unique_id=1697273661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4291581, 0.15500642, 1.427577)
+gizmo_extents = 0.15
+
+[node name="PortugalMapBaixoAlentejo" type="MeshInstance3D" parent="Portugal/Provinces/Baixo Alentejo" unique_id=285480321]
+transform = Transform3D(0.015625, 0, 0, 0, 0.015625, 0, 0, 0, 0.015625, 0, 0, 0)
+mesh = ExtResource("25_ouei8")
+
+[node name="Alto Alentejo" type="Node3D" parent="Portugal/Provinces" unique_id=520114575]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("26_gqb84")
+
+[node name="Elvas" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=11193090]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_24ben")
+
+[node name="Elvas" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Elvas" unique_id=448647385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9753296, 0.15500642, 0.6106795)
+gizmo_extents = 0.15
+
+[node name="Estremoz" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1594888511]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_oaaxq")
+
+[node name="Estremoz" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Estremoz" unique_id=2128307283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64318013, 0.15500642, 0.66940206)
+gizmo_extents = 0.15
+
+[node name="Mora" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1606450450]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_8ety7")
+
+[node name="Mora" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Mora" unique_id=428973708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23028722, 0.15500642, 0.5629674)
+gizmo_extents = 0.15
+
+[node name="Monsaraz" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1577271636]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_b3f14")
+
+[node name="Monsaraz" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Monsaraz" unique_id=1370622490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.731264, 0.15500642, 0.9611797)
+gizmo_extents = 0.15
+
+[node name="Crato" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=143112795]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.054802936, -0.014235448, -0.06085544)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_mtadd")
+
+[node name="Crato" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Crato" unique_id=14652912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1934133, 1.913868, 6.0283365)
+gizmo_extents = 0.15
+
+[node name="Castelo de Vide" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=661150918]
+transform = Transform3D(0.0125, 0, 0, 0, 0.0125, 0, 0, 0, 0.0125, 0.054802936, -0.014235448, -0.06085544)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_iahh5")
+
+[node name="Castelo de Vide" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Castelo de Vide" unique_id=289554363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.78791, 1.913868, 5.4553432)
+gizmo_extents = 0.15
+
+[node name="Évora" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=2101147247]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_f3oab")
+
+[node name="Évora" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Évora" unique_id=1054085643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46994126, 0.15500642, 0.87402886)
+gizmo_extents = 0.15
+
+[node name="Portalegre" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1747679844]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_4tpd2")
+
+[node name="Portalegre" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Portalegre" unique_id=2055656251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7226556, 0.15500642, 0.25266618)
+gizmo_extents = 0.15
+
+[node name="Vila Viçosa" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1071351067]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_3qrso")
+
+[node name="Vila Viçosa" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Vila Viçosa" unique_id=931745345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8109676, 0.15500642, 0.6876916)
+gizmo_extents = 0.15
+
+[node name="PortugalMapAltoAlentejo" type="MeshInstance3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=181955293]
+transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
+mesh = ExtResource("27_pxpsi")
+
+[node name="Algarve" type="Node3D" parent="Portugal/Provinces" unique_id=1845756080]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+script = ExtResource("4_5bs6h")
+data = ExtResource("28_5pdjc")
+
+[node name="Faro" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=193534994]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="Faro" type="Marker3D" parent="Portugal/Provinces/Algarve/Faro" unique_id=469409753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3760107, 0.15500642, 2.4304829)
+gizmo_extents = 0.15
+
+[node name="Olhão" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=1895546248]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_lhrmh")
+
+[node name="Olhão" type="Marker3D" parent="Portugal/Provinces/Algarve/Olhão" unique_id=344078334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.468236, 0.15500642, 2.3803077)
+gizmo_extents = 0.15
+
+[node name="Loulé" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=1736546101]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_3sqjm")
+
+[node name="Loulé" type="Marker3D" parent="Portugal/Provinces/Algarve/Loulé" unique_id=982054819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38412818, 0.15500642, 2.3329015)
+gizmo_extents = 0.15
+
+[node name="Aljezur" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=779445613]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_wmdql")
+
+[node name="Aljezur" type="Marker3D" parent="Portugal/Provinces/Algarve/Aljezur" unique_id=53688153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28720498, 0.15500642, 2.0851655)
+gizmo_extents = 0.15
+
+[node name="Silves" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=1911681956]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_xl2vh")
+
+[node name="Silves" type="Marker3D" parent="Portugal/Provinces/Algarve/Silves" unique_id=676391203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0033492409, 0.15500642, 2.2243257)
+gizmo_extents = 0.15
+
+[node name="Sagres" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=1353757551]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_1txbo")
+
+[node name="Sagres" type="Marker3D" parent="Portugal/Provinces/Algarve/Sagres" unique_id=632274161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3957805, 0.15500642, 2.4047751)
+gizmo_extents = 0.15
+
+[node name="Lagos" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=482682787]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_tpatd")
+
+[node name="Lagos" type="Marker3D" parent="Portugal/Provinces/Algarve/Lagos" unique_id=904544781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19850948, 0.15500642, 2.3007874)
+gizmo_extents = 0.15
+
+[node name="Albufeira" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=1018164369]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_erx13")
+
+[node name="Albufeira" type="Marker3D" parent="Portugal/Provinces/Algarve/Albufeira" unique_id=175900463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17309406, 0.15500642, 2.3390183)
+gizmo_extents = 0.15
+
+[node name="PortugalMapAlgarve" type="MeshInstance3D" parent="Portugal/Provinces/Algarve" unique_id=46136537]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("29_h73kv")
+
+[node name="Trás-os-Montes" type="Node3D" parent="Portugal/Provinces" unique_id=296428972]
+script = ExtResource("4_5bs6h")
+data = ExtResource("30_k1mt5")
+
+[node name="Vimioso" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=1336078524]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_n13l1")
+
+[node name="Vimioso" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Vimioso" unique_id=876849004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4092278, 0.15500642, -1.9826791)
+gizmo_extents = 0.15
+
+[node name="Vila Nova de Foz Cõa" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=274453994]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_30h2s")
+
+[node name="Vila Nova de Foz Cõa" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Vila Nova de Foz Cõa" unique_id=2120438150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95351654, 0.15500642, -1.4902663)
+gizmo_extents = 0.15
+
+[node name="Mirandela" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=1312140925]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_py0vj")
+
+[node name="Mirandela" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Mirandela" unique_id=236185764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7960056, 0.15500642, -1.8389313)
+gizmo_extents = 0.15
+
+[node name="Miranda do Douro" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=50235604]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_35ecq")
+
+[node name="Miranda do Douro" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Miranda do Douro" unique_id=748606878]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4780433, 0.15500642, -1.9184513)
+gizmo_extents = 0.15
+
+[node name="Chaves" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=1481057010]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_5p402")
+
+[node name="Chaves" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Chaves" unique_id=433585305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71036863, 0.15500642, -2.1218395)
+gizmo_extents = 0.15
+
+[node name="Montalegre" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=498451454]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_r2jwt")
+
+[node name="Montalegre" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Montalegre" unique_id=1893854335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43816528, 0.15500642, -2.1891255)
+gizmo_extents = 0.15
+
+[node name="Bragança" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=1240759949]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_xh2nj")
+
+[node name="Bragança" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Bragança" unique_id=1867246568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2125511, 0.15500642, -2.1662788)
+gizmo_extents = 0.15
+
+[node name="Vila Real" type="Node3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=744171858]
+script = ExtResource("7_boprf")
+data = SubResource("Resource_dtqei")
+
+[node name="Vila Real" type="Marker3D" parent="Portugal/Provinces/Trás-os-Montes/Vila Real" unique_id=970867046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5486746, 0.15500642, -1.73442)
+gizmo_extents = 0.15
+
+[node name="PortugalMapTrásOsMontes" type="MeshInstance3D" parent="Portugal/Provinces/Trás-os-Montes" unique_id=1194643474]
+mesh = ExtResource("31_nhqut")
+
+[node name="City_Spawner" type="Node" parent="Portugal" unique_id=1422882795]
+script = ExtResource("32_obkjf")
+model_set = ExtResource("33_l65r0")
+
+[node name="CityTab" parent="." unique_id=1226605598 instance=ExtResource("34_843hb")]

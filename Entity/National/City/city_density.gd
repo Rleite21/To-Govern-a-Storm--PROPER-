@@ -7,54 +7,51 @@ enum Level { VERY_RURAL, RURAL, URBAN, VERY_URBANISED, METROPOLITAN }
 const DISTRIBUTIONS := {
 	Level.VERY_RURAL: {
 		SocialClass.Type.PEASANTS: 0.85,
-		SocialClass.Type.PROLETARIAT: 0.03,
+		SocialClass.Type.WORKING_CLASS: 0.03,
 		SocialClass.Type.MIDDLE_CLASS: 0.08,
 		SocialClass.Type.INDUSTRIALISTS: 0.01,
-		SocialClass.Type.ARISTOCRATS_LANDOWNERS: 0.03,
+		SocialClass.Type.ARISTOCRATS: 0.03,
 	},
 	Level.RURAL: {
 		SocialClass.Type.PEASANTS: 0.70,
-		SocialClass.Type.PROLETARIAT: 0.08,
+		SocialClass.Type.WORKING_CLASS: 0.08,
 		SocialClass.Type.MIDDLE_CLASS: 0.15,
 		SocialClass.Type.INDUSTRIALISTS: 0.03,
-		SocialClass.Type.ARISTOCRATS_LANDOWNERS: 0.04,
+		SocialClass.Type.ARISTOCRATS: 0.04,
 	},
 	Level.URBAN: {
 		SocialClass.Type.PEASANTS: 0.35,
-		SocialClass.Type.PROLETARIAT: 0.30,
+		SocialClass.Type.WORKING_CLASS: 0.30,
 		SocialClass.Type.MIDDLE_CLASS: 0.25,
 		SocialClass.Type.INDUSTRIALISTS: 0.06,
-		SocialClass.Type.ARISTOCRATS_LANDOWNERS: 0.04,
+		SocialClass.Type.ARISTOCRATS: 0.04,
 	},
 	Level.VERY_URBANISED: {
 		SocialClass.Type.PEASANTS: 0.10,
-		SocialClass.Type.PROLETARIAT: 0.45,
+		SocialClass.Type.WORKING_CLASS: 0.45,
 		SocialClass.Type.MIDDLE_CLASS: 0.32,
 		SocialClass.Type.INDUSTRIALISTS: 0.09,
-		SocialClass.Type.ARISTOCRATS_LANDOWNERS: 0.04,
+		SocialClass.Type.ARISTOCRATS: 0.04,
 	},
 	Level.METROPOLITAN: {
 		SocialClass.Type.PEASANTS: 0.05,
-		SocialClass.Type.PROLETARIAT: 0.35,
+		SocialClass.Type.WORKING_CLASS: 0.35,
 		SocialClass.Type.MIDDLE_CLASS: 0.40,
 		SocialClass.Type.INDUSTRIALISTS: 0.12,
-		SocialClass.Type.ARISTOCRATS_LANDOWNERS: 0.08,
+		SocialClass.Type.ARISTOCRATS: 0.08,
 	},
 }
 
 
-# Devolve -1 se não reconhecer
 static func from_string(text: String) -> int:
 	var key := text.strip_edges().to_upper().replace(" ", "_").replace("-", "_")
 	return Level[key] if Level.has(key) else -1
 
 
-# Devolve uma cópia da distribuição {SocialClass.Type: float}
 static func get_distribution(level: Level) -> Dictionary:
 	return DISTRIBUTIONS[level].duplicate()
 
 
-# Cria as instâncias de SocialClass já com a percentagem da população
 static func create_social_classes(level: Level) -> Array[SocialClass]:
 	var result: Array[SocialClass] = []
 	for class_type in DISTRIBUTIONS[level]:
