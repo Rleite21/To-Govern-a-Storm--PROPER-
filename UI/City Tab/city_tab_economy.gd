@@ -12,7 +12,7 @@ static func fill(city: City, chart: PieChart) -> void:
 		if spec == null:
 			continue
 
-		values[Economy.Sector.keys()[spec.sector]] = Economy.roll_size(
+		values[Economy.display_name(spec.sector)] = Economy.roll_size(
 			city.data.population,
 			spec.sector,
 			1.0,

@@ -20,6 +20,33 @@ const BASELINE_WEIGHT := {
 	Sector.CIVIL_ENGINEERING: 0.15,
 }
 
+static func display_name(type: int) -> String:
+	match type:
+		Sector.AGRICULTURE:
+			return "Agriculture"
+		Sector.HEAVY_INDUSTRY:
+			return "Heavy Industry"
+		Sector.FINANCE:
+			return "Finance"
+		Sector.TRANSPORTATION:
+			return "Transportation"
+		Sector.MINING:
+			return "Mining & Raw Materials"
+		Sector.TRADE_SERVICES:
+			return "Trade & Services"
+		Sector.ARMS:
+			return "Arms Industry"
+		Sector.MANUFACTURING:
+			return "Manufacturing"
+		Sector.FISHING:
+			return "Fishing"
+		Sector.PORTUARY:
+			return "Portuary"
+		Sector.CIVIL_ENGINEERING:
+			return "Civil Engineering"
+	return "Unknown"
+
+
 static func economic_scale(total_population: float) -> float:
 	return 100.0 * pow(total_population / 10000.0, 0.8)
 

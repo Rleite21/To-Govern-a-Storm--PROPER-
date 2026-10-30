@@ -382,7 +382,6 @@ func _refresh_view(i: int) -> void:
 	if poly.material is ShaderMaterial:
 		(poly.material as ShaderMaterial).set_shader_parameter("hover", 1.0 if hovered else 0.0)
 
-
 func _rebuild_legend() -> void:
 	for c in _legend.get_children():
 		_legend.remove_child(c)
@@ -399,8 +398,10 @@ func _rebuild_legend() -> void:
 
 	for i in slices.size():
 		var s := slices[i]
-		if s == null:
+
+		if s == null or s.value <= 0.0:
 			continue
+
 		var row := HBoxContainer.new()
 		row.add_theme_constant_override("separation", 6)
 

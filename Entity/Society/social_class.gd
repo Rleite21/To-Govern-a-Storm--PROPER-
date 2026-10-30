@@ -1,7 +1,7 @@
-class_name Social_Class
+class_name SocialClass
 extends RefCounted
 
-enum Type { PEASANTS, PROLETARIAT, MIDDLE_CLASS, INDUSTRIALISTS, ARISTOCRATS_LANDOWNERS }
+enum Type { PEASANTS, WORKING_CLASS, MIDDLE_CLASS, INDUSTRIALISTS, ARISTOCRATS }
 
 var type: Type
 var population: int = 0            # Número de habitantes desta classe na cidade
@@ -26,10 +26,10 @@ func _init(p_type: Type = Type.PEASANTS, p_share: float = 0.0) -> void:
 func get_display_name() -> String:
 	match type:
 		Type.PEASANTS: return "Peasants"
-		Type.PROLETARIAT: return "Proletariat"
+		Type.WORKING_CLASS: return "Working Class"
 		Type.MIDDLE_CLASS: return "Middle Class"
 		Type.INDUSTRIALISTS: return "Industrialists"
-		Type.ARISTOCRATS_LANDOWNERS: return "Aristocrats & Landowners"
+		Type.ARISTOCRATS: return "Aristocrats"
 	return "Unknown"
 
 
