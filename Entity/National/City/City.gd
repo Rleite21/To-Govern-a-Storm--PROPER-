@@ -30,4 +30,5 @@ func initialize(world_seed: int = 0) -> bool:
 	demographics.generate(data.population, data.density, rng)
 	economy.generate(demographics.population, data.traits, data.specializations)
 	stance.flags = data.society
+	
 	return true

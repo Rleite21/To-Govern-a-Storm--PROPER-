@@ -35,34 +35,55 @@ func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		accept_event()
 
-
-# Aceita uma City ou um CityData (de preferência passa a City)
 func show_city(source: Variant) -> void:
+	print("[DEBUG] show_city iniciado")
+	print("[DEBUG] source type: ", typeof(source))
+	print("[DEBUG] source class: ", source.get_class() if source is Object else "Not Object")
+
 	var city: City = null
 	var data: CityData = null
 
 	if source is City:
+		print("[DEBUG] Source é City")
 		city = source
 		data = city.data
+
 	elif source is CityData:
+		print("[DEBUG] Source é CityData")
 		data = source
 		city = _find_city(data)
+		print("[DEBUG] Resultado _find_city: ", city)
+
+	else:
+		print("[DEBUG] Source não é City nem CityData")
 
 	if data == null:
+		print("[DEBUG] DATA É NULL - RETURN")
 		return
 
+	print("[DEBUG] Data encontrada: ", data.city_name)
+
 	_show_data(data)
+	print("[DEBUG] _show_data concluído")
 
 	if city != null:
-		# Segurança: se o arranque do mundo não inicializou esta cidade
+		print("[DEBUG] City encontrada: ", city.data.city_name)
+
 		if city.demographics.social_classes.is_empty():
+			print("[DEBUG] Social classes vazias - initialize()")
 			city.initialize()
+
+		print("[DEBUG] ANTES de _fill_demographics()")
 		_fill_demographics(city)
+		print("[DEBUG] DEPOIS de _fill_demographics()")
+
 	else:
-		push_warning("CityTab: não encontrei a City para '%s'. Passa a City em vez do CityData, ou adiciona-a ao grupo 'cities'." % data.city_name)
+		print("[DEBUG] CITY É NULL")
+		push_warning("CityTab: não encontrei a City para '%s'." % data.city_name)
 		_clear_demographics()
 
 	visible = true
+
 
 
 func close() -> void:
@@ -89,18 +110,23 @@ func _show_data(data: CityData) -> void:
 
 	_fill_specializations(data)
 
-
 func _fill_demographics(city: City) -> void:
+	print("[DEBUG] A chamar _fill_demographics()")
 	if demographics_chart == null:
+		push_warning("DemographicsChart não encontrado!")
 		return
 
-	var values := {}
-	var types: Array = city.demographics.social_classes.keys()
-	types.sort()  # ordem do enum SocialClass.Type
-	for type in types:
+	print("\n--- Demografia: ", city.data.city_name, " ---")
+
+	var values: Dictionary = {}
+
+	for type in city.demographics.social_classes:
 		var sc: SocialClass = city.demographics.social_classes[type]
+		print(sc.get_display_name(), " | Population: ", sc.population)
 		values[sc.get_display_name()] = sc.population
-	demographics_chart.set_values(values, true)  # true = repete a animação de entrada
+
+	print("Valores enviados ao gráfico: ", values)
+	demographics_chart.set_values(values, true)
 
 
 func _clear_demographics() -> void:
@@ -132,9 +158,20 @@ func _fill_specializations(data: CityData) -> void:
 # ---------------------------------------------------------------- helpers
 
 func _find_city(data: CityData) -> City:
-	for c in get_tree().get_nodes_in_group("cities"):
-		if c is City and (c as City).data == data:
-			return c
+	var provinces := get_node_or_null("../Portugal/Provinces")
+
+	if provinces == null:
+		push_error("CityTab: não foi encontrado ../Portugal/Provinces")
+		return null
+
+	for province in provinces.get_children():
+		for node in province.get_children():
+			if node is City:
+				var city := node as City
+
+				if city.data == data:
+					return city
+
 	return null
 
 
