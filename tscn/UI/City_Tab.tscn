@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://covr643g4mpxm" path="res://UI/city_tab.gd" id="1_ikkh7"]
 [ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_3ad8n"]
+[ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="3_qgd44"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
 font_size = 20
@@ -94,6 +95,11 @@ layout_mode = 2
 
 [node name="DensityLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1230229610]
 layout_mode = 2
+
+[node name="DemographicsChart" parent="MarginContainer/ScrollContainer/VBox" unique_id=1266502682 instance=ExtResource("3_qgd44")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=178555464]
 layout_mode = 2

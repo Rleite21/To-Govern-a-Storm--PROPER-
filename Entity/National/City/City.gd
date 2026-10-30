@@ -18,11 +18,16 @@ var tier: CityTier.Type:
 	get: return data.tier
 	
 # Returns false if the city can't be used
-func initialize() -> bool:
+# Returns false if the city can't be used
+func initialize(world_seed: int = 0) -> bool:
 	if data == null:
 		push_error("City '%s' has no CityData!" % name)
 		return false
-	demographics.generate(data.population, data.density)
+
+	var rng := RandomNumberGenerator.new()
+	rng.seed = hash(data.city_name) + world_seed
+
+	demographics.generate(data.population, data.density, rng)
 	economy.generate(demographics.population, data.traits, data.specializations)
 	stance.flags = data.society
 	return true

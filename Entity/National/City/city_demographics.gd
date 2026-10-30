@@ -1,35 +1,55 @@
 class_name CityDemographics
 extends RefCounted
 
-const RANDOM_RANGE := 0.025
-
-# Ordem: PEASANTS, PROLETARIAT, MIDDLE_CLASS, INDUSTRIALISTS, ARISTOCRATS
-const DENSITY_SHARES := {
-	CityDensity.Level.VERY_RURAL:     [0.85, 0.03, 0.08, 0.01, 0.03],
-	CityDensity.Level.RURAL:          [0.70, 0.08, 0.15, 0.03, 0.04],
-	CityDensity.Level.URBAN:          [0.35, 0.30, 0.25, 0.06, 0.04],
-	CityDensity.Level.VERY_URBANISED: [0.10, 0.45, 0.32, 0.09, 0.04],
-	CityDensity.Level.METROPOLITAN:   [0.05, 0.35, 0.40, 0.12, 0.08],
-}
+## Desvio máximo (±) aplicado a cada classe. 0.25 = cada percentagem pode variar até 25% para cima ou para baixo.
+const DEFAULT_VARIANCE := 0.25
 
 var population: int = 0
-var class_shares := PackedFloat32Array()  # indexado por SocialClass.Type
+var social_classes: Dictionary = {}  # {SocialClass.Type: SocialClass}
 
-func generate(p_population: int, density: CityDensity.Level) -> void:
-	population = p_population
-	var base: Array = DENSITY_SHARES[density]
-	class_shares.resize(base.size())
 
-	var total := 0.0
-	for i in base.size():
-		var v := maxf(float(base[i]) + randf_range(-RANDOM_RANGE, RANDOM_RANGE), 0.0)
-		class_shares[i] = v
-		total += v
-	for i in class_shares.size():
-		class_shares[i] /= total
+func generate(total_population: int, density: CityDensity.Level, rng: RandomNumberGenerator = null, variance: float = DEFAULT_VARIANCE) -> void:
+	if rng == null:
+		rng = RandomNumberGenerator.new()
+		rng.randomize()
 
-func get_share(social_class: SocialClass.Type) -> float:
-	return class_shares[social_class]
+	population = total_population
+	social_classes.clear()
 
-func get_count(social_class: SocialClass.Type) -> float:
-	return population * class_shares[social_class]
+	# 1) Base da densidade + desvio multiplicativo por classe
+	var base := CityDensity.get_distribution(density)
+	var shares := {}
+	var sum := 0.0
+	for class_type in base:
+		var s: float = base[class_type] * rng.randf_range(1.0 - variance, 1.0 + variance)
+		shares[class_type] = s
+		sum += s
+
+	# 2) Normalizar para somar exatamente 1.0
+	for class_type in shares:
+		shares[class_type] /= sum
+
+	# 3) Converter em população inteira (método do maior resto, para a soma bater certo)
+	var assigned := 0
+	var remainders: Array = []  # [[class_type, resto], ...]
+	for class_type in shares:
+		var exact: float = shares[class_type] * population
+		var count := floori(exact)
+		var sc := SocialClass.new(class_type, shares[class_type])
+		sc.population = count
+		social_classes[class_type] = sc
+		assigned += count
+		remainders.append([class_type, exact - count])
+
+	remainders.sort_custom(func(a, b): return a[1] > b[1])
+	var leftover := population - assigned
+	for i in leftover:
+		social_classes[remainders[i % remainders.size()][0]].population += 1
+
+
+func get_class_population(class_type: SocialClass.Type) -> int:
+	return social_classes[class_type].population if social_classes.has(class_type) else 0
+
+
+func get_class_share(class_type: SocialClass.Type) -> float:
+	return social_classes[class_type].population_share if social_classes.has(class_type) else 0.0
