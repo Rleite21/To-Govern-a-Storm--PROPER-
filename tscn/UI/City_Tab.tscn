@@ -5,10 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="3_qgd44"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
-font_size = 20
+font_size = 15
 font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ad8n"]
+font_size = 15
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgd44"]
 font_size = 20
 font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
@@ -46,6 +50,7 @@ theme = ExtResource("2_3ad8n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 13
 
 [node name="Header" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=1021751646]
 layout_mode = 2
@@ -78,6 +83,8 @@ layout_mode = 2
 
 [node name="Stats" type="GridContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=498628557]
 layout_mode = 2
+theme_override_constants/h_separation = 35
+theme_override_constants/v_separation = 8
 columns = 2
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1637490244]
@@ -85,22 +92,37 @@ layout_mode = 2
 text = "Population"
 label_settings = SubResource("LabelSettings_ikkh7")
 
+[node name="PopulationLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=584126907]
+layout_mode = 2
+
 [node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1765972966]
 layout_mode = 2
 text = "Density"
 label_settings = SubResource("LabelSettings_3ad8n")
 
-[node name="PopulationLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=584126907]
-layout_mode = 2
-
 [node name="DensityLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Stats" unique_id=1230229610]
 layout_mode = 2
 
-[node name="DemographicsChart" parent="MarginContainer/ScrollContainer/VBox" unique_id=1266502682 instance=ExtResource("3_qgd44")]
+[node name="ChartsBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=1584217906]
+layout_mode = 2
+
+[node name="Demographics_Economy" type="Label" parent="MarginContainer/ScrollContainer/VBox/ChartsBox" unique_id=1497551436]
+layout_mode = 2
+text = "Demographics & Economy"
+label_settings = SubResource("LabelSettings_qgd44")
+horizontal_alignment = 1
+
+[node name="DemographicsChart" parent="MarginContainer/ScrollContainer/VBox/ChartsBox" unique_id=1266502682 instance=ExtResource("3_qgd44")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="EconomyChart" parent="MarginContainer/ScrollContainer/VBox/ChartsBox" unique_id=353517851 instance=ExtResource("3_qgd44")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.38431373, 0.41960785, 0.45882353, 1, 0.83137256, 0.6745098, 0.19607843, 1, 0.22352941, 0.4745098, 0.7254902, 1, 0.6039216, 0.4117647, 0.70980394, 1, 0.5882353, 0.23529412, 0.25882354, 1, 0.8509804, 0.50980395, 0.2627451, 1, 0.14117648, 0.30980393, 0.47058824, 1, 0.2779903, 0.59403276, 0, 1, 0.36862746, 0, 0, 1, 0.21176471, 0.6509804, 0.627451, 1)
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=178555464]
 layout_mode = 2

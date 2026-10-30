@@ -3,23 +3,26 @@ extends Control
 
 signal closed
 
-const VBOX := "MarginContainer/ScrollContainer/VBox/"
+const MAIN_VBOX := "MarginContainer/ScrollContainer/VBox/"
+const CHARTS_VBOX := "MarginContainer/ScrollContainer/VBox/ChartsBox/"
 
-@onready var name_label: Label = get_node(VBOX + "Header/NameLabel")
-@onready var tier_label: Label = get_node(VBOX + "Header/TierLabel")
-@onready var close_button: Button = get_node(VBOX + "Header/CloseButton")
-@onready var province_label: Label = get_node(VBOX + "Header/ProvinceLabel")
 
-@onready var description_label: RichTextLabel = get_node(VBOX + "DescriptionLabel")
-@onready var population_label: Label = get_node(VBOX + "Stats/PopulationLabel")
-@onready var density_label: Label = get_node(VBOX + "Stats/DensityLabel")
+@onready var name_label: Label = get_node(MAIN_VBOX + "Header/NameLabel")
+@onready var tier_label: Label = get_node(MAIN_VBOX + "Header/TierLabel")
+@onready var close_button: Button = get_node(MAIN_VBOX + "Header/CloseButton")
+@onready var province_label: Label = get_node(MAIN_VBOX + "Header/ProvinceLabel")
 
-@onready var society_box: Container = get_node(VBOX + "SocietyBox")
-@onready var specializations_box: Container = get_node(VBOX + "SpecializationsBox")
-@onready var traits_box: Container = get_node(VBOX + "TraitsBox")
+@onready var description_label: RichTextLabel = get_node(MAIN_VBOX + "DescriptionLabel")
+@onready var population_label: Label = get_node(MAIN_VBOX + "Stats/PopulationLabel")
+@onready var density_label: Label = get_node(MAIN_VBOX + "Stats/DensityLabel")
 
-@onready var demographics_chart: PieChart = get_node(VBOX + "DemographicsChart")
+@onready var society_box: Container = get_node(MAIN_VBOX + "SocietyBox")
+@onready var specializations_box: Container = get_node(MAIN_VBOX + "SpecializationsBox")
+@onready var traits_box: Container = get_node(MAIN_VBOX + "TraitsBox")
 
+@onready var demographics_box: VBoxContainer = get_node(CHARTS_VBOX)
+@onready var demographics_chart: PieChart = get_node(CHARTS_VBOX + "DemographicsChart")
+@onready var economy_chart: PieChart = get_node(CHARTS_VBOX + "EconomyChart")
 
 func _ready() -> void:
 	close_button.pressed.connect(close)
@@ -40,23 +43,10 @@ func show_city(source: Variant) -> void:
 	if data == null:
 		return
 
-	CityTabInfo.fill(
-		data,
-		name_label,
-		tier_label,
-		province_label,
-		description_label,
-		population_label,
-		density_label
-	)
-
-	CityTabSociety.fill(
-		data,
-		society_box,
-		specializations_box,
-		traits_box
-	)
-
+	CityTabInfo.fill(data,name_label,tier_label,province_label,description_label,population_label,density_label)
+	CityTabSociety.fill(data, society_box, specializations_box, traits_box)
+	CityTabEconomy.fill(city, economy_chart)
+	
 	if city != null:
 		if city.demographics.social_classes.is_empty():
 			city.initialize()
