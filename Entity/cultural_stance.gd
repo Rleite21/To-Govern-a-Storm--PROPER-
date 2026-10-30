@@ -1,7 +1,6 @@
 class_name CulturalStance
 extends RefCounted
 
-# Cada valor é um bit. Acrescentar novos sempre no FIM (o .tres grava o número).
 enum Flag {
 	NONE = 0,
 	COSMOPOLITAN = 1 << 0,
@@ -23,10 +22,8 @@ enum Flag {
 	PATRIOTIC = 1 << 16,
 }
 
-# Nomes alternativos (documento/CSV) -> nome no enum
 const ALIASES := { "TRADITIONALIST": "TRADITIONAL" }
 
-# ---------- Estado da cidade (sem efeitos por agora) ----------
 var flags: int = 0
 
 func has(flag: Flag) -> bool:
@@ -41,15 +38,11 @@ func remove(flag: Flag) -> void:
 func get_names() -> Array[String]:
 	return names_from_flags(flags)
 
-# ---------- Conversões (estáticas) ----------
-
-# Devolve 0 se não reconhecer
 static func from_string(text: String) -> int:
 	var key := text.strip_edges().to_upper().replace(" ", "_").replace("-", "_")
 	key = ALIASES.get(key, key)
 	return Flag[key] if Flag.has(key) else 0
 
-# "Cosmopolitan, Militant" -> flags combinadas num único int
 static func parse_flags(text: String) -> int:
 	var result := 0
 	for part in text.split(","):
@@ -62,7 +55,6 @@ static func parse_flags(text: String) -> int:
 		result |= value
 	return result
 
-# Para debug: nomes das flags ativas
 static func names_from_flags(value: int) -> Array[String]:
 	var out: Array[String] = []
 	for key in Flag.keys():

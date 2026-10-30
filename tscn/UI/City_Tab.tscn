@@ -26,7 +26,7 @@ font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
 [node name="CityTab" type="PanelContainer" unique_id=808472461]
 anchors_preset = -1
-anchor_right = 0.3
+anchor_right = 0.35
 anchor_bottom = 0.85
 script = ExtResource("1_ikkh7")
 

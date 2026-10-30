@@ -4,7 +4,6 @@ extends Node
 @onready var cities := get_node_or_null("Cities")
 var world_seed: int = 0
 
-
 func _ready() -> void:
 	print("Portugal initialized! Running routine checks...\n")
 	print("[MAIN]- Checking provinces...")
