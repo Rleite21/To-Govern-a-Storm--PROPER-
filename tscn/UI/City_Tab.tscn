@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cisd305cg8krh"]
 
-[ext_resource type="Script" uid="uid://covr643g4mpxm" path="res://UI/city_tab.gd" id="1_ikkh7"]
+[ext_resource type="Script" uid="uid://covr643g4mpxm" path="res://UI/City Tab/city_tab.gd" id="1_ikkh7"]
 [ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_3ad8n"]
 [ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="3_qgd44"]
 
