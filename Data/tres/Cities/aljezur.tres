@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_38040"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_8mycl"]
 
+[sub_resource type="Resource" id="Resource_xwiq1"]
+script = ExtResource("2_8mycl")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_eypes"]
+script = ExtResource("2_8mycl")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_38040")
 city_name = "Aljezur"
@@ -10,6 +19,7 @@ map_position = Vector3(-0.28720498, 0.15500642, 2.0851655)
 description = "Remote and rugged, Aljezur clings to the western Algarve, where the Atlantic meets a landscape of windswept hills, farmland and scattered villages. Fishing and agriculture dictate the pace of life, while the ruins of the old Moorish settlement preserve the memory of earlier rulers. Modernity has yet to transform this isolated corner of Portugal. The debates of Lisbon — politics, religion and revolution — feel distant here, where survival still depends on the land, the weather and the sea."
 province_name = "Algarve"
 population = 6045
+specializations = Array[ExtResource("2_8mycl")]([SubResource("Resource_xwiq1"), SubResource("Resource_eypes")])
 density = 0
 society = 10498
 traits = Array[int]([0, 10, 2])

@@ -3,6 +3,36 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2x66g"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_b2rju"]
 
+[sub_resource type="Resource" id="Resource_2q1mf"]
+script = ExtResource("2_b2rju")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_kdb4f"]
+script = ExtResource("2_b2rju")
+sector = 2
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_xb4sg"]
+script = ExtResource("2_b2rju")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_rafsr"]
+script = ExtResource("2_b2rju")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_4esrv"]
+script = ExtResource("2_b2rju")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_upmqj"]
+script = ExtResource("2_b2rju")
+sector = 9
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_2x66g")
 city_name = "Porto"
@@ -11,6 +41,7 @@ description = "The 2nd largest metropolis of Portugal rises produly along the st
 province_name = "Douro Litoral"
 tier = 1
 population = 273476
+specializations = Array[ExtResource("2_b2rju")]([SubResource("Resource_2q1mf"), SubResource("Resource_kdb4f"), SubResource("Resource_xb4sg"), SubResource("Resource_rafsr"), SubResource("Resource_4esrv"), SubResource("Resource_upmqj")])
 density = 4
 society = 255
 traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 15, 11])

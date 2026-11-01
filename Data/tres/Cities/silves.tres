@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_43gpb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_irnrt"]
 
+[sub_resource type="Resource" id="Resource_xjskp"]
+script = ExtResource("2_irnrt")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_43gpb")
 city_name = "Silves"
@@ -11,5 +15,6 @@ description = "Once a flourishing centre of Islamic al-Andalus, Silves preserves
 province_name = "Algarve"
 tier = 2
 population = 38239
+specializations = Array[ExtResource("2_irnrt")]([SubResource("Resource_xjskp")])
 society = 2432
 traits = Array[int]([0, 10])

@@ -3,6 +3,36 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ttevi"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_o4heh"]
 
+[sub_resource type="Resource" id="Resource_60m07"]
+script = ExtResource("2_o4heh")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_2rnfx"]
+script = ExtResource("2_o4heh")
+sector = 2
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_qxoln"]
+script = ExtResource("2_o4heh")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_1lvyb"]
+script = ExtResource("2_o4heh")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_lfbn8"]
+script = ExtResource("2_o4heh")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_8oclv"]
+script = ExtResource("2_o4heh")
+sector = 9
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_ttevi")
 city_name = "Lisboa"
@@ -11,6 +41,7 @@ description = "The capital of the Portuguese Republic is a city of contradiction
 province_name = "Oeste"
 tier = 0
 population = 658236
+specializations = Array[ExtResource("2_o4heh")]([SubResource("Resource_60m07"), SubResource("Resource_2rnfx"), SubResource("Resource_qxoln"), SubResource("Resource_1lvyb"), SubResource("Resource_lfbn8"), SubResource("Resource_8oclv")])
 density = 4
 society = 63
 traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 15, 11])

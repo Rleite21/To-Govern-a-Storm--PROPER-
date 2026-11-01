@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3dgyy"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_w2uek"]
 
+[sub_resource type="Resource" id="Resource_r7sem"]
+script = ExtResource("2_w2uek")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_rr4xb"]
+script = ExtResource("2_w2uek")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_3dgyy")
 city_name = "Chaves"
@@ -11,5 +20,6 @@ description = "Near the Spanish border, Chaves stands as a historic gateway betw
 province_name = "Trás-os-Montes"
 tier = 2
 population = 37419
+specializations = Array[ExtResource("2_w2uek")]([SubResource("Resource_r7sem"), SubResource("Resource_rr4xb")])
 society = 14528
 traits = Array[int]([10, 12])

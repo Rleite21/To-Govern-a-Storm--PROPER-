@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_6vejc"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_s40vh"]
 
+[sub_resource type="Resource" id="Resource_8dlys"]
+script = ExtResource("2_s40vh")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_js8nf"]
+script = ExtResource("2_s40vh")
+sector = 8
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_6wf3g"]
+script = ExtResource("2_s40vh")
+sector = 9
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_6vejc")
 city_name = "Albufeira"
@@ -11,6 +25,7 @@ description = "Albufeira is a modest fishing town shaped by the rhythms of the A
 province_name = "Algarve"
 tier = 2
 population = 44164
+specializations = Array[ExtResource("2_s40vh")]([SubResource("Resource_8dlys"), SubResource("Resource_js8nf"), SubResource("Resource_6wf3g")])
 density = 2
 society = 10496
 traits = Array[int]([2, 10, 0])

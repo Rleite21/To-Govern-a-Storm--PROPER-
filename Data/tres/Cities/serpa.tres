@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fh3by"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_l2l32"]
 
+[sub_resource type="Resource" id="Resource_fh3by"]
+script = ExtResource("2_l2l32")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_fh3by")
 city_name = "Serpa"
@@ -11,5 +15,6 @@ description = "Rising above the plains of the Baixo Alentejo, close to the Spani
 province_name = "Baixo Alentejo"
 tier = 2
 population = 13764
+specializations = Array[ExtResource("2_l2l32")]([SubResource("Resource_fh3by")])
 society = 2310
 traits = Array[int]([0, 10])

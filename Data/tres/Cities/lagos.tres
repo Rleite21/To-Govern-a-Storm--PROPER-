@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_5bdba"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_8br0b"]
 
+[sub_resource type="Resource" id="Resource_4wfgr"]
+script = ExtResource("2_8br0b")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_bdlui"]
+script = ExtResource("2_8br0b")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_v8sov"]
+script = ExtResource("2_8br0b")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_5bdba")
 city_name = "Lagos"
@@ -11,6 +25,7 @@ description = "Once a principal gateway to Portugal's maritime expansion, Lagos 
 province_name = "Algarve"
 tier = 2
 population = 33583
+specializations = Array[ExtResource("2_8br0b")]([SubResource("Resource_4wfgr"), SubResource("Resource_bdlui"), SubResource("Resource_v8sov")])
 density = 2
 society = 8450
 traits = Array[int]([0, 2, 12, 10])

@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wkkgb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_7lneq"]
 
+[sub_resource type="Resource" id="Resource_7es3y"]
+script = ExtResource("2_7lneq")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_8q4q2"]
+script = ExtResource("2_7lneq")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_xxrqn"]
+script = ExtResource("2_7lneq")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_wkkgb")
 city_name = "Ovar"
@@ -11,6 +26,7 @@ description = "Situated between the Atlantic shore and the lagoons and waterways
 province_name = "Beira Litoral"
 tier = 2
 population = 58091
+specializations = Array[ExtResource("2_7lneq")]([SubResource("Resource_7es3y"), SubResource("Resource_8q4q2"), SubResource("Resource_xxrqn")])
 density = 2
 society = 390
 traits = Array[int]([9, 10, 12, 13, 15, 6, 2, 7])

@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ukxg4"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_omba4"]
 
+[sub_resource type="Resource" id="Resource_40kjr"]
+script = ExtResource("2_omba4")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_vf7e6"]
+script = ExtResource("2_omba4")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_oclbp"]
+script = ExtResource("2_omba4")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_ukxg4")
 city_name = "Coimbra"
@@ -11,6 +26,7 @@ description = "Rising above the Mondego River, Coimbra is a city of ancient ston
 province_name = "Beira Litoral"
 tier = 1
 population = 146899
+specializations = Array[ExtResource("2_omba4")]([SubResource("Resource_40kjr"), SubResource("Resource_vf7e6"), SubResource("Resource_oclbp")])
 density = 3
 society = 2902
 traits = Array[int]([3, 4, 5, 6, 8, 10, 12, 13, 16, 15])

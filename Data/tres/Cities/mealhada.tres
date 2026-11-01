@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2icsx"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_61xaq"]
 
+[sub_resource type="Resource" id="Resource_t2bwn"]
+script = ExtResource("2_61xaq")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_160t5"]
+script = ExtResource("2_61xaq")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_be51d"]
+script = ExtResource("2_61xaq")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_2icsx")
 city_name = "Mealhada"
@@ -11,5 +25,6 @@ description = "Set amid the fertile countryside between Coimbra and Aveiro, Meal
 province_name = "Beira Alta"
 tier = 2
 population = 19948
+specializations = Array[ExtResource("2_61xaq")]([SubResource("Resource_t2bwn"), SubResource("Resource_160t5"), SubResource("Resource_be51d")])
 density = 2
 society = 448

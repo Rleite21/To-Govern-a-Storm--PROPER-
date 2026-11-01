@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_2jdfm"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_85oye"]
 
+[sub_resource type="Resource" id="Resource_jkksm"]
+script = ExtResource("2_85oye")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_qh6w8"]
+script = ExtResource("2_85oye")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ubkvn"]
+script = ExtResource("2_85oye")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_b8cge"]
+script = ExtResource("2_85oye")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_2jdfm")
 city_name = "Tomar"
@@ -11,6 +30,7 @@ description = "Dominated by the monumental Convent of Christ, Tomar is a city wh
 province_name = "Ribatejo"
 tier = 2
 population = 37420
+specializations = Array[ExtResource("2_85oye")]([SubResource("Resource_jkksm"), SubResource("Resource_qh6w8"), SubResource("Resource_ubkvn"), SubResource("Resource_b8cge")])
 density = 2
 society = 1344
 traits = Array[int]([0, 4, 6, 9, 12, 13])

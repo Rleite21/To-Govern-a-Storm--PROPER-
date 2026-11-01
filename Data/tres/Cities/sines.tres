@@ -3,6 +3,26 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7g8h6"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_2tr4w"]
 
+[sub_resource type="Resource" id="Resource_iputm"]
+script = ExtResource("2_2tr4w")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_vbuis"]
+script = ExtResource("2_2tr4w")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_fyw1v"]
+script = ExtResource("2_2tr4w")
+sector = 9
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_u36xc"]
+script = ExtResource("2_2tr4w")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_7g8h6")
 city_name = "Sines"
@@ -11,6 +31,7 @@ description = "A coastal town overlooking the Atlantic, Sines is shaped by its f
 province_name = "Península de Setúbal"
 tier = 2
 population = 16943
+specializations = Array[ExtResource("2_2tr4w")]([SubResource("Resource_iputm"), SubResource("Resource_vbuis"), SubResource("Resource_fyw1v"), SubResource("Resource_u36xc")])
 density = 2
 society = 386
 traits = Array[int]([2, 6])

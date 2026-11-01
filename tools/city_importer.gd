@@ -9,6 +9,9 @@ const REQUIRED_COLUMNS: Array[String] = [
 	"society", "tier", "density", "traits"
 ]
 
+# Peso dado a todos os setores listados na coluna "economy"
+const DEFAULT_PREVALENCE := 1.0
+
 const SOCIETY_FLAGS: Array[String] = [
 	"Cosmopolitan", "Militant", "Rebellious", "Secular", "Intellectual",
 	"Modernist", "Provincial", "Rugged", "Traditional", "Nostalgic",
@@ -132,6 +135,9 @@ func _import_csv() -> int:
 	if not col.has("province_name"):
 		print("[INFO] Sem coluna 'province_name' no CSV (opcional, vem da cena do mapa).")
 
+	if not col.has("economy"):
+		print("[INFO] Sem coluna 'economy' no CSV: as specializations não são alteradas.")
+
 	var count := 0
 	var problems := 0
 	var skipped := 0
@@ -247,19 +253,30 @@ func _import_csv() -> int:
 				% [cname, line_no, density_raw, density_key, ", ".join(CityDensity.Level.keys())]
 			)
 
-		# Traits
-		data.traits.clear()
+		# Traits (array novo em vez de clear(), evita "Array is in read-only state")
+		var new_traits: Array[CityTrait.Type] = []
 
 		for t in _split_list(_field(row, col, "traits")):
 			var key := _to_key(t)
 
 			if CityTrait.Type.has(key):
-				data.traits.append(CityTrait.Type[key])
+				new_traits.append(CityTrait.Type[key])
 			else:
 				_warn(
 					"%s (linha %d): trait '%s' (chave '%s') não existe. Válidos: %s"
 					% [cname, line_no, t, key, ", ".join(CityTrait.Type.keys())]
 				)
+
+		data.traits = new_traits
+
+		# Specializations (coluna "economy"): todos os setores com o mesmo peso
+		if col.has("economy"):
+			data.specializations = _build_specializations(
+				_field(row, col, "economy"),
+				data.specializations,
+				cname,
+				line_no
+			)
 
 		# Province
 		var prov := _field(row, col, "province_name")
@@ -294,6 +311,54 @@ func _import_csv() -> int:
 		_err("Nenhuma cidade foi importada. Verifica o formato do CSV acima.")
 
 	return count
+
+
+# --------------------------------------------------
+# SPECIALIZATIONS
+# --------------------------------------------------
+
+# Cria uma SectorSpecialization por setor listado, todas com DEFAULT_PREVALENCE.
+# Se o .tres já tinha uma specialization desse setor, reaproveita-a (mantém o peso editado à mão).
+func _build_specializations(
+	value: String,
+	existing: Array[SectorSpecialization],
+	cname: String,
+	line_no: int
+) -> Array[SectorSpecialization]:
+	var out: Array[SectorSpecialization] = []
+	var used := {}
+
+	for raw in _split_list(value):
+		var key := _to_key(raw)
+
+		if not Economy.Sector.has(key):
+			_warn(
+				"%s (linha %d): setor '%s' (chave '%s') não existe em Economy.Sector. Válidos: %s"
+				% [cname, line_no, raw, key, ", ".join(Economy.Sector.keys())]
+			)
+			continue
+
+		var sector_value: int = Economy.Sector[key]
+
+		if used.has(sector_value):
+			_warn("%s (linha %d): setor '%s' repetido na coluna economy." % [cname, line_no, raw])
+			continue
+		used[sector_value] = true
+
+		var spec: SectorSpecialization = null
+		for e in existing:
+			if e != null and e.sector == sector_value:
+				spec = e
+				break
+
+		if spec == null:
+			spec = SectorSpecialization.new()
+			spec.sector = sector_value
+			spec.prevalence = DEFAULT_PREVALENCE
+
+		out.append(spec)
+
+	return out
 
 
 # --------------------------------------------------

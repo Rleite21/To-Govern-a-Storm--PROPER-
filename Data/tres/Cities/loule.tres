@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_gdgfb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_kt5jy"]
 
+[sub_resource type="Resource" id="Resource_gdgfb"]
+script = ExtResource("2_kt5jy")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_kt5jy"]
+script = ExtResource("2_kt5jy")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_bwkp8"]
+script = ExtResource("2_kt5jy")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_gdgfb")
 city_name = "Loulé"
@@ -11,6 +25,7 @@ description = "In the rolling countryside of the central Algarve, Loulé gathers
 province_name = "Algarve"
 tier = 2
 population = 72344
+specializations = Array[ExtResource("2_kt5jy")]([SubResource("Resource_gdgfb"), SubResource("Resource_kt5jy"), SubResource("Resource_bwkp8")])
 density = 2
 society = 10562
 traits = Array[int]([0, 4, 13, 12, 10])

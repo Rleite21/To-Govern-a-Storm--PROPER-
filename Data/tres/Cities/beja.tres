@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_syhp7"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_fxatq"]
 
+[sub_resource type="Resource" id="Resource_syhp7"]
+script = ExtResource("2_fxatq")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_fxatq"]
+script = ExtResource("2_fxatq")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ijixt"]
+script = ExtResource("2_fxatq")
+sector = 5
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_syhp7")
 city_name = "Beja"
@@ -11,6 +25,7 @@ description = "Rising above the open plains of the Baixo Alentejo, Beja is an im
 province_name = "Baixo Alentejo"
 tier = 1
 population = 33401
+specializations = Array[ExtResource("2_fxatq")]([SubResource("Resource_syhp7"), SubResource("Resource_fxatq"), SubResource("Resource_ijixt")])
 density = 2
 society = 2310
 traits = Array[int]([10, 12, 13, 4])

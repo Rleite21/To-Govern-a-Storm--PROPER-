@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fs4il"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_drev2"]
 
+[sub_resource type="Resource" id="Resource_jt8l6"]
+script = ExtResource("2_drev2")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_5en5p"]
+script = ExtResource("2_drev2")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_qgals"]
+script = ExtResource("2_drev2")
+sector = 5
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_fs4il")
 city_name = "Amarante"
@@ -11,6 +25,7 @@ description = "Straddling the Tâmega River, Amarante is a town of granite house
 province_name = "Douro Litoral"
 tier = 2
 population = 52116
+specializations = Array[ExtResource("2_drev2")]([SubResource("Resource_jt8l6"), SubResource("Resource_5en5p"), SubResource("Resource_qgals")])
 density = 2
 society = 2500
 traits = Array[int]([0, 6, 12, 13, 16, 9])

@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_udgkv"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_i5he0"]
 
+[sub_resource type="Resource" id="Resource_udgkv"]
+script = ExtResource("2_i5he0")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_i5he0"]
+script = ExtResource("2_i5he0")
+sector = 5
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_udgkv")
 city_name = "Évora"
@@ -11,6 +20,7 @@ description = "Encircled by medieval walls, Évora is a city where Roman columns
 province_name = "Alto Alentejo"
 tier = 2
 population = 58567
+specializations = Array[ExtResource("2_i5he0")]([SubResource("Resource_udgkv"), SubResource("Resource_i5he0")])
 density = 2
 society = 8514
 traits = Array[int]([0, 13, 12, 10, 8, 4])

@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_d4ax0"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_s8jpt"]
 
+[sub_resource type="Resource" id="Resource_ba1ke"]
+script = ExtResource("2_s8jpt")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_tpeej"]
+script = ExtResource("2_s8jpt")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_d4ax0")
 city_name = "Mirandela"
@@ -11,6 +20,7 @@ description = "In the fertile valleys of the Tua and the wider landscapes of nor
 province_name = "Trás-os-Montes"
 tier = 2
 population = 21284
+specializations = Array[ExtResource("2_s8jpt")]([SubResource("Resource_ba1ke"), SubResource("Resource_tpeej")])
 density = 2
 society = 6336
 traits = Array[int]([13, 12, 0, 10])

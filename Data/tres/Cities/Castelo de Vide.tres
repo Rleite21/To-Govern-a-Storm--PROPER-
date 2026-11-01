@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_x24ry"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_qe1e7"]
 
+[sub_resource type="Resource" id="Resource_3da6d"]
+script = ExtResource("2_qe1e7")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_x24ry")
 city_name = "Castelo de Vide"
@@ -10,6 +14,7 @@ map_position = Vector3(0.719265, 0.15500644, 0.11738157)
 description = "Perched among the green hills of the Alto Alentejo, Castelo de Vide is a town of narrow lanes, whitewashed houses and ancient stone walls. Its medieval castle watches over a settlement whose history carries traces of Christian and Jewish communities, including a historic Jewish quarter with winding streets and enduring architectural details. Springs and fountains provide water to residents and travellers, while nearby farms and orchards sustain the local economy. Quiet and dignified, Castelo de Vide preserves layers of memory within its walls, where faith, exile and coexistence have all left their mark."
 province_name = "Alto Alentejo"
 population = 3197
+specializations = Array[ExtResource("2_qe1e7")]([SubResource("Resource_3da6d")])
 density = 0
 society = 12422
 traits = Array[int]([0, 10])

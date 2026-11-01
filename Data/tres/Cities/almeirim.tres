@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7tjs2"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_3f0nf"]
 
+[sub_resource type="Resource" id="Resource_33pua"]
+script = ExtResource("2_3f0nf")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_7tjs2")
 city_name = "Almeirim"
@@ -11,5 +15,6 @@ description = "Set amid the fertile plains of the Tagus Valley, Almeirim draws i
 province_name = "Ribatejo"
 tier = 2
 population = 22012
+specializations = Array[ExtResource("2_3f0nf")]([SubResource("Resource_33pua")])
 society = 7168
 traits = Array[int]([0, 10])

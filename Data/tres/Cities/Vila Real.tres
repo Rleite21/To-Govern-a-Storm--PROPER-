@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_4myf1"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_82ehm"]
 
+[sub_resource type="Resource" id="Resource_s337n"]
+script = ExtResource("2_82ehm")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_cnjvm"]
+script = ExtResource("2_82ehm")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_7wlld"]
+script = ExtResource("2_82ehm")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_j6v6l"]
+script = ExtResource("2_82ehm")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_4myf1")
 city_name = "Vila Real"
@@ -11,6 +30,7 @@ description = "Standing upon a high plateau among the valleys and mountains of T
 province_name = "Trás-os-Montes"
 tier = 1
 population = 49574
+specializations = Array[ExtResource("2_82ehm")]([SubResource("Resource_s337n"), SubResource("Resource_cnjvm"), SubResource("Resource_7wlld"), SubResource("Resource_j6v6l")])
 density = 2
 society = 2498
 traits = Array[int]([0, 13, 12, 10, 9])

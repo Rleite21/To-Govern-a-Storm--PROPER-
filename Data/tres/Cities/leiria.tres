@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_bmy6d"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_a28u4"]
 
+[sub_resource type="Resource" id="Resource_31t57"]
+script = ExtResource("2_a28u4")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_rxetr"]
+script = ExtResource("2_a28u4")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_3p8aw"]
+script = ExtResource("2_a28u4")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_aysky"]
+script = ExtResource("2_a28u4")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_bmy6d")
 city_name = "Leiria"
@@ -11,6 +30,7 @@ description = "Standing beneath the ruins of its medieval castle, Leiria command
 province_name = "Beira Litoral"
 tier = 2
 population = 128640
+specializations = Array[ExtResource("2_a28u4")]([SubResource("Resource_31t57"), SubResource("Resource_rxetr"), SubResource("Resource_3p8aw"), SubResource("Resource_aysky")])
 density = 2
 society = 2306
 traits = Array[int]([0, 3, 4, 5, 6, 7, 9, 12, 13])

@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wc2tc"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_o3aow"]
 
+[sub_resource type="Resource" id="Resource_wc2tc"]
+script = ExtResource("2_o3aow")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_wc2tc")
 city_name = "Fundão"
@@ -11,5 +15,6 @@ description = "Nestled between the slopes of the Serra da Gardunha and the vast 
 province_name = "Beira Baixa"
 tier = 2
 population = 27754
+specializations = Array[ExtResource("2_o3aow")]([SubResource("Resource_wc2tc")])
 society = 14528
 traits = Array[int]([0, 10])

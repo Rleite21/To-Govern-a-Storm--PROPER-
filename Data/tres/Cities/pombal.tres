@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_q8gmc"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_avul0"]
 
+[sub_resource type="Resource" id="Resource_m7agj"]
+script = ExtResource("2_avul0")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_qru1y"]
+script = ExtResource("2_avul0")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_doqhd"]
+script = ExtResource("2_avul0")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_q8gmc")
 city_name = "Pombal"
@@ -11,6 +26,7 @@ description = "Overlooked by the medieval castle that once guarded the roads bet
 province_name = "Beira Litoral"
 tier = 2
 population = 53995
+specializations = Array[ExtResource("2_avul0")]([SubResource("Resource_m7agj"), SubResource("Resource_qru1y"), SubResource("Resource_doqhd")])
 density = 2
 society = 256
 traits = Array[int]([0, 4, 10, 12, 13])

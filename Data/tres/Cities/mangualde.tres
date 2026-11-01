@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7s5ge"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_bcf2y"]
 
+[sub_resource type="Resource" id="Resource_q74q3"]
+script = ExtResource("2_bcf2y")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_rcfxe"]
+script = ExtResource("2_bcf2y")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_igucd"]
+script = ExtResource("2_bcf2y")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_7s5ge")
 city_name = "Mangualde"
@@ -11,6 +25,7 @@ description = "Situated amid the granite hills, vineyards and small agricultural
 province_name = "Beira Alta"
 tier = 2
 population = 18766
+specializations = Array[ExtResource("2_bcf2y")]([SubResource("Resource_q74q3"), SubResource("Resource_rcfxe"), SubResource("Resource_igucd")])
 density = 2
 society = 2434
 traits = Array[int]([1, 0, 7, 10])

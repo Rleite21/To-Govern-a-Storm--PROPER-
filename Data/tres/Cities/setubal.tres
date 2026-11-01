@@ -1,7 +1,27 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://blkt8bdbp4wgm"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://bq25qbrygmvdt"]
 
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_20nbe"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_rweya"]
+
+[sub_resource type="Resource" id="Resource_20nbe"]
+script = ExtResource("2_rweya")
+sector = 9
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_rweya"]
+script = ExtResource("2_rweya")
+sector = 8
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_nputu"]
+script = ExtResource("2_rweya")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_m1if2"]
+script = ExtResource("2_rweya")
+sector = 1
+prevalence = 1.0
 
 [resource]
 script = ExtResource("1_20nbe")
@@ -11,6 +31,7 @@ description = "Facing the broad estuary of the Sado, Setúbal has grown into one
 province_name = "Península de Setúbal"
 tier = 1
 population = 123519
+specializations = Array[ExtResource("2_rweya")]([SubResource("Resource_20nbe"), SubResource("Resource_rweya"), SubResource("Resource_nputu"), SubResource("Resource_m1if2")])
 density = 3
 society = 2094
 traits = Array[int]([0, 2, 4, 5, 7, 10, 12, 13, 15, 16, 11])

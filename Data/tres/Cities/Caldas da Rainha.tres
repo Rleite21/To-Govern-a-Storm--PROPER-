@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_jba3t"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_wnqil"]
 
+[sub_resource type="Resource" id="Resource_2a4fb"]
+script = ExtResource("2_wnqil")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_vg6w4"]
+script = ExtResource("2_wnqil")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_mwide"]
+script = ExtResource("2_wnqil")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_jba3t")
 city_name = "Caldas da Rainha"
@@ -11,6 +26,7 @@ description = "Renowned for its thermal springs, Caldas da Rainha has long drawn
 province_name = "Oeste"
 tier = 2
 population = 58983
+specializations = Array[ExtResource("2_wnqil")]([SubResource("Resource_2a4fb"), SubResource("Resource_vg6w4"), SubResource("Resource_mwide")])
 density = 2
 society = 262
 traits = Array[int]([4, 6, 7, 9, 10, 12, 13])

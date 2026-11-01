@@ -3,6 +3,31 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wucv3"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_enl3d"]
 
+[sub_resource type="Resource" id="Resource_wucv3"]
+script = ExtResource("2_enl3d")
+sector = 9
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_enl3d"]
+script = ExtResource("2_enl3d")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ey1hn"]
+script = ExtResource("2_enl3d")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_044d6"]
+script = ExtResource("2_enl3d")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_s1mw8"]
+script = ExtResource("2_enl3d")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_wucv3")
 city_name = "Faro"
@@ -11,6 +36,7 @@ description = "Situated on the southern coast of Portugal, overlooking the shelt
 province_name = "Algarve"
 tier = 1
 population = 80256
+specializations = Array[ExtResource("2_enl3d")]([SubResource("Resource_wucv3"), SubResource("Resource_enl3d"), SubResource("Resource_ey1hn"), SubResource("Resource_044d6"), SubResource("Resource_s1mw8")])
 density = 3
 society = 110
 traits = Array[int]([2, 4, 3, 13, 15, 11])

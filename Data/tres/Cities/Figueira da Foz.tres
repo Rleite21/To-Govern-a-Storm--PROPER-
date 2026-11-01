@@ -3,6 +3,26 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_mqtke"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_uqw64"]
 
+[sub_resource type="Resource" id="Resource_x3beg"]
+script = ExtResource("2_uqw64")
+sector = 9
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_4w863"]
+script = ExtResource("2_uqw64")
+sector = 8
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_hyvdu"]
+script = ExtResource("2_uqw64")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ntkwu"]
+script = ExtResource("2_uqw64")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_mqtke")
 city_name = "Figueira da Foz"
@@ -11,6 +31,7 @@ description = "At the mouth of the Mondego River, Figueira da Foz is a coastal t
 province_name = "Beira Litoral"
 tier = 2
 population = 65852
+specializations = Array[ExtResource("2_uqw64")]([SubResource("Resource_x3beg"), SubResource("Resource_4w863"), SubResource("Resource_hyvdu"), SubResource("Resource_ntkwu")])
 density = 2
 society = 2088
 traits = Array[int]([2, 9, 10, 12, 16, 11])

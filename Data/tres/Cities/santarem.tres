@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3wops"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_hy0d7"]
 
+[sub_resource type="Resource" id="Resource_3wops"]
+script = ExtResource("2_hy0d7")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_hy0d7"]
+script = ExtResource("2_hy0d7")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_avgsg"]
+script = ExtResource("2_hy0d7")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_x3jlh"]
+script = ExtResource("2_hy0d7")
+sector = 3
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_3wops")
 city_name = "Santarém"
@@ -11,6 +30,7 @@ description = "Rising above the fertile plains of the Tagus, Santarém is an anc
 province_name = "Ribatejo"
 tier = 2
 population = 69392
+specializations = Array[ExtResource("2_hy0d7")]([SubResource("Resource_3wops"), SubResource("Resource_hy0d7"), SubResource("Resource_avgsg"), SubResource("Resource_x3jlh")])
 density = 2
 society = 34
 traits = Array[int]([15, 13, 12, 10, 6, 7])

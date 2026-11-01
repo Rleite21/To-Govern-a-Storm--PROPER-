@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3gr1l"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_gii5h"]
 
+[sub_resource type="Resource" id="Resource_h6lwk"]
+script = ExtResource("2_gii5h")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_wuyxr"]
+script = ExtResource("2_gii5h")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_xeepm"]
+script = ExtResource("2_gii5h")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_3gr1l")
 city_name = "Mafra"
@@ -11,5 +25,6 @@ description = "Dominated by its immense royal palace and convent, Mafra bears th
 province_name = "Oeste"
 tier = 2
 population = 86521
+specializations = Array[ExtResource("2_gii5h")]([SubResource("Resource_h6lwk"), SubResource("Resource_wuyxr"), SubResource("Resource_xeepm")])
 density = 2
 society = 1280

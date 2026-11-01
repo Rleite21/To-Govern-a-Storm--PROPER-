@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_27842"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_51c2j"]
 
+[sub_resource type="Resource" id="Resource_27842"]
+script = ExtResource("2_51c2j")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_27842")
 city_name = "Vila Viçosa"
@@ -11,5 +15,6 @@ description = "Nestled among the hills and marble quarries of the Alentejo, Vila
 province_name = "Alto Alentejo"
 tier = 2
 population = 7388
+specializations = Array[ExtResource("2_51c2j")]([SubResource("Resource_27842")])
 society = 4614
 traits = Array[int]([0, 1, 10])

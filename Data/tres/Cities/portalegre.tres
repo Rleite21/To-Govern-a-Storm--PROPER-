@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ye5om"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ugemt"]
 
+[sub_resource type="Resource" id="Resource_q5u4n"]
+script = ExtResource("2_ugemt")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_ye5om")
 city_name = "Portalegre"
@@ -11,6 +15,7 @@ description = "ituated on the slopes of the Serra de São Mamede, Portalegre com
 province_name = "Alto Alentejo"
 tier = 2
 population = 22368
+specializations = Array[ExtResource("2_ugemt")]([SubResource("Resource_q5u4n")])
 density = 2
 society = 2374
 traits = Array[int]([13, 12, 10, 0, 1])

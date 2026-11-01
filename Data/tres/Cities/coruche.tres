@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_l6wk6"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_eyy2j"]
 
+[sub_resource type="Resource" id="Resource_7mx5b"]
+script = ExtResource("2_eyy2j")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_l6wk6")
 city_name = "Coruche"
@@ -11,5 +15,6 @@ description = "Across the vast plains of the Ribatejo, Coruche lies among rollin
 province_name = "Ribatejo"
 tier = 2
 population = 17356
+specializations = Array[ExtResource("2_eyy2j")]([SubResource("Resource_7mx5b")])
 society = 2368
 traits = Array[int]([0, 10])

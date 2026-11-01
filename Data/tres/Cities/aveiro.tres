@@ -3,6 +3,41 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_tdooo"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_mnwgg"]
 
+[sub_resource type="Resource" id="Resource_61877"]
+script = ExtResource("2_mnwgg")
+sector = 1
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ausbc"]
+script = ExtResource("2_mnwgg")
+sector = 2
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_5cvy2"]
+script = ExtResource("2_mnwgg")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_by6gy"]
+script = ExtResource("2_mnwgg")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_yc2cr"]
+script = ExtResource("2_mnwgg")
+sector = 9
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_lg2qv"]
+script = ExtResource("2_mnwgg")
+sector = 8
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_14ye6"]
+script = ExtResource("2_mnwgg")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_tdooo")
 city_name = "Aveiro"
@@ -11,6 +46,7 @@ description = "Between the lagoon and the Atlantic, Aveiro is a town in transiti
 province_name = "Beira Litoral"
 tier = 2
 population = 80978
+specializations = Array[ExtResource("2_mnwgg")]([SubResource("Resource_61877"), SubResource("Resource_ausbc"), SubResource("Resource_5cvy2"), SubResource("Resource_by6gy"), SubResource("Resource_yc2cr"), SubResource("Resource_lg2qv"), SubResource("Resource_14ye6")])
 density = 3
 society = 38
 traits = Array[int]([0, 2, 3, 4, 5, 7, 9, 10, 12, 13, 16, 15])

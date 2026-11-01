@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_koyic"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_dqysc"]
 
+[sub_resource type="Resource" id="Resource_koyic"]
+script = ExtResource("2_dqysc")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_dqysc"]
+script = ExtResource("2_dqysc")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_koyic")
 city_name = "Covilhã"
@@ -11,5 +20,6 @@ description = "Climbing the steep slopes of the Serra da Estrela, Covilhã is a 
 province_name = "Beira Baixa"
 tier = 2
 population = 51045
+specializations = Array[ExtResource("2_dqysc")]([SubResource("Resource_koyic"), SubResource("Resource_dqysc")])
 society = 8640
 traits = Array[int]([1, 12, 10])

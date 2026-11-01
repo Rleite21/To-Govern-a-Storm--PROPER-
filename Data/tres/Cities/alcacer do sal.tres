@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_d8wuy"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_sftpq"]
 
+[sub_resource type="Resource" id="Resource_d8wuy"]
+script = ExtResource("2_sftpq")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_sftpq"]
+script = ExtResource("2_sftpq")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_d8wuy")
 city_name = "Alcácer do Sal"
@@ -11,5 +20,6 @@ description = "Along the Sado River, Alcácer do Sal thrives on the wealth of th
 province_name = "Península de Setúbal"
 tier = 2
 population = 11112
+specializations = Array[ExtResource("2_sftpq")]([SubResource("Resource_d8wuy"), SubResource("Resource_sftpq")])
 society = 3330
 traits = Array[int]([0, 10, 12, 13, 16])

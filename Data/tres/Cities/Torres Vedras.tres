@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_u7ps3"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_cdqs8"]
 
+[sub_resource type="Resource" id="Resource_iqbym"]
+script = ExtResource("2_cdqs8")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_h1nl3"]
+script = ExtResource("2_cdqs8")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_aj4cq"]
+script = ExtResource("2_cdqs8")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_u7ps3")
 city_name = "Torres Vedras"
@@ -11,6 +25,7 @@ description = "Surrounded by fertile farmland and rolling hills northwest of Lis
 province_name = "Oeste"
 tier = 2
 population = 83130
+specializations = Array[ExtResource("2_cdqs8")]([SubResource("Resource_iqbym"), SubResource("Resource_h1nl3"), SubResource("Resource_aj4cq")])
 density = 2
 society = 34
 traits = Array[int]([0, 4, 5, 6, 7, 9, 10, 12, 13])

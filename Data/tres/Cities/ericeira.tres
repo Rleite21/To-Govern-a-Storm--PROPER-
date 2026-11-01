@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wapj6"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_nwfyb"]
 
+[sub_resource type="Resource" id="Resource_u1jjl"]
+script = ExtResource("2_nwfyb")
+sector = 8
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_wapj6")
 city_name = "Ericeira"
@@ -10,5 +15,6 @@ map_position = Vector3(-0.7137613, 0.15500642, 0.5466059)
 description = "Perched above the Atlantic, Ericeira is a coastal fishing village where life is measured by the tides and the temper of the ocean. Whitewashed houses with blue trim cluster along narrow streets, overlooking a harbour where fishermen haul in their catch and mend their nets. The sea provides both livelihood and danger, its sudden storms capable of turning a routine voyage into tragedy. Salt hangs in the air, taverns fill with sailors’ stories, and generations of families remain bound to the water. Beyond the village, the rugged coastline stretches into the mist, beautiful, unforgiving and impossible to tame, the same mist that called thousands and thousands of portuguese seamen to take to the Atlantic in search of new horizons"
 province_name = "Oeste"
 population = 12359
+specializations = Array[ExtResource("2_nwfyb")]([SubResource("Resource_u1jjl")])
 society = 9088
 traits = Array[int]([2])

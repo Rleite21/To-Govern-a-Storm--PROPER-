@@ -3,6 +3,11 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_7ja3d"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_kjd1b"]
 
+[sub_resource type="Resource" id="Resource_5e1wk"]
+script = ExtResource("2_kjd1b")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_7ja3d")
 city_name = "Barcelos"
@@ -11,6 +16,7 @@ description = "Amid the green valleys of northern Portugal, Barcelos thrives on 
 province_name = "Minho"
 tier = 2
 population = 122487
+specializations = Array[ExtResource("2_kjd1b")]([SubResource("Resource_5e1wk")])
 density = 2
 society = 1346
 traits = Array[int]([1, 4, 6, 7, 9])

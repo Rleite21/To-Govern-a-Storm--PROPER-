@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_i827g"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_b76p2"]
 
+[sub_resource type="Resource" id="Resource_qjjad"]
+script = ExtResource("2_b76p2")
+sector = 7
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_sasyo"]
+script = ExtResource("2_b76p2")
+sector = 5
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_f81xt"]
+script = ExtResource("2_b76p2")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_qcui6"]
+script = ExtResource("2_b76p2")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_i827g")
 city_name = "Sintra"
@@ -11,6 +30,7 @@ description = "Set amid mist-covered hills, wooded estates and extravagant palac
 province_name = "Oeste"
 tier = 1
 population = 395528
+specializations = Array[ExtResource("2_b76p2")]([SubResource("Resource_qjjad"), SubResource("Resource_sasyo"), SubResource("Resource_f81xt"), SubResource("Resource_qcui6")])
 density = 4
 society = 786
 traits = Array[int]([0, 4, 5, 6, 7, 8, 9, 10, 15])

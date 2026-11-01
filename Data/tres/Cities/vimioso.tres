@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_0sk7x"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_du8ki"]
 
+[sub_resource type="Resource" id="Resource_54lbu"]
+script = ExtResource("2_du8ki")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_0sk7x")
 city_name = "Vimioso"
@@ -10,5 +14,6 @@ map_position = Vector3(1.4092278, 0.15500642, -1.9826791)
 description = "In the northeastern reaches of Trás-os-Montes, Vimioso lies amid a rugged landscape of granite hills, open pastures and small settlements scattered across the frontier countryside. Livestock raising, subsistence agriculture and local trade sustain a population accustomed to difficult conditions and limited access to the wealthier coastal regions. Communal traditions and Catholic observance remain central to village life, while established landowners and local notables retain influence over municipal affairs. The Republic's secular reforms and partisan conflicts have altered the institutions of the nation, but their impact is less immediate here than the demands of harvests, weather and household survival. Vimioso embodies the endurance of Portugal's rural northeast, where attachment to land and community provides continuity amid the instability of national politics."
 province_name = "Trás-os-Montes"
 population = 4149
+specializations = Array[ExtResource("2_du8ki")]([SubResource("Resource_54lbu")])
 society = 30912
 traits = Array[int]([0, 10])

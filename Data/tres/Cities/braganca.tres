@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_kxmdf"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_edfpc"]
 
+[sub_resource type="Resource" id="Resource_kxmdf"]
+script = ExtResource("2_edfpc")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_edfpc"]
+script = ExtResource("2_edfpc")
+sector = 3
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_8fgbh"]
+script = ExtResource("2_edfpc")
+sector = 5
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_kxmdf")
 city_name = "Bragança"
@@ -11,6 +25,7 @@ description = "Far in Portugal’s northeastern reaches, Bragança stands amid r
 province_name = "Trás-os-Montes"
 tier = 2
 population = 38309
+specializations = Array[ExtResource("2_edfpc")]([SubResource("Resource_kxmdf"), SubResource("Resource_edfpc"), SubResource("Resource_8fgbh")])
 density = 2
 society = 19904
 traits = Array[int]([0, 3, 4, 7, 9, 10, 12, 13])

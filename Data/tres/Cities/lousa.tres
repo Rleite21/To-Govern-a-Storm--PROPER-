@@ -3,6 +3,15 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ikwo3"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_riupo"]
 
+[sub_resource type="Resource" id="Resource_ikwo3"]
+script = ExtResource("2_riupo")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_riupo"]
+script = ExtResource("2_riupo")
+sector = 7
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_ikwo3")
 city_name = "Lousã"
@@ -11,5 +20,6 @@ description = "Nestled among the wooded slopes of the Serra da Lousã, this inla
 province_name = "Beira Litoral"
 tier = 2
 population = 17006
+specializations = Array[ExtResource("2_riupo")]([SubResource("Resource_ikwo3"), SubResource("Resource_riupo")])
 society = 450
 traits = Array[int]([1, 0, 6, 9])

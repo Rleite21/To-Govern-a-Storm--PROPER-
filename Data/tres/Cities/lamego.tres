@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_a5sf7"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_xbr38"]
 
+[sub_resource type="Resource" id="Resource_ugn01"]
+script = ExtResource("2_xbr38")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_a5sf7")
 city_name = "Lamego"
@@ -11,5 +15,6 @@ description = "Set among the terraced slopes and valleys of the upper Douro, Lam
 province_name = "Beira Alta"
 tier = 2
 population = 24315
+specializations = Array[ExtResource("2_xbr38")]([SubResource("Resource_ugn01")])
 society = 15552
 traits = Array[int]([0, 7, 12])

@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_emi1d"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_v5xuu"]
 
+[sub_resource type="Resource" id="Resource_1dcko"]
+script = ExtResource("2_v5xuu")
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_emi1d")
 city_name = "Batalha"
@@ -11,5 +15,6 @@ description = "Batalha stands beneath the shadow of its magnificent monastery, a
 province_name = "Beira Litoral"
 tier = 2
 population = 15557
+specializations = Array[ExtResource("2_v5xuu")]([SubResource("Resource_1dcko")])
 society = 3328
 traits = Array[int]([0, 4, 12])
