@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cmf3765cws0cd"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://4dfyuv71sgq6"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_w1qp4"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ljej0"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_feqhu"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_whycs"]
 
 [resource]
-script = ExtResource("1_w1qp4")
+script = ExtResource("1_feqhu")
 city_name = "Alter do Chão"
 map_position = Vector3(0.66874886, 0.15500644, 0.39102048)
 description = "In the heart of the Alentejo, Alter do Chão is a land of vast estates, grazing livestock and deeply rooted rural customs. Roman ruins and a medieval castle recall the civilisations that once claimed this territory, while horse breeding continues a tradition of local prestige. Beneath the wide skies, life follows the demands of agriculture and the authority of landowners. As the Republic struggles with mounting instability, the old rural hierarchies remain stubbornly intact."

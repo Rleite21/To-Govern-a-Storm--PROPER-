@@ -12,4 +12,4 @@ province_name = "Trás-os-Montes"
 tier = 2
 population = 37419
 society = 14528
-traits = Array[int]([10, 11])
+traits = Array[int]([10, 12])

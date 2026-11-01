@@ -11,4 +11,4 @@ description = "In the highlands of Barroso, Montalegre is a land of harsh winter
 province_name = "Trás-os-Montes"
 population = 9261
 society = 28864
-traits = Array[int]([11, 10])
+traits = Array[int]([12, 10])

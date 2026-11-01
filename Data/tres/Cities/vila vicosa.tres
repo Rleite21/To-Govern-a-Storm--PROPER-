@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dxjwebbcp5ltr"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_27842"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_51c2j"]
+
+[resource]
+script = ExtResource("1_27842")
+city_name = "Vila Viçosa"
+map_position = Vector3(0.8109676, 0.15500642, 0.6876916)
+description = "Nestled among the hills and marble quarries of the Alentejo, Vila Viçosa is renowned for its magnificent ducal palace and its association with the House of Braganza, Portugal's former royal dynasty. For centuries, the town served as one of the principal residences of the dukes, whose wealth and patronage shaped its architecture, religious institutions and cultural life. The proclamation of the Republic in 1910 transformed the political meaning of this royal heritage, but it did not erase the town's aristocratic character or its historical attachment to the monarchy. Marble extraction and agriculture provide important sources of employment, while the surrounding estates preserve older patterns of rural society. Catholic traditions remain deeply rooted, and monarchist nostalgia can still be found among some residents. Vila Viçosa is a place where the memory of royal Portugal survives under a Republic that has replaced the dynasty but not its monuments."
+province_name = "Alto Alentejo"
+tier = 2
+population = 7388
+society = 4614
+traits = Array[int]([0, 1, 10])

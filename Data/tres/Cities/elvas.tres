@@ -12,4 +12,4 @@ province_name = "Alto Alentejo"
 tier = 2
 population = 21929
 society = 2306
-traits = Array[int]([0, 4, 5, 11, 10])
+traits = Array[int]([0, 4, 5, 12, 10])

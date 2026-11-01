@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://hnljxqi88n0n"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://caeks4jhrpwag"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_gb81e"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_p8t6y"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_d8wuy"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_sftpq"]
 
 [resource]
-script = ExtResource("1_gb81e")
+script = ExtResource("1_d8wuy")
 city_name = "Alcácer do Sal"
 map_position = Vector3(-0.063146204, 0.15500642, 1.1331882)
 description = "Along the Sado River, Alcácer do Sal thrives on the wealth of the surrounding countryside. Rice fields, salt production and agricultural labour sustain its economy, while its ancient castle bears witness to centuries of Roman, Islamic and Christian rule. Yet beneath this rich history lies a rigid social order, shaped by powerful landowners and generations of rural tradition. The Republic may promise a new Portugal, but here, the land still belongs to the few."
@@ -12,4 +12,4 @@ province_name = "Península de Setúbal"
 tier = 2
 population = 11112
 society = 3330
-traits = Array[int]([0, 10, 11, 12, 15])
+traits = Array[int]([0, 10, 12, 13, 16])

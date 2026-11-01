@@ -12,4 +12,4 @@ province_name = "Beira Alta"
 population = 1719
 density = 0
 society = 20480
-traits = Array[int]([0, 11])
+traits = Array[int]([0, 12])

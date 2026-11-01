@@ -6,7 +6,9 @@
 [resource]
 script = ExtResource("1_wbpdb")
 city_name = "Reguengos de Monsaraz"
+map_position = Vector3(0.731264, 0.15500642, 0.9611797)
 description = "Crowned by its medieval walls and castle, Monsaraz overlooks the vast plains of the Alentejo, where olive groves, grain fields and pasture stretch towards the Spanish frontier. Its ancient fortifications recall centuries of border warfare, while its whitewashed houses and parish churches reflect a rural society deeply attached to land and faith. The local order rests upon agricultural property, village notables and the seasonal labour of workers whose livelihoods depend on the harvest. Republican secularism has challenged the Church's former institutional privileges, yet religious observance remains woven into communal life. In a region marked by unequal landholding and demanding agricultural work, political unrest can grow from material grievances as readily as from ideological conviction."
+province_name = "Alto Alentejo"
 population = 9871
 society = 6146
 traits = Array[int]([0, 1, 10])

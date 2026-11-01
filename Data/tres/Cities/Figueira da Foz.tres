@@ -12,5 +12,5 @@ province_name = "Beira Litoral"
 tier = 2
 population = 65852
 density = 2
-society = 2304
-traits = Array[int]([2, 9, 10, 11, 15])
+society = 2088
+traits = Array[int]([2, 9, 10, 12, 16, 11])

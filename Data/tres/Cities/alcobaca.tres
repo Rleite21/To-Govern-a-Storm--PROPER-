@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://bldcn7mnnvgbl"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://bik0084i6ly5o"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_jl772"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_vxtpa"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_au47v"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_f18jq"]
 
 [resource]
-script = ExtResource("1_jl772")
+script = ExtResource("1_au47v")
 city_name = "Alcobaça"
 map_position = Vector3(-0.44818214, 0.15500642, -0.0006095134)
 description = "Dominating the town, the great Monastery of Alcobaça stands as a monument to the power of faith, monarchy and the religious orders that once shaped Portugal. The Republic’s secular reforms have challenged that legacy, but the monastery remains woven into the identity of the town. Beyond its walls, farmers, merchants and artisans carry on their daily trades. Old beliefs and new ideals coexist uneasily, leaving Alcobaça caught between a sacred past and a changing present."
@@ -13,4 +13,4 @@ tier = 2
 population = 54965
 density = 2
 society = 3330
-traits = Array[int]([6, 0, 11, 9])
+traits = Array[int]([6, 0, 12, 9])

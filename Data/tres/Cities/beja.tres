@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://q68g1hp3ukmf"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_syhp7"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_fxatq"]
+
+[resource]
+script = ExtResource("1_syhp7")
+city_name = "Beja"
+map_position = Vector3(0.4291581, 0.15500642, 1.427577)
+description = "Rising above the open plains of the Baixo Alentejo, Beja is an important regional centre whose castle and ancient streets testify to a long history of Roman settlement, Islamic rule and Christian reconquest. Its fertile surroundings make it a centre of agricultural commerce, particularly in cereals, livestock and olive cultivation. Merchants, landowners, civil servants and agricultural workers give the town a more varied social character than the smaller settlements scattered across the Alentejo. Yet the countryside remains dominated by large estates and an unequal distribution of land, creating persistent tensions between rural labourers and wealthy proprietors. Republican ideas have found supporters among sections of the urban population, while conservative Catholics and traditional landowning families retain considerable influence. Beja stands at the intersection of provincial tradition and the social conflicts transforming rural Portugal."
+province_name = "Baixo Alentejo"
+tier = 1
+population = 33401
+density = 2
+society = 2310
+traits = Array[int]([10, 12, 13, 4])

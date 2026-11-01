@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dq074tdppk83d"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fh3by"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_l2l32"]
+
+[resource]
+script = ExtResource("1_fh3by")
+city_name = "Serpa"
+map_position = Vector3(0.6058669, 0.15500642, 1.5178204)
+description = "Rising above the plains of the Baixo Alentejo, close to the Spanish frontier and the left bank of the Guadiana, Serpa is a historic walled town whose identity has been shaped by centuries of frontier conflict and agricultural life. Its medieval walls, castle, narrow streets and whitewashed houses preserve the legacy of Roman, Islamic and Christian settlement. Beyond the town, vast olive groves, vineyards, wheat fields and pastures dominate the landscape, while sheep farming sustains one of the region's most distinctive traditions. The countryside is divided between large estates and smallholders, with agricultural labourers facing seasonal unemployment and difficult working conditions. Cante alentejano, local festivals and religious celebrations remain important expressions of communal identity. Now under the Republic, Serpa maintains its deeply traditional rural society, where Catholic customs and conservative landowners retain influence, but the hardships of agricultural workers create fertile ground for republican and labour movements. Its proud frontier heritage and strong local traditions give it a character both resilient and fiercely attached to its land."
+province_name = "Baixo Alentejo"
+tier = 2
+population = 13764
+society = 2310
+traits = Array[int]([0, 10])

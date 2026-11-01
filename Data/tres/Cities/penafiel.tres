@@ -13,4 +13,4 @@ tier = 2
 population = 69629
 density = 2
 society = 2496
-traits = Array[int]([0, 1, 10, 11])
+traits = Array[int]([0, 1, 10, 12])

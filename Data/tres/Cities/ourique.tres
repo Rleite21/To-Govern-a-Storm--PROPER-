@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://b10wsu6a8rt8s"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_3ykv3"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_fib7y"]
+
+[resource]
+script = ExtResource("1_3ykv3")
+city_name = "Ourique"
+map_position = Vector3(0.17615256, 0.15500642, 1.7609684)
+description = "Set amid the rolling plains and low hills of the southern Alentejo, Ourique is a small rural settlement whose identity is inseparable from the surrounding countryside. Its name is closely associated with the legendary Battle of Ourique, traditionally linked to the foundation of the Portuguese monarchy, giving the town an importance in national memory beyond its modest size. In the 1920s, however, everyday life is governed less by heroic legends than by agriculture, livestock and the demands of a harsh climate. Isolated farms and small villages dot the landscape, while agricultural labourers and landowners occupy sharply different positions within rural society. Catholic customs, local festivities and traditional forms of community life remain strong. The political debates of the Republic reach Ourique, but the immediate concerns of land, employment and survival continue to dominate local affairs."
+province_name = "Baixo Alentejo"
+population = 5129
+density = 0
+society = 4096
+traits = Array[int]([10])

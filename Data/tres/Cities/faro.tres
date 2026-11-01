@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://1ii4xvmd7trs"]
+
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wucv3"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_enl3d"]
+
+[resource]
+script = ExtResource("1_wucv3")
+city_name = "Faro"
+map_position = Vector3(0.3760107, 0.15500642, 2.4304829)
+description = "Situated on the southern coast of Portugal, overlooking the sheltered waters of the Ria Formosa, Faro is the administrative and commercial centre of the Algarve. Its ancient walled quarter, known as Vila-Adentro, preserves traces of Roman and Islamic rule, while the cathedral and historic churches reflect its long-standing importance as an episcopal seat. Unlike the smaller fishing settlements scattered along the coast, Faro possesses a growing urban character, with government offices, schools, merchants, professionals and established bourgeois families shaping its social life. Fishing, salt extraction, agriculture and coastal trade remain important sources of income, while the harbour connects the city to other Portuguese ports and the wider Mediterranean. Its position as the regional capital brings a degree of modernity and outside influence, although traditional Catholic values remain deeply rooted in everyday life. The Republic's political divisions are present among its educated classes, civil servants and commercial circles, where republicanism, monarchist nostalgia, anticlericalism and conservative Catholicism compete for influence. Faro is a city of contrasts: provincial in many of its customs, yet outward-looking through its maritime connections and growing administrative importance."
+province_name = "Algarve"
+tier = 1
+population = 80256
+density = 3
+society = 110
+traits = Array[int]([2, 4, 3, 13, 15, 11])

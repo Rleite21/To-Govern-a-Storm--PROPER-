@@ -6,7 +6,9 @@
 [resource]
 script = ExtResource("1_ck6tr")
 city_name = "Arganil"
+map_position = Vector3(0.4376513, 0.15500642, -0.70954996)
 description = "Nestled among the wooded hills and deep valleys of central Portugal, Arganil is a rural town shaped by the rugged landscapes of the Serra do Açor and the agricultural communities scattered throughout its hinterland. Chestnut groves, olive orchards and small farms sustain a population accustomed to hard work and the uncertainties of mountain life. Catholic traditions and the influence of local notables remain deeply rooted, while the Republic's promises of secular education and modernisation reach these remote communities only gradually. Landowners and merchants preserve their standing, but poverty and limited opportunities weigh heavily upon rural labourers. Far from the political intrigues of Lisbon, Arganil represents an enduring, traditional Portugal, where communal loyalties and the struggle for livelihood matter more than the shifting fortunes of the Republic."
+province_name = "Beira Alta"
 population = 11065
 society = 12480
 traits = Array[int]([0, 10])

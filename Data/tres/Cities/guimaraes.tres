@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://du4qkiduhg04l"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://c0jtde48n3tm4"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_u4b6i"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_51b8p"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_fqana"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_lwkyi"]
 
 [resource]
-script = ExtResource("1_u4b6i")
+script = ExtResource("1_fqana")
 city_name = "Guimarães"
 map_position = Vector3(0.121841505, 0.15500642, -1.8236846)
 description = "Ancient walls and narrow medieval streets surround the castle where Portugal’s earliest legends took shape. Guimarães wears its royal past with pride, and the memory of kings remains woven into its identity—even after the monarchy’s fall. Yet the town is not frozen in history: workshops and growing industries draw workers into new forms of collective life, where discussions of wages, unions, socialism, and the rights of labour challenge the old social hierarchy. Here, the birthplace of a kingdom must reckon with a country trying to imagine what should replace it."
@@ -13,4 +13,4 @@ tier = 2
 population = 165554
 density = 2
 society = 2506
-traits = Array[int]([1, 4, 5, 6, 7, 9, 10, 11, 12, 14])
+traits = Array[int]([1, 4, 5, 6, 7, 9, 10, 12, 13, 15])

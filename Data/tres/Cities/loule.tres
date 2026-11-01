@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://tu1a1fqhvgpa"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://d4e18gg7pmlq1"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_vpxpt"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_smpl2"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_gdgfb"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_kt5jy"]
 
 [resource]
-script = ExtResource("1_vpxpt")
+script = ExtResource("1_gdgfb")
 city_name = "Loulé"
 map_position = Vector3(0.38412818, 0.15500642, 2.3329015)
 description = "In the rolling countryside of the central Algarve, Loulé gathers the produce of inland farms beneath the towers and whitewashed walls of its historic centre. Its celebrated market draws farmers, craftsmen and traders from surrounding villages, sustaining a regional economy rooted in agriculture, livestock and small-scale commerce. Catholic festivals and traditional associations remain central to community life, while republican municipal politics offers a growing arena for local notables and professionals. Yet the hardships of rural labour and the uneven distribution of land and wealth leave much of the population distant from the promises of political modernisation. Loulé is a town of enduring custom, quietly exposed to the changes reaching the southern provinces."
@@ -13,4 +13,4 @@ tier = 2
 population = 72344
 density = 2
 society = 10562
-traits = Array[int]([0, 4, 12, 11, 10])
+traits = Array[int]([0, 4, 13, 12, 10])

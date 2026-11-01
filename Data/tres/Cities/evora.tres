@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://ptbb7tvfmk71"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://beglswulntsgv"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_0an68"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_e2scf"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_udgkv"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_i5he0"]
 
 [resource]
-script = ExtResource("1_0an68")
+script = ExtResource("1_udgkv")
 city_name = "Évora"
 map_position = Vector3(0.46994126, 0.15500642, 0.87402886)
 description = "Encircled by medieval walls, Évora is a city where Roman columns, Gothic churches and whitewashed streets preserve the weight of centuries. Its ancient temple rises above the rooftops, while convents, noble residences and bustling markets reflect a long history of religious devotion and regional prestige. Beyond the city gates, the vast plains of the Alentejo are divided among agricultural estates, where seasonal labourers endure the summer heat and landowners maintain their influence. Life within Évora moves between solemn processions, market-day chatter and the quiet routines of rural commerce. Here, the past is not merely remembered — it stands in stone at every turn."
@@ -13,4 +13,4 @@ tier = 2
 population = 58567
 density = 2
 society = 8514
-traits = Array[int]([0, 12, 11, 10, 8, 4])
+traits = Array[int]([0, 13, 12, 10, 8, 4])

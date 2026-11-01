@@ -16,7 +16,6 @@ func generate(total_population: int, density: CityDensity.Level, rng: RandomNumb
 	social_classes.clear()
 
 	var distribution := CityDensity.get_distribution(density)
-	var total_weight := 1.0
 
 	for type in distribution:
 		var share: float = maxf(distribution[type] + rng.randf_range(-DEFAULT_VARIANCE, DEFAULT_VARIANCE), 0.005)

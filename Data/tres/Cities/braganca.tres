@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://ba5sgtdgt87ds"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://vig37yrowxjx"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_4j1xw"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_fbjlp"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_kxmdf"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_edfpc"]
 
 [resource]
-script = ExtResource("1_4j1xw")
+script = ExtResource("1_kxmdf")
 city_name = "Bragança"
 map_position = Vector3(1.2125511, 0.15500642, -2.1662788)
 description = "Far in Portugal’s northeastern reaches, Bragança stands amid rugged hills, cold winters and isolated villages. Its medieval citadel rises above a maze of stone houses, guarding a land shaped by border conflicts, rural hardship and enduring traditions. Livestock, farming and local trade sustain the population, while strong family ties bind communities scattered across the surrounding countryside. Distant from the political centres of Lisbon and Porto, Bragança preserves a stern, resilient character, where the harsh landscape and the memory of old struggles are never far away."
@@ -13,4 +13,4 @@ tier = 2
 population = 38309
 density = 2
 society = 19904
-traits = Array[int]([0, 3, 4, 7, 9, 10, 11, 12])
+traits = Array[int]([0, 3, 4, 7, 9, 10, 12, 13])

@@ -11,4 +11,4 @@ description = "Perched above the deep gorge of the Douro on Portugal's northeast
 province_name = "Trás-os-Montes"
 population = 6065
 society = 30912
-traits = Array[int]([0, 10, 11])
+traits = Array[int]([0, 10, 12])

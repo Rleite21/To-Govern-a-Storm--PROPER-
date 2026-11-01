@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://cq1qqj07ybje3"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://jpar0cofgxnb"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_0jvvu"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_4ts01"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_75wbl"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_6irxg"]
 
 [resource]
-script = ExtResource("1_0jvvu")
+script = ExtResource("1_75wbl")
 city_name = "Vila Nova de Foz Côa"
+map_position = Vector3(0.95351654, 0.15500642, -1.4902663)
 description = "Located in the rugged upper Douro valley, Vila Nova de Foz Côa is surrounded by steep slopes, vineyards and a landscape shaped by the cultivation of wine and olive groves. Its position near the meeting of the Douro and Côa rivers connects it to the wider wine-growing economy, while the demanding terrain preserves a strongly rural character. Agricultural proprietors, smallholders and seasonal workers form the backbone of local society, their fortunes tied to harvests and the markets that carry Douro produce beyond the region. Catholic traditions remain deeply embedded in village life, and the political controversies of the Republic are often distant from immediate local concerns. Yet changing markets, transport links and the spread of new political ideas gradually connect even this remote valley to the wider transformations of Portugal."
+province_name = "Trás-os-Montes"
 population = 6304
 society = 14528
 traits = Array[int]([0, 10])

@@ -1648,12 +1648,12 @@ data = SubResource("Resource_60fy0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44697365, 0.15500642, -1.5196888)
 gizmo_extents = 0.15
 
-[node name="Piódão" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=2142860629]
+[node name="Arganil" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=2142860629]
 transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
 script = ExtResource("7_boprf")
 data = SubResource("Resource_gc3iy")
 
-[node name="Piódão" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Piódão" unique_id=1319338677]
+[node name="Arganil" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Arganil" unique_id=1319338677]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4376513, 0.15500642, -0.70954996)
 gizmo_extents = 0.15
 
@@ -1675,12 +1675,12 @@ data = SubResource("Resource_3a45c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1403275, 0.15500642, -1.0263584)
 gizmo_extents = 0.15
 
-[node name="Buçaco" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=449459498]
+[node name="Mealhada" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=449459498]
 transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
 script = ExtResource("7_boprf")
 data = SubResource("Resource_nylm5")
 
-[node name="Buçaco" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Buçaco" unique_id=1547855334]
+[node name="Mealhada" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Mealhada" unique_id=1547855334]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035652135, 0.15500642, -0.80767816)
 gizmo_extents = 0.15
 
@@ -1788,12 +1788,12 @@ data = SubResource("Resource_8ety7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23028722, 0.15500642, 0.5629674)
 gizmo_extents = 0.15
 
-[node name="Monsaraz" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1577271636]
+[node name="Reguengos de Monsaraz" type="Node3D" parent="Portugal/Provinces/Alto Alentejo" unique_id=1577271636]
 transform = Transform3D(0.0625, 0, 0, 0, 0.0625, 0, 0, 0, 0.0625, 0, 0, 0)
 script = ExtResource("7_boprf")
 data = SubResource("Resource_b3f14")
 
-[node name="Monsaraz" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Monsaraz" unique_id=1370622490]
+[node name="Reguengos de Monsaraz" type="Marker3D" parent="Portugal/Provinces/Alto Alentejo/Reguengos de Monsaraz" unique_id=1370622490]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.731264, 0.15500642, 0.9611797)
 gizmo_extents = 0.15
 
@@ -1853,6 +1853,7 @@ data = ExtResource("28_5pdjc")
 
 [node name="Faro" type="Node3D" parent="Portugal/Provinces/Algarve" unique_id=193534994]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+script = ExtResource("7_boprf")
 
 [node name="Faro" type="Marker3D" parent="Portugal/Provinces/Algarve/Faro" unique_id=469409753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3760107, 0.15500642, 2.4304829)

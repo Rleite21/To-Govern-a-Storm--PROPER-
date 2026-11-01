@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dbf7v5cjm7dft"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://brvrtin1n7kca"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_nmins"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_pnvfs"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_ikwo3"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_riupo"]
 
 [resource]
-script = ExtResource("1_nmins")
+script = ExtResource("1_ikwo3")
 city_name = "Lousã"
 map_position = Vector3(0.17844036, 0.15500642, -0.58593947)
 description = "Nestled among the wooded slopes of the Serra da Lousã, this inland settlement is shaped by mountain paths, scattered villages and the resources of its surrounding countryside. Agriculture, forestry and traditional crafts sustain much of the local economy, while connections to Coimbra offer access to wider markets and new ideas. The Republic's secular reforms and political disputes are felt here less through mass demonstrations than through the tensions between local notables, rural communities and the Church. Catholic observance remains deeply rooted, though the aspirations of teachers, professionals and younger republicans reflect a country increasingly divided over education, authority and the meaning of progress."

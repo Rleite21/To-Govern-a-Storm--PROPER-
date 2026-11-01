@@ -6,9 +6,10 @@
 [resource]
 script = ExtResource("1_2icsx")
 city_name = "Mealhada"
+map_position = Vector3(-0.035652135, 0.15500642, -0.80767816)
 description = "Set amid the fertile countryside between Coimbra and Aveiro, Mealhada owes much of its character to agriculture, roadside commerce and the movement of travellers along the region's important transport routes. Vineyards, farms and local businesses sustain a community increasingly connected to the wider economy. The town's reputation for food and hospitality reflects a provincial culture in which family, parish and local custom remain powerful institutions. Republican administration has brought new expectations of public education and civic life, yet Catholic influence continues to command respect among many residents. Merchants and landowners generally favour order and dependable trade, while agricultural labourers face the familiar uncertainties of wages, harvests and rising prices."
+province_name = "Beira Alta"
 tier = 2
 population = 19948
 density = 2
 society = 448
-traits = Array[int]([0, 6, 11, 10])
