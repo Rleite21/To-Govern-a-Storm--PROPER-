@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://covr643g4mpxm" path="res://UI/City Tab/city_tab.gd" id="1_ikkh7"]
 [ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_3ad8n"]
+[ext_resource type="PackedScene" uid="uid://nj6w2ttgo0qi" path="res://tscn/UI/OrnateHSeparator.tscn" id="3_n2600"]
 [ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="3_qgd44"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
@@ -69,16 +70,13 @@ layout_mode = 2
 offset_transform_enabled = true
 text = "X"
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=311788441]
-layout_mode = 2
-
 [node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/VBox" unique_id=1606731677]
 layout_mode = 2
 size_flags_vertical = 3
 fit_content = true
 scroll_following = true
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=158896861]
+[node name="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=2121820605 instance=ExtResource("3_n2600")]
 layout_mode = 2
 
 [node name="Stats" type="GridContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=498628557]
@@ -147,3 +145,7 @@ label_settings = SubResource("LabelSettings_6tkuj")
 
 [node name="TraitsBox" type="HFlowContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=814988529]
 layout_mode = 2
+
+[node name="HSeparator2" parent="MarginContainer/ScrollContainer/VBox" unique_id=936750761 instance=ExtResource("3_n2600")]
+layout_mode = 2
+emblem_height = 60
