@@ -22,4 +22,4 @@ tier = 2
 population = 11112
 specializations = Array[ExtResource("2_sftpq")]([SubResource("Resource_d8wuy"), SubResource("Resource_sftpq")])
 society = 3330
-traits = Array[int]([0, 10, 12, 13, 16])
+traits = Array[int]([0, 10, 12, 13, 15])

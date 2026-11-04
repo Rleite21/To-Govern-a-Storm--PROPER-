@@ -9,7 +9,7 @@ enum Type {
 }
 
 static func from_string(s: String) -> int:
-	match s.strip_edges().to_lower().replace(" ", "_"):
+	match s.strip_edges().to_upper().replace(" ", "_"):
 		"CAPITAL":
 			return Type.CAPITAL
 		"LARGE":

@@ -23,6 +23,11 @@ script = ExtResource("2_o4heh")
 sector = 5
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_xdn2s"]
+script = ExtResource("2_o4heh")
+sector = 6
+prevalence = 1.0
+
 [sub_resource type="Resource" id="Resource_lfbn8"]
 script = ExtResource("2_o4heh")
 sector = 7
@@ -41,7 +46,7 @@ description = "The capital of the Portuguese Republic is a city of contradiction
 province_name = "Oeste"
 tier = 0
 population = 658236
-specializations = Array[ExtResource("2_o4heh")]([SubResource("Resource_60m07"), SubResource("Resource_2rnfx"), SubResource("Resource_qxoln"), SubResource("Resource_1lvyb"), SubResource("Resource_lfbn8"), SubResource("Resource_8oclv")])
+specializations = Array[ExtResource("2_o4heh")]([SubResource("Resource_60m07"), SubResource("Resource_2rnfx"), SubResource("Resource_qxoln"), SubResource("Resource_1lvyb"), SubResource("Resource_xdn2s"), SubResource("Resource_lfbn8"), SubResource("Resource_8oclv")])
 density = 4
 society = 63
-traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 15, 11])
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 15, 14, 11])

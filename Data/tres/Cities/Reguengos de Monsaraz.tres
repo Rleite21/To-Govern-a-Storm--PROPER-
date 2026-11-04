@@ -1,10 +1,15 @@
-[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://duqpjoykis4tr"]
+[gd_resource type="Resource" script_class="CityData" format=3 uid="uid://dk5xge17s6mhi"]
 
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wbpdb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_ui55t"]
 
 [sub_resource type="Resource" id="Resource_wcmo5"]
 script = ExtResource("2_ui55t")
+prevalence = 1.0
+
+[sub_resource type="Resource" id="Resource_ja72d"]
+script = ExtResource("2_ui55t")
+sector = 4
 prevalence = 1.0
 
 [resource]
@@ -14,6 +19,6 @@ map_position = Vector3(0.731264, 0.15500642, 0.9611797)
 description = "Crowned by its medieval walls and castle, Monsaraz overlooks the vast plains of the Alentejo, where olive groves, grain fields and pasture stretch towards the Spanish frontier. Its ancient fortifications recall centuries of border warfare, while its whitewashed houses and parish churches reflect a rural society deeply attached to land and faith. The local order rests upon agricultural property, village notables and the seasonal labour of workers whose livelihoods depend on the harvest. Republican secularism has challenged the Church's former institutional privileges, yet religious observance remains woven into communal life. In a region marked by unequal landholding and demanding agricultural work, political unrest can grow from material grievances as readily as from ideological conviction."
 province_name = "Alto Alentejo"
 population = 9871
-specializations = Array[ExtResource("2_ui55t")]([SubResource("Resource_wcmo5")])
+specializations = Array[ExtResource("2_ui55t")]([SubResource("Resource_wcmo5"), SubResource("Resource_ja72d")])
 society = 6146
 traits = Array[int]([0, 1, 10])

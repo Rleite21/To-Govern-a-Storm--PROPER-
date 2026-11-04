@@ -7,6 +7,11 @@
 script = ExtResource("2_51c2j")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_51c2j"]
+script = ExtResource("2_51c2j")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_27842")
 city_name = "Vila Viçosa"
@@ -15,6 +20,6 @@ description = "Nestled among the hills and marble quarries of the Alentejo, Vila
 province_name = "Alto Alentejo"
 tier = 2
 population = 7388
-specializations = Array[ExtResource("2_51c2j")]([SubResource("Resource_27842")])
+specializations = Array[ExtResource("2_51c2j")]([SubResource("Resource_27842"), SubResource("Resource_51c2j")])
 society = 4614
 traits = Array[int]([0, 1, 10])

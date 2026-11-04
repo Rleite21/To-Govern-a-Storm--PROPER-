@@ -17,6 +17,11 @@ prevalence = 1.0
 script = ExtResource("2_bcf2y")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_3pcqv"]
+script = ExtResource("2_bcf2y")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_7s5ge")
 city_name = "Mangualde"
@@ -25,7 +30,7 @@ description = "Situated amid the granite hills, vineyards and small agricultural
 province_name = "Beira Alta"
 tier = 2
 population = 18766
-specializations = Array[ExtResource("2_bcf2y")]([SubResource("Resource_q74q3"), SubResource("Resource_rcfxe"), SubResource("Resource_igucd")])
+specializations = Array[ExtResource("2_bcf2y")]([SubResource("Resource_q74q3"), SubResource("Resource_rcfxe"), SubResource("Resource_igucd"), SubResource("Resource_3pcqv")])
 density = 2
 society = 2434
 traits = Array[int]([1, 0, 7, 10])

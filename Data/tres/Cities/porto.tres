@@ -23,6 +23,11 @@ script = ExtResource("2_b2rju")
 sector = 5
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_t7c30"]
+script = ExtResource("2_b2rju")
+sector = 6
+prevalence = 1.0
+
 [sub_resource type="Resource" id="Resource_4esrv"]
 script = ExtResource("2_b2rju")
 sector = 7
@@ -41,7 +46,7 @@ description = "The 2nd largest metropolis of Portugal rises produly along the st
 province_name = "Douro Litoral"
 tier = 1
 population = 273476
-specializations = Array[ExtResource("2_b2rju")]([SubResource("Resource_2q1mf"), SubResource("Resource_kdb4f"), SubResource("Resource_xb4sg"), SubResource("Resource_rafsr"), SubResource("Resource_4esrv"), SubResource("Resource_upmqj")])
+specializations = Array[ExtResource("2_b2rju")]([SubResource("Resource_2q1mf"), SubResource("Resource_kdb4f"), SubResource("Resource_xb4sg"), SubResource("Resource_rafsr"), SubResource("Resource_t7c30"), SubResource("Resource_4esrv"), SubResource("Resource_upmqj")])
 density = 4
 society = 255
-traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 16, 15, 11])
+traits = Array[int]([2, 3, 4, 5, 6, 7, 8, 9, 13, 15, 14, 11])

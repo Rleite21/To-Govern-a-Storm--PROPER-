@@ -7,6 +7,11 @@
 script = ExtResource("2_ugemt")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_mb8jv"]
+script = ExtResource("2_ugemt")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_ye5om")
 city_name = "Portalegre"
@@ -15,7 +20,7 @@ description = "ituated on the slopes of the Serra de São Mamede, Portalegre com
 province_name = "Alto Alentejo"
 tier = 2
 population = 22368
-specializations = Array[ExtResource("2_ugemt")]([SubResource("Resource_q5u4n")])
+specializations = Array[ExtResource("2_ugemt")]([SubResource("Resource_q5u4n"), SubResource("Resource_mb8jv")])
 density = 2
 society = 2374
 traits = Array[int]([13, 12, 10, 0, 1])

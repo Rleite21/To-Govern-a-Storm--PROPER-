@@ -7,6 +7,11 @@
 script = ExtResource("2_nosld")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_nosld"]
+script = ExtResource("2_nosld")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_8h2ho")
 city_name = "Mértola"
@@ -14,7 +19,7 @@ map_position = Vector3(0.58445764, 0.15500642, 1.81755)
 description = "Perched above the Guadiana River in the rugged southeast of the Alentejo, Mértola is a small settlement with a history far greater than its size suggests. Once an important river port linking the Mediterranean with the mineral wealth and agricultural produce of the Alentejo interior, its streets and fortifications bear the marks of Roman, Islamic and Christian rule. The river remains central to local life, although its former commercial importance has long since declined. The surrounding countryside is harsh and sparsely populated, shaped by dry summers, rocky hills and scattered agricultural communities. Traditional religious life remains influential, while memories of the town's diverse past give it a distinctive identity. In the Republic, Mértola is a remote community where the concerns of land, labour and survival often matter more than the political quarrels of Lisbon."
 province_name = "Baixo Alentejo"
 population = 6206
-specializations = Array[ExtResource("2_nosld")]([SubResource("Resource_8h2ho")])
+specializations = Array[ExtResource("2_nosld")]([SubResource("Resource_8h2ho"), SubResource("Resource_nosld")])
 density = 0
 society = 2306
-traits = Array[int]([0, 10, 16])
+traits = Array[int]([0, 10, 15])

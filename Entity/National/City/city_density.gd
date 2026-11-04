@@ -26,16 +26,16 @@ const DISTRIBUTIONS := {
 	},
 	Level.VERY_URBANISED: {
 		SocialClass.Type.PEASANTS: 0.12,
-		SocialClass.Type.WORKING_CLASS: 0.47,
-		SocialClass.Type.MIDDLE_CLASS: 0.31,
+		SocialClass.Type.WORKING_CLASS: 0.48,
+		SocialClass.Type.MIDDLE_CLASS: 0.32,
 		SocialClass.Type.INDUSTRIALISTS: 0.06,
 		SocialClass.Type.ARISTOCRATS: 0.02,
 	},
 	Level.METROPOLITAN: {
 		SocialClass.Type.PEASANTS: 0.07,
-		SocialClass.Type.WORKING_CLASS: 0.39,
-		SocialClass.Type.MIDDLE_CLASS: 0.43,
-		SocialClass.Type.INDUSTRIALISTS: 0.08,
+		SocialClass.Type.WORKING_CLASS: 0.41,
+		SocialClass.Type.MIDDLE_CLASS: 0.44,
+		SocialClass.Type.INDUSTRIALISTS: 0.07,
 		SocialClass.Type.ARISTOCRATS: 0.01,
 	},
 }

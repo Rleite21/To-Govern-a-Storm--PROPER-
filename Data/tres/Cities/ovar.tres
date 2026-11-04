@@ -29,4 +29,4 @@ population = 58091
 specializations = Array[ExtResource("2_7lneq")]([SubResource("Resource_7es3y"), SubResource("Resource_8q4q2"), SubResource("Resource_xxrqn")])
 density = 2
 society = 390
-traits = Array[int]([9, 10, 12, 13, 15, 6, 2, 7])
+traits = Array[int]([9, 10, 12, 13, 14, 6, 2, 7])

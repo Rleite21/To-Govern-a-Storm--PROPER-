@@ -7,6 +7,11 @@
 script = ExtResource("2_dio6e")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_aikga"]
+script = ExtResource("2_dio6e")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_d2e4t")
 city_name = "Estremoz"
@@ -14,6 +19,6 @@ map_position = Vector3(0.64318013, 0.15500642, 0.66940206)
 description = "Among the rolling plains of the Alentejo, Estremoz rises in a striking display of whitewashed walls, red rooftops and pale marble. Its medieval castle and imposing tower overlook a town shaped by royal patronage, stoneworking and the wealth of the surrounding agricultural estates. Marble quarries provide work for skilled labourers, while farmers and livestock traders gather at bustling markets beneath the shadow of the old walls. Beyond the town, vast estates stretch across the sun-scorched countryside, where the distance between landowner and labourer remains deeply felt. Estremoz is a place of elegance and hard toil, its beauty carved from the very stone that sustains it."
 province_name = "Alto Alentejo"
 population = 12683
-specializations = Array[ExtResource("2_dio6e")]([SubResource("Resource_l0546")])
+specializations = Array[ExtResource("2_dio6e")]([SubResource("Resource_l0546"), SubResource("Resource_aikga")])
 society = 2310
 traits = Array[int]([0, 10])

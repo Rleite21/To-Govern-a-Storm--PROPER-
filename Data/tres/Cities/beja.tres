@@ -12,6 +12,11 @@ script = ExtResource("2_fxatq")
 sector = 3
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_7c5l4"]
+script = ExtResource("2_fxatq")
+sector = 4
+prevalence = 1.0
+
 [sub_resource type="Resource" id="Resource_ijixt"]
 script = ExtResource("2_fxatq")
 sector = 5
@@ -25,7 +30,7 @@ description = "Rising above the open plains of the Baixo Alentejo, Beja is an im
 province_name = "Baixo Alentejo"
 tier = 1
 population = 33401
-specializations = Array[ExtResource("2_fxatq")]([SubResource("Resource_syhp7"), SubResource("Resource_fxatq"), SubResource("Resource_ijixt")])
+specializations = Array[ExtResource("2_fxatq")]([SubResource("Resource_syhp7"), SubResource("Resource_fxatq"), SubResource("Resource_7c5l4"), SubResource("Resource_ijixt")])
 density = 2
 society = 2310
 traits = Array[int]([10, 12, 13, 4])

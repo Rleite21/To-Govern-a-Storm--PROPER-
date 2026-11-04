@@ -7,6 +7,11 @@
 script = ExtResource("2_riupo")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_ehlk8"]
+script = ExtResource("2_riupo")
+sector = 4
+prevalence = 1.0
+
 [sub_resource type="Resource" id="Resource_riupo"]
 script = ExtResource("2_riupo")
 sector = 7
@@ -20,6 +25,6 @@ description = "Nestled among the wooded slopes of the Serra da Lousã, this inla
 province_name = "Beira Litoral"
 tier = 2
 population = 17006
-specializations = Array[ExtResource("2_riupo")]([SubResource("Resource_ikwo3"), SubResource("Resource_riupo")])
+specializations = Array[ExtResource("2_riupo")]([SubResource("Resource_ikwo3"), SubResource("Resource_ehlk8"), SubResource("Resource_riupo")])
 society = 450
 traits = Array[int]([1, 0, 6, 9])

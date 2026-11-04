@@ -26,7 +26,7 @@ func initialize(world_seed: int = 0) -> bool:
 	rng.seed = hash(data.city_name) + world_seed
 
 	demographics.generate(data.population, data.density, rng)
-	economy.generate(demographics.population, data.traits, data.specializations)
+	economy.generate(demographics.population, data.traits, data.specializations, rng)
 	stance.flags = data.society
-	
+
 	return true

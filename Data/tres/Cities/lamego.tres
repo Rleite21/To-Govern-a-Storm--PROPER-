@@ -7,6 +7,11 @@
 script = ExtResource("2_xbr38")
 prevalence = 1.0
 
+[sub_resource type="Resource" id="Resource_lxfbl"]
+script = ExtResource("2_xbr38")
+sector = 4
+prevalence = 1.0
+
 [resource]
 script = ExtResource("1_a5sf7")
 city_name = "Lamego"
@@ -15,6 +20,6 @@ description = "Set among the terraced slopes and valleys of the upper Douro, Lam
 province_name = "Beira Alta"
 tier = 2
 population = 24315
-specializations = Array[ExtResource("2_xbr38")]([SubResource("Resource_ugn01")])
+specializations = Array[ExtResource("2_xbr38")]([SubResource("Resource_ugn01"), SubResource("Resource_lxfbl")])
 society = 15552
 traits = Array[int]([0, 7, 12])
