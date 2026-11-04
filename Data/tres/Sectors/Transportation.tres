@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EconomicSectorData" format=3 uid="uid://dkgh5o3mon2gm"]
+
+[ext_resource type="Script" uid="uid://bkbyajrcdxqg0" path="res://Data/Data Scripts/economic_sector_interaction_data.gd" id="1_5ojpc"]
+[ext_resource type="Script" uid="uid://iv4n485pviid" path="res://Data/Data Scripts/economic_sector_data.gd" id="1_b8k2a"]
+
+[resource]
+script = ExtResource("1_b8k2a")
+sector = 3
+base_strength = 0.25
+metadata/_custom_type_script = "uid://xjki6jn4tmpj"

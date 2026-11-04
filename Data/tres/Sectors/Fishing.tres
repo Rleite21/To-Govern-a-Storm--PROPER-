@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EconomicSectorData" format=3 uid="uid://dcurcihc8ydg5"]
+
+[ext_resource type="Script" uid="uid://iv4n485pviid" path="res://Data/Data Scripts/economic_sector_data.gd" id="1_jt2fy"]
+
+[resource]
+script = ExtResource("1_jt2fy")
+sector = 8
+base_strength = 0.1
+sector_type = 1
+preferred_customers = Dictionary[int, float]({
+5: 0.75
+})
+metadata/_custom_type_script = "uid://xjki6jn4tmpj"
