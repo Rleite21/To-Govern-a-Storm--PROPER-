@@ -5,6 +5,9 @@
 [resource]
 script = ExtResource("1_xa1pv")
 baseline_weight = 0.8
+required_labour = Dictionary[int, float]({
+0: 18.0
+})
 sector_type = 1
 preferred_customers = Dictionary[int, float]({
 5: 0.75

@@ -6,6 +6,10 @@
 script = ExtResource("1_omdt1")
 sector = 1
 base_strength = 0.25
+required_labour = Dictionary[int, float]({
+1: 0.8,
+2: 0.08
+})
 sector_type = 1
 distribution_cost_per_unit = 2.5
 preferred_customers = Dictionary[int, float]({

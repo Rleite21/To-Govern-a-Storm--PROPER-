@@ -1,4 +1,3 @@
-
 class_name EconomicSectorData
 extends Resource
 
@@ -11,17 +10,15 @@ extends Resource
 
 @export_group("Labour Requirements")
 # Amount of workers per unit of size of a given social class
-@export var required_labour: Dictionary = {}
-
-@export_group("Raw Materials")
-# Amount of production units from other sectors to produce 1 unit
-@export var required_raw_materials: Dictionary[EconomyEnums.Sector, float] = {}
+@export var required_labour: Dictionary[SocialClass.Type, float] = {}
 
 @export_group("Production & Distribution")
 # Amount of products made per unit of size
 @export var production: Dictionary = {}
 @export var sector_type: EconomyEnums.Sector_Type
+@export var required_raw_materials: Dictionary[EconomyEnums.Sector, float] = {}
 @export var distribution_cost_per_unit: float = 1.0
+
 
 @export_group("Sector Interactions")
 # From which sectors does this one sell and at what rates

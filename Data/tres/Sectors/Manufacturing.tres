@@ -6,7 +6,15 @@
 script = ExtResource("1_ar1fn")
 sector = 7
 base_strength = 0.4
+required_labour = Dictionary[int, float]({
+1: 1.5,
+2: 0.1
+})
 sector_type = 1
+required_raw_materials = Dictionary[int, float]({
+0: 0.6,
+1: 0.2
+})
 distribution_cost_per_unit = 2.0
 preferred_customers = Dictionary[int, float]({
 10: 0.2
