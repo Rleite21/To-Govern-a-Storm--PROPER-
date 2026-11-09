@@ -30,11 +30,11 @@ func _init(p_type := SocialClassEnums.Type.PEASANTS) -> void:
 static func get_template(p_type: SocialClassEnums.Type) -> SocialClassTemplate:
 	if _templates.is_empty():
 		_templates = {
-			SocialClassEnums.Type.PEASANTS: load("res://data/social_classes/Peasants.tres"),
-			SocialClassEnums.Type.WORKING_CLASS: load("res://data/social_classes/Working_Class.tres"),
-			SocialClassEnums.Type.MIDDLE_CLASS: load("res://data/social_classes/Middle_Class.tres"),
-			SocialClassEnums.Type.INDUSTRIALISTS: load("res://data/social_classes/Industrialists.tres"),
-			SocialClassEnums.Type.ARISTOCRATS: load("res://data/social_classes/Aristocrats.tres"),
+			SocialClassEnums.Type.PEASANTS: load("res://Data/tres/Social Classes/Peasants.tres"),
+			SocialClassEnums.Type.WORKING_CLASS: load("res://Data/tres/Social Classes/Working_Class.tres"),
+			SocialClassEnums.Type.MIDDLE_CLASS: load("res://Data/tres/Social Classes/Middle_Class.tres"),
+			SocialClassEnums.Type.INDUSTRIALISTS: load("res://Data/tres/Social Classes/Industrialists.tres"),
+			SocialClassEnums.Type.ARISTOCRATS: load("res://Data/tres/Social Classes/Aristocrats.tres"),
 		}
 		for key in _templates:
 			assert(_templates[key].type == key, "Template type mismatch for %s" % key)

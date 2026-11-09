@@ -38,7 +38,7 @@ const TYPE_NAMES := {
 	Type.WORKING_CLASS: "Working Class",
 	Type.MIDDLE_CLASS: "Middle Class",
 	Type.INDUSTRIALISTS: "Industrialists",
-	Type.ARISTOCRATS: "Aristocrats & Landowners",
+	Type.ARISTOCRATS: "Aristocrats",
 }
 
 const TRAIT_NAMES := {
