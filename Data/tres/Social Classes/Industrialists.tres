@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SocialClassTemplate" format=3 uid="uid://pfgfi2wo14mg"]
+
+[ext_resource type="Script" uid="uid://bd62gn16vhaxd" path="res://Data/Data Scripts/social_class_data.gd" id="1_axvvm"]
+
+[resource]
+script = ExtResource("1_axvvm")
+type = 3
+base_militancy = 60.0
+base_consciousness = 100.0
+metadata/_custom_type_script = "uid://bd62gn16vhaxd"

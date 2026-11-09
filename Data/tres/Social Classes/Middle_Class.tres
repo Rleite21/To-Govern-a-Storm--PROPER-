@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SocialClassTemplate" format=3 uid="uid://hstfkismyu3y"]
+
+[ext_resource type="Script" uid="uid://bd62gn16vhaxd" path="res://Data/Data Scripts/social_class_data.gd" id="1_ovaes"]
+
+[resource]
+script = ExtResource("1_ovaes")
+type = 2
+base_consciousness = 75.0
+metadata/_custom_type_script = "uid://bd62gn16vhaxd"

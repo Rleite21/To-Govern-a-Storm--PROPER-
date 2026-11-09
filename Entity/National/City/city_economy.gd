@@ -3,6 +3,7 @@ extends RefCounted
 
 var sizes := PackedFloat32Array()  # indexado por Economy.Sector
 
+
 func _init() -> void:
 	sizes.resize(Economy.Sector.size())
 

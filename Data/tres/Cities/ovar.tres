@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CityData" format=3 uid="uid://chdn54d4v8rm2"]
 
-[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/CityData.gd" id="1_wkkgb"]
+[ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/city_data.gd" id="1_wkkgb"]
 [ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="2_7lneq"]
 
 [sub_resource type="Resource" id="Resource_7es3y"]
