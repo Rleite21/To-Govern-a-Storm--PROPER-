@@ -1,8 +1,6 @@
-# social_class_enums.gd
 class_name SocialClassEnums
 extends RefCounted
 
-## Socioeconomic strata of a city's population.
 enum Type {
 	PEASANTS,
 	WORKING_CLASS,
@@ -11,11 +9,8 @@ enum Type {
 	ARISTOCRATS,
 }
 
-## Broad economic grouping (the Working / NonWorking flag).
 enum Category { WORKING, NON_WORKING }
 
-## Traits differentiate cities and regions. They influence militancy,
-## consciousness, convictions and reactions to Events.
 enum Trait {
 	LITERATE,
 	ILLITERATE,
@@ -24,8 +19,8 @@ enum Trait {
 	TRADITIONALIST,
 	PROGRESSIVE,
 	REBELLIOUS_HISTORY,
-	ORGANIZED,        # unions, guilds, associations
-	ISOLATED,         # poor communication, slow news
+	ORGANIZED,
+	ISOLATED,
 	URBANIZED,
 	PATRIOTIC,
 	CORRUPT_ELITES,
@@ -43,7 +38,7 @@ const TYPE_NAMES := {
 	Type.WORKING_CLASS: "Working Class",
 	Type.MIDDLE_CLASS: "Middle Class",
 	Type.INDUSTRIALISTS: "Industrialists",
-	Type.ARISTOCRATS: "Aristocrats",
+	Type.ARISTOCRATS: "Aristocrats & Landowners",
 }
 
 const TRAIT_NAMES := {
@@ -61,12 +56,14 @@ const TRAIT_NAMES := {
 	Trait.CORRUPT_ELITES: "Corrupt Elites",
 }
 
-## Traits that can't coexist on the same class.
 const CONFLICTING_TRAITS := [
 	[Trait.LITERATE, Trait.ILLITERATE],
 	[Trait.DEVOUT, Trait.SECULAR],
 	[Trait.TRADITIONALIST, Trait.PROGRESSIVE],
 ]
+
+
+# --- Types ---------------------------------------------------------------
 
 static func type_to_string(type: Type) -> String:
 	return TYPE_NAMES.get(type, "Unknown")
@@ -77,27 +74,36 @@ static func type_from_string(text: String) -> int:
 	key = key.replace("&", "").replace(" ", "_").replace("-", "_")
 	while key.contains("__"):
 		key = key.replace("__", "_")
-
+	if key == "PROLETARIAT":
+		key = "WORKING_CLASS"
 	return Type[key] if Type.has(key) else -1
+
 
 static func get_category(type: Type) -> Category:
 	return Category.WORKING if type in WORKING_TYPES else Category.NON_WORKING
 
+
 static func is_working(type: Type) -> bool:
 	return get_category(type) == Category.WORKING
+
+
+# --- Traits --------------------------------------------------------------
 
 static func trait_to_string(t: Trait) -> String:
 	return TRAIT_NAMES.get(t, "Unknown")
 
+
 static func trait_from_string(text: String) -> int:
 	var key := text.strip_edges().to_upper().replace(" ", "_").replace("-", "_")
 	return Trait[key] if Trait.has(key) else -1
+
 
 static func traits_conflict(a: Trait, b: Trait) -> bool:
 	for pair in CONFLICTING_TRAITS:
 		if a in pair and b in pair and a != b:
 			return true
 	return false
+
 
 static func random_traits(count: int, rng: RandomNumberGenerator = null) -> Array[Trait]:
 	if rng == null:
