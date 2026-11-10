@@ -1,6 +1,18 @@
 class_name CityTabDemographics
-extends RefCounted
+extends Control
 
+
+signal closed
+
+var _city: City
+
+@onready var close_button: Button = %CloseButton
+
+func setup(city: City) -> void:
+	_city = city
+
+func _ready() -> void:
+	close_button.pressed.connect(func(): closed.emit())
 
 static func fill(city: City, chart: PieChart) -> void:
 	if chart == null:

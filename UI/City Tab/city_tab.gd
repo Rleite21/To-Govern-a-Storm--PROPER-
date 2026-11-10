@@ -24,8 +24,16 @@ const CHARTS_VBOX := "MarginContainer/ScrollContainer/VBox/ChartsBox/"
 @onready var demographics_chart: PieChart = get_node(CHARTS_VBOX + "DemographicsChart")
 @onready var economy_chart: PieChart = get_node(CHARTS_VBOX + "EconomyChart")
 
+const DEMOGRAPHICS_SCENE : PackedScene = preload("res://tscn/UI/city_tab_demographics.tscn")
+
+@onready var tab_pop_button: Button = get_node(MAIN_VBOX + "Header/TabPop")
+
+var _city: City
+var _demographics_popup: Control
+
 func _ready() -> void:
 	close_button.pressed.connect(close)
+	tab_pop_button.pressed.connect(_open_demographics)
 	visible = false
 
 
@@ -42,6 +50,9 @@ func show_city(source: Variant) -> void:
 
 	if data == null:
 		return
+	
+	_city = city
+	tab_pop_button.disabled = city == null
 
 	CityTabInfo.fill(data,name_label,tier_label,province_label,description_label,population_label,density_label)
 	CityTabSociety.fill(data, society_box, specializations_box, traits_box)
@@ -60,6 +71,7 @@ func show_city(source: Variant) -> void:
 
 
 func close() -> void:
+	_close_demographics()
 	visible = false
 	closed.emit()
 
@@ -77,3 +89,27 @@ func _find_city(data: CityData) -> City:
 				return node
 
 	return null
+
+func _open_demographics() -> void:
+	if _city == null:
+		return
+	if is_instance_valid(_demographics_popup):
+		_demographics_popup.queue_free()
+
+	var popup := DEMOGRAPHICS_SCENE.instantiate() as Control
+	if popup.has_method("setup"):
+		popup.setup(_city)
+	add_child(popup)
+	popup.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	popup.mouse_filter = Control.MOUSE_FILTER_STOP
+
+	if popup.has_signal("closed"):
+		popup.closed.connect(_close_demographics)
+
+	_demographics_popup = popup
+
+
+func _close_demographics() -> void:
+	if is_instance_valid(_demographics_popup):
+		_demographics_popup.queue_free()
+	_demographics_popup = null

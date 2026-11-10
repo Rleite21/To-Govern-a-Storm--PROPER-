@@ -70,6 +70,21 @@ layout_mode = 2
 offset_transform_enabled = true
 text = "X"
 
+[node name="TabPop" type="Button" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=786355436]
+layout_mode = 2
+offset_transform_enabled = true
+text = "1"
+
+[node name="TabEcon" type="Button" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=181099444]
+layout_mode = 2
+offset_transform_enabled = true
+text = "2"
+
+[node name="TabPolitics" type="Button" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=632608143]
+layout_mode = 2
+offset_transform_enabled = true
+text = "3"
+
 [node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/VBox" unique_id=1606731677]
 layout_mode = 2
 size_flags_vertical = 3
