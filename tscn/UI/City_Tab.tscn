@@ -115,12 +115,20 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+spawn_enabled = null
+spawn_parent = null
+replace_previous = null
+spawn_at_cursor = null
 
 [node name="EconomyChart" parent="MarginContainer/ScrollContainer/VBox/ChartsBox" unique_id=353517851 instance=ExtResource("3_qgd44")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 palette = PackedColorArray(0.38431373, 0.41960785, 0.45882353, 1, 0.83137256, 0.6745098, 0.19607843, 1, 0.22352941, 0.4745098, 0.7254902, 1, 0.6039216, 0.4117647, 0.70980394, 1, 0.5882353, 0.23529412, 0.25882354, 1, 0.8509804, 0.50980395, 0.2627451, 1, 0.14117648, 0.30980393, 0.47058824, 1, 0.2779903, 0.59403276, 0, 1, 0.36862746, 0, 0, 1, 0.21176471, 0.6509804, 0.627451, 1)
+spawn_enabled = null
+spawn_parent = null
+replace_previous = null
+spawn_at_cursor = null
 
 [node name="Label" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=178555464]
 layout_mode = 2

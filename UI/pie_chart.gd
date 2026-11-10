@@ -5,14 +5,13 @@ extends Control
 signal slice_hovered(slice: PieSlice, index: int)
 signal slice_unhovered
 signal slice_clicked(slice: PieSlice, index: int)
+signal slice_content_spawned(node: Node, key: int, slice: PieSlice, index: int)
 
 enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 
-# ───────────── Dados ─────────────
 @export_group("Data")
 @export var slices: Array[PieSlice] = []:
 	set = _set_slices
-## Cores usadas pelas fatias que não têm cor própria (alpha 0).
 @export var palette: PackedColorArray = PackedColorArray([
 	Color("e6194b"), Color("3cb44b"), Color("4363d8"), Color("f58231"),
 	Color("911eb4"), Color("42d4f4"), Color("f032e6"), Color("bfef45"),
@@ -21,14 +20,11 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 		palette = v
 		_queue_rebuild()
 
-# ───────────── Forma ─────────────
 @export_group("Shape")
-## 0 = pie normal, >0 = donut.
 @export_range(0.0, 0.95, 0.01) var hole_ratio: float = 0.0:
 	set(v):
 		hole_ratio = v
 		_queue_rebuild()
-## Graus a partir do topo (12h).
 @export_range(-180.0, 180.0, 1.0) var start_angle: float = 0.0:
 	set(v):
 		start_angle = v
@@ -37,7 +33,6 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 	set(v):
 		clockwise = v
 		_queue_rebuild()
-## Espaço angular entre fatias, em graus.
 @export_range(0.0, 20.0, 0.1) var gap_degrees: float = 0.0:
 	set(v):
 		gap_degrees = v
@@ -51,7 +46,6 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 		segments_per_circle = v
 		_queue_rebuild()
 
-# ───────────── Contorno ─────────────
 @export_group("Outline")
 @export_range(0.0, 10.0, 0.1) var outline_width: float = 0.0:
 	set(v):
@@ -62,26 +56,28 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 		outline_color = v
 		_queue_rebuild()
 
-# ───────────── Interação ─────────────
 @export_group("Interaction")
 @export var hoverable: bool = true
 @export var hover_explode_px: float = 8.0
 @export_range(0.0, 1.0, 0.01) var hover_brighten: float = 0.15
-## Placeholders: {name} {value} {percent}
 @export_multiline var tooltip_format: String = "{name}\n{value} ({percent}%)"
 
-# ───────────── Legenda ─────────────
+@export_group("Spawn")
+@export var spawn_enabled: bool = true
+@export var spawn_parent: NodePath
+@export var replace_previous: bool = true
+@export var spawn_at_cursor: bool = false
+
 @export_group("Legend")
 @export var legend_position: LegendPosition = LegendPosition.RIGHT:
 	set(v):
 		legend_position = v
 		_queue_rebuild()
-## Placeholders: {name} {value} {percent}
 @export var legend_format: String = "{name} ({percent}%)":
 	set(v):
 		legend_format = v
 		_queue_rebuild()
-@export var legend_font_size: int = 0:  # 0 = usar o tema
+@export var legend_font_size: int = 0:
 	set(v):
 		legend_font_size = v
 		_queue_rebuild()
@@ -90,9 +86,7 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 		percent_decimals = v
 		_queue_rebuild()
 
-# ───────────── Centro (donut) ─────────────
 @export_group("Center")
-## Placeholder: {total}
 @export var center_text: String = "":
 	set(v):
 		center_text = v
@@ -102,26 +96,26 @@ enum LegendPosition { NONE, RIGHT, LEFT, TOP, BOTTOM }
 		center_font_size = v
 		_queue_rebuild()
 
-# ───────────── Animação ─────────────
 @export_group("Animation")
-## 0 = sem animação de entrada.
 @export var animate_duration: float = 0.6
 
-# ───────────── Internos ─────────────
+var selected_key: int = -1
+
 var _layout: BoxContainer
 var _canvas: Control
 var _legend: FlowContainer
 var _center_label: Label
 
-var _views: Array = []    # Polygon2D por fatia (null se invisível)
-var _ranges: Array = []   # Vector2(t0, t1) em radianos
-var _mids: Array = []     # ângulo médio de cada fatia
+var _views: Array = []
+var _ranges: Array = []
+var _mids: Array = []
 var _center := Vector2.ZERO
 var _radius := 1.0
 var _max_explode := 0.0
 var _hovered := -1
 var _rebuild_queued := false
 var _white_tex: ImageTexture
+var _spawned: Node
 
 var _reveal: float = 1.0:
 	set(v):
@@ -140,7 +134,6 @@ func _ready() -> void:
 	_canvas.gui_input.connect(_on_canvas_input)
 	_canvas.mouse_exited.connect(_set_hover.bind(-1))
 
-	# Em runtime cada instância fica com cópias próprias (os sub-resources da cena são partilhados)
 	if not Engine.is_editor_hint():
 		var own: Array[PieSlice] = []
 		for s in slices:
@@ -152,10 +145,6 @@ func _ready() -> void:
 		play_reveal()
 
 
-# ═════════════ API pública ═════════════
-
-## Atualiza valores por nome. Fatias já definidas no editor mantêm cor/shader/etc.
-## Nomes novos criam fatias novas; fatias que não aparecem no dicionário ficam a 0.
 func set_values(values: Dictionary, animate: bool = false) -> void:
 	var seen := {}
 	for key in values:
@@ -176,9 +165,36 @@ func set_values(values: Dictionary, animate: bool = false) -> void:
 		play_reveal()
 
 
+func set_values_by_key(values: Dictionary, name_resolver: Callable, animate: bool = false) -> void:
+	var seen := {}
+	for k in values:
+		var s := get_slice_by_key(int(k))
+		if s == null:
+			s = PieSlice.new()
+			s.key = int(k)
+			s.label = str(name_resolver.call(k))
+			var arr: Array[PieSlice] = slices.duplicate()
+			arr.append(s)
+			slices = arr
+		s.value = float(values[k])
+		seen[int(k)] = true
+	for s in slices:
+		if s and not seen.has(s.key):
+			s.value = 0.0
+	if animate:
+		play_reveal()
+
+
 func get_slice(label: String) -> PieSlice:
 	for s in slices:
 		if s and s.label == label:
+			return s
+	return null
+
+
+func get_slice_by_key(key: int) -> PieSlice:
+	for s in slices:
+		if s and s.key == key:
 			return s
 	return null
 
@@ -195,6 +211,12 @@ func set_slice_material(label: String, material: Material) -> void:
 		s.material = material
 
 
+func set_slice_scene(label: String, scene: PackedScene) -> void:
+	var s := get_slice(label)
+	if s:
+		s.spawn_scene = scene
+
+
 func play_reveal() -> void:
 	_reveal = 0.0
 	var tw := create_tween()
@@ -206,7 +228,11 @@ func refresh() -> void:
 	_queue_rebuild()
 
 
-# ═════════════ Dados ═════════════
+func close_spawned() -> void:
+	if is_instance_valid(_spawned):
+		_spawned.queue_free()
+	_spawned = null
+
 
 func _set_slices(v: Array[PieSlice]) -> void:
 	for s in slices:
@@ -246,8 +272,6 @@ func _format(fmt: String, s: PieSlice) -> String:
 		.replace("{value}", String.num(s.value))\
 		.replace("{percent}", String.num(_percent(s), percent_decimals))
 
-
-# ═════════════ Construção ═════════════
 
 func _queue_rebuild() -> void:
 	if _rebuild_queued:
@@ -338,7 +362,7 @@ func _rebuild_geometry() -> void:
 		var origin := _center - Vector2(_radius, _radius)
 		var uvs := PackedVector2Array()
 		for p in pts:
-			uvs.append((p - origin) / (_radius * 2.0) * tex_size)  # UV normalizado 0..1 no shader
+			uvs.append((p - origin) / (_radius * 2.0) * tex_size)
 
 		var poly := Polygon2D.new()
 		poly.polygon = pts
@@ -361,7 +385,6 @@ func _rebuild_geometry() -> void:
 
 func _make_material(s: PieSlice, i: int) -> Material:
 	if s.material is ShaderMaterial:
-		# Duplicado para cada fatia ter os seus próprios parâmetros
 		var sm := (s.material as ShaderMaterial).duplicate() as ShaderMaterial
 		sm.set_shader_parameter("percent", _percent(s))
 		sm.set_shader_parameter("slice_index", i)
@@ -381,6 +404,7 @@ func _refresh_view(i: int) -> void:
 	poly.position = _unit(_mids[i]) * off
 	if poly.material is ShaderMaterial:
 		(poly.material as ShaderMaterial).set_shader_parameter("hover", 1.0 if hovered else 0.0)
+
 
 func _rebuild_legend() -> void:
 	for c in _legend.get_children():
@@ -419,6 +443,9 @@ func _rebuild_legend() -> void:
 
 		row.mouse_entered.connect(_set_hover.bind(i))
 		row.mouse_exited.connect(_set_hover.bind(-1))
+		row.gui_input.connect(_on_legend_row_input.bind(i))
+		if s.spawn_scene != null:
+			row.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		_legend.add_child(row)
 
 
@@ -429,8 +456,6 @@ func _rebuild_center() -> void:
 		_center_label.add_theme_font_size_override("font_size", center_font_size)
 
 
-# ═════════════ Interação ═════════════
-
 func _on_canvas_input(event: InputEvent) -> void:
 	if not hoverable:
 		return
@@ -440,6 +465,45 @@ func _on_canvas_input(event: InputEvent) -> void:
 		var i := _slice_at(event.position)
 		if i >= 0:
 			slice_clicked.emit(slices[i], i)
+			_spawn_for(i)
+
+
+func _on_legend_row_input(event: InputEvent, i: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if i < slices.size() and slices[i]:
+			slice_clicked.emit(slices[i], i)
+			_spawn_for(i)
+
+
+func _spawn_for(i: int) -> void:
+	var s := slices[i]
+	if s == null:
+		return
+	selected_key = s.key
+
+	if not spawn_enabled or Engine.is_editor_hint() or s.spawn_scene == null:
+		return
+
+	if replace_previous and is_instance_valid(_spawned):
+		_spawned.queue_free()
+
+	var parent: Node = get_node_or_null(spawn_parent) if not spawn_parent.is_empty() else get_tree().current_scene
+	if parent == null:
+		push_warning("PieChart: spawn_parent path is invalid.")
+		return
+
+	var node := s.spawn_scene.instantiate()
+	if node.has_method("setup"):
+		node.setup(s.key)
+	parent.add_child(node)
+
+	if spawn_at_cursor and node is Control:
+		var c := node as Control
+		var vp := get_viewport_rect().size
+		c.global_position = get_global_mouse_position().clamp(Vector2.ZERO, (vp - c.size).max(Vector2.ZERO))
+
+	_spawned = node
+	slice_content_spawned.emit(node, s.key, s, i)
 
 
 func _slice_at(pos: Vector2) -> int:
@@ -465,7 +529,10 @@ func _set_hover(i: int) -> void:
 	_refresh_view(i)
 	if i >= 0 and i < slices.size() and slices[i]:
 		_canvas.tooltip_text = _format(tooltip_format, slices[i])
+		_canvas.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND \
+			if slices[i].spawn_scene != null else Control.CURSOR_ARROW
 		slice_hovered.emit(slices[i], i)
 	else:
 		_canvas.tooltip_text = ""
+		_canvas.mouse_default_cursor_shape = Control.CURSOR_ARROW
 		slice_unhovered.emit()
