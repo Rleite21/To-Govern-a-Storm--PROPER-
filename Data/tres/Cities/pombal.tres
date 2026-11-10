@@ -20,6 +20,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_q8gmc")
+id = 56
 city_name = "Pombal"
 map_position = Vector3(-0.075412184, 0.15500642, -0.4467793)
 description = "Overlooked by the medieval castle that once guarded the roads between Lisbon and Coimbra, Pombal occupies a fertile stretch of central Portugal where agriculture and regional commerce sustain its population. Its surrounding countryside, marked by pinewoods, fields and scattered villages, remains a world of smallholders, tenant farmers and established local proprietors. The Republic has brought new administrative institutions and promises of modernisation, yet the rhythms of rural life remain deeply traditional. The Catholic Church continues to command considerable social influence, while republican officials and the emerging professional classes seek to reshape education and public life. In Pombal, the national struggle between tradition and reform is felt less through grand ideological confrontations than through the everyday affairs of the municipality."

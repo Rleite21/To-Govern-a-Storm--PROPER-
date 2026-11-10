@@ -9,6 +9,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_emi1d")
+id = 12
 city_name = "Batalha"
 map_position = Vector3(-0.30540875, 0.15500642, -0.103741705)
 description = "Batalha stands beneath the shadow of its magnificent monastery, a monument to the victory that secured Portugal’s independence from Castile. Its soaring Gothic arches and intricate stonework speak of kings, warriors and generations of devoted craftsmen. Beyond the monastery, the surrounding countryside is a patchwork of farms, villages and limestone hills, where life moves to the rhythm of the seasons. Here, the glories of the medieval kingdom remain etched in stone, while ordinary people carry on beneath their weighty legacy."

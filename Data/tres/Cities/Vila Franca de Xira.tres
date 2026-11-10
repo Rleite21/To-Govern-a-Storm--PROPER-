@@ -24,6 +24,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_j8akd")
+id = 72
 city_name = "Vila Franca de Xira"
 map_position = Vector3(-0.34174657, 0.15500642, 0.4599996)
 description = "Situated along the broad estuary of the Tagus, Vila Franca de Xira is a town of river traffic, agricultural estates and traditions closely associated with the campino, the mounted cattle herder of the Ribatejo. Its surrounding plains sustain livestock, grain production and market gardening, while its position along the railway and river routes connecting Lisbon to the north encourages commerce and industrial development. The proximity of the capital exposes the town to the political and economic tensions of the Republic, particularly the demands of workers and agricultural labourers. Landowners and commercial interests seek stability, while socialist and anarchist ideas circulate among sections of the working population. Bullfighting, religious festivals and rural customs remain central to local identity. Vila Franca de Xira stands between the agricultural world of the Ribatejo and the expanding industrial orbit of Lisbon."

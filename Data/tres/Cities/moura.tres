@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_b0r2l")
+id = 50
 city_name = "Moura"
 map_position = Vector3(0.7603194, 0.15500642, 1.3174908)
 description = "Situated in the eastern Alentejo, not far from the Spanish frontier, Moura is a town of ancient walls, whitewashed streets and agricultural estates. Its history reflects the successive influences of Roman, Islamic and Christian rule, while its name and local traditions preserve memories of the medieval frontier. The surrounding landscape is characterised by olive groves, cereal fields and dry pasture, with agriculture forming the foundation of local prosperity. Large estates and established landowning families coexist with a population of agricultural labourers whose livelihoods depend upon seasonal work. Religious festivals and popular traditions remain central to community life, while the Republic's anticlerical policies and political instability create divisions between conservative rural interests and republican sympathisers. Moura remains deeply attached to its customs, its land and its frontier identity."

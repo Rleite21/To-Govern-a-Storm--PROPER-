@@ -24,6 +24,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_3wops")
+id = 61
 city_name = "Santarém"
 map_position = Vector3(-0.21544448, 0.15500642, 0.272852)
 description = "Rising above the fertile plains of the Tagus, Santarém is an ancient town whose Gothic churches, medieval streets and commanding position recall centuries of royal and military importance. Its surrounding lezíria is among Portugal's richest agricultural landscapes, sustaining grain production, livestock and commercial estates that tie local prosperity to the fortunes of the countryside. The town's landowners and professional classes retain considerable influence, while agricultural labourers face the familiar inequalities of rural society. Republicanism has a visible place in municipal life, but the Catholic Church continues to shape social customs and conservative opinion. The proximity of Lisbon brings Santarém into closer contact with national politics, even as its economic and cultural identity remains anchored in the agricultural wealth of the Tagus valley."

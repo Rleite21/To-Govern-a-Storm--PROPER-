@@ -24,6 +24,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_4myf1")
+id = 75
 city_name = "Vila Real"
 map_position = Vector3(0.5486746, 0.15500642, -1.73442)
 description = "Standing upon a high plateau among the valleys and mountains of Trás-os-Montes, Vila Real is a regional centre whose fortunes are linked to agriculture, wine production and commerce with the surrounding interior. The nearby estates of the Douro, including those associated with the production of Port wine, connect the city to one of Portugal's most important export industries. Its historic churches, aristocratic residences and Catholic traditions preserve the influence of older social institutions, while professionals, merchants and republican officials seek to extend modern administration into the region. The city's political life reflects the broader tensions of the Republic: conservative loyalties remain strong, but economic hardship and social inequality can encourage demands for reform. Vila Real stands as a gateway to the mountainous northeast, balancing inherited privilege and rural custom against the uncertain prospects of a changing nation"

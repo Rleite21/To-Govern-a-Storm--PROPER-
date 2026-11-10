@@ -25,6 +25,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_20nbe")
+id = 64
 city_name = "Setúbal"
 map_position = Vector3(-0.38368607, 0.15500642, 0.9850154)
 description = "Facing the broad estuary of the Sado, Setúbal has grown into one of Portugal's most important fishing and industrial centres. Its harbour, salt pans, fish-processing factories and commercial connections sustain a vigorous economy, while the surrounding Arrábida hills and fertile lands provide a striking contrast to the bustle of the waterfront. The growth of the canning industry has created a substantial working population, including many women employed in fish processing, whose wages and conditions are central to household survival. Industrialists and merchants seek stable markets, while labour organisers, socialists and anarchists challenge the inequalities of factory life. Republican secularism has weakened the Church's formal political position, but religious traditions endure among many families. Setúbal is a city where the promises of modern industry stand beside the realities of low wages, labour disputes and class conflict."

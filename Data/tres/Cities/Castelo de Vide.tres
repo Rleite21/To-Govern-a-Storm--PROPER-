@@ -9,6 +9,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_x24ry")
+id = 19
 city_name = "Castelo de Vide"
 map_position = Vector3(0.719265, 0.15500644, 0.11738157)
 description = "Perched among the green hills of the Alto Alentejo, Castelo de Vide is a town of narrow lanes, whitewashed houses and ancient stone walls. Its medieval castle watches over a settlement whose history carries traces of Christian and Jewish communities, including a historic Jewish quarter with winding streets and enduring architectural details. Springs and fountains provide water to residents and travellers, while nearby farms and orchards sustain the local economy. Quiet and dignified, Castelo de Vide preserves layers of memory within its walls, where faith, exile and coexistence have all left their mark."

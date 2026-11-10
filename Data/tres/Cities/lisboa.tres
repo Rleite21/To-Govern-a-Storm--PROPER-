@@ -40,6 +40,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_ttevi")
+id = 39
 city_name = "Lisboa"
 map_position = Vector3(-0.5638501, 0.15500642, 0.71844184)
 description = "The capital of the Portuguese Republic is a city of contradictions, where grand avenues and cafés of the bourgeoisie stand beside crowded tenements, dockside taverns and working-class neighbourhoods. Its hills overlook the Tagus, still the great artery of an empire whose former splendour cannot conceal the country's economic weakness. Since the Revolution of 1910, Lisbon has been the principal battleground between republican factions, monarchist sympathisers, Catholic traditionalists and militant secularists. Freemasons, military officers, industrialists, socialists and anarchists all compete to shape the future, while strikes, inflation and successive political crises unsettle daily life. Here, the Republic's greatest ambitions and deepest failures are laid bare."

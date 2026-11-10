@@ -19,6 +19,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_5bdba")
+id = 36
 city_name = "Lagos"
 map_position = Vector3(-0.19850948, 0.15500642, 2.3007874)
 description = "Once a principal gateway to Portugal's maritime expansion, Lagos rests along the sheltered shores of the western Algarve, where whitewashed streets overlook a sea that has long sustained fishermen and merchants. The memory of the Discoveries lingers in its churches and old walls, though the age of imperial glory has given way to the uncertain fortunes of a coastal town. Fishing, small commerce and agriculture sustain its people, whose traditional Catholic outlook coexists with the growing influence of republican institutions and the concerns of working families. Far from Lisbon's political theatres, Lagos remains attached to the rhythms of the sea, wary of distant promises of national renewal."

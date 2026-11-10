@@ -9,6 +9,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_l6wk6")
+id = 22
 city_name = "Coruche"
 map_position = Vector3(-0.06149045, 0.15500642, 0.5739779)
 description = "Across the vast plains of the Ribatejo, Coruche lies among rolling fields, cork oak forests and the winding waters of the Sorraia River. Cork harvesting, livestock and agriculture sustain its scattered rural communities, where generations have lived by the rhythm of the land. Herdsmen guide cattle across dusty tracks, while wealthy landowners oversee estates stretching towards the horizon. Here, the countryside is both a source of prosperity and a world of hard labour, where tradition and social hierarchy remain firmly rooted."

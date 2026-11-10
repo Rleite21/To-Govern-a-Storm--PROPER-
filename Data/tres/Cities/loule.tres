@@ -19,6 +19,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_gdgfb")
+id = 40
 city_name = "Loulé"
 map_position = Vector3(0.38412818, 0.15500642, 2.3329015)
 description = "In the rolling countryside of the central Algarve, Loulé gathers the produce of inland farms beneath the towers and whitewashed walls of its historic centre. Its celebrated market draws farmers, craftsmen and traders from surrounding villages, sustaining a regional economy rooted in agriculture, livestock and small-scale commerce. Catholic festivals and traditional associations remain central to community life, while republican municipal politics offers a growing arena for local notables and professionals. Yet the hardships of rural labour and the uneven distribution of land and wealth leave much of the population distant from the promises of political modernisation. Loulé is a town of enduring custom, quietly exposed to the changes reaching the southern provinces."

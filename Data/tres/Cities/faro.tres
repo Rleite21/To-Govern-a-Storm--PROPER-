@@ -30,6 +30,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_wucv3")
+id = 29
 city_name = "Faro"
 map_position = Vector3(0.3760107, 0.15500642, 2.4304829)
 description = "Situated on the southern coast of Portugal, overlooking the sheltered waters of the Ria Formosa, Faro is the administrative and commercial centre of the Algarve. Its ancient walled quarter, known as Vila-Adentro, preserves traces of Roman and Islamic rule, while the cathedral and historic churches reflect its long-standing importance as an episcopal seat. Unlike the smaller fishing settlements scattered along the coast, Faro possesses a growing urban character, with government offices, schools, merchants, professionals and established bourgeois families shaping its social life. Fishing, salt extraction, agriculture and coastal trade remain important sources of income, while the harbour connects the city to other Portuguese ports and the wider Mediterranean. Its position as the regional capital brings a degree of modernity and outside influence, although traditional Catholic values remain deeply rooted in everyday life. The Republic's political divisions are present among its educated classes, civil servants and commercial circles, where republicanism, monarchist nostalgia, anticlericalism and conservative Catholicism compete for influence. Faro is a city of contrasts: provincial in many of its customs, yet outward-looking through its maritime connections and growing administrative importance."

@@ -9,6 +9,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_774bd")
+id = 46
 city_name = "Miranda do Douro"
 map_position = Vector3(1.4780433, 0.15500642, -1.9184513)
 description = "Perched above the deep gorge of the Douro on Portugal's northeastern frontier, Miranda do Douro occupies a rugged landscape whose isolation has preserved a distinctive regional identity. The Mirandese language, traditional customs and strong communal loyalties set the area apart from much of the country, while the river and border sustain centuries-old connections with neighbouring Spain. Agriculture and livestock dominate the local economy, and the Catholic Church remains an enduring presence in village life. The Republic's debates over centralisation, secularism and national identity reach Miranda from afar, often seeming remote beside the demands of rural existence. Here, loyalty to the community and its inherited traditions can matter more than the changing allegiances of Lisbon."

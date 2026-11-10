@@ -9,6 +9,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_7tjs2")
+id = 6
 city_name = "Almeirim"
 map_position = Vector3(-0.095867455, 0.15500644, 0.2763281)
 description = "Set amid the fertile plains of the Tagus Valley, Almeirim draws its wealth from the land. Farms, livestock and rural commerce sustain the local economy, while regional traditions preserve the memory of an age when royal courts favoured these lands. The Republic has shaken the foundations of Portugal’s old political order, yet established landowners retain considerable influence. In Almeirim, the harvest remains more immediate than politics, and tradition proves difficult to uproot."

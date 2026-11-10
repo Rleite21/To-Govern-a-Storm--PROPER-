@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_udgkv")
+id = 28
 city_name = "Évora"
 map_position = Vector3(0.46994126, 0.15500642, 0.87402886)
 description = "Encircled by medieval walls, Évora is a city where Roman columns, Gothic churches and whitewashed streets preserve the weight of centuries. Its ancient temple rises above the rooftops, while convents, noble residences and bustling markets reflect a long history of religious devotion and regional prestige. Beyond the city gates, the vast plains of the Alentejo are divided among agricultural estates, where seasonal labourers endure the summer heat and landowners maintain their influence. Life within Évora moves between solemn processions, market-day chatter and the quiet routines of rural commerce. Here, the past is not merely remembered — it stands in stone at every turn."

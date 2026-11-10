@@ -40,6 +40,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_tdooo")
+id = 10
 city_name = "Aveiro"
 map_position = Vector3(-0.14314175, 0.15500642, -1.0715381)
 description = "Between the lagoon and the Atlantic, Aveiro is a town in transition. Its canals carry the memory of generations of salt workers and fishermen, while ceramics, commerce and emerging industries signal a future shaped by modern transport and expanding markets. New ideas about education, administration and progress find fertile ground in this growing regional centre. Yet beneath the promise of prosperity, old customs and social divisions endure. In Aveiro, the future is arriving — carried on the same waters that have sustained the town for centuries."

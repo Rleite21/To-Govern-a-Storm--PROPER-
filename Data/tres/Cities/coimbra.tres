@@ -20,6 +20,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_ukxg4")
+id = 21
 city_name = "Coimbra"
 map_position = Vector3(-0.005264282, 0.15500642, -0.6575407)
 description = "Rising above the Mondego River, Coimbra is a city of ancient stone walls, steep lanes and centuries of intellectual tradition. Its historic university draws students and scholars from across Portugal, filling the streets with lively debates, academic rivalries and youthful restlessness. In lecture halls and crowded taverns, ideas are exchanged, reputations challenged and long-held customs questioned. The university gives the city an unmistakable energy, where the curiosity of the students' black capes and traditions often brings generations into disagreement. Beyond its scholarly quarters, churches, monasteries and working-class neighbourhoods reflect the varied lives of its inhabitants. In Coimbra, knowledge commands respect, but a sharp mind and a stubborn spirit rarely allow things to remain unquestioned."

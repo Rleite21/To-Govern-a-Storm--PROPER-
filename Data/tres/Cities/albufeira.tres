@@ -19,6 +19,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_6vejc")
+id = 2
 city_name = "Albufeira"
 map_position = Vector3(0.17309406, 0.15500642, 2.3390183)
 description = "Albufeira is a modest fishing town shaped by the rhythms of the Atlantic. Fishing boats crowd its shores, while dried-fruit exports and small factories provide a living for its inhabitants. Women toil in the fish-processing trade, their labour essential to the local economy. Beyond the harbour, daily life follows familiar rhythms, grounded in family, faith and generations of coastal tradition. Here, the sea provides both livelihood and identity, while hardship remains an inseparable part of life along the Algarve coast."

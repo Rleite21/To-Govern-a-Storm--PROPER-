@@ -19,6 +19,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_bw7j5")
+id = 1
 city_name = "Abrantes"
 map_position = Vector3(0.1547475, 0.15500642, 0.06647192)
 description = "Perched above the Tagus Valley, Abrantes stands between Portugal’s fading agricultural past and an uncertain modern age. Its ancient castle watches over fields, river traffic and the villages scattered across the surrounding countryside. Trade and farming sustain the town, while the old order endures beneath the promises of the Republic. Here, history is never far from the surface — and progress arrives slowly."

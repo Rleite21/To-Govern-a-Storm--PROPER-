@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_au47v")
+id = 4
 city_name = "Alcobaça"
 map_position = Vector3(-0.44818214, 0.15500642, -0.0006095134)
 description = "Dominating the town, the great Monastery of Alcobaça stands as a monument to the power of faith, monarchy and the religious orders that once shaped Portugal. The Republic’s secular reforms have challenged that legacy, but the monastery remains woven into the identity of the town. Beyond its walls, farmers, merchants and artisans carry on their daily trades. Old beliefs and new ideals coexist uneasily, leaving Alcobaça caught between a sacred past and a changing present."

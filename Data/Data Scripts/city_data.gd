@@ -1,7 +1,7 @@
 extends Resource
 class_name CityData
 
-@export var ID: int # ID único de cada cidade
+@export var id: int # ID único de cada cidade
 @export var city_name: String  # Nome da cidade
 @export var map_position: Vector3  # relativa à raiz do mapa (Portugal)
 @export_multiline var description: String  # Texto de apresentação

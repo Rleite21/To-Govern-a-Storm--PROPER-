@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_d4ax0")
+id = 47
 city_name = "Mirandela"
 map_position = Vector3(0.7960056, 0.15500642, -1.8389313)
 description = "In the fertile valleys of the Tua and the wider landscapes of northeastern Portugal, Mirandela serves as an agricultural market town surrounded by olive groves, orchards and fields. Its prosperity rests upon rural production and the trade that links isolated communities to regional centres. The social order remains shaped by landowners, merchants and the Church, although the growth of transport connections and commercial activity encourages a more outward-looking local bourgeoisie. Republican politics has weakened the old formal authority of the monarchy, but it has not erased conservative loyalties or the influence of religious life. In this distant corner of the Republic, national upheavals are filtered through the practical concerns of land, prices, harvests and local authority."

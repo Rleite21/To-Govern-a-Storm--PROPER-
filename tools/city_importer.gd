@@ -200,6 +200,9 @@ func _import_csv() -> int:
 		if data == null:
 			data = CityData.new()
 
+		# ID sequencial: o CSV ordenado torna os IDs determinísticos.
+		data.id = count + 1
+
 		# Basic information
 		data.city_name = cname
 		data.description = _field(row, col, "description")
@@ -365,20 +368,10 @@ func _build_specializations(
 # CSV HELPERS
 # --------------------------------------------------
 
-func _field(
-	row: PackedStringArray,
-	col: Dictionary,
-	key: String
-) -> String:
-	if not col.has(key):
+func _field(row: PackedStringArray, col: Dictionary, key: String) -> String:
+	if not col.has(key) or col[key] >= row.size():
 		return ""
-
-	var index: int = col[key]
-
-	if index < 0 or index >= row.size():
-		return ""
-
-	return row[index].strip_edges()
+	return row[col[key]].strip_edges()
 
 
 func _split_list(value: String) -> Array[String]:

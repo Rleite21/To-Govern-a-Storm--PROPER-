@@ -30,6 +30,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_27yi2")
+id = 14
 city_name = "Braga"
 map_position = Vector3(-0.009927094, 0.15500642, -1.952796)
 description = "One of Portugal’s oldest religious centres, Braga is a city of towering churches, ancient streets and solemn processions. The bells of its cathedral ring over granite façades and crowded markets, while the clergy retain considerable influence over local society. Beyond the city, the green hills of Minho are dotted with farms, vineyards and traditional villages. Despite the Republic’s efforts to diminish the Church’s power, faith remains woven into the fabric of Braga, shaping its festivals, customs and the lives of its inhabitants"

@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_75wbl")
+id = 73
 city_name = "Vila Nova de Foz Côa"
 map_position = Vector3(0.95351654, 0.15500642, -1.4902663)
 description = "Located in the rugged upper Douro valley, Vila Nova de Foz Côa is surrounded by steep slopes, vineyards and a landscape shaped by the cultivation of wine and olive groves. Its position near the meeting of the Douro and Côa rivers connects it to the wider wine-growing economy, while the demanding terrain preserves a strongly rural character. Agricultural proprietors, smallholders and seasonal workers form the backbone of local society, their fortunes tied to harvests and the markets that carry Douro produce beyond the region. Catholic traditions remain deeply embedded in village life, and the political controversies of the Republic are often distant from immediate local concerns. Yet changing markets, transport links and the spread of new political ideas gradually connect even this remote valley to the wider transformations of Portugal."

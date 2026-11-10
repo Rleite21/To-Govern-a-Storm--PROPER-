@@ -20,6 +20,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_jba3t")
+id = 16
 city_name = "Caldas da Rainha"
 map_position = Vector3(-0.49660826, 0.15500642, 0.08630261)
 description = "Renowned for its thermal springs, Caldas da Rainha has long drawn visitors seeking relief from illness and the burdens of everyday life. Its hospital, founded under the patronage of Queen Leonor, remains a symbol of the town’s charitable heritage. Around the bustling markets, pottery workshops and small businesses sustain a lively local economy, while distinctive ceramics reflect the artistic spirit of the region. Beneath the familiar rhythm of trade and healing, Caldas preserves an identity shaped by royal patronage, craftsmanship and the enduring belief in the restorative power of its waters."

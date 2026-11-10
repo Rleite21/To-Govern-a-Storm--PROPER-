@@ -14,6 +14,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_d8wuy")
+id = 3
 city_name = "Alcácer do Sal"
 map_position = Vector3(-0.063146204, 0.15500642, 1.1331882)
 description = "Along the Sado River, Alcácer do Sal thrives on the wealth of the surrounding countryside. Rice fields, salt production and agricultural labour sustain its economy, while its ancient castle bears witness to centuries of Roman, Islamic and Christian rule. Yet beneath this rich history lies a rigid social order, shaped by powerful landowners and generations of rural tradition. The Republic may promise a new Portugal, but here, the land still belongs to the few."

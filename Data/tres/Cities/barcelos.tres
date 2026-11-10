@@ -10,6 +10,7 @@ prevalence = 1.0
 
 [resource]
 script = ExtResource("1_7ja3d")
+id = 11
 city_name = "Barcelos"
 map_position = Vector3(-0.13683632, 0.15500642, -1.965307)
 description = "Amid the green valleys of northern Portugal, Barcelos thrives on agriculture, local markets and centuries-old craft traditions. Its streets echo with the sounds of merchants and artisans, while pottery and colourful folk art reflect the character of the Minho region. The legend of the Rooster of Barcelos lives on in local folklore, a symbol of faith, justice and Portuguese identity. Beneath the church bells and the bustle of market day, rural customs remain deeply rooted in everyday life."
