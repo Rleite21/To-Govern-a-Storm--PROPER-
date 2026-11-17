@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_knao8"]
 [ext_resource type="PackedScene" uid="uid://nj6w2ttgo0qi" path="res://tscn/UI/OrnateHSeparator.tscn" id="3_wlbmq"]
 [ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="4_tavtl"]
+[ext_resource type="Script" uid="uid://dcwh122ln40rt" path="res://UI/City Tab/ClassInfoPanel.gd" id="5_knao8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
 font_size = 15
@@ -115,6 +116,31 @@ label_settings = SubResource("LabelSettings_p8160")
 
 [node name="Social_Classes" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=754557123]
 layout_mode = 2
+
+[node name="Aristocrats" type="Panel" parent="MarginContainer/ScrollContainer/VBox/Social_Classes" unique_id=1926997649]
+layout_mode = 2
+script = ExtResource("5_knao8")
+metadata/_custom_type_script = "uid://dcwh122ln40rt"
+
+[node name="Industrialists" type="Panel" parent="MarginContainer/ScrollContainer/VBox/Social_Classes" unique_id=586685771]
+layout_mode = 2
+script = ExtResource("5_knao8")
+metadata/_custom_type_script = "uid://dcwh122ln40rt"
+
+[node name="Middle_Class" type="Panel" parent="MarginContainer/ScrollContainer/VBox/Social_Classes" unique_id=1412860681]
+layout_mode = 2
+script = ExtResource("5_knao8")
+metadata/_custom_type_script = "uid://dcwh122ln40rt"
+
+[node name="Working_Class" type="Panel" parent="MarginContainer/ScrollContainer/VBox/Social_Classes" unique_id=1874345797]
+layout_mode = 2
+script = ExtResource("5_knao8")
+metadata/_custom_type_script = "uid://dcwh122ln40rt"
+
+[node name="Peasants" type="Panel" parent="MarginContainer/ScrollContainer/VBox/Social_Classes" unique_id=430490663]
+layout_mode = 2
+script = ExtResource("5_knao8")
+metadata/_custom_type_script = "uid://dcwh122ln40rt"
 
 [node name="HSeparator2" parent="MarginContainer/ScrollContainer/VBox" unique_id=936750761 instance=ExtResource("3_wlbmq")]
 layout_mode = 2

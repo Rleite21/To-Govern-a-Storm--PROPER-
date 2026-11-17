@@ -66,8 +66,10 @@ func show_city(source: Variant) -> void:
 	else:
 		CityTabDemographics.clear(demographics_chart)
 		push_warning("CityTab: não encontrei a City para '%s'." % data.city_name)
-
+		
 	visible = true
+	ClassInfoPanel.current_city = city
+	get_tree().call_group("class_info_panels", "refresh")
 
 
 func close() -> void:

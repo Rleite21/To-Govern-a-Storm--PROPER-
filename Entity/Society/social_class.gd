@@ -8,6 +8,7 @@ var population: int = 0
 var population_share: float = 0.0
 var convictions: Dictionary = {}
 var traits: Array[SocialClassEnums.Trait] = []
+var wealth: float = 0.0
 
 var militancy: float = 0.0:
 	set(value):
