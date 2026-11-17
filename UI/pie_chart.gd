@@ -130,6 +130,13 @@ func _ready() -> void:
 	_center_label = %CenterLabel
 	_center_label.z_index = 1
 
+	if custom_minimum_size == Vector2.ZERO:
+		custom_minimum_size = Vector2(300, 220)
+	_layout.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_canvas.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_canvas.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_canvas.mouse_filter = Control.MOUSE_FILTER_STOP
+
 	_canvas.resized.connect(_rebuild_geometry)
 	_canvas.gui_input.connect(_on_canvas_input)
 	_canvas.mouse_exited.connect(_set_hover.bind(-1))
