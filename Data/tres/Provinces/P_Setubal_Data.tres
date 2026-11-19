@@ -1,8 +1,30 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://dfyx4kddrlkkl"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_tbhtt"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_keiyu"]
+
+[sub_resource type="Resource" id="Resource_c2xil"]
+script = ExtResource("2_keiyu")
+value = 7
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_sltvr"]
+script = ExtResource("2_keiyu")
+value = 6
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_8mxw2"]
+script = ExtResource("2_keiyu")
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_huyn0"]
+script = ExtResource("2_keiyu")
+value = 13
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_tbhtt")
 province_name = "Península de Setúbal"
+traits = Array[ExtResource("2_keiyu")]([SubResource("Resource_c2xil"), SubResource("Resource_sltvr"), SubResource("Resource_8mxw2"), SubResource("Resource_huyn0")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"
