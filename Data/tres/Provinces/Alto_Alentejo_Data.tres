@@ -1,8 +1,30 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://cxe4ewex2dt8b"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_643mn"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_8sivm"]
+
+[sub_resource type="Resource" id="Resource_g5nrc"]
+script = ExtResource("2_8sivm")
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_qo5ui"]
+script = ExtResource("2_8sivm")
+value = 10
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_h0c5v"]
+script = ExtResource("2_8sivm")
+value = 9
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_8ag22"]
+script = ExtResource("2_8sivm")
+value = 8
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_643mn")
 province_name = "Alto Alentejo"
+traits = Array[ExtResource("2_8sivm")]([SubResource("Resource_g5nrc"), SubResource("Resource_qo5ui"), SubResource("Resource_h0c5v"), SubResource("Resource_8ag22")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"

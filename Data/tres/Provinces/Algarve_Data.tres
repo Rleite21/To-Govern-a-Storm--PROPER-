@@ -1,8 +1,32 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://hiaqcl0qptw2"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_1ve51"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_cr0tp"]
+
+[sub_resource type="Resource" id="Resource_cr0tp"]
+script = ExtResource("2_cr0tp")
+value = 8
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_cfkhc"]
+script = ExtResource("2_cr0tp")
+value = 7
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_2jv17"]
+script = ExtResource("2_cr0tp")
+value = 9
+strength = 0
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_gp5ev"]
+script = ExtResource("2_cr0tp")
+strength = 0
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_1ve51")
 province_name = "Algarve"
+traits = Array[ExtResource("2_cr0tp")]([SubResource("Resource_cr0tp"), SubResource("Resource_cfkhc"), SubResource("Resource_2jv17"), SubResource("Resource_gp5ev")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"

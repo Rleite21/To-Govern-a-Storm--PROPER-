@@ -1,8 +1,44 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://jir1dmji1kkj"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_xcwg8"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_3cuix"]
+
+[sub_resource type="Resource" id="Resource_ptlfl"]
+script = ExtResource("2_3cuix")
+value = 9
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_5oenf"]
+script = ExtResource("2_3cuix")
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_i45nc"]
+script = ExtResource("2_3cuix")
+value = 1
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_cn5eu"]
+script = ExtResource("2_3cuix")
+value = 5
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_bso48"]
+script = ExtResource("2_3cuix")
+value = 12
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_q7d35"]
+script = ExtResource("2_3cuix")
+value = 15
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_xcwg8")
 province_name = "Trás-os-Montes"
+traits = Array[ExtResource("2_3cuix")]([SubResource("Resource_ptlfl"), SubResource("Resource_5oenf"), SubResource("Resource_i45nc"), SubResource("Resource_cn5eu"), SubResource("Resource_bso48"), SubResource("Resource_q7d35")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"

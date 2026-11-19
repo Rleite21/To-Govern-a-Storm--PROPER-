@@ -1,9 +1,37 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://33oj4a2yehjp"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_7vppm"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_ebjnh"]
+
+[sub_resource type="Resource" id="Resource_d3vcs"]
+script = ExtResource("2_ebjnh")
+value = 9
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_kbrxr"]
+script = ExtResource("2_ebjnh")
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_1ss5j"]
+script = ExtResource("2_ebjnh")
+value = 1
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_mlb73"]
+script = ExtResource("2_ebjnh")
+value = 5
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_und67"]
+script = ExtResource("2_ebjnh")
+value = 10
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_7vppm")
 province_name = "Beira Alta"
 description = "Um bem haja da Beira Alta!!"
+traits = Array[ExtResource("2_ebjnh")]([SubResource("Resource_d3vcs"), SubResource("Resource_kbrxr"), SubResource("Resource_1ss5j"), SubResource("Resource_mlb73"), SubResource("Resource_und67")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"

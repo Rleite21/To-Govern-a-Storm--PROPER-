@@ -1,8 +1,42 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://jdttgslcpdwx"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_gjjc8"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_oqpxu"]
+
+[sub_resource type="Resource" id="Resource_qawqq"]
+script = ExtResource("2_oqpxu")
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_4fgi1"]
+script = ExtResource("2_oqpxu")
+value = 5
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_tjlgs"]
+script = ExtResource("2_oqpxu")
+value = 6
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_qjhsh"]
+script = ExtResource("2_oqpxu")
+value = 7
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_c0jbn"]
+script = ExtResource("2_oqpxu")
+value = 11
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_w5b3i"]
+script = ExtResource("2_oqpxu")
+value = 14
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_gjjc8")
 province_name = "Beira Litoral"
+traits = Array[ExtResource("2_oqpxu")]([SubResource("Resource_qawqq"), SubResource("Resource_4fgi1"), SubResource("Resource_tjlgs"), SubResource("Resource_qjhsh"), SubResource("Resource_c0jbn"), SubResource("Resource_w5b3i")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"

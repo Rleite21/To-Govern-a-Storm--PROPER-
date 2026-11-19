@@ -1,8 +1,38 @@
 [gd_resource type="Resource" script_class="ProvinceData" format=3 uid="uid://bbx0nxpk4b6qp"]
 
 [ext_resource type="Script" uid="uid://bdxcaeyat04r3" path="res://Data/Data Scripts/province_data.gd" id="1_vjc8y"]
+[ext_resource type="Script" uid="uid://cjrl0cwxhglp7" path="res://Entity/National/Province/province_trait_entry.gd" id="2_luc3p"]
+
+[sub_resource type="Resource" id="Resource_8hym7"]
+script = ExtResource("2_luc3p")
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_u8ny0"]
+script = ExtResource("2_luc3p")
+value = 5
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_86ixo"]
+script = ExtResource("2_luc3p")
+value = 11
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_xsvsw"]
+script = ExtResource("2_luc3p")
+value = 10
+strength = 2
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
+
+[sub_resource type="Resource" id="Resource_lb2it"]
+script = ExtResource("2_luc3p")
+value = 7
+metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]
 script = ExtResource("1_vjc8y")
 province_name = "Minho"
+traits = Array[ExtResource("2_luc3p")]([SubResource("Resource_8hym7"), SubResource("Resource_u8ny0"), SubResource("Resource_86ixo"), SubResource("Resource_xsvsw"), SubResource("Resource_lb2it")])
 metadata/_custom_type_script = "uid://bdxcaeyat04r3"
