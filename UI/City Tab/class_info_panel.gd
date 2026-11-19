@@ -83,12 +83,11 @@ func _populate(root: VBoxContainer) -> void:
 	traits_title.add_theme_font_size_override("font_size", 16)
 	root.add_child(traits_title)
 
-	var city_traits: Array = city.data.traits if city.data != null else []
-	if city_traits.is_empty():
+	if sc.traits.is_empty():
 		root.add_child(_label("Nenhum"))
 	else:
-		for t in city_traits:
-			root.add_child(_label("• " + CityTrait.Type.keys()[t].capitalize()))
+		for t in sc.traits:
+			root.add_child(_label("• " + SocialClassEnums.trait_to_string(t)))
 
 
 func _label(text: String) -> Label:

@@ -70,6 +70,10 @@ func add_trait(t: SocialClassEnums.Trait, apply_effects: bool = true) -> bool:
 	for existing in traits:
 		if SocialClassEnums.traits_conflict(t, existing):
 			return false
+	if not SocialClassEnums.Trait.values().has(t):
+		push_error("Trait inválido a ser adicionado: %s (classe %s)" % [t, SocialClassEnums.type_to_string(type)])
+		print_stack()
+		return false
 	traits.append(t)
 	if apply_effects:
 		ClassModifiers.apply_trait_effects(self, t)

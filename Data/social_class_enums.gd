@@ -50,8 +50,6 @@ const TRAIT_NAMES := {
 	Trait.PROGRESSIVE: "Progressive",
 	Trait.REBELLIOUS_HISTORY: "Rebellious History",
 	Trait.ORGANIZED: "Organized",
-	Trait.ISOLATED: "Isolated",
-	Trait.URBANIZED: "Urbanized",
 	Trait.PATRIOTIC: "Patriotic",
 	Trait.CORRUPT_ELITES: "Corrupt Elites",
 }

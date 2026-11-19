@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_knao8"]
 [ext_resource type="PackedScene" uid="uid://nj6w2ttgo0qi" path="res://tscn/UI/OrnateHSeparator.tscn" id="3_wlbmq"]
 [ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="4_tavtl"]
-[ext_resource type="Script" uid="uid://dcwh122ln40rt" path="res://UI/City Tab/ClassInfoPanel.gd" id="5_knao8"]
+[ext_resource type="Script" uid="uid://dcwh122ln40rt" path="res://UI/City Tab/class_info_panel.gd" id="5_knao8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ikkh7"]
 font_size = 15
