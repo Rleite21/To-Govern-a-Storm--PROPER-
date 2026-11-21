@@ -20,7 +20,6 @@ metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [sub_resource type="Resource" id="Resource_huyn0"]
 script = ExtResource("2_keiyu")
-value = 13
 metadata/_custom_type_script = "uid://cjrl0cwxhglp7"
 
 [resource]

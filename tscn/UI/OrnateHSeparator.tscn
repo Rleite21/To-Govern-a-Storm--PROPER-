@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nj6w2ttgo0qi"]
 
-[ext_resource type="Script" uid="uid://y3bx7vdjytfd" path="res://UI/ornate_separator.gd" id="1_otj2t"]
+[ext_resource type="Script" uid="uid://y3bx7vdjytfd" path="res://UI/UI Elements/ornate_separator.gd" id="1_otj2t"]
 [ext_resource type="Texture2D" uid="uid://br3r4v2q3b50l" path="res://UI/Art/Coat of Arms 2.png" id="2_otj2t"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_otj2t"]
@@ -8,7 +8,6 @@
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_o1psy"]
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=2121820605]
-anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
