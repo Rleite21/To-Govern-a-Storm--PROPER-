@@ -22,10 +22,12 @@ font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 font_size = 20
 font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
-[node name="CityTab" type="PanelContainer" unique_id=808472461]
+[node name="ProvinceTab" type="PanelContainer" unique_id=808472461]
+clip_contents = true
 anchors_preset = -1
 anchor_right = 0.35
 anchor_bottom = 0.85
+size_flags_vertical = 3
 script = ExtResource("1_qg7da")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=354473496]
@@ -39,6 +41,7 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 mouse_filter = 0
 theme = ExtResource("2_cl7xf")
+horizontal_scroll_mode = 0
 
 [node name="VBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=11513643]
 layout_mode = 2
@@ -59,6 +62,9 @@ offset_transform_enabled = true
 text = "X"
 
 [node name="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=2121820605 instance=ExtResource("3_soonb")]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer/VBox" unique_id=1272252094]
 layout_mode = 2
 
 [node name="Stats" type="GridContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=498628557]

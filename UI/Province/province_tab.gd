@@ -6,7 +6,11 @@ signal city_selected(city: City)
 
 const MAIN_VBOX := "MarginContainer/ScrollContainer/VBox/"
 const CHARTS_VBOX := "MarginContainer/ScrollContainer/VBox/ChartsBox/"
+
 const TEXT_COLOR := Color.WHITE
+const CARD_BG := Color(0.40, 0.38, 0.34, 0.95)
+const BAR_BG := Color(0.28, 0.27, 0.24)
+const BAR_FILL := Color(0.62, 0.61, 0.58)
 
 @onready var name_label: Label = get_node(MAIN_VBOX + "Header/NameLabel")
 @onready var close_button: Button = get_node(MAIN_VBOX + "Header/CloseButton")
@@ -56,6 +60,8 @@ func close() -> void:
 	closed.emit()
 
 
+# ---------------------------------------------------------------- Stats
+
 func _fill_stats(census: ProvinceCensus) -> void:
 	population_label.text = "Population: %s" % _fmt_int(census.population)
 	cities_label.text = "Cities: %d" % census.city_count
@@ -66,6 +72,8 @@ func _fill_stats(census: ProvinceCensus) -> void:
 	average_label.text = "Avg. militancy: %.1f   Avg. consciousness: %.1f" % [census.avg_militancy, census.avg_consciousness]
 
 
+# ---------------------------------------------------------------- Chart
+
 func _fill_chart(census: ProvinceCensus) -> void:
 	var values := {}
 	for type in census.class_population:
@@ -73,19 +81,103 @@ func _fill_chart(census: ProvinceCensus) -> void:
 	demographics_chart.set_values_by_key(values, SocialClassEnums.type_to_string, true)
 
 
+# ---------------------------------------------------------------- Classes
+
 func _fill_classes(census: ProvinceCensus) -> void:
 	_clear(classes_box)
-	classes_box.add_child(_label("Social classes", 17))
-	for type in SocialClassEnums.Type.values():
-		var line := "%s: %s (%.1f%%)  |  Militancy %.1f  |  Consciousness %.1f" % [
-			SocialClassEnums.type_to_string(type),
-			_fmt_int(census.class_population[type]),
-			census.class_share[type] * 100.0,
-			census.class_militancy[type],
-			census.class_consciousness[type],
-		]
-		classes_box.add_child(_label(line))
+	classes_box.add_theme_constant_override("separation", 8)
+	classes_box.add_child(_label("Social Classes", 24))
 
+	for type in SocialClassEnums.Type.values():
+		classes_box.add_child(_class_card(
+			SocialClassEnums.type_to_string(type),
+			census.class_population[type],
+			census.class_share[type],
+			census.class_consciousness[type],
+			census.class_militancy[type],
+		))
+
+
+func _class_card(title: String, population: int, share: float, consciousness: float, militancy: float) -> Control:
+	var card := PanelContainer.new()
+	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
+	var style := StyleBoxFlat.new()
+	style.bg_color = CARD_BG
+	style.set_corner_radius_all(8)
+	style.set_content_margin_all(12)
+	card.add_theme_stylebox_override("panel", style)
+
+	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 6)
+	card.add_child(vbox)
+
+	vbox.add_child(_label(title, 26))
+	vbox.add_child(HSeparator.new())
+
+	vbox.add_child(_text_row("Population", "%s (%.1f%%)" % [_fmt_int(population), share * 100.0]))
+	vbox.add_child(_bar_row("Consciousness", consciousness))
+	vbox.add_child(_bar_row("Militancy", militancy))
+
+	return card
+
+
+func _text_row(left: String, right: String) -> Control:
+	var row := HBoxContainer.new()
+
+	var l := _label(left)
+	l.autowrap_mode = TextServer.AUTOWRAP_OFF
+	l.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	row.add_child(l)
+
+	var r := _label(right)
+	r.autowrap_mode = TextServer.AUTOWRAP_OFF
+	r.size_flags_horizontal = Control.SIZE_SHRINK_END
+	r.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	row.add_child(r)
+
+	return row
+
+func _bar_row(label_text: String, value: float) -> Control:
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 10)
+
+	var l := _label(label_text)
+	l.autowrap_mode = TextServer.AUTOWRAP_OFF
+	l.size_flags_horizontal = Control.SIZE_FILL
+	l.custom_minimum_size.x = 120
+	row.add_child(l)
+
+	var bar := ProgressBar.new()
+	bar.min_value = 0
+	bar.max_value = 100
+	bar.value = value
+	bar.show_percentage = false
+	bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	bar.custom_minimum_size = Vector2(60, 16)
+
+	var bg := StyleBoxFlat.new()
+	bg.bg_color = BAR_BG
+	bg.set_corner_radius_all(8)
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = BAR_FILL
+	fill.set_corner_radius_all(8)
+	bar.add_theme_stylebox_override("background", bg)
+	bar.add_theme_stylebox_override("fill", fill)
+	row.add_child(bar)
+
+	var v := _label("%.1f" % value)
+	v.autowrap_mode = TextServer.AUTOWRAP_OFF
+	v.size_flags_horizontal = Control.SIZE_FILL
+	v.custom_minimum_size.x = 50
+	v.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	row.add_child(v)
+
+	return row
+
+
+# ---------------------------------------------------------------- Traits
 
 func _fill_traits(data: ProvinceData) -> void:
 	_clear(traits_box)
@@ -104,6 +196,8 @@ func _fill_traits(data: ProvinceData) -> void:
 			traits_box.add_child(_label("• %s [%s]" % [e.get_display_name(), ProvinceTraitEntry.Strength.keys()[e.strength].capitalize()]))
 
 
+# ---------------------------------------------------------------- Cities
+
 func _fill_cities(province: Province) -> void:
 	_clear(cities_box)
 	cities_box.add_child(_label("Cities", 17))
@@ -113,9 +207,13 @@ func _fill_cities(province: Province) -> void:
 		var btn := Button.new()
 		btn.text = "%s (%s)" % [city_name, _fmt_int(city.population)]
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		btn.clip_text = true
+		btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		btn.pressed.connect(func(): city_selected.emit(city))
 		cities_box.add_child(btn)
 
+
+# ---------------------------------------------------------------- Helpers
 
 func _clear(box: Container) -> void:
 	for c in box.get_children():
@@ -126,6 +224,8 @@ func _clear(box: Container) -> void:
 func _label(text: String, font_size: int = 0) -> Label:
 	var l := Label.new()
 	l.text = text
+	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	l.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	l.add_theme_color_override("font_color", TEXT_COLOR)
 	if font_size > 0:
 		l.add_theme_font_size_override("font_size", font_size)
