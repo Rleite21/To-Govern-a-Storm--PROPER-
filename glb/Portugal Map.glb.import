@@ -64,7 +64,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Algarve.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Algarve.res",
 "save_to_file/path": "uid://kb3rbyssuhp6"
 },
 "Portugal Map_Alto Alentejo": {
@@ -73,7 +73,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Alto Alentejo.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Alto Alentejo.res",
 "save_to_file/path": "uid://bkua8ueuusx7b"
 },
 "Portugal Map_Baixo Alentejo": {
@@ -82,7 +82,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Baixo Alentejo.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Baixo Alentejo.res",
 "save_to_file/path": "uid://et1ts4gh0inp"
 },
 "Portugal Map_Beira Alta": {
@@ -91,7 +91,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Alta.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Beira Alta.res",
 "save_to_file/path": "uid://fg322vumlhvb"
 },
 "Portugal Map_Beira Baixa": {
@@ -100,7 +100,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Baixa.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Beira Baixa.res",
 "save_to_file/path": "uid://bj5hv34qoncdu"
 },
 "Portugal Map_Douro Litoral": {
@@ -109,7 +109,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Douro Litoral.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Douro Litoral.res",
 "save_to_file/path": "uid://bb7ksc6dfsv5w"
 },
 "Portugal Map_Minho": {
@@ -118,7 +118,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Minho.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Minho.res",
 "save_to_file/path": "uid://cglalqoa4jroo"
 },
 "Portugal Map_Oeste e Lisboa": {
@@ -127,7 +127,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Oeste e Lisboa.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Oeste e Lisboa.res",
 "save_to_file/path": "uid://blhp8f7vbc5tx"
 },
 "Portugal Map_Península de Setúbal": {
@@ -136,7 +136,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Península de Setúbal.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Península de Setúbal.res",
 "save_to_file/path": "uid://dvymj6i8hgwjs"
 },
 "Portugal Map_Plane_007": {
@@ -145,7 +145,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Beira Litoral.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Beira Litoral.res",
 "save_to_file/path": "uid://bm1qnsdmbxkt4"
 },
 "Portugal Map_Ribatejo": {
@@ -154,7 +154,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Ribatejo.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Ribatejo.res",
 "save_to_file/path": "uid://b8y16extl1nyy"
 },
 "Portugal Map_Trás-os-Montes": {
@@ -163,7 +163,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://meshes/Portugal Map_Trás-os-Montes.res",
+"save_to_file/fallback_path": "res://meshes/provinces/Portugal Map_Trás-os-Montes.res",
 "save_to_file/path": "uid://cdbju84l3mcfq"
 }
 }

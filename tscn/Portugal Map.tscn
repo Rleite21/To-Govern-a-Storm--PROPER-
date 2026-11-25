@@ -6,9 +6,9 @@
 [ext_resource type="Script" uid="uid://5u4y0so43u03" path="res://Entity/National/Province/Province.gd" id="4_5bs6h"]
 [ext_resource type="Resource" uid="uid://damolcyvw1a0p" path="res://Data/tres/Provinces/Ribatejo_Data.tres" id="5_cgvin"]
 [ext_resource type="ArrayMesh" uid="uid://b8y16extl1nyy" path="res://meshes/provinces/Portugal Map_Ribatejo.res" id="6_5a8bk"]
-[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/city.gd" id="7_boprf"]
+[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/City.gd" id="7_boprf"]
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/city_data.gd" id="8_gau84"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="9_iwx5t"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/Sector_Specialization.gd" id="9_iwx5t"]
 [ext_resource type="Resource" uid="uid://b37m4dpplnjug" path="res://Data/tres/Provinces/Douro_Litoral_Data.tres" id="10_vnma1"]
 [ext_resource type="ArrayMesh" uid="uid://bb7ksc6dfsv5w" path="res://meshes/provinces/Portugal Map_Douro Litoral.res" id="11_hqn7d"]
 [ext_resource type="Resource" uid="uid://dfyx4kddrlkkl" path="res://Data/tres/Provinces/P_Setubal_Data.tres" id="12_oorhn"]
@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://c7yj6wogtp264" path="res://city_model_spawner.gd" id="32_obkjf"]
 [ext_resource type="Resource" uid="uid://buwtujvkdo5y7" path="res://Data/tres/city_models.tres" id="33_l65r0"]
 [ext_resource type="PackedScene" uid="uid://cisd305cg8krh" path="res://tscn/UI/City_Tab.tscn" id="34_843hb"]
+[ext_resource type="PackedScene" uid="uid://b7b68edgpiyn1" path="res://tscn/UI/Province_Tab.tscn" id="35_6q2uf"]
 
 [sub_resource type="Resource" id="Resource_y4s44"]
 script = ExtResource("9_iwx5t")
@@ -630,21 +631,6 @@ density = 2
 society = 390
 traits = Array[int]([9, 10, 11, 12, 14, 6, 2, 7])
 
-[sub_resource type="Resource" id="Resource_salhf"]
-script = ExtResource("9_iwx5t")
-
-[sub_resource type="Resource" id="Resource_eifag"]
-script = ExtResource("8_gau84")
-city_name = "Seia"
-map_position = Vector3(0.51589906, 0.15500642, -0.78985304)
-description = "Nestled on the northern slopes of the Serra da Estrela, Seia looks towards Portugal's highest mainland mountains, where harsh winters, steep valleys and scattered settlements shape a demanding rural existence. Sheep farming, dairy production, wool working and mountain agriculture sustain the local economy, while traditional crafts connect its inhabitants to wider regional markets. Catholic festivals and village customs remain central to communal life, and the influence of the clergy and established local families is considerable. The Republic's promises of secular education and modern administration are tempered by the realities of poverty, difficult transport and seasonal work. For many residents, political ideologies matter less than land, family and livelihood. Yet the growth of commerce and industry in the surrounding region slowly introduces new social aspirations into this mountain society."
-province_name = "Beira Baixa"
-tier = 2
-population = 21597
-specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_salhf")])
-society = 14464
-traits = Array[int]([10])
-
 [sub_resource type="Resource" id="Resource_fxduh"]
 script = ExtResource("8_gau84")
 city_name = "Castelo Branco"
@@ -831,6 +817,21 @@ specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_e6deb"), 
 density = 2
 society = 5312
 traits = Array[int]([1, 12, 11, 10])
+
+[sub_resource type="Resource" id="Resource_salhf"]
+script = ExtResource("9_iwx5t")
+
+[sub_resource type="Resource" id="Resource_eifag"]
+script = ExtResource("8_gau84")
+city_name = "Seia"
+map_position = Vector3(0.51589906, 0.15500642, -0.78985304)
+description = "Nestled on the northern slopes of the Serra da Estrela, Seia looks towards Portugal's highest mainland mountains, where harsh winters, steep valleys and scattered settlements shape a demanding rural existence. Sheep farming, dairy production, wool working and mountain agriculture sustain the local economy, while traditional crafts connect its inhabitants to wider regional markets. Catholic festivals and village customs remain central to communal life, and the influence of the clergy and established local families is considerable. The Republic's promises of secular education and modern administration are tempered by the realities of poverty, difficult transport and seasonal work. For many residents, political ideologies matter less than land, family and livelihood. Yet the growth of commerce and industry in the surrounding region slowly introduces new social aspirations into this mountain society."
+province_name = "Beira Baixa"
+tier = 2
+population = 21597
+specializations = Array[ExtResource("9_iwx5t")]([SubResource("Resource_salhf")])
+society = 14464
+traits = Array[int]([10])
 
 [sub_resource type="Resource" id="Resource_dbnuf"]
 script = ExtResource("8_gau84")
@@ -1168,10 +1169,11 @@ city_name = "Bragança"
 script = ExtResource("8_gau84")
 city_name = "Vila Real"
 
-[node name="PortugalMap" type="Node3D" unique_id=234336860 node_paths=PackedStringArray("city_tab")]
+[node name="PortugalMap" type="Node3D" unique_id=234336860 node_paths=PackedStringArray("city_tab", "province_tab")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("1_wr50m")
 city_tab = NodePath("CityTab")
+province_tab = NodePath("ProvinceTab")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=241464538]
 transform = Transform3D(0.25, 0, 0, 0, -1.0927847e-08, 0.25, 0, -0.25, -1.0927847e-08, 0, 0.97302246, 0)
@@ -1558,15 +1560,6 @@ data = ExtResource("20_qh1st")
 transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
 mesh = ExtResource("21_3klkf")
 
-[node name="Seia" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=1123387739]
-transform = Transform3D(0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0, 0.0009765625, 0, 0, 0)
-script = ExtResource("7_boprf")
-data = SubResource("Resource_eifag")
-
-[node name="Seia" type="Marker3D" parent="Portugal/Provinces/Beira Baixa/Seia" unique_id=2057036629]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51589906, 0.15500642, -0.78985304)
-gizmo_extents = 0.15
-
 [node name="Castelo Branco" type="Node3D" parent="Portugal/Provinces/Beira Baixa" unique_id=294706588]
 transform = Transform3D(0.0001953125, 0, 0, 0, 0.0001953125, 0, 0, 0, 0.0001953125, 0.0007005454, -0.00022242888, -0.0002797545)
 script = ExtResource("7_boprf")
@@ -1691,6 +1684,15 @@ data = SubResource("Resource_klb7t")
 
 [node name="Guarda" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Guarda" unique_id=468773729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89023495, 0.15500642, -0.98585796)
+gizmo_extents = 0.15
+
+[node name="Seia" type="Node3D" parent="Portugal/Provinces/Beira Alta" unique_id=1123387739]
+transform = Transform3D(0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0, 0.00390625, 0, 0, 0)
+script = ExtResource("7_boprf")
+data = SubResource("Resource_eifag")
+
+[node name="Seia" type="Marker3D" parent="Portugal/Provinces/Beira Alta/Seia" unique_id=2057036629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51589906, 0.15500642, -0.78985304)
 gizmo_extents = 0.15
 
 [node name="Baixo Alentejo" type="Node3D" parent="Portugal/Provinces" unique_id=638531593]
@@ -2002,3 +2004,6 @@ script = ExtResource("32_obkjf")
 model_set = ExtResource("33_l65r0")
 
 [node name="CityTab" parent="." unique_id=1226605598 instance=ExtResource("34_843hb")]
+visible = false
+
+[node name="ProvinceTab" parent="." unique_id=808472461 instance=ExtResource("35_6q2uf")]
