@@ -32,6 +32,10 @@ var _province: Province
 
 func _ready() -> void:
 	close_button.pressed.connect(close)
+
+	description_label.fit_content = true
+	description_label.add_theme_color_override("default_color", name_label.get_theme_color("font_color"))
+
 	visible = false
 
 
@@ -86,7 +90,6 @@ func _fill_chart(census: ProvinceCensus) -> void:
 func _fill_classes(census: ProvinceCensus) -> void:
 	_clear(classes_box)
 	classes_box.add_theme_constant_override("separation", 8)
-	classes_box.add_child(_label("Social Classes", 24))
 
 	for type in SocialClassEnums.Type.values():
 		classes_box.add_child(_class_card(
@@ -138,6 +141,7 @@ func _text_row(left: String, right: String) -> Control:
 
 	return row
 
+
 func _bar_row(label_text: String, value: float) -> Control:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 10)
@@ -181,7 +185,6 @@ func _bar_row(label_text: String, value: float) -> Control:
 
 func _fill_traits(data: ProvinceData) -> void:
 	_clear(traits_box)
-	traits_box.add_child(_label("Provincial traits", 17))
 
 	if data.traits.is_empty():
 		traits_box.add_child(_label("None"))
@@ -200,7 +203,6 @@ func _fill_traits(data: ProvinceData) -> void:
 
 func _fill_cities(province: Province) -> void:
 	_clear(cities_box)
-	cities_box.add_child(_label("Cities", 17))
 
 	for city_name in province.data.cities:
 		var city: City = province.data.cities[city_name]
