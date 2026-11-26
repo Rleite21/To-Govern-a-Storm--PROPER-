@@ -7,4 +7,5 @@ script = ExtResource("1_tdxpi")
 type = 4
 base_militancy = 100.0
 base_consciousness = 65.0
+ownership = Array[float]([0.78, 0.0, 0.35, 0.4, 0.5, 0.2, 0.4, 0.4, 0.2, 0.35, 0.4])
 metadata/_custom_type_script = "uid://bd62gn16vhaxd"

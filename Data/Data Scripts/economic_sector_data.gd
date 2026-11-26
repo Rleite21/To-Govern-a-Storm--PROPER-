@@ -3,6 +3,7 @@ extends Resource
 
 @export_group("Identification")
 @export var sector: EconomyEnums.Sector
+@export var id: int 
 
 @export_group("Base Statistics")
 @export var baseline_weight: float = 0.0 # baseline weight to calculate the size within a city
@@ -10,7 +11,7 @@ extends Resource
 
 @export_group("Labour Requirements")
 # Amount of workers per unit of size of a given social class
-@export var required_labour: Dictionary[SocialClass.Type, float] = {}
+@export var required_labour: Dictionary[SocialClassEnums.Type, float] = {}
 
 @export_group("Production & Distribution")
 # Amount of products made per unit of size
@@ -18,6 +19,9 @@ extends Resource
 @export var sector_type: EconomyEnums.Sector_Type
 @export var required_raw_materials: Dictionary[EconomyEnums.Sector, float] = {}
 @export var distribution_cost_per_unit: float = 1.0
+
+@export_group("Property & Distribution")
+@export var class_ownership: Dictionary[SocialClassEnums.Type, float] = {}
 
 
 @export_group("Sector Interactions")

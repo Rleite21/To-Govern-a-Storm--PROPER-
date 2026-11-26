@@ -8,3 +8,4 @@ extends Resource
 @export var default_traits: Array[SocialClassEnums.Trait] = []
 @export var militancy_noise: float = 10.0
 @export var consciousness_noise: float = 10.0
+@export var ownership: Array[float] = []

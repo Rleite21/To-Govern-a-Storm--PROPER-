@@ -56,7 +56,7 @@ func show_city(source: Variant) -> void:
 
 	CityTabInfo.fill(data,name_label,tier_label,province_label,description_label,population_label,density_label)
 	CityTabSociety.fill(data, society_box, specializations_box, traits_box)
-	CityTabEconomy.fill(city, economy_chart)
+	fill_economy(city, economy_chart)
 	
 	if city != null:
 		if city.demographics.social_classes.is_empty():
@@ -110,6 +110,21 @@ func _open_demographics() -> void:
 
 	_demographics_popup = popup
 
+static func fill_economy(city: City, chart: PieChart) -> void:
+	if chart == null or city.economy == null:
+		return
+
+	var values: Dictionary = {}
+
+	for sector_type in city.economy.sectors:
+		var sector: EconomySector = city.economy.sectors[sector_type]
+		values[sector_type] = sector.size
+
+	chart.set_values_by_key(
+		values,
+		Economy.display_name,
+		true
+	)
 
 func _close_demographics() -> void:
 	if is_instance_valid(_demographics_popup):

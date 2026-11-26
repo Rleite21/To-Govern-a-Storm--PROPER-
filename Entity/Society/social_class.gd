@@ -9,6 +9,7 @@ var population_share: float = 0.0
 var convictions: Dictionary = {}
 var traits: Array[SocialClassEnums.Trait] = []
 var wealth: float = 0.0
+var ownership: Array[float] = []
 
 var militancy: float = 0.0:
 	set(value):
@@ -50,10 +51,14 @@ static func create(p_type: SocialClassEnums.Type, rng: RandomNumberGenerator) ->
 
 static func from_template(template: SocialClassTemplate, rng: RandomNumberGenerator) -> SocialClass:
 	var sc := SocialClass.new(template.type)
+
 	sc.militancy = template.base_militancy + rng.randf_range(-template.militancy_noise, template.militancy_noise)
 	sc.consciousness = template.base_consciousness + rng.randf_range(-template.consciousness_noise, template.consciousness_noise)
+
 	sc.convictions = template.convictions.duplicate(true)
 	sc.traits.assign(template.default_traits)
+	sc.ownership = template.ownership.duplicate()
+
 	return sc
 
 

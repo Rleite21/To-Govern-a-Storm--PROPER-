@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://c6jsg3yffm7ek"]
+
+[ext_resource type="Script" uid="uid://cyxlpgr7jsvpy" path="res://UI/City Tab/city_tab_economy.gd" id="1_jauda"]
+[ext_resource type="Theme" uid="uid://b6cm0nocpc35k" path="res://UI/ui_theme.tres" id="2_si5rr"]
+[ext_resource type="PackedScene" uid="uid://nj6w2ttgo0qi" path="res://tscn/UI/OrnateHSeparator.tscn" id="3_8elgd"]
+[ext_resource type="PackedScene" uid="uid://capq81ycu44wy" path="res://tscn/UI/Pie_Chart.tscn" id="4_mxueg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgd44"]
+font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p8160"]
+font_size = 20
+font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+
+[node name="CityTab" type="PanelContainer" unique_id=808472461]
+anchors_preset = -1
+anchor_right = 0.35
+anchor_bottom = 0.85
+script = ExtResource("1_jauda")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=354473496]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer" unique_id=1003018428]
+layout_mode = 2
+mouse_filter = 0
+theme = ExtResource("2_si5rr")
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer" unique_id=11513643]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 13
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=1021751646]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=1008583762]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="MarginContainer/ScrollContainer/VBox/Header" unique_id=1874354015]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+text = "X"
+
+[node name="HSeparator" parent="MarginContainer/ScrollContainer/VBox" unique_id=2121820605 instance=ExtResource("3_8elgd")]
+layout_mode = 2
+
+[node name="Stats" type="GridContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=498628557]
+layout_mode = 2
+theme_override_constants/h_separation = 35
+theme_override_constants/v_separation = 8
+columns = 2
+
+[node name="Title" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=1497551436]
+layout_mode = 2
+text = "Economy"
+label_settings = SubResource("LabelSettings_qgd44")
+horizontal_alignment = 1
+
+[node name="ChartsBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=1584217906]
+layout_mode = 2
+
+[node name="SectorsChart" parent="MarginContainer/ScrollContainer/VBox/ChartsBox" unique_id=1266502682 instance=ExtResource("4_mxueg")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Ownership & Capital" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=1436504290]
+layout_mode = 2
+text = "Ownership & Capital"
+label_settings = SubResource("LabelSettings_p8160")
+horizontal_alignment = 1
+
+[node name="Ownership" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=754557123]
+layout_mode = 2
+
+[node name="Agriculture_Chart" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=948229080 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart2" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=68183812 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart3" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=1182362916 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart4" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=313844909 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart5" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=2015086811 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart6" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=1341588529 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart7" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=1405055676 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart8" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=1851132233 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart9" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=743409160 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="Agriculture_Chart10" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=1369048679 instance=ExtResource("4_mxueg")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
+
+[node name="HSeparator2" parent="MarginContainer/ScrollContainer/VBox" unique_id=936750761 instance=ExtResource("3_8elgd")]
+layout_mode = 2
+emblem_height = 60

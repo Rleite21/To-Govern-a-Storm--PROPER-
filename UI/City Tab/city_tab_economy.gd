@@ -1,27 +1,26 @@
 class_name CityTabEconomy
-extends RefCounted
+extends Control
+
+signal closed
+
+var _city: City
+
+@onready var close_button: Button = %CloseButton
+@onready var ownership_chart: BoxContainer = %Ownership
 
 
-static func fill(city: City, chart: PieChart) -> void:
-	if chart == null:
+func setup(city: City) -> void:
+	_city = city
+
+
+func _ready() -> void:
+	close_button.pressed.connect(func(): closed.emit())
+	if _city == null:
 		return
-
-	var values: Dictionary = {}
-
-	for spec in city.data.specializations:
-		if spec == null:
-			continue
-
-		values[Economy.display_name(spec.sector)] = Economy.roll_size(
-			city.data.population,
-			spec.sector,
-			1.0,
-			spec.prevalence
-		)
-
-	chart.set_values(values, true)
-
+	if _city.demographics.social_classes.is_empty():
+		_city.initialize()
+	fill(_city, chart)
 
 static func clear(chart: PieChart) -> void:
 	if chart != null:
-		chart.set_values({})
+		chart.set_values_by_key({}, SocialClassEnums.type_to_string)

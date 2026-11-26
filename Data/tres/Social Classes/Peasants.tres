@@ -6,4 +6,5 @@
 script = ExtResource("1_abio5")
 base_militancy = 10.0
 base_consciousness = 10.0
+ownership = Array[float]([0.03, 0.0, 0.0, 0.0, 0.05, 0.0, 0.0, 0.05, 0.0, 0.0, 0.0])
 metadata/_custom_type_script = "uid://bd62gn16vhaxd"
