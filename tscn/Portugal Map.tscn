@@ -6,9 +6,9 @@
 [ext_resource type="Script" uid="uid://5u4y0so43u03" path="res://Entity/National/Province/Province.gd" id="4_5bs6h"]
 [ext_resource type="Resource" uid="uid://damolcyvw1a0p" path="res://Data/tres/Provinces/Ribatejo_Data.tres" id="5_cgvin"]
 [ext_resource type="ArrayMesh" uid="uid://b8y16extl1nyy" path="res://meshes/provinces/Portugal Map_Ribatejo.res" id="6_5a8bk"]
-[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/City.gd" id="7_boprf"]
+[ext_resource type="Script" uid="uid://rnirco77fg5i" path="res://Entity/National/City/city.gd" id="7_boprf"]
 [ext_resource type="Script" uid="uid://b7ybj3s8rlcba" path="res://Data/Data Scripts/city_data.gd" id="8_gau84"]
-[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/Sector_Specialization.gd" id="9_iwx5t"]
+[ext_resource type="Script" uid="uid://xjki6jn4tmpj" path="res://Entity/Economy/sector_specialization.gd" id="9_iwx5t"]
 [ext_resource type="Resource" uid="uid://b37m4dpplnjug" path="res://Data/tres/Provinces/Douro_Litoral_Data.tres" id="10_vnma1"]
 [ext_resource type="ArrayMesh" uid="uid://bb7ksc6dfsv5w" path="res://meshes/provinces/Portugal Map_Douro Litoral.res" id="11_hqn7d"]
 [ext_resource type="Resource" uid="uid://dfyx4kddrlkkl" path="res://Data/tres/Provinces/P_Setubal_Data.tres" id="12_oorhn"]
@@ -2007,3 +2007,4 @@ model_set = ExtResource("33_l65r0")
 visible = false
 
 [node name="ProvinceTab" parent="." unique_id=808472461 instance=ExtResource("35_6q2uf")]
+visible = false

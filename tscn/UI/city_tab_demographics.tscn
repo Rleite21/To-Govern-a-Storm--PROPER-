@@ -22,7 +22,7 @@ font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 font_size = 20
 font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
-[node name="CityTab" type="PanelContainer" unique_id=808472461]
+[node name="CityTabDemographics" type="PanelContainer" unique_id=808472461]
 anchors_preset = -1
 anchor_right = 0.35
 anchor_bottom = 0.85
@@ -104,10 +104,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 palette = PackedColorArray(0.55295557, 0.55295557, 0.55295545, 1, 0.76020277, 3.706068e-06, 4.813075e-07, 1, 8.609527, 8.6799555, 8.961672, 1, 0.9607843, 0.8392157, 0.19215687, 1, 4.3317677e-06, 0.22875336, 0.64688635, 1, 0.25882354, 0.83137256, 0.95686275, 1, 0.9411765, 0.19607843, 0.9019608, 1, 0.7490196, 0.9372549, 0.27058825, 1)
-spawn_enabled = true
-spawn_parent = NodePath("")
-replace_previous = true
-spawn_at_cursor = false
 
 [node name="Label2" type="Label" parent="MarginContainer/ScrollContainer/VBox" unique_id=1436504290]
 layout_mode = 2

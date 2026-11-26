@@ -22,12 +22,8 @@ var consciousness: float = 0.0:
 var is_working: bool:
 	get: return SocialClassEnums.is_working(type)
 
-
 func _init(p_type := SocialClassEnums.Type.PEASANTS) -> void:
 	type = p_type
-
-
-# --- Templates -----------------------------------------------------------
 
 static func get_template(p_type: SocialClassEnums.Type) -> SocialClassTemplate:
 	if _templates.is_empty():
@@ -41,9 +37,6 @@ static func get_template(p_type: SocialClassEnums.Type) -> SocialClassTemplate:
 		for key in _templates:
 			assert(_templates[key].type == key, "Template type mismatch for %s" % key)
 	return _templates[p_type]
-
-
-# --- Factory -------------------------------------------------------------
 
 static func create(p_type: SocialClassEnums.Type, rng: RandomNumberGenerator) -> SocialClass:
 	return from_template(get_template(p_type), rng)
@@ -60,9 +53,6 @@ static func from_template(template: SocialClassTemplate, rng: RandomNumberGenera
 	sc.ownership = template.ownership.duplicate()
 
 	return sc
-
-
-# --- Modifiers -----------------------------------------------------------
 
 func apply_modifier(militancy_delta: float = 0.0, consciousness_delta: float = 0.0) -> void:
 	militancy += militancy_delta
@@ -89,12 +79,8 @@ func set_population(total_city_population: int, share: float) -> void:
 	population_share = share
 	population = roundi(total_city_population * share)
 
-
-# --- Queries -------------------------------------------------------------
-
 func get_display_name() -> String:
 	return SocialClassEnums.type_to_string(type)
-
 
 func has_trait(t: SocialClassEnums.Trait) -> bool:
 	return t in traits

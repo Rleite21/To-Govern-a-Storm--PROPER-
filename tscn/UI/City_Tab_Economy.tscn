@@ -13,7 +13,7 @@ font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 font_size = 20
 font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 
-[node name="CityTab" type="PanelContainer" unique_id=808472461]
+[node name="CityTabEconomy" type="PanelContainer" unique_id=808472461]
 anchors_preset = -1
 anchor_right = 0.35
 anchor_bottom = 0.85
@@ -81,6 +81,7 @@ label_settings = SubResource("LabelSettings_p8160")
 horizontal_alignment = 1
 
 [node name="Ownership" type="VBoxContainer" parent="MarginContainer/ScrollContainer/VBox" unique_id=754557123]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Agriculture_Chart" parent="MarginContainer/ScrollContainer/VBox/Ownership" unique_id=948229080 instance=ExtResource("4_mxueg")]

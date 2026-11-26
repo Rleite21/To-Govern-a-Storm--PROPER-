@@ -1,11 +1,21 @@
 class_name Economy
 
 enum Sector {
-	AGRICULTURE, HEAVY_INDUSTRY, FINANCE, TRANSPORTATION, MINING_RAW_MATERIALS,
-	TRADE_SERVICES, ARMS_INDUSTRY, MANUFACTURING, FISHING, PORTUARY, CIVIL_ENGINEERING
+	AGRICULTURE,
+	HEAVY_INDUSTRY,
+	FINANCE,
+	TRANSPORTATION,
+	MINING_RAW_MATERIALS,
+	TRADE_SERVICES,
+	ARMS_INDUSTRY,
+	MANUFACTURING,
+	FISHING,
+	PORTUARY,
+	CIVIL_ENGINEERING
 }
 
-# Valores provisórios, a afinar nos testes
+
+# Valores provisórios
 const BASELINE_WEIGHT := {
 	Sector.AGRICULTURE: 0.8,
 	Sector.HEAVY_INDUSTRY: 0.25,
@@ -20,45 +30,56 @@ const BASELINE_WEIGHT := {
 	Sector.CIVIL_ENGINEERING: 0.15,
 }
 
-static func display_name(type: int) -> String:
+
+# --- Identification ------------------------------------------------------
+
+static func display_name(type: Sector) -> String:
 	match type:
-		Sector.AGRICULTURE:
-			return "Agriculture"
-		Sector.HEAVY_INDUSTRY:
-			return "Heavy Industry"
-		Sector.FINANCE:
-			return "Finance"
-		Sector.TRANSPORTATION:
-			return "Transportation"
-		Sector.MINING_RAW_MATERIALS:
-			return "Mining & Raw Materials"
-		Sector.TRADE_SERVICES:
-			return "Trade & Services"
-		Sector.ARMS_INDUSTRY:
-			return "Arms Industry"
-		Sector.MANUFACTURING:
-			return "Manufacturing"
-		Sector.FISHING:
-			return "Fishing"
-		Sector.PORTUARY:
-			return "Portuary"
-		Sector.CIVIL_ENGINEERING:
-			return "Civil Engineering"
+		Sector.AGRICULTURE: return "Agriculture"
+		Sector.HEAVY_INDUSTRY: return "Heavy Industry"
+		Sector.FINANCE: return "Finance"
+		Sector.TRANSPORTATION: return "Transportation"
+		Sector.MINING_RAW_MATERIALS: return "Mining & Raw Materials"
+		Sector.TRADE_SERVICES: return "Trade & Services"
+		Sector.ARMS_INDUSTRY: return "Arms Industry"
+		Sector.MANUFACTURING: return "Manufacturing"
+		Sector.FISHING: return "Fishing"
+		Sector.PORTUARY: return "Portuary"
+		Sector.CIVIL_ENGINEERING: return "Civil Engineering"
+
 	return "Unknown"
 
+
+# --- Economic Calculations ----------------------------------------------
 
 static func economic_scale(total_population: float) -> float:
 	return 100.0 * pow(total_population / 10000.0, 0.8)
 
+
 static func base_size(pop: float, sector: Sector, suitability: float) -> float:
 	return economic_scale(pop) * BASELINE_WEIGHT[sector] * suitability
 
-static func size_potential(pop: float, sector: Sector, suitability: float, prevalence: float) -> float:
+
+static func size_potential(
+	pop: float,
+	sector: Sector,
+	suitability: float,
+	prevalence: float
+) -> float:
 	return base_size(pop, sector, suitability) * prevalence
 
-static func roll_size(pop: float, sector: Sector, suitability: float, prevalence: float, rng: RandomNumberGenerator = null) -> float:
+
+static func roll_size(
+	pop: float,
+	sector: Sector,
+	suitability: float,
+	prevalence: float,
+	rng: RandomNumberGenerator = null
+) -> float:
 	var lo := base_size(pop, sector, suitability)
 	var hi := size_potential(pop, sector, suitability, prevalence)
+
 	if rng == null:
 		return randf_range(lo, hi)
+
 	return rng.randf_range(lo, hi)
