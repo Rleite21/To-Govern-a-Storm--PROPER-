@@ -49,7 +49,8 @@ static func from_template(template: SocialClassTemplate, rng: RandomNumberGenera
 	sc.consciousness = template.base_consciousness + rng.randf_range(-template.consciousness_noise, template.consciousness_noise)
 
 	sc.convictions = template.convictions.duplicate(true)
-	sc.traits.assign(template.default_traits)
+	for t in template.default_traits:
+		sc.add_trait(t)
 	sc.ownership = template.ownership.duplicate()
 
 	return sc
@@ -71,7 +72,7 @@ func add_trait(t: SocialClassEnums.Trait, apply_effects: bool = true) -> bool:
 		return false
 	traits.append(t)
 	if apply_effects:
-		ClassModifiers.apply_trait_effects(self, t)
+		ClassModifiersPolitics.apply_trait_effects(self, t)
 	return true
 
 

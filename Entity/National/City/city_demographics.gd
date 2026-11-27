@@ -8,8 +8,12 @@ var population: int = 0
 var social_classes: Dictionary = {}  # {SocialClassEnums.Type: SocialClass}
 
 
-func generate(total_population: int, density: CityDensity.Level,
-		city_traits: Array = [], rng: RandomNumberGenerator = null) -> void:
+func generate(
+	total_population: int,
+	density: CityDensity.Level,
+	city_traits: Array = [],
+	rng: RandomNumberGenerator = null
+) -> void:
 	if rng == null:
 		rng = RandomNumberGenerator.new()
 		rng.randomize()
@@ -22,26 +26,51 @@ func generate(total_population: int, density: CityDensity.Level,
 	# 1) Noisy shares, normalized to sum to 1.0
 	var shares := {}
 	var total := 0.0
+
 	for type in distribution:
-		var s: float = maxf(distribution[type] + rng.randf_range(-DEFAULT_VARIANCE, DEFAULT_VARIANCE), MIN_SHARE)
+		var s: float = maxf(
+			distribution[type] + rng.randf_range(-DEFAULT_VARIANCE, DEFAULT_VARIANCE),
+			MIN_SHARE
+		)
 		shares[type] = s
 		total += s
 
-	# 2) Build each class: template -> city effects -> density effects -> traits -> population
+	# 2) Build each social class
 	var assigned := 0
 	var largest_type = null
+
 	for type in distribution:
+		# Create from template
 		var sc := SocialClass.create(type, rng)
-		ClassModifiers.apply_city_effects(sc, city_traits)
-		ClassModifiers.apply_density_effects(sc, density)
-		ClassModifiers.roll_traits(sc, city_traits, density, rng)
+
+		# Apply city trait modifiers
+		ClassModifiersEcon.apply_city_effects(sc, city_traits)
+		ClassModifiersPolitics.apply_city_effects(sc, city_traits)
+
+		# Apply population density modifiers
+		ClassModifiersEcon.apply_density_effects(sc, density)
+		ClassModifiersPolitics.apply_density_effects(sc, density)
+
+		# Generate class traits
+		ClassModifiersEcon.roll_traits(
+			sc, city_traits, density, rng
+		)
+
+		ClassModifiersPolitics.roll_traits(
+			sc, city_traits, density, rng
+		)
+
+		# Assign population
 		sc.set_population(population, shares[type] / total)
+
 		social_classes[type] = sc
+
 		assigned += sc.population
+
 		if largest_type == null or sc.population > social_classes[largest_type].population:
 			largest_type = type
 
-	# 3) Give the rounding remainder to the largest class so the total is exact
+	# 3) Give rounding remainder to largest class
 	if largest_type != null:
 		social_classes[largest_type].population += population - assigned
 
