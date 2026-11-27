@@ -4,11 +4,14 @@ extends RefCounted
 var sectors: Dictionary[Economy.Sector, EconomySector] = {}
 
 
+# Gera os setores da cidade e, depois, a ownership de cada um
 func generate(
 	population: float,
 	traits: Array,
 	specializations: Array[SectorSpecialization],
-	rng: RandomNumberGenerator
+	rng: RandomNumberGenerator,
+	demographics: CityDemographics = null,
+	province_traits: Array = []
 ) -> void:
 	sectors.clear()
 
@@ -45,6 +48,14 @@ func generate(
 		)
 
 		sectors[s] = sector
+
+	# Ownership inicial (depois de todos os tamanhos, para não mudar o RNG deles)
+	for s in sectors:
+		var base := OwnershipTable.get_base(s)
+		var shifts := OwnershipMods.compute(s, base, traits, demographics, province_traits)
+		var shares := SectorOwnership.generate(s, demographics, rng, shifts)
+		for owner in shares:
+			sectors[s].ownership[owner] = shares[owner]
 
 
 func get_sector(type: Economy.Sector) -> EconomySector:
